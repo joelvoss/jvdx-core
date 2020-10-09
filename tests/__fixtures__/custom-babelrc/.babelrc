@@ -1,7 +1,7 @@
 {
 	"presets": [
 		[
-			"@jvdx/babel-preset-jvdx",
+			"@jvdx/babel-preset",
 			{
 				"preset-env": {
 					"loose": true,

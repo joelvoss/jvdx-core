@@ -91,7 +91,7 @@ module.exports = () => {
 				// Add our default preset if the no "babelrc" found.
 				babelOptions.presets = createConfigItems(babelCore, 'preset', [
 					{
-						name: '@jvdx/babel-preset-jvdx',
+						name: '@jvdx/babel-preset',
 						'preset-env': {
 							targets: customOptions.modern
 								? { esmodules: true }

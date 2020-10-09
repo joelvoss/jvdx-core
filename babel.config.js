@@ -1,3 +1,3 @@
 module.exports = {
-	presets: ['@jvdx/babel-preset-jvdx'],
+	presets: ['@jvdx/babel-preset'],
 };
