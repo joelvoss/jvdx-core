@@ -1,7 +1,6 @@
 # @jvdx/core
 
-jvdx is a zero minimal set of tools to help maintain and build better
-applications.
+jvdx is a minimal set of tools to help maintain and build better applications.
 
 ## Installation
 
