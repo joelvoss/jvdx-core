@@ -1,0 +1,8 @@
+{
+	"presets": [
+		"@jvdx/babel-preset-jvdx"
+	],
+	"plugins": [
+		"@babel/plugin-proposal-throw-expressions"
+	]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "basic-node-internals",
+  "scripts": {
+    "build": "jvdx build --target=node -f cjs"
+  }
+}

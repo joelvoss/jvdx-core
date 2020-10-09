@@ -1,0 +1,3045 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`build fixtures build alias with jvdx 1`] = `
+"Used script: jvdx build --no-sourcemap --alias ./constants=./constants-debug
+
+Directory tree:
+
+alias
+  dist
+    alias-mapping.esm.js
+    alias-mapping.js
+    alias-mapping.umd.js
+  package.json
+  src
+    constants-debug.js
+    constants.js
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/alias-mapping.js (42 B)
+  -> gzip: 62 B
+  -> brotli: 46 B
+./dist/alias-mapping.esm.js (42 B)
+  -> gzip: 62 B
+  -> brotli: 46 B
+./dist/alias-mapping.umd.js (121 B)
+  -> gzip: 118 B
+  -> brotli: 83 B
+"
+`;
+
+exports[`build fixtures build alias with jvdx 2`] = `3`;
+
+exports[`build fixtures build alias with jvdx 3`] = `
+"console.log(\\"DEBUG should be true: \\",!0);
+"
+`;
+
+exports[`build fixtures build alias with jvdx 4`] = `
+"console.log(\\"DEBUG should be true: \\",!0);
+"
+`;
+
+exports[`build fixtures build alias with jvdx 5`] = `
+"!function(e){\\"function\\"==typeof define&&define.amd?define(e):e()}(function(){console.log(\\"DEBUG should be true: \\",!0)});
+"
+`;
+
+exports[`build fixtures build alias-external with jvdx 1`] = `
+"Used script: jvdx build --alias tiny-glob=./colossal-glob.js
+
+Directory tree:
+
+alias-external
+  dist
+    alias-external.esm.js
+    alias-external.esm.js.map
+    alias-external.js
+    alias-external.js.map
+    alias-external.umd.js
+    alias-external.umd.js.map
+  package.json
+  src
+    colossal-glob.js
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/alias-external.js (17 B)
+  -> gzip: 37 B
+  -> brotli: 21 B
+./dist/alias-external.esm.js (17 B)
+  -> gzip: 37 B
+  -> brotli: 21 B
+./dist/alias-external.umd.js (96 B)
+  -> gzip: 93 B
+  -> brotli: 89 B
+"
+`;
+
+exports[`build fixtures build alias-external with jvdx 2`] = `6`;
+
+exports[`build fixtures build alias-external with jvdx 3`] = `
+"console.log(42);
+//# sourceMappingURL=alias-external.esm.js.map
+"
+`;
+
+exports[`build fixtures build alias-external with jvdx 4`] = `
+"console.log(42);
+//# sourceMappingURL=alias-external.js.map
+"
+`;
+
+exports[`build fixtures build alias-external with jvdx 5`] = `
+"!function(n){\\"function\\"==typeof define&&define.amd?define(n):n()}(function(){console.log(42)});
+//# sourceMappingURL=alias-external.umd.js.map
+"
+`;
+
+exports[`build fixtures build async-iife-ts with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+async-iife-ts
+  dist
+    async-iife-ts.esm.js
+    async-iife-ts.esm.js.map
+    async-iife-ts.js
+    async-iife-ts.js.map
+    async-iife-ts.umd.js
+    async-iife-ts.umd.js.map
+    index.d.ts
+  node_modules
+  package.json
+  src
+    index.ts
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/async-iife-ts.js (51 B)
+  -> gzip: 70 B
+  -> brotli: 55 B
+./dist/async-iife-ts.esm.js (51 B)
+  -> gzip: 70 B
+  -> brotli: 55 B
+./dist/async-iife-ts.umd.js (131 B)
+  -> gzip: 125 B
+  -> brotli: 95 B
+"
+`;
+
+exports[`build fixtures build async-iife-ts with jvdx 2`] = `7`;
+
+exports[`build fixtures build async-iife-ts with jvdx 3`] = `
+"try{console.log(\\"foo\\")}catch(o){Promise.reject(o)}
+//# sourceMappingURL=async-iife-ts.esm.js.map
+"
+`;
+
+exports[`build fixtures build async-iife-ts with jvdx 4`] = `
+"try{console.log(\\"foo\\")}catch(o){Promise.reject(o)}
+//# sourceMappingURL=async-iife-ts.js.map
+"
+`;
+
+exports[`build fixtures build async-iife-ts with jvdx 5`] = `
+"!function(e){\\"function\\"==typeof define&&define.amd?define(e):e()}(function(){try{console.log(\\"foo\\")}catch(e){Promise.reject(e)}});
+//# sourceMappingURL=async-iife-ts.umd.js.map
+"
+`;
+
+exports[`build fixtures build async-iife-ts with jvdx 6`] = `""`;
+
+exports[`build fixtures build async-ts with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+async-ts
+  dist
+    async-ts.esm.js
+    async-ts.esm.js.map
+    async-ts.js
+    async-ts.js.map
+    async-ts.umd.js
+    async-ts.umd.js.map
+    index.d.ts
+  node_modules
+  package.json
+  src
+    index.ts
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/async-ts.js (107 B)
+  -> gzip: 103 B
+  -> brotli: 72 B
+./dist/async-ts.esm.js (118 B)
+  -> gzip: 112 B
+  -> brotli: 91 B
+./dist/async-ts.umd.js (328 B)
+  -> gzip: 214 B
+  -> brotli: 167 B
+"
+`;
+
+exports[`build fixtures build async-ts with jvdx 2`] = `7`;
+
+exports[`build fixtures build async-ts with jvdx 3`] = `
+"var o=function(){function o(){}return o.prototype.foo=function(){return Promise.resolve()},o}();export{o as MyClass};
+//# sourceMappingURL=async-ts.esm.js.map
+"
+`;
+
+exports[`build fixtures build async-ts with jvdx 4`] = `
+"exports.MyClass=function(){function o(){}return o.prototype.foo=function(){return Promise.resolve()},o}();
+//# sourceMappingURL=async-ts.js.map
+"
+`;
+
+exports[`build fixtures build async-ts with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?o(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],o):o((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).asyncTs={})}(this,function(e){e.MyClass=function(){function e(){}return e.prototype.foo=function(){return Promise.resolve()},e}()});
+//# sourceMappingURL=async-ts.umd.js.map
+"
+`;
+
+exports[`build fixtures build async-ts with jvdx 6`] = `
+"export declare class MyClass {
+    foo(): Promise<void>;
+}
+"
+`;
+
+exports[`build fixtures build basic with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic
+  dist
+    basic-lib.esm.js
+    basic-lib.esm.js.map
+    basic-lib.js
+    basic-lib.js.map
+    basic-lib.umd.js
+    basic-lib.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-lib.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/basic-lib.esm.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/basic-lib.umd.js (599 B)
+  -> gzip: 287 B
+  -> brotli: 231 B
+"
+`;
+
+exports[`build fixtures build basic with jvdx 2`] = `6`;
+
+exports[`build fixtures build basic with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=basic-lib.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=basic-lib.js.map
+"
+`;
+
+exports[`build fixtures build basic with jvdx 5`] = `
+"!function(e,r){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=r():\\"function\\"==typeof define&&define.amd?define(r):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).basicLib=r()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,r){return e+r},0))}catch(e){return Promise.reject(e)}};return function(){try{var r=arguments,n=[].slice.call(r);return Promise.resolve(e.apply(void 0,n)).then(function(r){return Promise.resolve(e.apply(void 0,n)).then(function(e){return[r,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=basic-lib.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-babelrc with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic-babelrc
+  dist
+    basic-babelrc.esm.js
+    basic-babelrc.esm.js.map
+    basic-babelrc.js
+    basic-babelrc.js.map
+    basic-babelrc.umd.js
+    basic-babelrc.umd.js.map
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-babelrc.js (144 B)
+  -> gzip: 122 B
+  -> brotli: 91 B
+./dist/basic-babelrc.esm.js (144 B)
+  -> gzip: 122 B
+  -> brotli: 91 B
+./dist/basic-babelrc.umd.js (223 B)
+  -> gzip: 158 B
+  -> brotli: 121 B
+"
+`;
+
+exports[`build fixtures build basic-babelrc with jvdx 2`] = `6`;
+
+exports[`build fixtures build basic-babelrc with jvdx 3`] = `
+"function r(r){return void 0===r&&(r=function(r){throw new Error(\\"required!\\")}()),!0===r||function(r){throw new Error(\\"Falsey!\\")}()}r(!0),r(!1);
+//# sourceMappingURL=basic-babelrc.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-babelrc with jvdx 4`] = `
+"function r(r){return void 0===r&&(r=function(r){throw new Error(\\"required!\\")}()),!0===r||function(r){throw new Error(\\"Falsey!\\")}()}r(!0),r(!1);
+//# sourceMappingURL=basic-babelrc.js.map
+"
+`;
+
+exports[`build fixtures build basic-babelrc with jvdx 5`] = `
+"!function(n){\\"function\\"==typeof define&&define.amd?define(n):n()}(function(){function n(n){return void 0===n&&(n=function(n){throw new Error(\\"required!\\")}()),!0===n||function(n){throw new Error(\\"Falsey!\\")}()}n(!0),n(!1)});
+//# sourceMappingURL=basic-babelrc.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-compress-false with jvdx 1`] = `
+"Used script: jvdx build --compress=false
+
+Directory tree:
+
+basic-compress-false
+  dist
+    basic-compress-false.esm.js
+    basic-compress-false.esm.js.map
+    basic-compress-false.js
+    basic-compress-false.js.map
+    basic-compress-false.umd.js
+    basic-compress-false.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-compress-false.js (640 B)
+  -> gzip: 260 B
+  -> brotli: 206 B
+./dist/basic-compress-false.esm.js (638 B)
+  -> gzip: 258 B
+  -> brotli: 209 B
+./dist/basic-compress-false.umd.js (987 B)
+  -> gzip: 396 B
+  -> brotli: 319 B
+"
+`;
+
+exports[`build fixtures build basic-compress-false with jvdx 2`] = `6`;
+
+exports[`build fixtures build basic-compress-false with jvdx 3`] = `
+"var two = function two() {
+  try {
+    var _arguments2 = arguments;
+    return Promise.resolve([].slice.call(_arguments2).reduce(function (total, value) {
+      return total + value;
+    }, 0));
+  } catch (e) {
+    return Promise.reject(e);
+  }
+};
+
+var index = (function () {
+  try {
+    var _arguments2 = arguments;
+    var args = [].slice.call(_arguments2);
+    return Promise.resolve(two.apply(void 0, args)).then(function (_two) {
+      return Promise.resolve(two.apply(void 0, args)).then(function (_two2) {
+        return [_two, _two2];
+      });
+    });
+  } catch (e) {
+    return Promise.reject(e);
+  }
+});
+
+export default index;
+//# sourceMappingURL=basic-compress-false.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-compress-false with jvdx 4`] = `
+"var two = function two() {
+  try {
+    var _arguments2 = arguments;
+    return Promise.resolve([].slice.call(_arguments2).reduce(function (total, value) {
+      return total + value;
+    }, 0));
+  } catch (e) {
+    return Promise.reject(e);
+  }
+};
+
+var index = (function () {
+  try {
+    var _arguments2 = arguments;
+    var args = [].slice.call(_arguments2);
+    return Promise.resolve(two.apply(void 0, args)).then(function (_two) {
+      return Promise.resolve(two.apply(void 0, args)).then(function (_two2) {
+        return [_two, _two2];
+      });
+    });
+  } catch (e) {
+    return Promise.reject(e);
+  }
+});
+
+module.exports = index;
+//# sourceMappingURL=basic-compress-false.js.map
+"
+`;
+
+exports[`build fixtures build basic-compress-false with jvdx 5`] = `
+"(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.basicCompressFalse = factory());
+}(this, (function () {
+	var two = function two() {
+	  try {
+	    var _arguments2 = arguments;
+	    return Promise.resolve([].slice.call(_arguments2).reduce(function (total, value) {
+	      return total + value;
+	    }, 0));
+	  } catch (e) {
+	    return Promise.reject(e);
+	  }
+	};
+
+	var index = (function () {
+	  try {
+	    var _arguments2 = arguments;
+	    var args = [].slice.call(_arguments2);
+	    return Promise.resolve(two.apply(void 0, args)).then(function (_two) {
+	      return Promise.resolve(two.apply(void 0, args)).then(function (_two2) {
+	        return [_two, _two2];
+	      });
+	    });
+	  } catch (e) {
+	    return Promise.reject(e);
+	  }
+	});
+
+	return index;
+
+})));
+//# sourceMappingURL=basic-compress-false.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-css with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic-css
+  dist
+    basic-css.css
+    basic-css.esm.js
+    basic-css.esm.js.map
+    basic-css.js
+    basic-css.js.map
+    basic-css.umd.js
+    basic-css.umd.js.map
+  package.json
+  src
+    index.js
+    two.css
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-css.js (95 B)
+  -> gzip: 107 B
+  -> brotli: 60 B
+./dist/basic-css.esm.js (98 B)
+  -> gzip: 109 B
+  -> brotli: 67 B
+./dist/basic-css.umd.js (308 B)
+  -> gzip: 212 B
+  -> brotli: 145 B
+"
+`;
+
+exports[`build fixtures build basic-css with jvdx 2`] = `7`;
+
+exports[`build fixtures build basic-css with jvdx 3`] = `".testing{display:flex;color:red;background:#00f}"`;
+
+exports[`build fixtures build basic-css with jvdx 4`] = `
+"function e(){var e=document.createElement(\\"div\\");return e.className=\\"testing\\",e}export default e;
+//# sourceMappingURL=basic-css.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-css with jvdx 5`] = `
+"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"testing\\",e};
+//# sourceMappingURL=basic-css.js.map
+"
+`;
+
+exports[`build fixtures build basic-css with jvdx 6`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).basicCss=n()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"testing\\",e}});
+//# sourceMappingURL=basic-css.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-dashed-external with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic-dashed-external
+  dist
+    basic-dashed-external.esm.js
+    basic-dashed-external.esm.js.map
+    basic-dashed-external.js
+    basic-dashed-external.js.map
+    basic-dashed-external.umd.js
+    basic-dashed-external.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-dashed-external.js (511 B)
+  -> gzip: 259 B
+  -> brotli: 196 B
+./dist/basic-dashed-external.esm.js (425 B)
+  -> gzip: 214 B
+  -> brotli: 164 B
+./dist/basic-dashed-external.umd.js (753 B)
+  -> gzip: 355 B
+  -> brotli: 295 B
+"
+`;
+
+exports[`build fixtures build basic-dashed-external with jvdx 2`] = `6`;
+
+exports[`build fixtures build basic-dashed-external with jvdx 3`] = `
+"import r from\\"tiny-glob\\";var e=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};console.log(r);export default function(){try{var r=arguments,t=[].slice.call(r);return Promise.resolve(e.apply(void 0,t)).then(function(r){return Promise.resolve(e.apply(void 0,t)).then(function(e){return[r,e]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=basic-dashed-external.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-dashed-external with jvdx 4`] = `
+"var e=require(\\"tiny-glob\\");function r(e){return e&&\\"object\\"==typeof e&&\\"default\\"in e?e:{default:e}}var t=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,r){return e+r},0))}catch(e){return Promise.reject(e)}};console.log(r(e).default),module.exports=function(){try{var e=arguments,r=[].slice.call(e);return Promise.resolve(t.apply(void 0,r)).then(function(e){return Promise.resolve(t.apply(void 0,r)).then(function(r){return[e,r]})})}catch(e){return Promise.reject(e)}};
+//# sourceMappingURL=basic-dashed-external.js.map
+"
+`;
+
+exports[`build fixtures build basic-dashed-external with jvdx 5`] = `
+"!function(e,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t(require(\\"tiny-glob\\")):\\"function\\"==typeof define&&define.amd?define([\\"tiny-glob\\"],t):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).basicDashedExternal=t(e.tinyGlob)}(this,function(e){function t(e){return e&&\\"object\\"==typeof e&&\\"default\\"in e?e:{default:e}}var n=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,t){return e+t},0))}catch(e){return Promise.reject(e)}};return console.log(t(e).default),function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(n.apply(void 0,t)).then(function(e){return Promise.resolve(n.apply(void 0,t)).then(function(t){return[e,t]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=basic-dashed-external.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-flow with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic-flow
+  dist
+    basic-lib-flow.esm.js
+    basic-lib-flow.esm.js.map
+    basic-lib-flow.js
+    basic-lib-flow.js.map
+    basic-lib-flow.umd.js
+    basic-lib-flow.umd.js.map
+  package.json
+  src
+    fruits.js
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-lib-flow.js (39 B)
+  -> gzip: 57 B
+  -> brotli: 43 B
+./dist/basic-lib-flow.esm.js (38 B)
+  -> gzip: 56 B
+  -> brotli: 42 B
+./dist/basic-lib-flow.umd.js (291 B)
+  -> gzip: 186 B
+  -> brotli: 147 B
+"
+`;
+
+exports[`build fixtures build basic-flow with jvdx 2`] = `6`;
+
+exports[`build fixtures build basic-flow with jvdx 3`] = `
+"export default[\\"banana\\",\\"raspberry\\"];
+//# sourceMappingURL=basic-lib-flow.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-flow with jvdx 4`] = `
+"module.exports=[\\"banana\\",\\"raspberry\\"];
+//# sourceMappingURL=basic-lib-flow.js.map
+"
+`;
+
+exports[`build fixtures build basic-flow with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=[\\"banana\\",\\"raspberry\\"]:\\"function\\"==typeof define&&define.amd?define(function(){return[\\"banana\\",\\"raspberry\\"]}):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).basicLibFlow=[\\"banana\\",\\"raspberry\\"]}(this);
+//# sourceMappingURL=basic-lib-flow.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-json with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic-json
+  dist
+    basic-json.esm.js
+    basic-json.esm.js.map
+    basic-json.js
+    basic-json.js.map
+    basic-json.umd.js
+    basic-json.umd.js.map
+  package.json
+  src
+    index.js
+    two.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-json.js (74 B)
+  -> gzip: 93 B
+  -> brotli: 65 B
+./dist/basic-json.esm.js (73 B)
+  -> gzip: 92 B
+  -> brotli: 64 B
+./dist/basic-json.umd.js (288 B)
+  -> gzip: 196 B
+  -> brotli: 145 B
+"
+`;
+
+exports[`build fixtures build basic-json with jvdx 2`] = `6`;
+
+exports[`build fixtures build basic-json with jvdx 3`] = `
+"var e={test:\\"true\\"};export default function(){return Promise.resolve(e)}
+//# sourceMappingURL=basic-json.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-json with jvdx 4`] = `
+"var e={test:\\"true\\"};module.exports=function(){return Promise.resolve(e)};
+//# sourceMappingURL=basic-json.js.map
+"
+`;
+
+exports[`build fixtures build basic-json with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).basicJson=n()}(this,function(){var e={test:\\"true\\"};return function(){return Promise.resolve(e)}});
+//# sourceMappingURL=basic-json.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-multi-source with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic-multi-source
+  a.js
+  b.js
+  dist
+    a.esm.js
+    a.esm.js.map
+    a.js
+    a.js.map
+    a.umd.js
+    a.umd.js.map
+    b.esm.js
+    b.esm.js.map
+    b.js
+    b.js.map
+    b.umd.js
+    b.umd.js.map
+  package.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/a.js (23 B)
+  -> gzip: 43 B
+  -> brotli: 27 B
+./dist/a.esm.js (23 B)
+  -> gzip: 43 B
+  -> brotli: 27 B
+./dist/a.umd.js (102 B)
+  -> gzip: 99 B
+  -> brotli: 84 B
+./dist/b.js (23 B)
+  -> gzip: 43 B
+  -> brotli: 27 B
+./dist/b.esm.js (23 B)
+  -> gzip: 43 B
+  -> brotli: 27 B
+./dist/b.umd.js (102 B)
+  -> gzip: 99 B
+  -> brotli: 79 B
+"
+`;
+
+exports[`build fixtures build basic-multi-source with jvdx 2`] = `12`;
+
+exports[`build fixtures build basic-multi-source with jvdx 3`] = `
+"console.log(\\"i am a\\");
+//# sourceMappingURL=a.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-multi-source with jvdx 4`] = `
+"console.log(\\"i am a\\");
+//# sourceMappingURL=a.js.map
+"
+`;
+
+exports[`build fixtures build basic-multi-source with jvdx 5`] = `
+"!function(n){\\"function\\"==typeof define&&define.amd?define(n):n()}(function(){console.log(\\"i am a\\")});
+//# sourceMappingURL=a.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-multi-source with jvdx 6`] = `
+"console.log(\\"i am b\\");
+//# sourceMappingURL=b.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-multi-source with jvdx 7`] = `
+"console.log(\\"i am b\\");
+//# sourceMappingURL=b.js.map
+"
+`;
+
+exports[`build fixtures build basic-multi-source with jvdx 8`] = `
+"!function(n){\\"function\\"==typeof define&&define.amd?define(n):n()}(function(){console.log(\\"i am b\\")});
+//# sourceMappingURL=b.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-no-compress with jvdx 1`] = `
+"Used script: jvdx build --no-compress
+
+Directory tree:
+
+basic-no-compress
+  dist
+    basic-no-compress.esm.js
+    basic-no-compress.esm.js.map
+    basic-no-compress.js
+    basic-no-compress.js.map
+    basic-no-compress.umd.js
+    basic-no-compress.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-no-compress.js (640 B)
+  -> gzip: 260 B
+  -> brotli: 206 B
+./dist/basic-no-compress.esm.js (638 B)
+  -> gzip: 258 B
+  -> brotli: 209 B
+./dist/basic-no-compress.umd.js (984 B)
+  -> gzip: 392 B
+  -> brotli: 319 B
+"
+`;
+
+exports[`build fixtures build basic-no-compress with jvdx 2`] = `6`;
+
+exports[`build fixtures build basic-no-compress with jvdx 3`] = `
+"var two = function two() {
+  try {
+    var _arguments2 = arguments;
+    return Promise.resolve([].slice.call(_arguments2).reduce(function (total, value) {
+      return total + value;
+    }, 0));
+  } catch (e) {
+    return Promise.reject(e);
+  }
+};
+
+var index = (function () {
+  try {
+    var _arguments2 = arguments;
+    var args = [].slice.call(_arguments2);
+    return Promise.resolve(two.apply(void 0, args)).then(function (_two) {
+      return Promise.resolve(two.apply(void 0, args)).then(function (_two2) {
+        return [_two, _two2];
+      });
+    });
+  } catch (e) {
+    return Promise.reject(e);
+  }
+});
+
+export default index;
+//# sourceMappingURL=basic-no-compress.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-no-compress with jvdx 4`] = `
+"var two = function two() {
+  try {
+    var _arguments2 = arguments;
+    return Promise.resolve([].slice.call(_arguments2).reduce(function (total, value) {
+      return total + value;
+    }, 0));
+  } catch (e) {
+    return Promise.reject(e);
+  }
+};
+
+var index = (function () {
+  try {
+    var _arguments2 = arguments;
+    var args = [].slice.call(_arguments2);
+    return Promise.resolve(two.apply(void 0, args)).then(function (_two) {
+      return Promise.resolve(two.apply(void 0, args)).then(function (_two2) {
+        return [_two, _two2];
+      });
+    });
+  } catch (e) {
+    return Promise.reject(e);
+  }
+});
+
+module.exports = index;
+//# sourceMappingURL=basic-no-compress.js.map
+"
+`;
+
+exports[`build fixtures build basic-no-compress with jvdx 5`] = `
+"(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.basicNoCompress = factory());
+}(this, (function () {
+	var two = function two() {
+	  try {
+	    var _arguments2 = arguments;
+	    return Promise.resolve([].slice.call(_arguments2).reduce(function (total, value) {
+	      return total + value;
+	    }, 0));
+	  } catch (e) {
+	    return Promise.reject(e);
+	  }
+	};
+
+	var index = (function () {
+	  try {
+	    var _arguments2 = arguments;
+	    var args = [].slice.call(_arguments2);
+	    return Promise.resolve(two.apply(void 0, args)).then(function (_two) {
+	      return Promise.resolve(two.apply(void 0, args)).then(function (_two2) {
+	        return [_two, _two2];
+	      });
+	    });
+	  } catch (e) {
+	    return Promise.reject(e);
+	  }
+	});
+
+	return index;
+
+})));
+//# sourceMappingURL=basic-no-compress.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-no-pkg-main with jvdx 1`] = `
+"Used script: jvdx build --pkg-main false
+
+Directory tree:
+
+basic-no-pkg-main
+  dist
+    basic-no-pkg-main.js
+    basic-no-pkg-main.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-no-pkg-main.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/basic-no-pkg-main.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/basic-no-pkg-main.js (605 B)
+  -> gzip: 294 B
+  -> brotli: 245 B
+"
+`;
+
+exports[`build fixtures build basic-no-pkg-main with jvdx 2`] = `2`;
+
+exports[`build fixtures build basic-no-pkg-main with jvdx 3`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).basicNoPkgMain=n()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,n){return e+n},0))}catch(e){return Promise.reject(e)}};return function(){try{var n=arguments,r=[].slice.call(n);return Promise.resolve(e.apply(void 0,r)).then(function(n){return Promise.resolve(e.apply(void 0,r)).then(function(e){return[n,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=basic-no-pkg-main.js.map
+"
+`;
+
+exports[`build fixtures build basic-node-internals with jvdx 1`] = `
+"Used script: jvdx build --target=node -f cjs
+
+Directory tree:
+
+basic-node-internals
+  dist
+    basic-node-internals.js
+    basic-node-internals.js.map
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-node-internals.js (309 B)
+  -> gzip: 191 B
+  -> brotli: 149 B
+"
+`;
+
+exports[`build fixtures build basic-node-internals with jvdx 2`] = `2`;
+
+exports[`build fixtures build basic-node-internals with jvdx 3`] = `
+"var child_process = require('child_process');
+
+function runCommand(cmd) {
+  return new Promise((resolve, reject) => {
+    child_process.exec(cmd, (error, stdout, stderr) => {
+      if (error) {
+        reject(error);
+      }
+
+      resolve(stdout || stderr);
+    });
+  });
+}
+
+exports.runCommand = runCommand;
+//# sourceMappingURL=basic-node-internals.js.map
+"
+`;
+
+exports[`build fixtures build basic-ts with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic-ts
+  dist
+    basic-lib-ts.esm.js
+    basic-lib-ts.esm.js.map
+    basic-lib-ts.js
+    basic-lib-ts.js.map
+    basic-lib-ts.umd.js
+    basic-lib-ts.umd.js.map
+    car.d.ts
+    index.d.ts
+  node_modules
+  package.json
+  src
+    car.ts
+    index.ts
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-lib-ts.js (106 B)
+  -> gzip: 104 B
+  -> brotli: 76 B
+./dist/basic-lib-ts.esm.js (106 B)
+  -> gzip: 104 B
+  -> brotli: 82 B
+./dist/basic-lib-ts.umd.js (313 B)
+  -> gzip: 201 B
+  -> brotli: 158 B
+"
+`;
+
+exports[`build fixtures build basic-ts with jvdx 2`] = `8`;
+
+exports[`build fixtures build basic-ts with jvdx 3`] = `
+"var n=new(function(){function n(){}return n.prototype.drive=function(n){return!0},n}());export default n;
+//# sourceMappingURL=basic-lib-ts.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-ts with jvdx 4`] = `
+"var n=new(function(){function n(){}return n.prototype.drive=function(n){return!0},n}());module.exports=n;
+//# sourceMappingURL=basic-lib-ts.js.map
+"
+`;
+
+exports[`build fixtures build basic-ts with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).basicLibTs=n()}(this,function(){return new(function(){function e(){}return e.prototype.drive=function(e){return!0},e}())});
+//# sourceMappingURL=basic-lib-ts.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-ts with jvdx 6`] = `
+"export interface Driveable {
+    drive(distance: number): boolean;
+}
+export default class Car implements Driveable {
+    drive(distance: number): boolean;
+}
+"
+`;
+
+exports[`build fixtures build basic-ts with jvdx 7`] = `
+"import Car from './car';
+declare let Ferrari: Car;
+export default Ferrari;
+"
+`;
+
+exports[`build fixtures build basic-tsx with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic-tsx
+  dist
+    basic-lib-tsx.esm.js
+    basic-lib-tsx.esm.js.map
+    basic-lib-tsx.js
+    basic-lib-tsx.js.map
+    basic-lib-tsx.umd.js
+    basic-lib-tsx.umd.js.map
+    index.d.ts
+  node_modules
+  package.json
+  src
+    index.tsx
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic-lib-tsx.js (245 B)
+  -> gzip: 199 B
+  -> brotli: 153 B
+./dist/basic-lib-tsx.esm.js (249 B)
+  -> gzip: 200 B
+  -> brotli: 153 B
+./dist/basic-lib-tsx.umd.js (461 B)
+  -> gzip: 294 B
+  -> brotli: 233 B
+"
+`;
+
+exports[`build fixtures build basic-tsx with jvdx 2`] = `7`;
+
+exports[`build fixtures build basic-tsx with jvdx 3`] = `
+"var n=function(n,r){return{tag:n,props:r,children:[].slice.call(arguments,2)}},r=function(){function r(){}return r.prototype.render=function(){return n(\\"div\\",{id:\\"app\\"},n(\\"h1\\",null,\\"Hello, World!\\"),n(\\"p\\",null,\\"A JSX demo.\\"))},r}();export default r;
+//# sourceMappingURL=basic-lib-tsx.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-tsx with jvdx 4`] = `
+"var n=function(n,r){return{tag:n,props:r,children:[].slice.call(arguments,2)}};module.exports=function(){function r(){}return r.prototype.render=function(){return n(\\"div\\",{id:\\"app\\"},n(\\"h1\\",null,\\"Hello, World!\\"),n(\\"p\\",null,\\"A JSX demo.\\"))},r}();
+//# sourceMappingURL=basic-lib-tsx.js.map
+"
+`;
+
+exports[`build fixtures build basic-tsx with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).basicLibTsx=n()}(this,function(){var e=function(e,n){return{tag:e,props:n,children:[].slice.call(arguments,2)}};return function(){function n(){}return n.prototype.render=function(){return e(\\"div\\",{id:\\"app\\"},e(\\"h1\\",null,\\"Hello, World!\\"),e(\\"p\\",null,\\"A JSX demo.\\"))},n}()});
+//# sourceMappingURL=basic-lib-tsx.umd.js.map
+"
+`;
+
+exports[`build fixtures build basic-tsx with jvdx 6`] = `
+"export default class Foo {
+    render(): any;
+}
+"
+`;
+
+exports[`build fixtures build basic-with-cwd with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+basic
+  dist
+    basic.esm.js
+    basic.esm.js.map
+    basic.js
+    basic.js.map
+    basic.umd.js
+    basic.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/basic.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/basic.esm.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/basic.umd.js (596 B)
+  -> gzip: 283 B
+  -> brotli: 233 B
+"
+`;
+
+exports[`build fixtures build basic-with-cwd with jvdx 2`] = `6`;
+
+exports[`build fixtures build basic-with-cwd with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=basic.esm.js.map
+"
+`;
+
+exports[`build fixtures build basic-with-cwd with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=basic.js.map
+"
+`;
+
+exports[`build fixtures build basic-with-cwd with jvdx 5`] = `
+"!function(e,r){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=r():\\"function\\"==typeof define&&define.amd?define(r):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).basic=r()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,r){return e+r},0))}catch(e){return Promise.reject(e)}};return function(){try{var r=arguments,n=[].slice.call(r);return Promise.resolve(e.apply(void 0,n)).then(function(r){return Promise.resolve(e.apply(void 0,n)).then(function(e){return[r,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=basic.umd.js.map
+"
+`;
+
+exports[`build fixtures build class-decorators-ts with jvdx 1`] = `
+"Used script: jvdx build --raw
+
+Directory tree:
+
+class-decorators-ts
+  dist
+    class-decorators-ts.esm.js
+    class-decorators-ts.esm.js.map
+    class-decorators-ts.js
+    class-decorators-ts.js.map
+    class-decorators-ts.umd.js
+    class-decorators-ts.umd.js.map
+    index.d.ts
+  node_modules
+  package.json
+  src
+    index.ts
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/class-decorators-ts.js (543 B)
+  -> gzip: 333 B
+  -> brotli: 276 B
+./dist/class-decorators-ts.esm.js (543 B)
+  -> gzip: 333 B
+  -> brotli: 278 B
+./dist/class-decorators-ts.umd.js (761 B)
+  -> gzip: 414 B
+  -> brotli: 355 B
+"
+`;
+
+exports[`build fixtures build class-decorators-ts with jvdx 2`] = `7`;
+
+exports[`build fixtures build class-decorators-ts with jvdx 3`] = `
+"var e=function(){function e(e){this.greeting=e}return e.prototype.greet=function(){return\\"Hello, \\"+this.greeting},e}(),t=new(e=function(e,t,r,n){var o,c=arguments.length,l=c<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,r):n;if(\\"object\\"==typeof Reflect&&\\"function\\"==typeof Reflect.decorate)l=Reflect.decorate(e,t,r,n);else for(var f=e.length-1;f>=0;f--)(o=e[f])&&(l=(c<3?o(l):c>3?o(t,r,l):o(t,r))||l);return c>3&&l&&Object.defineProperty(t,r,l),l}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))(\\"Hello World\\");export default t;
+//# sourceMappingURL=class-decorators-ts.esm.js.map
+"
+`;
+
+exports[`build fixtures build class-decorators-ts with jvdx 4`] = `
+"var e=function(){function e(e){this.greeting=e}return e.prototype.greet=function(){return\\"Hello, \\"+this.greeting},e}(),t=new(e=function(e,t,r,o){var n,c=arguments.length,l=c<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if(\\"object\\"==typeof Reflect&&\\"function\\"==typeof Reflect.decorate)l=Reflect.decorate(e,t,r,o);else for(var f=e.length-1;f>=0;f--)(n=e[f])&&(l=(c<3?n(l):c>3?n(t,r,l):n(t,r))||l);return c>3&&l&&Object.defineProperty(t,r,l),l}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))(\\"Hello World\\");module.exports=t;
+//# sourceMappingURL=class-decorators-ts.js.map
+"
+`;
+
+exports[`build fixtures build class-decorators-ts with jvdx 5`] = `
+"!function(e,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t():\\"function\\"==typeof define&&define.amd?define(t):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).classDecoratorsTs=t()}(this,function(){var e=function(){function e(e){this.greeting=e}return e.prototype.greet=function(){return\\"Hello, \\"+this.greeting},e}();return new(e=function(e,t,o,n){var r,f=arguments.length,i=f<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,o):n;if(\\"object\\"==typeof Reflect&&\\"function\\"==typeof Reflect.decorate)i=Reflect.decorate(e,t,o,n);else for(var c=e.length-1;c>=0;c--)(r=e[c])&&(i=(f<3?r(i):f>3?r(t,o,i):r(t,o))||i);return f>3&&i&&Object.defineProperty(t,o,i),i}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))(\\"Hello World\\")});
+//# sourceMappingURL=class-decorators-ts.umd.js.map
+"
+`;
+
+exports[`build fixtures build class-decorators-ts with jvdx 6`] = `
+"declare class Greeter {
+    greeting: string;
+    constructor(message: string);
+    greet(): string;
+}
+declare const _default: Greeter;
+export default _default;
+"
+`;
+
+exports[`build fixtures build class-properties with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+class-properties
+  dist
+    class-properties.esm.js
+    class-properties.esm.js.map
+    class-properties.js
+    class-properties.js.map
+    class-properties.umd.js
+    class-properties.umd.js.map
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/class-properties.js (82 B)
+  -> gzip: 93 B
+  -> brotli: 79 B
+./dist/class-properties.esm.js (84 B)
+  -> gzip: 96 B
+  -> brotli: 85 B
+./dist/class-properties.umd.js (305 B)
+  -> gzip: 213 B
+  -> brotli: 166 B
+"
+`;
+
+exports[`build fixtures build class-properties with jvdx 2`] = `6`;
+
+exports[`build fixtures build class-properties with jvdx 3`] = `
+"var a=function(){this.baz=3};a.bar=2;var r=new a;export default r;export{a as Foo};
+//# sourceMappingURL=class-properties.esm.js.map
+"
+`;
+
+exports[`build fixtures build class-properties with jvdx 4`] = `
+"var a=function(){this.baz=3};a.bar=2;var o=new a;exports.Foo=a,exports.default=o;
+//# sourceMappingURL=class-properties.js.map
+"
+`;
+
+exports[`build fixtures build class-properties with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?o(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],o):o((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).classProperties={})}(this,function(e){var o=function(){this.baz=3};o.bar=2;var n=new o;e.Foo=o,e.default=n});
+//# sourceMappingURL=class-properties.umd.js.map
+"
+`;
+
+exports[`build fixtures build css-modules--false with jvdx 1`] = `
+"Used script: jvdx build --no-sourcemap --css-modules false
+
+Directory tree:
+
+css-modules--false
+  dist
+    css-modules--false.css
+    css-modules--false.esm.js
+    css-modules--false.js
+    css-modules--false.umd.js
+  package.json
+  src
+    index.js
+    not_scoped.css
+    not_scoped.module.css
+
+
+Built in 0s
+
+Bundle(s)
+./dist/css-modules--false.js (29 B)
+  -> gzip: 49 B
+  -> brotli: 23 B
+./dist/css-modules--false.esm.js (32 B)
+  -> gzip: 52 B
+  -> brotli: 36 B
+./dist/css-modules--false.umd.js (265 B)
+  -> gzip: 172 B
+  -> brotli: 125 B
+"
+`;
+
+exports[`build fixtures build css-modules--false with jvdx 2`] = `4`;
+
+exports[`build fixtures build css-modules--false with jvdx 3`] = `"body{display:flex;color:red;background:#00f}.test_class_that_shouldnt_be_scoped{background-color:#00f}.not_scoped_class{color:pink}"`;
+
+exports[`build fixtures build css-modules--false with jvdx 4`] = `
+"function t(){}export default t;
+"
+`;
+
+exports[`build fixtures build css-modules--false with jvdx 5`] = `
+"module.exports=function(){};
+"
+`;
+
+exports[`build fixtures build css-modules--false with jvdx 6`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=function(){}:\\"function\\"==typeof define&&define.amd?define(function(){return function(){}}):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).cssModulesFalse=function(){}}(this);
+"
+`;
+
+exports[`build fixtures build css-modules--null with jvdx 1`] = `
+"Used script: jvdx build --no-sourcemap
+
+Directory tree:
+
+css-modules--null
+  dist
+    css-modules--null.css
+    css-modules--null.esm.js
+    css-modules--null.js
+    css-modules--null.umd.js
+  package.json
+  src
+    index.js
+    not_scoped.css
+    scoped.module.css
+
+
+Built in 0s
+
+Bundle(s)
+./dist/css-modules--null.js (94 B)
+  -> gzip: 110 B
+  -> brotli: 72 B
+./dist/css-modules--null.esm.js (97 B)
+  -> gzip: 112 B
+  -> brotli: 77 B
+./dist/css-modules--null.umd.js (313 B)
+  -> gzip: 217 B
+  -> brotli: 152 B
+"
+`;
+
+exports[`build fixtures build css-modules--null with jvdx 2`] = `4`;
+
+exports[`build fixtures build css-modules--null with jvdx 3`] = `"body{display:flex;color:red;background:#00f}.test_class_that_shouldnt_be_scoped{background-color:#00f}._2kWDE{color:pink}"`;
+
+exports[`build fixtures build css-modules--null with jvdx 4`] = `
+"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE\\",e}export default e;
+"
+`;
+
+exports[`build fixtures build css-modules--null with jvdx 5`] = `
+"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE\\",e};
+"
+`;
+
+exports[`build fixtures build css-modules--null with jvdx 6`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).cssModulesNull=n()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE\\",e}});
+"
+`;
+
+exports[`build fixtures build css-modules--string with jvdx 1`] = `
+"Used script: jvdx build --no-sourcemap --css-modules '_contains_this_[hash]'
+
+Directory tree:
+
+css-modules--string
+  dist
+    css-modules--string.css
+    css-modules--string.esm.js
+    css-modules--string.js
+    css-modules--string.umd.js
+  package.json
+  src
+    index.js
+    scoped.css
+    scoped.module.css
+
+
+Built in 0s
+
+Bundle(s)
+./dist/css-modules--string.js (183 B)
+  -> gzip: 166 B
+  -> brotli: 118 B
+./dist/css-modules--string.esm.js (186 B)
+  -> gzip: 168 B
+  -> brotli: 122 B
+./dist/css-modules--string.umd.js (404 B)
+  -> gzip: 278 B
+  -> brotli: 207 B
+"
+`;
+
+exports[`build fixtures build css-modules--string with jvdx 2`] = `4`;
+
+exports[`build fixtures build css-modules--string with jvdx 3`] = `"body{display:flex;color:red;background:#00f}._contains_this_81567d0efc15a456670452d3277e1a68{background-color:#00f}._contains_this_0a8c24df242c2cd708036873307aea94{color:pink}"`;
+
+exports[`build fixtures build css-modules--string with jvdx 4`] = `
+"function a(){var a=document.createElement(\\"div\\");return a.className=\\"_contains_this_0a8c24df242c2cd708036873307aea94 _contains_this_81567d0efc15a456670452d3277e1a68\\",a}export default a;
+"
+`;
+
+exports[`build fixtures build css-modules--string with jvdx 5`] = `
+"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"_contains_this_0a8c24df242c2cd708036873307aea94 _contains_this_81567d0efc15a456670452d3277e1a68\\",e};
+"
+`;
+
+exports[`build fixtures build css-modules--string with jvdx 6`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).cssModulesString=n()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"_contains_this_0a8c24df242c2cd708036873307aea94 _contains_this_81567d0efc15a456670452d3277e1a68\\",e}});
+"
+`;
+
+exports[`build fixtures build css-modules--true with jvdx 1`] = `
+"Used script: jvdx build --no-sourcemap --css-modules true
+
+Directory tree:
+
+css-modules--true
+  dist
+    css-modules--true.css
+    css-modules--true.esm.js
+    css-modules--true.js
+    css-modules--true.umd.js
+  package.json
+  src
+    index.js
+    scoped.css
+    scoped.module.css
+
+
+Built in 0s
+
+Bundle(s)
+./dist/css-modules--true.js (137 B)
+  -> gzip: 139 B
+  -> brotli: 94 B
+./dist/css-modules--true.esm.js (140 B)
+  -> gzip: 141 B
+  -> brotli: 108 B
+./dist/css-modules--true.umd.js (356 B)
+  -> gzip: 246 B
+  -> brotli: 179 B
+"
+`;
+
+exports[`build fixtures build css-modules--true with jvdx 2`] = `4`;
+
+exports[`build fixtures build css-modules--true with jvdx 3`] = `"body{display:flex;color:red;background:#00f}.test_class_that_should_be_scoped{background-color:#00f}._2kWDE{color:pink}"`;
+
+exports[`build fixtures build css-modules--true with jvdx 4`] = `
+"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE \\"+(void 0).test_class_that_should_be_scoped,e}export default e;
+"
+`;
+
+exports[`build fixtures build css-modules--true with jvdx 5`] = `
+"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE \\"+(void 0).test_class_that_should_be_scoped,e};
+"
+`;
+
+exports[`build fixtures build css-modules--true with jvdx 6`] = `
+"!function(e,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t():\\"function\\"==typeof define&&define.amd?define(t):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).cssModulesTrue=t()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE \\"+(void 0).test_class_that_should_be_scoped,e}});
+"
+`;
+
+exports[`build fixtures build custom-babelrc with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+custom-babelrc
+  dist
+    custom-babelrc.esm.js
+    custom-babelrc.esm.js.map
+    custom-babelrc.js
+    custom-babelrc.js.map
+    custom-babelrc.umd.js
+    custom-babelrc.umd.js.map
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/custom-babelrc.js (279 B)
+  -> gzip: 218 B
+  -> brotli: 193 B
+./dist/custom-babelrc.esm.js (285 B)
+  -> gzip: 222 B
+  -> brotli: 185 B
+./dist/custom-babelrc.umd.js (506 B)
+  -> gzip: 324 B
+  -> brotli: 270 B
+"
+`;
+
+exports[`build fixtures build custom-babelrc with jvdx 2`] = `6`;
+
+exports[`build fixtures build custom-babelrc with jvdx 3`] = `
+"class e{constructor(){var e,r;r=[\\"foo\\",\\"bar\\"],(e=\\"myFields\\")in this?Object.defineProperty(this,e,{value:r,enumerable:!0,configurable:!0,writable:!0}):this[e]=r}foo(){try{return Promise.resolve(this.myFields.find(e=>\\"bar\\"===e))}catch(e){return Promise.reject(e)}}}export{e as MyClass};
+//# sourceMappingURL=custom-babelrc.esm.js.map
+"
+`;
+
+exports[`build fixtures build custom-babelrc with jvdx 4`] = `
+"exports.MyClass=class{constructor(){var e,r;r=[\\"foo\\",\\"bar\\"],(e=\\"myFields\\")in this?Object.defineProperty(this,e,{value:r,enumerable:!0,configurable:!0,writable:!0}):this[e]=r}foo(){try{return Promise.resolve(this.myFields.find(e=>\\"bar\\"===e))}catch(e){return Promise.reject(e)}}};
+//# sourceMappingURL=custom-babelrc.js.map
+"
+`;
+
+exports[`build fixtures build custom-babelrc with jvdx 5`] = `
+"!function(e,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?t(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],t):t((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).customBabelrc={})}(this,function(e){e.MyClass=class{constructor(){var e,t;t=[\\"foo\\",\\"bar\\"],(e=\\"myFields\\")in this?Object.defineProperty(this,e,{value:t,enumerable:!0,configurable:!0,writable:!0}):this[e]=t}foo(){try{return Promise.resolve(this.myFields.find(e=>\\"bar\\"===e))}catch(e){return Promise.reject(e)}}}});
+//# sourceMappingURL=custom-babelrc.umd.js.map
+"
+`;
+
+exports[`build fixtures build custom-source with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+custom-source
+  dist
+    custom-source.esm.js
+    custom-source.esm.js.map
+    custom-source.js
+    custom-source.js.map
+    custom-source.umd.js
+    custom-source.umd.js.map
+  package.json
+  src
+    custom-source.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/custom-source.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/custom-source.esm.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/custom-source.umd.js (603 B)
+  -> gzip: 288 B
+  -> brotli: 232 B
+"
+`;
+
+exports[`build fixtures build custom-source with jvdx 2`] = `6`;
+
+exports[`build fixtures build custom-source with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=custom-source.esm.js.map
+"
+`;
+
+exports[`build fixtures build custom-source with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=custom-source.js.map
+"
+`;
+
+exports[`build fixtures build custom-source with jvdx 5`] = `
+"!function(e,r){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=r():\\"function\\"==typeof define&&define.amd?define(r):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).customSource=r()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,r){return e+r},0))}catch(e){return Promise.reject(e)}};return function(){try{var r=arguments,n=[].slice.call(r);return Promise.resolve(e.apply(void 0,n)).then(function(r){return Promise.resolve(e.apply(void 0,n)).then(function(e){return[r,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=custom-source.umd.js.map
+"
+`;
+
+exports[`build fixtures build custom-source-with-cwd with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+custom-source
+  dist
+    custom-src.esm.js
+    custom-src.esm.js.map
+    custom-src.js
+    custom-src.js.map
+    custom-src.umd.js
+    custom-src.umd.js.map
+  package.json
+  src
+    custom-source.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/custom-src.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/custom-src.esm.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/custom-src.umd.js (600 B)
+  -> gzip: 286 B
+  -> brotli: 234 B
+"
+`;
+
+exports[`build fixtures build custom-source-with-cwd with jvdx 2`] = `6`;
+
+exports[`build fixtures build custom-source-with-cwd with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=custom-src.esm.js.map
+"
+`;
+
+exports[`build fixtures build custom-source-with-cwd with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=custom-src.js.map
+"
+`;
+
+exports[`build fixtures build custom-source-with-cwd with jvdx 5`] = `
+"!function(e,r){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=r():\\"function\\"==typeof define&&define.amd?define(r):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).customSrc=r()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,r){return e+r},0))}catch(e){return Promise.reject(e)}};return function(){try{var r=arguments,n=[].slice.call(r);return Promise.resolve(e.apply(void 0,n)).then(function(r){return Promise.resolve(e.apply(void 0,n)).then(function(e){return[r,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=custom-src.umd.js.map
+"
+`;
+
+exports[`build fixtures build default-named with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+default-named
+  dist
+    default-named.esm.js
+    default-named.esm.js.map
+    default-named.js
+    default-named.js.map
+    default-named.umd.js
+    default-named.umd.js.map
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/default-named.js (45 B)
+  -> gzip: 60 B
+  -> brotli: 46 B
+./dist/default-named.esm.js (58 B)
+  -> gzip: 74 B
+  -> brotli: 62 B
+./dist/default-named.umd.js (265 B)
+  -> gzip: 182 B
+  -> brotli: 136 B
+"
+`;
+
+exports[`build fixtures build default-named with jvdx 2`] = `6`;
+
+exports[`build fixtures build default-named with jvdx 3`] = `
+"var t=42;function e(){}export default e;export{t as foo};
+//# sourceMappingURL=default-named.esm.js.map
+"
+`;
+
+exports[`build fixtures build default-named with jvdx 4`] = `
+"exports.default=function(){},exports.foo=42;
+//# sourceMappingURL=default-named.js.map
+"
+`;
+
+exports[`build fixtures build default-named with jvdx 5`] = `
+"!function(e,f){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?f(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],f):f((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).defaultNamed={})}(this,function(e){e.default=function(){},e.foo=42});
+//# sourceMappingURL=default-named.umd.js.map
+"
+`;
+
+exports[`build fixtures build define with jvdx 1`] = `
+"Used script: jvdx build --no-sourcemap --define DEBUG=false
+
+Directory tree:
+
+define
+  dist
+    define.esm.js
+    define.js
+    define.umd.js
+  index.js
+  package.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/define.js (35 B)
+  -> gzip: 55 B
+  -> brotli: 37 B
+./dist/define.esm.js (35 B)
+  -> gzip: 55 B
+  -> brotli: 37 B
+./dist/define.umd.js (114 B)
+  -> gzip: 108 B
+  -> brotli: 78 B
+"
+`;
+
+exports[`build fixtures build define with jvdx 2`] = `3`;
+
+exports[`build fixtures build define with jvdx 3`] = `
+"console.log(\\"production mode\\",!1);
+"
+`;
+
+exports[`build fixtures build define with jvdx 4`] = `
+"console.log(\\"production mode\\",!1);
+"
+`;
+
+exports[`build fixtures build define with jvdx 5`] = `
+"!function(n){\\"function\\"==typeof define&&define.amd?define(n):n()}(function(){console.log(\\"production mode\\",!1)});
+"
+`;
+
+exports[`build fixtures build define-expression with jvdx 1`] = `
+"Used script: jvdx build -f esm --no-sourcemap --define @Object.freeze=Object
+
+Directory tree:
+
+define-expression
+  dist
+    define-expression.esm.js
+  index.js
+  package.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/define-expression.esm.js (36 B)
+  -> gzip: 56 B
+  -> brotli: 40 B
+"
+`;
+
+exports[`build fixtures build define-expression with jvdx 2`] = `1`;
+
+exports[`build fixtures build define-expression with jvdx 3`] = `
+"console.log(Object({a:\\"b\\",c:\\"d\\"}));
+"
+`;
+
+exports[`build fixtures build esnext-ts with jvdx 1`] = `
+"Used script: jvdx build --raw
+
+Directory tree:
+
+esnext-ts
+  dist
+    esnext-ts.esm.js
+    esnext-ts.esm.js.map
+    esnext-ts.js
+    esnext-ts.js.map
+    esnext-ts.umd.js
+    esnext-ts.umd.js.map
+    index.d.ts
+  node_modules
+  package.json
+  src
+    index.ts
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/esnext-ts.js (2437 B)
+  -> gzip: 989 B
+  -> brotli: 883 B
+./dist/esnext-ts.esm.js (2437 B)
+  -> gzip: 990 B
+  -> brotli: 881 B
+./dist/esnext-ts.umd.js (2650 B)
+  -> gzip: 1064 B
+  -> brotli: 945 B
+"
+`;
+
+exports[`build fixtures build esnext-ts with jvdx 2`] = `7`;
+
+exports[`build fixtures build esnext-ts with jvdx 3`] = `
+"function n(t,e,i){if(!t.s){if(i instanceof r){if(!i.s)return void(i.o=n.bind(null,t,e));1&e&&(e=i.s),i=i.v}if(i&&i.then)return void i.then(n.bind(null,t,e),n.bind(null,t,2));t.s=e,t.v=i;var o=t.o;o&&o(t)}}var t=function(){try{var t,o,u,f,h=[],c=!0,v=!1,a=i(function(){return function(i,f){try{var v=function(){t=function(n){var t;if(\\"undefined\\"!=typeof Symbol){if(Symbol.asyncIterator&&null!=(t=n[Symbol.asyncIterator]))return t.call(n);if(Symbol.iterator&&null!=(t=n[Symbol.iterator]))return t.call(n)}throw new TypeError(\\"Object is not async iterable\\")}([1,2]);var i=function(t,i,o){for(var u;;){var f=t();if(e(f)&&(f=f.v),!f)return h;if(f.then){u=0;break}var h=o();if(h&&h.then){if(!e(h)){u=1;break}h=h.s}if(i){var c=i();if(c&&c.then&&!e(c)){u=2;break}}}var v=new r,a=n.bind(null,v,2);return(0===u?f.then(s):1===u?h.then(l):c.then(d)).then(void 0,a),v;function l(r){h=r;do{if(i&&(c=i())&&c.then&&!e(c))return void c.then(d).then(void 0,a);if(!(f=t())||e(f)&&!f.v)return void n(v,1,h);if(f.then)return void f.then(s).then(void 0,a);e(h=o())&&(h=h.v)}while(!h||!h.then);h.then(l).then(void 0,a)}function s(t){t?(h=o())&&h.then?h.then(l).then(void 0,a):l(h):n(v,1,h)}function d(){(f=t())?f.then?f.then(s).then(void 0,a):s(f):n(v,1,h)}}(function(){return!!Promise.resolve(t.next()).then(function(n){return c=o.done,o=n,Promise.resolve(o.value).then(function(n){return u=n,!c})})},function(){return!!(c=!0)},function(){h.push(u)});if(i&&i.then)return i.then(function(){})}()}catch(n){return f(n)}return v&&v.then?v.then(void 0,f):v}(0,function(n){v=!0,f=n})},function(n,r){function e(t){if(n)throw r;return r}var o=i(function(){var n=function(){if(!c&&null!=t.return)return Promise.resolve(t.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(v)throw f;if(n)throw t;return t});return o&&o.then?o.then(e):e()});return Promise.resolve(a&&a.then?a.then(function(n){return h}):h)}catch(n){return Promise.reject(n)}},r=function(){function t(){}return t.prototype.then=function(r,e){var i=new t,o=this.s;if(o){var u=1&o?r:e;if(u){try{n(i,1,u(this.v))}catch(t){n(i,2,t)}return i}return this}return this.o=function(t){try{var o=t.v;1&t.s?n(i,1,r?r(o):o):e?n(i,1,e(o)):n(i,2,o)}catch(t){n(i,2,t)}},i},t}();function e(n){return n instanceof r&&1&n.s}function i(n,t){try{var r=n()}catch(n){return t(!0,n)}return r&&r.then?r.then(t.bind(null,!1),t.bind(null,!0)):t(!1,r)}t().then(console.log);export default t;
+//# sourceMappingURL=esnext-ts.esm.js.map
+"
+`;
+
+exports[`build fixtures build esnext-ts with jvdx 4`] = `
+"function n(t,e,i){if(!t.s){if(i instanceof r){if(!i.s)return void(i.o=n.bind(null,t,e));1&e&&(e=i.s),i=i.v}if(i&&i.then)return void i.then(n.bind(null,t,e),n.bind(null,t,2));t.s=e,t.v=i;var o=t.o;o&&o(t)}}var t=function(){try{var t,o,u,f,h=[],c=!0,v=!1,a=i(function(){return function(i,f){try{var v=function(){t=function(n){var t;if(\\"undefined\\"!=typeof Symbol){if(Symbol.asyncIterator&&null!=(t=n[Symbol.asyncIterator]))return t.call(n);if(Symbol.iterator&&null!=(t=n[Symbol.iterator]))return t.call(n)}throw new TypeError(\\"Object is not async iterable\\")}([1,2]);var i=function(t,i,o){for(var u;;){var f=t();if(e(f)&&(f=f.v),!f)return h;if(f.then){u=0;break}var h=o();if(h&&h.then){if(!e(h)){u=1;break}h=h.s}if(i){var c=i();if(c&&c.then&&!e(c)){u=2;break}}}var v=new r,a=n.bind(null,v,2);return(0===u?f.then(s):1===u?h.then(l):c.then(d)).then(void 0,a),v;function l(r){h=r;do{if(i&&(c=i())&&c.then&&!e(c))return void c.then(d).then(void 0,a);if(!(f=t())||e(f)&&!f.v)return void n(v,1,h);if(f.then)return void f.then(s).then(void 0,a);e(h=o())&&(h=h.v)}while(!h||!h.then);h.then(l).then(void 0,a)}function s(t){t?(h=o())&&h.then?h.then(l).then(void 0,a):l(h):n(v,1,h)}function d(){(f=t())?f.then?f.then(s).then(void 0,a):s(f):n(v,1,h)}}(function(){return!!Promise.resolve(t.next()).then(function(n){return c=o.done,o=n,Promise.resolve(o.value).then(function(n){return u=n,!c})})},function(){return!!(c=!0)},function(){h.push(u)});if(i&&i.then)return i.then(function(){})}()}catch(n){return f(n)}return v&&v.then?v.then(void 0,f):v}(0,function(n){v=!0,f=n})},function(n,r){function e(t){if(n)throw r;return r}var o=i(function(){var n=function(){if(!c&&null!=t.return)return Promise.resolve(t.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(v)throw f;if(n)throw t;return t});return o&&o.then?o.then(e):e()});return Promise.resolve(a&&a.then?a.then(function(n){return h}):h)}catch(n){return Promise.reject(n)}},r=function(){function t(){}return t.prototype.then=function(r,e){var i=new t,o=this.s;if(o){var u=1&o?r:e;if(u){try{n(i,1,u(this.v))}catch(t){n(i,2,t)}return i}return this}return this.o=function(t){try{var o=t.v;1&t.s?n(i,1,r?r(o):o):e?n(i,1,e(o)):n(i,2,o)}catch(t){n(i,2,t)}},i},t}();function e(n){return n instanceof r&&1&n.s}function i(n,t){try{var r=n()}catch(n){return t(!0,n)}return r&&r.then?r.then(t.bind(null,!1),t.bind(null,!0)):t(!1,r)}t().then(console.log),module.exports=t;
+//# sourceMappingURL=esnext-ts.js.map
+"
+`;
+
+exports[`build fixtures build esnext-ts with jvdx 5`] = `
+"!function(n,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t():\\"function\\"==typeof define&&define.amd?define(t):(n=\\"undefined\\"!=typeof globalThis?globalThis:n||self).esnextTs=t()}(this,function(){function n(t,r,i){if(!t.s){if(i instanceof e){if(!i.s)return void(i.o=n.bind(null,t,r));1&r&&(r=i.s),i=i.v}if(i&&i.then)return void i.then(n.bind(null,t,r),n.bind(null,t,2));t.s=r,t.v=i;var o=t.o;o&&o(t)}}var t=function(){try{var t,o,u,f,h=[],c=!0,l=!1,a=i(function(){return function(i,f){try{var l=function(){t=function(n){var t;if(\\"undefined\\"!=typeof Symbol){if(Symbol.asyncIterator&&null!=(t=n[Symbol.asyncIterator]))return t.call(n);if(Symbol.iterator&&null!=(t=n[Symbol.iterator]))return t.call(n)}throw new TypeError(\\"Object is not async iterable\\")}([1,2]);var i=function(t,i,o){for(var u;;){var f=t();if(r(f)&&(f=f.v),!f)return h;if(f.then){u=0;break}var h=o();if(h&&h.then){if(!r(h)){u=1;break}h=h.s}if(i){var c=i();if(c&&c.then&&!r(c)){u=2;break}}}var l=new e,a=n.bind(null,l,2);return(0===u?f.then(s):1===u?h.then(v):c.then(d)).then(void 0,a),l;function v(e){h=e;do{if(i&&(c=i())&&c.then&&!r(c))return void c.then(d).then(void 0,a);if(!(f=t())||r(f)&&!f.v)return void n(l,1,h);if(f.then)return void f.then(s).then(void 0,a);r(h=o())&&(h=h.v)}while(!h||!h.then);h.then(v).then(void 0,a)}function s(t){t?(h=o())&&h.then?h.then(v).then(void 0,a):v(h):n(l,1,h)}function d(){(f=t())?f.then?f.then(s).then(void 0,a):s(f):n(l,1,h)}}(function(){return!!Promise.resolve(t.next()).then(function(n){return c=o.done,o=n,Promise.resolve(o.value).then(function(n){return u=n,!c})})},function(){return!!(c=!0)},function(){h.push(u)});if(i&&i.then)return i.then(function(){})}()}catch(n){return f(n)}return l&&l.then?l.then(void 0,f):l}(0,function(n){l=!0,f=n})},function(n,e){function r(t){if(n)throw e;return e}var o=i(function(){var n=function(){if(!c&&null!=t.return)return Promise.resolve(t.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(l)throw f;if(n)throw t;return t});return o&&o.then?o.then(r):r()});return Promise.resolve(a&&a.then?a.then(function(n){return h}):h)}catch(n){return Promise.reject(n)}},e=function(){function t(){}return t.prototype.then=function(e,r){var i=new t,o=this.s;if(o){var u=1&o?e:r;if(u){try{n(i,1,u(this.v))}catch(t){n(i,2,t)}return i}return this}return this.o=function(t){try{var o=t.v;1&t.s?n(i,1,e?e(o):o):r?n(i,1,r(o)):n(i,2,o)}catch(t){n(i,2,t)}},i},t}();function r(n){return n instanceof e&&1&n.s}function i(n,t){try{var e=n()}catch(n){return t(!0,n)}return e&&e.then?e.then(t.bind(null,!1),t.bind(null,!0)):t(!1,e)}return t().then(console.log),t});
+//# sourceMappingURL=esnext-ts.umd.js.map
+"
+`;
+
+exports[`build fixtures build esnext-ts with jvdx 6`] = `
+"export default function foo(): Promise<any[]>;
+"
+`;
+
+exports[`build fixtures build jsx with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+jsx
+  dist
+    jsx.esm.js
+    jsx.esm.js.map
+    jsx.js
+    jsx.js.map
+    jsx.umd.js
+    jsx.umd.js.map
+  index.js
+  package.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/jsx.js (304 B)
+  -> gzip: 210 B
+  -> brotli: 179 B
+./dist/jsx.esm.js (311 B)
+  -> gzip: 220 B
+  -> brotli: 184 B
+./dist/jsx.umd.js (540 B)
+  -> gzip: 307 B
+  -> brotli: 267 B
+"
+`;
+
+exports[`build fixtures build jsx with jvdx 2`] = `6`;
+
+exports[`build fixtures build jsx with jvdx 3`] = `
+"import{jsxs as r,jsx as e,Fragment as n}from\\"react/jsx-runtime\\";var t=function(){function t(){}return t.prototype.render=function(){return r(\\"div\\",{id:\\"app\\",children:[e(\\"h1\\",{children:\\"Hello, World!\\"}),e(\\"p\\",{children:\\"A JSX demo.\\"}),e(n,{children:e(\\"p\\",{children:\\"Test fragment\\"})})]})},t}();export default t;
+//# sourceMappingURL=jsx.esm.js.map
+"
+`;
+
+exports[`build fixtures build jsx with jvdx 4`] = `
+"var e=require(\\"react/jsx-runtime\\");module.exports=function(){function r(){}return r.prototype.render=function(){return e.jsxs(\\"div\\",{id:\\"app\\",children:[e.jsx(\\"h1\\",{children:\\"Hello, World!\\"}),e.jsx(\\"p\\",{children:\\"A JSX demo.\\"}),e.jsx(e.Fragment,{children:e.jsx(\\"p\\",{children:\\"Test fragment\\"})})]})},r}();
+//# sourceMappingURL=jsx.js.map
+"
+`;
+
+exports[`build fixtures build jsx with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n(require(\\"react/jsx-runtime\\")):\\"function\\"==typeof define&&define.amd?define([\\"react/jsx-runtime\\"],n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).jsx=n(e.jsxRuntime)}(this,function(e){return function(){function n(){}return n.prototype.render=function(){return e.jsxs(\\"div\\",{id:\\"app\\",children:[e.jsx(\\"h1\\",{children:\\"Hello, World!\\"}),e.jsx(\\"p\\",{children:\\"A JSX demo.\\"}),e.jsx(e.Fragment,{children:e.jsx(\\"p\\",{children:\\"Test fragment\\"})})]})},n}()});
+//# sourceMappingURL=jsx.umd.js.map
+"
+`;
+
+exports[`build fixtures build macro with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+macro
+  dist
+    macro-lib.esm.js
+    macro-lib.esm.js.map
+    macro-lib.js
+    macro-lib.js.map
+    macro-lib.umd.js
+    macro-lib.umd.js.map
+  package.json
+  src
+    index.js
+    macro.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/macro-lib.js (29 B)
+  -> gzip: 49 B
+  -> brotli: 33 B
+./dist/macro-lib.esm.js (28 B)
+  -> gzip: 48 B
+  -> brotli: 32 B
+./dist/macro-lib.umd.js (257 B)
+  -> gzip: 171 B
+  -> brotli: 129 B
+"
+`;
+
+exports[`build fixtures build macro with jvdx 2`] = `6`;
+
+exports[`build fixtures build macro with jvdx 3`] = `
+"export default\\"name-macro\\";
+//# sourceMappingURL=macro-lib.esm.js.map
+"
+`;
+
+exports[`build fixtures build macro with jvdx 4`] = `
+"module.exports=\\"name-macro\\";
+//# sourceMappingURL=macro-lib.js.map
+"
+`;
+
+exports[`build fixtures build macro with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=\\"name-macro\\":\\"function\\"==typeof define&&define.amd?define(function(){return\\"name-macro\\"}):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).macroLib=\\"name-macro\\"}(this);
+//# sourceMappingURL=macro-lib.umd.js.map
+"
+`;
+
+exports[`build fixtures build mangle-json-file with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+mangle-json-file
+  dist
+    mangle-json-file.esm.js
+    mangle-json-file.esm.js.map
+    mangle-json-file.js
+    mangle-json-file.js.map
+    mangle-json-file.umd.js
+    mangle-json-file.umd.js.map
+  mangle.json
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/mangle-json-file.js (101 B)
+  -> gzip: 103 B
+  -> brotli: 89 B
+./dist/mangle-json-file.esm.js (104 B)
+  -> gzip: 105 B
+  -> brotli: 91 B
+./dist/mangle-json-file.umd.js (320 B)
+  -> gzip: 211 B
+  -> brotli: 173 B
+"
+`;
+
+exports[`build fixtures build mangle-json-file with jvdx 2`] = `6`;
+
+exports[`build fixtures build mangle-json-file with jvdx 3`] = `
+"var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export default r;
+//# sourceMappingURL=mangle-json-file.esm.js.map
+"
+`;
+
+exports[`build fixtures build mangle-json-file with jvdx 4`] = `
+"var o={prop1:1,__p2:2};module.exports=function(){return console.log(o.prop1),console.log(o.__p2),o};
+//# sourceMappingURL=mangle-json-file.js.map
+"
+`;
+
+exports[`build fixtures build mangle-json-file with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=o():\\"function\\"==typeof define&&define.amd?define(o):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).mangleJsonFile=o()}(this,function(){var e={prop1:1,__p2:2};return function(){return console.log(e.prop1),console.log(e.__p2),e}});
+//# sourceMappingURL=mangle-json-file.umd.js.map
+"
+`;
+
+exports[`build fixtures build minify-config with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+minify-config
+  dist
+    minify-config.esm.js
+    minify-config.esm.js.map
+    minify-config.js
+    minify-config.js.map
+    minify-config.umd.js
+    minify-config.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/minify-config.js (95 B)
+  -> gzip: 99 B
+  -> brotli: 85 B
+./dist/minify-config.esm.js (98 B)
+  -> gzip: 101 B
+  -> brotli: 87 B
+./dist/minify-config.umd.js (312 B)
+  -> gzip: 205 B
+  -> brotli: 153 B
+"
+`;
+
+exports[`build fixtures build minify-config with jvdx 2`] = `6`;
+
+exports[`build fixtures build minify-config with jvdx 3`] = `
+"var o={prop1:1,o:2};function r(){return console.log(o.prop1),console.log(o.o),o}export default r;
+//# sourceMappingURL=minify-config.esm.js.map
+"
+`;
+
+exports[`build fixtures build minify-config with jvdx 4`] = `
+"var o={prop1:1,o:2};module.exports=function(){return console.log(o.prop1),console.log(o.o),o};
+//# sourceMappingURL=minify-config.js.map
+"
+`;
+
+exports[`build fixtures build minify-config with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=o():\\"function\\"==typeof define&&define.amd?define(o):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).minifyConfig=o()}(this,function(){var e={prop1:1,o:2};return function(){return console.log(e.prop1),console.log(e.o),e}});
+//# sourceMappingURL=minify-config.umd.js.map
+"
+`;
+
+exports[`build fixtures build minify-path-config with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+minify-path-config
+  dist
+    minify-path-config.esm.js
+    minify-path-config.esm.js.map
+    minify-path-config.js
+    minify-path-config.js.map
+    minify-path-config.umd.js
+    minify-path-config.umd.js.map
+  minify.json
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/minify-path-config.js (101 B)
+  -> gzip: 103 B
+  -> brotli: 89 B
+./dist/minify-path-config.esm.js (104 B)
+  -> gzip: 105 B
+  -> brotli: 91 B
+./dist/minify-path-config.umd.js (322 B)
+  -> gzip: 213 B
+  -> brotli: 166 B
+"
+`;
+
+exports[`build fixtures build minify-path-config with jvdx 2`] = `6`;
+
+exports[`build fixtures build minify-path-config with jvdx 3`] = `
+"var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export default r;
+//# sourceMappingURL=minify-path-config.esm.js.map
+"
+`;
+
+exports[`build fixtures build minify-path-config with jvdx 4`] = `
+"var o={prop1:1,__p2:2};module.exports=function(){return console.log(o.prop1),console.log(o.__p2),o};
+//# sourceMappingURL=minify-path-config.js.map
+"
+`;
+
+exports[`build fixtures build minify-path-config with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=o():\\"function\\"==typeof define&&define.amd?define(o):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).minifyPathConfig=o()}(this,function(){var e={prop1:1,__p2:2};return function(){return console.log(e.prop1),console.log(e.__p2),e}});
+//# sourceMappingURL=minify-path-config.umd.js.map
+"
+`;
+
+exports[`build fixtures build minify-path-parent-dir-with-cwd with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+minify-path-parent-dir
+  dist
+    minify-path-parent-dir.esm.js
+    minify-path-parent-dir.esm.js.map
+    minify-path-parent-dir.js
+    minify-path-parent-dir.js.map
+    minify-path-parent-dir.umd.js
+    minify-path-parent-dir.umd.js.map
+  index.js
+  package.json
+  two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/minify-path-parent-dir.js (101 B)
+  -> gzip: 103 B
+  -> brotli: 89 B
+./dist/minify-path-parent-dir.esm.js (104 B)
+  -> gzip: 105 B
+  -> brotli: 91 B
+./dist/minify-path-parent-dir.umd.js (325 B)
+  -> gzip: 216 B
+  -> brotli: 174 B
+"
+`;
+
+exports[`build fixtures build minify-path-parent-dir-with-cwd with jvdx 2`] = `6`;
+
+exports[`build fixtures build minify-path-parent-dir-with-cwd with jvdx 3`] = `
+"var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export default r;
+//# sourceMappingURL=minify-path-parent-dir.esm.js.map
+"
+`;
+
+exports[`build fixtures build minify-path-parent-dir-with-cwd with jvdx 4`] = `
+"var o={prop1:1,__p2:2};module.exports=function(){return console.log(o.prop1),console.log(o.__p2),o};
+//# sourceMappingURL=minify-path-parent-dir.js.map
+"
+`;
+
+exports[`build fixtures build minify-path-parent-dir-with-cwd with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=o():\\"function\\"==typeof define&&define.amd?define(o):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).minifyPathParentDir=o()}(this,function(){var e={prop1:1,__p2:2};return function(){return console.log(e.prop1),console.log(e.__p2),e}});
+//# sourceMappingURL=minify-path-parent-dir.umd.js.map
+"
+`;
+
+exports[`build fixtures build modern with jvdx 1`] = `
+"Used script: jvdx build -f modern
+
+Directory tree:
+
+modern
+  dist
+    modern-lib.modern.js
+    modern-lib.modern.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/modern-lib.modern.js (130 B)
+  -> gzip: 113 B
+  -> brotli: 92 B
+"
+`;
+
+exports[`build fixtures build modern with jvdx 2`] = `2`;
+
+exports[`build fixtures build modern with jvdx 3`] = `
+"async function n(...n){return n.reduce((n,t)=>n+t,0)}async function t(...t){return[await n(...t),await n(...t)]}export default t;
+//# sourceMappingURL=modern-lib.modern.js.map
+"
+`;
+
+exports[`build fixtures build modern-generators with jvdx 1`] = `
+"Used script: jvdx build -f modern,es,umd,cjs
+
+Directory tree:
+
+modern-generators
+  dist
+    modern-generators.esm.js
+    modern-generators.esm.js.map
+    modern-generators.js
+    modern-generators.js.map
+    modern-generators.modern.js
+    modern-generators.modern.js.map
+    modern-generators.umd.js
+    modern-generators.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/modern-generators.js (355 B)
+  -> gzip: 234 B
+  -> brotli: 207 B
+./dist/modern-generators.modern.js (123 B)
+  -> gzip: 118 B
+  -> brotli: 99 B
+./dist/modern-generators.esm.js (354 B)
+  -> gzip: 233 B
+  -> brotli: 191 B
+./dist/modern-generators.umd.js (576 B)
+  -> gzip: 325 B
+  -> brotli: 274 B
+"
+`;
+
+exports[`build fixtures build modern-generators with jvdx 2`] = `8`;
+
+exports[`build fixtures build modern-generators with jvdx 3`] = `
+"var e=regeneratorRuntime.mark(r);function r(){var r;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:r=0;case 1:return e.next=4,r++;case 4:e.next=1;break;case 6:case\\"end\\":return e.stop()}},e)}export default function(){try{var e=r();return Promise.resolve([e.next().value,e.next().value])}catch(e){return Promise.reject(e)}}
+//# sourceMappingURL=modern-generators.esm.js.map
+"
+`;
+
+exports[`build fixtures build modern-generators with jvdx 4`] = `
+"var e=regeneratorRuntime.mark(r);function r(){var r;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:r=0;case 1:return e.next=4,r++;case 4:e.next=1;break;case 6:case\\"end\\":return e.stop()}},e)}module.exports=function(){try{var e=r();return Promise.resolve([e.next().value,e.next().value])}catch(e){return Promise.reject(e)}};
+//# sourceMappingURL=modern-generators.js.map
+"
+`;
+
+exports[`build fixtures build modern-generators with jvdx 5`] = `
+"async function e(){const e=function*(){let e=0;for(;;)yield e++}();return[e.next().value,e.next().value]}export default e;
+//# sourceMappingURL=modern-generators.modern.js.map
+"
+`;
+
+exports[`build fixtures build modern-generators with jvdx 6`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).modernGenerators=n()}(this,function(){var e=regeneratorRuntime.mark(n);function n(){var n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:n=0;case 1:return e.next=4,n++;case 4:e.next=1;break;case 6:case\\"end\\":return e.stop()}},e)}return function(){try{var e=n();return Promise.resolve([e.next().value,e.next().value])}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=modern-generators.umd.js.map
+"
+`;
+
+exports[`build fixtures build name-custom-amd with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+name-custom-amd
+  dist
+    name-custom-amd.esm.js
+    name-custom-amd.esm.js.map
+    name-custom-amd.js
+    name-custom-amd.js.map
+    name-custom-amd.umd.js
+    name-custom-amd.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/name-custom-amd.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/name-custom-amd.esm.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/name-custom-amd.umd.js (604 B)
+  -> gzip: 292 B
+  -> brotli: 227 B
+"
+`;
+
+exports[`build fixtures build name-custom-amd with jvdx 2`] = `6`;
+
+exports[`build fixtures build name-custom-amd with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=name-custom-amd.esm.js.map
+"
+`;
+
+exports[`build fixtures build name-custom-amd with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=name-custom-amd.js.map
+"
+`;
+
+exports[`build fixtures build name-custom-amd with jvdx 5`] = `
+"!function(e,r){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=r():\\"function\\"==typeof define&&define.amd?define(r):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).customNameAmd=r()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,r){return e+r},0))}catch(e){return Promise.reject(e)}};return function(){try{var r=arguments,n=[].slice.call(r);return Promise.resolve(e.apply(void 0,n)).then(function(r){return Promise.resolve(e.apply(void 0,n)).then(function(e){return[r,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=name-custom-amd.umd.js.map
+"
+`;
+
+exports[`build fixtures build name-custom-cli with jvdx 1`] = `
+"Used script: jvdx build --name nameCustomCli
+
+Directory tree:
+
+name-custom-cli
+  dist
+    name-custom.esm.js
+    name-custom.esm.js.map
+    name-custom.js
+    name-custom.js.map
+    name-custom.umd.js
+    name-custom.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/name-custom.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/name-custom.esm.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/name-custom.umd.js (604 B)
+  -> gzip: 292 B
+  -> brotli: 232 B
+"
+`;
+
+exports[`build fixtures build name-custom-cli with jvdx 2`] = `6`;
+
+exports[`build fixtures build name-custom-cli with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=name-custom.esm.js.map
+"
+`;
+
+exports[`build fixtures build name-custom-cli with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=name-custom.js.map
+"
+`;
+
+exports[`build fixtures build name-custom-cli with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).nameCustomCli=n()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,n){return e+n},0))}catch(e){return Promise.reject(e)}};return function(){try{var n=arguments,r=[].slice.call(n);return Promise.resolve(e.apply(void 0,r)).then(function(n){return Promise.resolve(e.apply(void 0,r)).then(function(e){return[n,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=name-custom.umd.js.map
+"
+`;
+
+exports[`build fixtures build no-pkg with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+no-pkg
+  dist
+    no-pkg.esm.js
+    no-pkg.esm.js.map
+    no-pkg.js
+    no-pkg.js.map
+    no-pkg.umd.js
+    no-pkg.umd.js.map
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/no-pkg.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/no-pkg.esm.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/no-pkg.umd.js (596 B)
+  -> gzip: 284 B
+  -> brotli: 227 B
+"
+`;
+
+exports[`build fixtures build no-pkg with jvdx 2`] = `6`;
+
+exports[`build fixtures build no-pkg with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=no-pkg.esm.js.map
+"
+`;
+
+exports[`build fixtures build no-pkg with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=no-pkg.js.map
+"
+`;
+
+exports[`build fixtures build no-pkg with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).noPkg=n()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,n){return e+n},0))}catch(e){return Promise.reject(e)}};return function(){try{var n=arguments,r=[].slice.call(n);return Promise.resolve(e.apply(void 0,r)).then(function(n){return Promise.resolve(e.apply(void 0,r)).then(function(e){return[n,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=no-pkg.umd.js.map
+"
+`;
+
+exports[`build fixtures build no-pkg-name with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+no-pkg-name
+  dist
+    no-pkg-name.esm.js
+    no-pkg-name.esm.js.map
+    no-pkg-name.js
+    no-pkg-name.js.map
+    no-pkg-name.umd.js
+    no-pkg-name.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/no-pkg-name.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/no-pkg-name.esm.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/no-pkg-name.umd.js (600 B)
+  -> gzip: 288 B
+  -> brotli: 229 B
+"
+`;
+
+exports[`build fixtures build no-pkg-name with jvdx 2`] = `6`;
+
+exports[`build fixtures build no-pkg-name with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=no-pkg-name.esm.js.map
+"
+`;
+
+exports[`build fixtures build no-pkg-name with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=no-pkg-name.js.map
+"
+`;
+
+exports[`build fixtures build no-pkg-name with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).noPkgName=n()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,n){return e+n},0))}catch(e){return Promise.reject(e)}};return function(){try{var n=arguments,r=[].slice.call(n);return Promise.resolve(e.apply(void 0,r)).then(function(n){return Promise.resolve(e.apply(void 0,r)).then(function(e){return[n,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=no-pkg-name.umd.js.map
+"
+`;
+
+exports[`build fixtures build optional-chaining-ts with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+optional-chaining-ts
+  dist
+    index.d.ts
+    optional-chaining-ts.esm.js
+    optional-chaining-ts.esm.js.map
+    optional-chaining-ts.js
+    optional-chaining-ts.js.map
+    optional-chaining-ts.umd.js
+    optional-chaining-ts.umd.js.map
+  node_modules
+  package.json
+  src
+    index.ts
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/optional-chaining-ts.js (98 B)
+  -> gzip: 109 B
+  -> brotli: 88 B
+./dist/optional-chaining-ts.esm.js (104 B)
+  -> gzip: 111 B
+  -> brotli: 97 B
+./dist/optional-chaining-ts.umd.js (330 B)
+  -> gzip: 226 B
+  -> brotli: 177 B
+"
+`;
+
+exports[`build fixtures build optional-chaining-ts with jvdx 2`] = `7`;
+
+exports[`build fixtures build optional-chaining-ts with jvdx 3`] = `
+"export declare function chain(test: {
+    maybeVar?: {
+        thing: string;
+    };
+}): string | undefined;
+"
+`;
+
+exports[`build fixtures build optional-chaining-ts with jvdx 4`] = `
+"function n(n){var r,i;return null!=(r=null==(i=n.maybeVar)?void 0:i.thing)?r:void 0}export{n as chain};
+//# sourceMappingURL=optional-chaining-ts.esm.js.map
+"
+`;
+
+exports[`build fixtures build optional-chaining-ts with jvdx 5`] = `
+"exports.chain=function(n){var i,r;return null!=(i=null==(r=n.maybeVar)?void 0:r.thing)?i:void 0};
+//# sourceMappingURL=optional-chaining-ts.js.map
+"
+`;
+
+exports[`build fixtures build optional-chaining-ts with jvdx 6`] = `
+"!function(n,e){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?e(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],e):e((n=\\"undefined\\"!=typeof globalThis?globalThis:n||self).optionalChainingTs={})}(this,function(n){n.chain=function(n){var e,i;return null!=(e=null==(i=n.maybeVar)?void 0:i.thing)?e:void 0}});
+//# sourceMappingURL=optional-chaining-ts.umd.js.map
+"
+`;
+
+exports[`build fixtures build pretty with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+pretty
+  dist
+    pretty.esm.js
+    pretty.esm.js.map
+    pretty.js
+    pretty.js.map
+    pretty.umd.js
+    pretty.umd.js.map
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/pretty.js (6.79 kB)
+  -> gzip: 6.33 kB
+  -> brotli: 5.19 kB
+./dist/pretty.esm.js (6.8 kB)
+  -> gzip: 6.34 kB
+  -> brotli: 5.21 kB
+./dist/pretty.umd.js (7.01 kB)
+  -> gzip: 6.48 kB
+  -> brotli: 5.37 kB
+"
+`;
+
+exports[`build fixtures build pretty with jvdx 2`] = `6`;
+
+exports[`build fixtures build pretty with jvdx 3`] = `
+"var n=\\"\\\\n\\\\nThere is immense joy in just watching - watching all the little creatures in nature. I'll go over the colors one more\\\\ntime that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow,\\\\nand Permanent red. If you don't like it - change it. It's your world. Be brave. Sometimes you learn more from your\\\\nmistakes than you do from your masterpieces.\\\\n\\\\nTrees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Now let's put some happy\\\\nlittle clouds in here. We have no limits to our world. We're only limited by our imagination. The first step to doing\\\\nanything is to believe you can do it. See it finished in your mind before you ever start. Even trees need a friend. We\\\\nall need friends. And that's when it becomes fun - you don't have to spend your time thinking about what's happening -\\\\nyou just let it happen.\\\\n\\\\nरिती संपादक बेंगलूर अन्तरराष्ट्रीयकरन शीघ्र भाषा चिदंश उद्योग विस्तरणक्षमता चिदंश एकएस तरहथा। प्रोत्साहित उपेक्ष बिन्दुओ\\\\nध्येय देने गुजरना ऎसाजीस निर्माण नवंबर लिए। एसेएवं उपलब्धता मुश्किले डाले। बहतर सहायता माध्यम भाषाओ समूह\\\\n\\\\n井待品亡写回横提和指生志考結。重特天県偏切運録広詳三人転者数代歳。秀天戦機広八型希金生作事国第。年米教止証車断級弘報安楽\\\\n銀必約現獲料切。点額講問課覧傷邸出送跡出懲。編米人験由社迷入解公著片法記択昇必崎掲清。摩出元自越食多県実間旅売主注理併間\\\\n話策。小政退時年福米越給新家入解美露方堀港朝。俊間髪物縦該高報見甲購形州日事。\\\\n\\\\n🌸🍂🌃🐧🍘🏧🍮 🌶👢🔗🐥🔼🎮 🐤🍲📆👧🎼🐒 💑🍖📴🐠🍼 🎱🔮🍦💳👹 💫🏮📅🍑📭🎎 🏭💿🏫🔢👚💩 👇🌄🌗🔵💦 🔺🔡🌍🐗🏀📫\\\\n📻🍵🐰🔜🕧 🌴🌞🕙🎨🎾🔊🏰 🎑🌆🔁🌂 🕐📣📉🌴🕠📢 🎀📖🎋🔱📒💰 🍅🐻🌃🌖. 🎁🕔👎🎷📀📞 🍁🔫🍀🌃📹 💈📂💶👕 🍡📰👛🐻\\\\n🍖🐽💫📼 🍆🎀💛👫🔹 🎷🕙🌱👸🕁🔝 🍸🔅👿🐡. 🐟🔐🏡🔅👾 🐱💱👺🍶 🎠🔆🎤🏥🌻🗾 👽🎯💈🏣🔊📴💆🏫 🔉🌉🍃🌻 🎅🔌🔻💣 🌸🍎🐀🌇\\\\n🗻👔📤💤🔶. 🍆👣🕕👦📦👑 🐍🐉🔶🕕 🍲👩🍍🌕📻👒📵 🔣🌋🌟👼 🔏📀🐆🍖🍮 🐁🌘🐻🏥🐡🔶🔘🏭 👡🔫🔗📊📻 🍂💧🌿📥🔚 📹💻🔌💠🌚\\\\n🐦💴🌎🌞🏤.\\\\n\\\\nThere is immense joy in just watching - watching all the little creatures in nature. I'll go over the colors one more\\\\ntime that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow,\\\\nand Permanent red. If you don't like it - change it. It's your world. Be brave. Sometimes you learn more from your\\\\nmistakes than you do from your masterpieces. That's why I paint - because I can create the kind of world I want - and I\\\\ncan make this world as happy as I want it. I was blessed with a very steady hand; and it comes in very handy when you're\\\\ndoing these little delicate things. We'll paint one happy little tree right here. These things happen automatically. All\\\\nyou have to do is just let them happen.\\\\n\\\\n🐻🍘💀🐪 🕧🎂🕃🍵🏠 💎🌄🐐📘🐄 🍂🏤👊🍖 👆🍂📫👪🐈🕢👓 👯🕞🏉🍚🎆🔠🌵 🎭🎎💵📮📭 🔪💨📢📕 🐔📬👪🏄🐙🗽📤.\\\\n💛👴💧🎁👗💟👡💎 🎷🕡👮🗾🍷 🎪🍇🍩💰 📫🐗🎄🍍🎃 🎯🌴🐍🔉📰 👼👧🐢🕔🔷📞🍩 🔘👑🌆🌒🔣 🔆👺📴👾 🔝💑💸💒🏡🔸 🔟👞📷🔱👠\\\\n📵🏠📕🕝🐂👪 💐🎾🕁🗾👊📪. 🍉🏁👰🏡🕔💒🐯 🐟🍡📴🌿👱👢 📵💄🌊🌵🐫🍏 🎎🕠🍍💭💀👖 🎵💘🔗🍖 📧🌘🍅🕚📘🔮 👤🌾👿🐍🎽🌹\\\\n🎲🎎💅📪🐐🍢📈 🏣🐑👇👼🐄🍔 🍠📧🌊🕁🔛🐩. 🌺📊🍼🐁💼 🔈💬🌱🎑🔊🐙💲👩 🍇👞📎👻🌔 💑🕁🎲💤 🎮📃🕖📖 📻💬🔢💔🐇👬 🔨🌃📈🔞\\\\n🌒🎈👙🔥🐊 📭👍📢👊📟.\\\\n\\\\n出死問民同歴術荘面族上自。窃指写氷名続球投込光試事樹増。作合副者扶実権守安展感意環待質出。告供体企紙勢構込君奪属仕子業戦\\\\n浮私。長論攻士踊再連公雪地約政近第公。界地島命党浮国沼出問気混心未独院。朝原妙画岡性制領子金次問無浦妥混口時研。道記険健\\\\n集立根聖間前設集族山要本覧。変注再悩式付療場図験問県家界月止収文。\\\\n\\\\nलेकिन उसके संपादक उपलब्ध दिनांक प्रति सम्पर्क प्राधिकरन नाकर मुक्त कलइस वेबजाल वर्तमान समस्याओ देखने भोगोलिक केन्द्रिय\\\\nकिया खयालात विज्ञान ध्येय गटको साधन चिदंश पासपाई व्याख्या मार्गदर्शन संदेश जिवन प्रतिबध वार्तालाप किके विश्व खरिदने\\\\nहुआआदी तकनीकी संदेश सारांश असरकारक वार्तालाप चाहे पहोच। अतित पुर्णता केन्द्रिय\\\\n\\\\n👅💾🐂🔙 🐂🎠👶🐮🐛 👛💗💶🌿💒 🐐🌱🐶🌴🏤🐒 🔪🍡🎸🐛🍖 📗🎓🏊🕀🎿 🔅📋📥👳🔝 🐗👝🏄🐲 📂🎷🐎🏯💎🐹 📲🍍🏥🔂🕚🐉🎤\\\\n🌕🐴📐🎪💋. 💔👂🐗📷🎐 🌹📔💒📝👎📭 🔖🍶💺🕘 🔡💘🎪🔚🔯👉 💯🎉👠🎁🐌💵 👌🔉🎹🕒💕🍁 🏡🍢🔹🔷👀💦🏉👀 👑🐺🐁🏤\\\\n🎺🍁🐙🐮🌃🕢🐟 🍶🎃🕕🔦 🐧🔝💔💚🔫👍 🌉🔁🌄📺 👓🎳📧🌆💖🍋🕔. 🍥🔘🗼📟 🍹🔸🔰🕣🌍 🏡💽🍬👗👧 📩👬🌻🐐🌞🌎🐵🔛 🏆🌹🍰🔬📕\\\\n👋🎩🍓🌏👙 🎁🏃🎌🍳🔋👎📔 🐈🌽🔘💮 🏬🐷💿🕕. 📕👖📦📡 🎅🎺🏭🍗💜💷🐦 💻💚🐪🕠🔀 💰🍹💶🍶🎥📄 🌛👕🐲🐣🍷🎬 🐥🎯🔵🎹\\\\n🌿👌🐚🍛🏪 🌵📞💃📗👱👩 📟🐸🌺🐅👮 💚🐦💉💞🌛 🔼🔤👓🏡💩.\\\\n\\\\n\\\\nयधपि बाजार तकरीबन आंतरजाल प्राधिकरन लगती संदेश एसलिये बिन्दुओ प्रोत्साहित जानकारी ढांचामात्रुभाषा बाजार बदले प्रमान\\\\nअनुवाद विकेन्द्रित पसंद ढांचा हमारि जोवे उद्योग संस्थान और्४५० विकसित उदेश लेकिन सकती वार्तालाप लाभान्वित संदेश उदेश\\\\nपहोच। लचकनहि अनुवाद सुविधा एकत्रित कीने सक्षम भीयह अत्यंत लचकनहि निरपेक्ष कराना हमारि प्राप्त पुर्णता प्रतिबध्दता होगा\\\\nउन्हे जाएन खयालात पहोचाना\\\\n\\\\n散待望会窮縮囲前賀理格顔欧製暮景初子加。首稿覧析回未帯則号医間本取退埋帯品。右歳約幻病護指極講賞京応。野受移供頑特公却報\\\\n法利務水提士政駐物際。角媛分地昧況面日残金真福方雨入顔作化。最刊情感売校見強移本説注辞。経必好以小球生音明優去験見政感治\\\\n報付。講刊切記勝帯載豪著転読金止。金子森午模移言兆埠関価亡出目載。\\\\n\\\\nWork on one thing at a time. Don't get carried away - we have plenty of time. Everything is happy if you choose to make\\\\nit that way. Happy painting, God bless. You can create anything that makes you happy. Just make a decision and let it\\\\ngo. Nice little clouds playing around in the sky.You can do anything here - the only pre-requisite is that it makes you\\\\nhappy. I'm going to mix up a little color. We’ll use Van Dyke Brown, Permanent Red, and a little bit of Prussian Blue.\\\\nLet's make some happy little clouds in our world.\\\\n\\\\nपहेला गएआप स्वतंत्र प्राधिकरन सेऔर अनुकूल ब्रौशर बिन्दुओमे सदस्य गुजरना तकनिकल वैश्विक सकते बनाति चिदंश चाहे कुशलता\\\\nवर्तमान प्रोत्साहित देने विवरन पहोचाना विकेन्द्रियकरण अनुकूल विभाजनक्षमता औषधिक अन्य खरिदे दिये आवश्यक समस्याए कम्प्युटर\\\\nविनिमय अविरोधता लाभान्वित लाभो ढांचा\\\\n\\\\n抄聞調時得直決移警撃覧進聞滑公政央。日探劇票選伊追短青功書更将奈府成多。味治理育月漬安意散護良読京。芳豚大度面傾府山応著\\\\n器地捜志。止高棋戻管明証経処流自勝動続。装載聞視属王減通橋説主費事業情芸。追若得本臭稿事馬予治川劇覧記今竹犯破育食。参兆\\\\n徹括単写東家素講舞校食医咋存務代連子。球設国事検問周東集題聞供奈。\\\\n\\\\n🍊🌆📛🍛🌊🍡🍒 🔦🐟🐵🍚🌐🍛🐏 🔆💍📟🎧 🔐📤💺🐒 🔥🔬🐣💹🌻👚 🎰👯🎡🗻💯🐉🌗 🍐👣🐯🔖📚 💡📟👨🍮🍼💛📞 🕕🐁🌾🏧💻📷\\\\n💗🐢🏥🎵🐰🍉 🏥🔎💛💘🔧🍛🎿 🍟🌰🐴🏫🎀 🎷🌿🌴🏤🍢📳🍺 🐗👷🌳👦📩🌁 🐂🔜🔙📕. 🌎🍠📓📠🕡 🎽🔺🔱🌔📗🎤 🎫🍃👚🍤🐽🌰\\\\n🕠🌉📪🍒🐃💲 🎢🔯👶🔙🔚🕝 🍮📒🏉🏨🐝🌿 👔💫🏁🎺 🐸💞🌈🐸 📣🔯📅🐍🐴 🌑🌍🌛👀 🕂👟🐕📃🎇🔞 🍮🔏🍥👨 🐪📲🐐🎁 🍥🔁📑💮🌘.\\\\n🌏🎎🍛👯 🔈🎸💨🏧📚 🏪💼🎣🔚 🐤💳💁👓 👃🍆🕘🐋👬🐣 🕚🏃🌄🔷🌈🔖 💥💧🔴🌛🍁👦 💣🐐🕓🎠🕚🕞🏭 💨👓🏢🌓🔄. 📪🔜💹👤👂🐭\\\\n🕚🔎🐂🏂👍📻 👾💠🌕📻🎍 🐟🔬🏢💍 👓👠👤🎐💸👝 🔟💕🕛💊 🍩🌙👬🐘 🍪🔙📉💔🐝🕝 📭🕡🎼💈📇🔡 👓🍁🎾👯👨 🏇🍱🐢🌛\\\\n🎇🐩📴🎋🕁📎🎈 🐌👱📎🍹👆 👐🍐📗👽🐹💜 📭🌔🌅🍯👀.\\\\n\\\\n🔜🐰🏊🍃🐮 🔪🔐📇🐩 🐬👔🍙🍩💉 🏉👩👔🍞🍟🌂 🍺🕔🌖🔪🔩🍥 🎓🍒🌅🐘💛 🐔🐊📶🐊 👂📌👂🍺 💗🐳🎠📧🏭💧 🐝📅🍆🔞🏆\\\\n👇🔂🐺🔬🎯🔳🎐🎍 💖💅🐲🔭📔🏊🔋 🐨📫🕢🎁. 🐯💁🔘📰🐪 💥👭🍘🎴📣💂💄 🐏🔊🐚👔🎿🐙 🔕🐞💹📁 🔊👴👬👪 👠📱👃📍 🏢🐃🍯🍹🗻\\\\n🐩💮👲👠 🍏🎽📄🐋 🔣💉🔉📒💸🎭👎 💁🗾🔵🐪🍣 🍃🔝💥🔒👴. 📦🔟🔶💷🍥 🍚🕤👦🍻🔥🍹 👄🌜🐑🌀🐃🔪🕦 🌟🐶🍞🕥🌛 👮🐄🏬🎴👂💼📵\\\\n🌋📐🐲👥 🔒🏭🔭💿🎫🎄 💓🐓🎐🎁👔📟 💌🍇🎶👷🎬 🌌💀🎸💡 📔🐢💁🔊👘🐳🌞 🎩📝💟🍼💦🔄 🕒🍼🏧🎄🔃💐. 🎆🌜👗👿 🐁🌑💮👙🎌👞\\\\n🏫📙🌌🕙🐥 👓🌑💎💸📹📒 👋🐎🍡🎾👸🗽 📢📓🌍🏮📳🔈 👶🐷🐭🎿🔴🗾🏬 🌆🔈🍡💞💭🎨. \\";export{n as allTheIpsum};
+//# sourceMappingURL=pretty.esm.js.map
+"
+`;
+
+exports[`build fixtures build pretty with jvdx 4`] = `
+"exports.allTheIpsum=\\"\\\\n\\\\nThere is immense joy in just watching - watching all the little creatures in nature. I'll go over the colors one more\\\\ntime that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow,\\\\nand Permanent red. If you don't like it - change it. It's your world. Be brave. Sometimes you learn more from your\\\\nmistakes than you do from your masterpieces.\\\\n\\\\nTrees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Now let's put some happy\\\\nlittle clouds in here. We have no limits to our world. We're only limited by our imagination. The first step to doing\\\\nanything is to believe you can do it. See it finished in your mind before you ever start. Even trees need a friend. We\\\\nall need friends. And that's when it becomes fun - you don't have to spend your time thinking about what's happening -\\\\nyou just let it happen.\\\\n\\\\nरिती संपादक बेंगलूर अन्तरराष्ट्रीयकरन शीघ्र भाषा चिदंश उद्योग विस्तरणक्षमता चिदंश एकएस तरहथा। प्रोत्साहित उपेक्ष बिन्दुओ\\\\nध्येय देने गुजरना ऎसाजीस निर्माण नवंबर लिए। एसेएवं उपलब्धता मुश्किले डाले। बहतर सहायता माध्यम भाषाओ समूह\\\\n\\\\n井待品亡写回横提和指生志考結。重特天県偏切運録広詳三人転者数代歳。秀天戦機広八型希金生作事国第。年米教止証車断級弘報安楽\\\\n銀必約現獲料切。点額講問課覧傷邸出送跡出懲。編米人験由社迷入解公著片法記択昇必崎掲清。摩出元自越食多県実間旅売主注理併間\\\\n話策。小政退時年福米越給新家入解美露方堀港朝。俊間髪物縦該高報見甲購形州日事。\\\\n\\\\n🌸🍂🌃🐧🍘🏧🍮 🌶👢🔗🐥🔼🎮 🐤🍲📆👧🎼🐒 💑🍖📴🐠🍼 🎱🔮🍦💳👹 💫🏮📅🍑📭🎎 🏭💿🏫🔢👚💩 👇🌄🌗🔵💦 🔺🔡🌍🐗🏀📫\\\\n📻🍵🐰🔜🕧 🌴🌞🕙🎨🎾🔊🏰 🎑🌆🔁🌂 🕐📣📉🌴🕠📢 🎀📖🎋🔱📒💰 🍅🐻🌃🌖. 🎁🕔👎🎷📀📞 🍁🔫🍀🌃📹 💈📂💶👕 🍡📰👛🐻\\\\n🍖🐽💫📼 🍆🎀💛👫🔹 🎷🕙🌱👸🕁🔝 🍸🔅👿🐡. 🐟🔐🏡🔅👾 🐱💱👺🍶 🎠🔆🎤🏥🌻🗾 👽🎯💈🏣🔊📴💆🏫 🔉🌉🍃🌻 🎅🔌🔻💣 🌸🍎🐀🌇\\\\n🗻👔📤💤🔶. 🍆👣🕕👦📦👑 🐍🐉🔶🕕 🍲👩🍍🌕📻👒📵 🔣🌋🌟👼 🔏📀🐆🍖🍮 🐁🌘🐻🏥🐡🔶🔘🏭 👡🔫🔗📊📻 🍂💧🌿📥🔚 📹💻🔌💠🌚\\\\n🐦💴🌎🌞🏤.\\\\n\\\\nThere is immense joy in just watching - watching all the little creatures in nature. I'll go over the colors one more\\\\ntime that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow,\\\\nand Permanent red. If you don't like it - change it. It's your world. Be brave. Sometimes you learn more from your\\\\nmistakes than you do from your masterpieces. That's why I paint - because I can create the kind of world I want - and I\\\\ncan make this world as happy as I want it. I was blessed with a very steady hand; and it comes in very handy when you're\\\\ndoing these little delicate things. We'll paint one happy little tree right here. These things happen automatically. All\\\\nyou have to do is just let them happen.\\\\n\\\\n🐻🍘💀🐪 🕧🎂🕃🍵🏠 💎🌄🐐📘🐄 🍂🏤👊🍖 👆🍂📫👪🐈🕢👓 👯🕞🏉🍚🎆🔠🌵 🎭🎎💵📮📭 🔪💨📢📕 🐔📬👪🏄🐙🗽📤.\\\\n💛👴💧🎁👗💟👡💎 🎷🕡👮🗾🍷 🎪🍇🍩💰 📫🐗🎄🍍🎃 🎯🌴🐍🔉📰 👼👧🐢🕔🔷📞🍩 🔘👑🌆🌒🔣 🔆👺📴👾 🔝💑💸💒🏡🔸 🔟👞📷🔱👠\\\\n📵🏠📕🕝🐂👪 💐🎾🕁🗾👊📪. 🍉🏁👰🏡🕔💒🐯 🐟🍡📴🌿👱👢 📵💄🌊🌵🐫🍏 🎎🕠🍍💭💀👖 🎵💘🔗🍖 📧🌘🍅🕚📘🔮 👤🌾👿🐍🎽🌹\\\\n🎲🎎💅📪🐐🍢📈 🏣🐑👇👼🐄🍔 🍠📧🌊🕁🔛🐩. 🌺📊🍼🐁💼 🔈💬🌱🎑🔊🐙💲👩 🍇👞📎👻🌔 💑🕁🎲💤 🎮📃🕖📖 📻💬🔢💔🐇👬 🔨🌃📈🔞\\\\n🌒🎈👙🔥🐊 📭👍📢👊📟.\\\\n\\\\n出死問民同歴術荘面族上自。窃指写氷名続球投込光試事樹増。作合副者扶実権守安展感意環待質出。告供体企紙勢構込君奪属仕子業戦\\\\n浮私。長論攻士踊再連公雪地約政近第公。界地島命党浮国沼出問気混心未独院。朝原妙画岡性制領子金次問無浦妥混口時研。道記険健\\\\n集立根聖間前設集族山要本覧。変注再悩式付療場図験問県家界月止収文。\\\\n\\\\nलेकिन उसके संपादक उपलब्ध दिनांक प्रति सम्पर्क प्राधिकरन नाकर मुक्त कलइस वेबजाल वर्तमान समस्याओ देखने भोगोलिक केन्द्रिय\\\\nकिया खयालात विज्ञान ध्येय गटको साधन चिदंश पासपाई व्याख्या मार्गदर्शन संदेश जिवन प्रतिबध वार्तालाप किके विश्व खरिदने\\\\nहुआआदी तकनीकी संदेश सारांश असरकारक वार्तालाप चाहे पहोच। अतित पुर्णता केन्द्रिय\\\\n\\\\n👅💾🐂🔙 🐂🎠👶🐮🐛 👛💗💶🌿💒 🐐🌱🐶🌴🏤🐒 🔪🍡🎸🐛🍖 📗🎓🏊🕀🎿 🔅📋📥👳🔝 🐗👝🏄🐲 📂🎷🐎🏯💎🐹 📲🍍🏥🔂🕚🐉🎤\\\\n🌕🐴📐🎪💋. 💔👂🐗📷🎐 🌹📔💒📝👎📭 🔖🍶💺🕘 🔡💘🎪🔚🔯👉 💯🎉👠🎁🐌💵 👌🔉🎹🕒💕🍁 🏡🍢🔹🔷👀💦🏉👀 👑🐺🐁🏤\\\\n🎺🍁🐙🐮🌃🕢🐟 🍶🎃🕕🔦 🐧🔝💔💚🔫👍 🌉🔁🌄📺 👓🎳📧🌆💖🍋🕔. 🍥🔘🗼📟 🍹🔸🔰🕣🌍 🏡💽🍬👗👧 📩👬🌻🐐🌞🌎🐵🔛 🏆🌹🍰🔬📕\\\\n👋🎩🍓🌏👙 🎁🏃🎌🍳🔋👎📔 🐈🌽🔘💮 🏬🐷💿🕕. 📕👖📦📡 🎅🎺🏭🍗💜💷🐦 💻💚🐪🕠🔀 💰🍹💶🍶🎥📄 🌛👕🐲🐣🍷🎬 🐥🎯🔵🎹\\\\n🌿👌🐚🍛🏪 🌵📞💃📗👱👩 📟🐸🌺🐅👮 💚🐦💉💞🌛 🔼🔤👓🏡💩.\\\\n\\\\n\\\\nयधपि बाजार तकरीबन आंतरजाल प्राधिकरन लगती संदेश एसलिये बिन्दुओ प्रोत्साहित जानकारी ढांचामात्रुभाषा बाजार बदले प्रमान\\\\nअनुवाद विकेन्द्रित पसंद ढांचा हमारि जोवे उद्योग संस्थान और्४५० विकसित उदेश लेकिन सकती वार्तालाप लाभान्वित संदेश उदेश\\\\nपहोच। लचकनहि अनुवाद सुविधा एकत्रित कीने सक्षम भीयह अत्यंत लचकनहि निरपेक्ष कराना हमारि प्राप्त पुर्णता प्रतिबध्दता होगा\\\\nउन्हे जाएन खयालात पहोचाना\\\\n\\\\n散待望会窮縮囲前賀理格顔欧製暮景初子加。首稿覧析回未帯則号医間本取退埋帯品。右歳約幻病護指極講賞京応。野受移供頑特公却報\\\\n法利務水提士政駐物際。角媛分地昧況面日残金真福方雨入顔作化。最刊情感売校見強移本説注辞。経必好以小球生音明優去験見政感治\\\\n報付。講刊切記勝帯載豪著転読金止。金子森午模移言兆埠関価亡出目載。\\\\n\\\\nWork on one thing at a time. Don't get carried away - we have plenty of time. Everything is happy if you choose to make\\\\nit that way. Happy painting, God bless. You can create anything that makes you happy. Just make a decision and let it\\\\ngo. Nice little clouds playing around in the sky.You can do anything here - the only pre-requisite is that it makes you\\\\nhappy. I'm going to mix up a little color. We’ll use Van Dyke Brown, Permanent Red, and a little bit of Prussian Blue.\\\\nLet's make some happy little clouds in our world.\\\\n\\\\nपहेला गएआप स्वतंत्र प्राधिकरन सेऔर अनुकूल ब्रौशर बिन्दुओमे सदस्य गुजरना तकनिकल वैश्विक सकते बनाति चिदंश चाहे कुशलता\\\\nवर्तमान प्रोत्साहित देने विवरन पहोचाना विकेन्द्रियकरण अनुकूल विभाजनक्षमता औषधिक अन्य खरिदे दिये आवश्यक समस्याए कम्प्युटर\\\\nविनिमय अविरोधता लाभान्वित लाभो ढांचा\\\\n\\\\n抄聞調時得直決移警撃覧進聞滑公政央。日探劇票選伊追短青功書更将奈府成多。味治理育月漬安意散護良読京。芳豚大度面傾府山応著\\\\n器地捜志。止高棋戻管明証経処流自勝動続。装載聞視属王減通橋説主費事業情芸。追若得本臭稿事馬予治川劇覧記今竹犯破育食。参兆\\\\n徹括単写東家素講舞校食医咋存務代連子。球設国事検問周東集題聞供奈。\\\\n\\\\n🍊🌆📛🍛🌊🍡🍒 🔦🐟🐵🍚🌐🍛🐏 🔆💍📟🎧 🔐📤💺🐒 🔥🔬🐣💹🌻👚 🎰👯🎡🗻💯🐉🌗 🍐👣🐯🔖📚 💡📟👨🍮🍼💛📞 🕕🐁🌾🏧💻📷\\\\n💗🐢🏥🎵🐰🍉 🏥🔎💛💘🔧🍛🎿 🍟🌰🐴🏫🎀 🎷🌿🌴🏤🍢📳🍺 🐗👷🌳👦📩🌁 🐂🔜🔙📕. 🌎🍠📓📠🕡 🎽🔺🔱🌔📗🎤 🎫🍃👚🍤🐽🌰\\\\n🕠🌉📪🍒🐃💲 🎢🔯👶🔙🔚🕝 🍮📒🏉🏨🐝🌿 👔💫🏁🎺 🐸💞🌈🐸 📣🔯📅🐍🐴 🌑🌍🌛👀 🕂👟🐕📃🎇🔞 🍮🔏🍥👨 🐪📲🐐🎁 🍥🔁📑💮🌘.\\\\n🌏🎎🍛👯 🔈🎸💨🏧📚 🏪💼🎣🔚 🐤💳💁👓 👃🍆🕘🐋👬🐣 🕚🏃🌄🔷🌈🔖 💥💧🔴🌛🍁👦 💣🐐🕓🎠🕚🕞🏭 💨👓🏢🌓🔄. 📪🔜💹👤👂🐭\\\\n🕚🔎🐂🏂👍📻 👾💠🌕📻🎍 🐟🔬🏢💍 👓👠👤🎐💸👝 🔟💕🕛💊 🍩🌙👬🐘 🍪🔙📉💔🐝🕝 📭🕡🎼💈📇🔡 👓🍁🎾👯👨 🏇🍱🐢🌛\\\\n🎇🐩📴🎋🕁📎🎈 🐌👱📎🍹👆 👐🍐📗👽🐹💜 📭🌔🌅🍯👀.\\\\n\\\\n🔜🐰🏊🍃🐮 🔪🔐📇🐩 🐬👔🍙🍩💉 🏉👩👔🍞🍟🌂 🍺🕔🌖🔪🔩🍥 🎓🍒🌅🐘💛 🐔🐊📶🐊 👂📌👂🍺 💗🐳🎠📧🏭💧 🐝📅🍆🔞🏆\\\\n👇🔂🐺🔬🎯🔳🎐🎍 💖💅🐲🔭📔🏊🔋 🐨📫🕢🎁. 🐯💁🔘📰🐪 💥👭🍘🎴📣💂💄 🐏🔊🐚👔🎿🐙 🔕🐞💹📁 🔊👴👬👪 👠📱👃📍 🏢🐃🍯🍹🗻\\\\n🐩💮👲👠 🍏🎽📄🐋 🔣💉🔉📒💸🎭👎 💁🗾🔵🐪🍣 🍃🔝💥🔒👴. 📦🔟🔶💷🍥 🍚🕤👦🍻🔥🍹 👄🌜🐑🌀🐃🔪🕦 🌟🐶🍞🕥🌛 👮🐄🏬🎴👂💼📵\\\\n🌋📐🐲👥 🔒🏭🔭💿🎫🎄 💓🐓🎐🎁👔📟 💌🍇🎶👷🎬 🌌💀🎸💡 📔🐢💁🔊👘🐳🌞 🎩📝💟🍼💦🔄 🕒🍼🏧🎄🔃💐. 🎆🌜👗👿 🐁🌑💮👙🎌👞\\\\n🏫📙🌌🕙🐥 👓🌑💎💸📹📒 👋🐎🍡🎾👸🗽 📢📓🌍🏮📳🔈 👶🐷🐭🎿🔴🗾🏬 🌆🔈🍡💞💭🎨. \\";
+//# sourceMappingURL=pretty.js.map
+"
+`;
+
+exports[`build fixtures build pretty with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?n(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],n):n((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).pretty={})}(this,function(e){e.allTheIpsum=\\"\\\\n\\\\nThere is immense joy in just watching - watching all the little creatures in nature. I'll go over the colors one more\\\\ntime that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow,\\\\nand Permanent red. If you don't like it - change it. It's your world. Be brave. Sometimes you learn more from your\\\\nmistakes than you do from your masterpieces.\\\\n\\\\nTrees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Now let's put some happy\\\\nlittle clouds in here. We have no limits to our world. We're only limited by our imagination. The first step to doing\\\\nanything is to believe you can do it. See it finished in your mind before you ever start. Even trees need a friend. We\\\\nall need friends. And that's when it becomes fun - you don't have to spend your time thinking about what's happening -\\\\nyou just let it happen.\\\\n\\\\nरिती संपादक बेंगलूर अन्तरराष्ट्रीयकरन शीघ्र भाषा चिदंश उद्योग विस्तरणक्षमता चिदंश एकएस तरहथा। प्रोत्साहित उपेक्ष बिन्दुओ\\\\nध्येय देने गुजरना ऎसाजीस निर्माण नवंबर लिए। एसेएवं उपलब्धता मुश्किले डाले। बहतर सहायता माध्यम भाषाओ समूह\\\\n\\\\n井待品亡写回横提和指生志考結。重特天県偏切運録広詳三人転者数代歳。秀天戦機広八型希金生作事国第。年米教止証車断級弘報安楽\\\\n銀必約現獲料切。点額講問課覧傷邸出送跡出懲。編米人験由社迷入解公著片法記択昇必崎掲清。摩出元自越食多県実間旅売主注理併間\\\\n話策。小政退時年福米越給新家入解美露方堀港朝。俊間髪物縦該高報見甲購形州日事。\\\\n\\\\n🌸🍂🌃🐧🍘🏧🍮 🌶👢🔗🐥🔼🎮 🐤🍲📆👧🎼🐒 💑🍖📴🐠🍼 🎱🔮🍦💳👹 💫🏮📅🍑📭🎎 🏭💿🏫🔢👚💩 👇🌄🌗🔵💦 🔺🔡🌍🐗🏀📫\\\\n📻🍵🐰🔜🕧 🌴🌞🕙🎨🎾🔊🏰 🎑🌆🔁🌂 🕐📣📉🌴🕠📢 🎀📖🎋🔱📒💰 🍅🐻🌃🌖. 🎁🕔👎🎷📀📞 🍁🔫🍀🌃📹 💈📂💶👕 🍡📰👛🐻\\\\n🍖🐽💫📼 🍆🎀💛👫🔹 🎷🕙🌱👸🕁🔝 🍸🔅👿🐡. 🐟🔐🏡🔅👾 🐱💱👺🍶 🎠🔆🎤🏥🌻🗾 👽🎯💈🏣🔊📴💆🏫 🔉🌉🍃🌻 🎅🔌🔻💣 🌸🍎🐀🌇\\\\n🗻👔📤💤🔶. 🍆👣🕕👦📦👑 🐍🐉🔶🕕 🍲👩🍍🌕📻👒📵 🔣🌋🌟👼 🔏📀🐆🍖🍮 🐁🌘🐻🏥🐡🔶🔘🏭 👡🔫🔗📊📻 🍂💧🌿📥🔚 📹💻🔌💠🌚\\\\n🐦💴🌎🌞🏤.\\\\n\\\\nThere is immense joy in just watching - watching all the little creatures in nature. I'll go over the colors one more\\\\ntime that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow,\\\\nand Permanent red. If you don't like it - change it. It's your world. Be brave. Sometimes you learn more from your\\\\nmistakes than you do from your masterpieces. That's why I paint - because I can create the kind of world I want - and I\\\\ncan make this world as happy as I want it. I was blessed with a very steady hand; and it comes in very handy when you're\\\\ndoing these little delicate things. We'll paint one happy little tree right here. These things happen automatically. All\\\\nyou have to do is just let them happen.\\\\n\\\\n🐻🍘💀🐪 🕧🎂🕃🍵🏠 💎🌄🐐📘🐄 🍂🏤👊🍖 👆🍂📫👪🐈🕢👓 👯🕞🏉🍚🎆🔠🌵 🎭🎎💵📮📭 🔪💨📢📕 🐔📬👪🏄🐙🗽📤.\\\\n💛👴💧🎁👗💟👡💎 🎷🕡👮🗾🍷 🎪🍇🍩💰 📫🐗🎄🍍🎃 🎯🌴🐍🔉📰 👼👧🐢🕔🔷📞🍩 🔘👑🌆🌒🔣 🔆👺📴👾 🔝💑💸💒🏡🔸 🔟👞📷🔱👠\\\\n📵🏠📕🕝🐂👪 💐🎾🕁🗾👊📪. 🍉🏁👰🏡🕔💒🐯 🐟🍡📴🌿👱👢 📵💄🌊🌵🐫🍏 🎎🕠🍍💭💀👖 🎵💘🔗🍖 📧🌘🍅🕚📘🔮 👤🌾👿🐍🎽🌹\\\\n🎲🎎💅📪🐐🍢📈 🏣🐑👇👼🐄🍔 🍠📧🌊🕁🔛🐩. 🌺📊🍼🐁💼 🔈💬🌱🎑🔊🐙💲👩 🍇👞📎👻🌔 💑🕁🎲💤 🎮📃🕖📖 📻💬🔢💔🐇👬 🔨🌃📈🔞\\\\n🌒🎈👙🔥🐊 📭👍📢👊📟.\\\\n\\\\n出死問民同歴術荘面族上自。窃指写氷名続球投込光試事樹増。作合副者扶実権守安展感意環待質出。告供体企紙勢構込君奪属仕子業戦\\\\n浮私。長論攻士踊再連公雪地約政近第公。界地島命党浮国沼出問気混心未独院。朝原妙画岡性制領子金次問無浦妥混口時研。道記険健\\\\n集立根聖間前設集族山要本覧。変注再悩式付療場図験問県家界月止収文。\\\\n\\\\nलेकिन उसके संपादक उपलब्ध दिनांक प्रति सम्पर्क प्राधिकरन नाकर मुक्त कलइस वेबजाल वर्तमान समस्याओ देखने भोगोलिक केन्द्रिय\\\\nकिया खयालात विज्ञान ध्येय गटको साधन चिदंश पासपाई व्याख्या मार्गदर्शन संदेश जिवन प्रतिबध वार्तालाप किके विश्व खरिदने\\\\nहुआआदी तकनीकी संदेश सारांश असरकारक वार्तालाप चाहे पहोच। अतित पुर्णता केन्द्रिय\\\\n\\\\n👅💾🐂🔙 🐂🎠👶🐮🐛 👛💗💶🌿💒 🐐🌱🐶🌴🏤🐒 🔪🍡🎸🐛🍖 📗🎓🏊🕀🎿 🔅📋📥👳🔝 🐗👝🏄🐲 📂🎷🐎🏯💎🐹 📲🍍🏥🔂🕚🐉🎤\\\\n🌕🐴📐🎪💋. 💔👂🐗📷🎐 🌹📔💒📝👎📭 🔖🍶💺🕘 🔡💘🎪🔚🔯👉 💯🎉👠🎁🐌💵 👌🔉🎹🕒💕🍁 🏡🍢🔹🔷👀💦🏉👀 👑🐺🐁🏤\\\\n🎺🍁🐙🐮🌃🕢🐟 🍶🎃🕕🔦 🐧🔝💔💚🔫👍 🌉🔁🌄📺 👓🎳📧🌆💖🍋🕔. 🍥🔘🗼📟 🍹🔸🔰🕣🌍 🏡💽🍬👗👧 📩👬🌻🐐🌞🌎🐵🔛 🏆🌹🍰🔬📕\\\\n👋🎩🍓🌏👙 🎁🏃🎌🍳🔋👎📔 🐈🌽🔘💮 🏬🐷💿🕕. 📕👖📦📡 🎅🎺🏭🍗💜💷🐦 💻💚🐪🕠🔀 💰🍹💶🍶🎥📄 🌛👕🐲🐣🍷🎬 🐥🎯🔵🎹\\\\n🌿👌🐚🍛🏪 🌵📞💃📗👱👩 📟🐸🌺🐅👮 💚🐦💉💞🌛 🔼🔤👓🏡💩.\\\\n\\\\n\\\\nयधपि बाजार तकरीबन आंतरजाल प्राधिकरन लगती संदेश एसलिये बिन्दुओ प्रोत्साहित जानकारी ढांचामात्रुभाषा बाजार बदले प्रमान\\\\nअनुवाद विकेन्द्रित पसंद ढांचा हमारि जोवे उद्योग संस्थान और्४५० विकसित उदेश लेकिन सकती वार्तालाप लाभान्वित संदेश उदेश\\\\nपहोच। लचकनहि अनुवाद सुविधा एकत्रित कीने सक्षम भीयह अत्यंत लचकनहि निरपेक्ष कराना हमारि प्राप्त पुर्णता प्रतिबध्दता होगा\\\\nउन्हे जाएन खयालात पहोचाना\\\\n\\\\n散待望会窮縮囲前賀理格顔欧製暮景初子加。首稿覧析回未帯則号医間本取退埋帯品。右歳約幻病護指極講賞京応。野受移供頑特公却報\\\\n法利務水提士政駐物際。角媛分地昧況面日残金真福方雨入顔作化。最刊情感売校見強移本説注辞。経必好以小球生音明優去験見政感治\\\\n報付。講刊切記勝帯載豪著転読金止。金子森午模移言兆埠関価亡出目載。\\\\n\\\\nWork on one thing at a time. Don't get carried away - we have plenty of time. Everything is happy if you choose to make\\\\nit that way. Happy painting, God bless. You can create anything that makes you happy. Just make a decision and let it\\\\ngo. Nice little clouds playing around in the sky.You can do anything here - the only pre-requisite is that it makes you\\\\nhappy. I'm going to mix up a little color. We’ll use Van Dyke Brown, Permanent Red, and a little bit of Prussian Blue.\\\\nLet's make some happy little clouds in our world.\\\\n\\\\nपहेला गएआप स्वतंत्र प्राधिकरन सेऔर अनुकूल ब्रौशर बिन्दुओमे सदस्य गुजरना तकनिकल वैश्विक सकते बनाति चिदंश चाहे कुशलता\\\\nवर्तमान प्रोत्साहित देने विवरन पहोचाना विकेन्द्रियकरण अनुकूल विभाजनक्षमता औषधिक अन्य खरिदे दिये आवश्यक समस्याए कम्प्युटर\\\\nविनिमय अविरोधता लाभान्वित लाभो ढांचा\\\\n\\\\n抄聞調時得直決移警撃覧進聞滑公政央。日探劇票選伊追短青功書更将奈府成多。味治理育月漬安意散護良読京。芳豚大度面傾府山応著\\\\n器地捜志。止高棋戻管明証経処流自勝動続。装載聞視属王減通橋説主費事業情芸。追若得本臭稿事馬予治川劇覧記今竹犯破育食。参兆\\\\n徹括単写東家素講舞校食医咋存務代連子。球設国事検問周東集題聞供奈。\\\\n\\\\n🍊🌆📛🍛🌊🍡🍒 🔦🐟🐵🍚🌐🍛🐏 🔆💍📟🎧 🔐📤💺🐒 🔥🔬🐣💹🌻👚 🎰👯🎡🗻💯🐉🌗 🍐👣🐯🔖📚 💡📟👨🍮🍼💛📞 🕕🐁🌾🏧💻📷\\\\n💗🐢🏥🎵🐰🍉 🏥🔎💛💘🔧🍛🎿 🍟🌰🐴🏫🎀 🎷🌿🌴🏤🍢📳🍺 🐗👷🌳👦📩🌁 🐂🔜🔙📕. 🌎🍠📓📠🕡 🎽🔺🔱🌔📗🎤 🎫🍃👚🍤🐽🌰\\\\n🕠🌉📪🍒🐃💲 🎢🔯👶🔙🔚🕝 🍮📒🏉🏨🐝🌿 👔💫🏁🎺 🐸💞🌈🐸 📣🔯📅🐍🐴 🌑🌍🌛👀 🕂👟🐕📃🎇🔞 🍮🔏🍥👨 🐪📲🐐🎁 🍥🔁📑💮🌘.\\\\n🌏🎎🍛👯 🔈🎸💨🏧📚 🏪💼🎣🔚 🐤💳💁👓 👃🍆🕘🐋👬🐣 🕚🏃🌄🔷🌈🔖 💥💧🔴🌛🍁👦 💣🐐🕓🎠🕚🕞🏭 💨👓🏢🌓🔄. 📪🔜💹👤👂🐭\\\\n🕚🔎🐂🏂👍📻 👾💠🌕📻🎍 🐟🔬🏢💍 👓👠👤🎐💸👝 🔟💕🕛💊 🍩🌙👬🐘 🍪🔙📉💔🐝🕝 📭🕡🎼💈📇🔡 👓🍁🎾👯👨 🏇🍱🐢🌛\\\\n🎇🐩📴🎋🕁📎🎈 🐌👱📎🍹👆 👐🍐📗👽🐹💜 📭🌔🌅🍯👀.\\\\n\\\\n🔜🐰🏊🍃🐮 🔪🔐📇🐩 🐬👔🍙🍩💉 🏉👩👔🍞🍟🌂 🍺🕔🌖🔪🔩🍥 🎓🍒🌅🐘💛 🐔🐊📶🐊 👂📌👂🍺 💗🐳🎠📧🏭💧 🐝📅🍆🔞🏆\\\\n👇🔂🐺🔬🎯🔳🎐🎍 💖💅🐲🔭📔🏊🔋 🐨📫🕢🎁. 🐯💁🔘📰🐪 💥👭🍘🎴📣💂💄 🐏🔊🐚👔🎿🐙 🔕🐞💹📁 🔊👴👬👪 👠📱👃📍 🏢🐃🍯🍹🗻\\\\n🐩💮👲👠 🍏🎽📄🐋 🔣💉🔉📒💸🎭👎 💁🗾🔵🐪🍣 🍃🔝💥🔒👴. 📦🔟🔶💷🍥 🍚🕤👦🍻🔥🍹 👄🌜🐑🌀🐃🔪🕦 🌟🐶🍞🕥🌛 👮🐄🏬🎴👂💼📵\\\\n🌋📐🐲👥 🔒🏭🔭💿🎫🎄 💓🐓🎐🎁👔📟 💌🍇🎶👷🎬 🌌💀🎸💡 📔🐢💁🔊👘🐳🌞 🎩📝💟🍼💦🔄 🕒🍼🏧🎄🔃💐. 🎆🌜👗👿 🐁🌑💮👙🎌👞\\\\n🏫📙🌌🕙🐥 👓🌑💎💸📹📒 👋🐎🍡🎾👸🗽 📢📓🌍🏮📳🔈 👶🐷🐭🎿🔴🗾🏬 🌆🔈🍡💞💭🎨. \\"});
+//# sourceMappingURL=pretty.umd.js.map
+"
+`;
+
+exports[`build fixtures build pure with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+pure
+  dist
+    pure.esm.js
+    pure.esm.js.map
+    pure.js
+    pure.js.map
+    pure.umd.js
+    pure.umd.js.map
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/pure.js (45 B)
+  -> gzip: 65 B
+  -> brotli: 44 B
+./dist/pure.esm.js (51 B)
+  -> gzip: 71 B
+  -> brotli: 49 B
+./dist/pure.umd.js (263 B)
+  -> gzip: 182 B
+  -> brotli: 143 B
+"
+`;
+
+exports[`build fixtures build pure with jvdx 2`] = `6`;
+
+exports[`build fixtures build pure with jvdx 3`] = `
+"function o(){return\\"hello world\\"}export{o as foo};
+//# sourceMappingURL=pure.esm.js.map
+"
+`;
+
+exports[`build fixtures build pure with jvdx 4`] = `
+"exports.foo=function(){return\\"hello world\\"};
+//# sourceMappingURL=pure.js.map
+"
+`;
+
+exports[`build fixtures build pure with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?o(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],o):o((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).pure={})}(this,function(e){e.foo=function(){return\\"hello world\\"}});
+//# sourceMappingURL=pure.umd.js.map
+"
+`;
+
+exports[`build fixtures build raw with jvdx 1`] = `
+"Used script: jvdx build --raw
+
+Directory tree:
+
+raw
+  dist
+    raw.esm.js
+    raw.esm.js.map
+    raw.js
+    raw.js.map
+    raw.umd.js
+    raw.umd.js.map
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/raw.js (2926 B)
+  -> gzip: 1389 B
+  -> brotli: 1160 B
+./dist/raw.esm.js (2937 B)
+  -> gzip: 1398 B
+  -> brotli: 1169 B
+./dist/raw.umd.js (3143 B)
+  -> gzip: 1515 B
+  -> brotli: 1264 B
+"
+`;
+
+exports[`build fixtures build raw with jvdx 2`] = `6`;
+
+exports[`build fixtures build raw with jvdx 3`] = `
+"var e=\\"\\\\n\\\\tWe might as well make some Almighty mountains today as well, what the heck.\\\\n\\\\tIn your imagination you can go anywhere you want. Nice little fluffy clouds\\\\n\\\\tlaying around in the sky being lazy. You have to make those little noises or\\\\n\\\\tit won't work. Clouds are free they come and go as they please.\\\\n\\\\n\\\\tTrees grow in all kinds of ways. They're not all perfectly straight. Not\\\\n\\\\tevery limb is perfect. Now let's put some happy little clouds in here. We\\\\n\\\\thave no limits to our world. We're only limited by our imagination. The\\\\n\\\\tfirst step to doing anything is to believe you can do it. See it finished\\\\n\\\\tin your mind before you ever start. Even trees need a friend. We all need\\\\n\\\\tfriends. And that's when it becomes fun - you don't have to spend your\\\\n\\\\ttime thinking about what's happening - you just let it happen.\\\\n\\\\n\\\\tI thought today we would do a happy little picture. We don't have to be\\\\n\\\\tconcerned about it. We just have to let it fall where it will. I'm gonna\\\\n\\\\tstart with a little Alizarin crimson and a touch of Prussian blue Be so\\\\n\\\\tvery light. Be a gentle whisper. The only prerequisite is that it makes\\\\n\\\\tyou happy. If it makes you happy then it's good. This is truly an almighty\\\\n\\\\tmountain.\\\\n\\\\n\\\\tThat's why I paint - because I can create the kind of world I want - and I\\\\n\\\\tcan make this world as happy as I want it. I was blessed with a very steady\\\\n\\\\thand; and it comes in very handy when you're doing these little delicate\\\\n\\\\tthings. We'll paint one happy little tree right here. These things happen\\\\n\\\\tautomatically. All you have to do is just let them happen.\\\\n\\\\n\\\\tYou can do anything here - the only pre-requisite is that it makes you\\\\n\\\\thappy. I'm going to mix up a little color. We’ll use Van Dyke Brown,\\\\n\\\\tPermanent Red, and a little bit of Prussian Blue. Let's make some happy\\\\n\\\\tlittle clouds in our world.\\\\n\\\\n\\\\tWork on one thing at a time. Don't get carried away - we have plenty of\\\\n\\\\ttime. Everything is happy if you choose to make it that way. Happy\\\\n\\\\tpainting, God bless. You can create anything that makes you happy. Just\\\\n\\\\tmake a decision and let it go. Nice little clouds playing around in the\\\\n\\\\tsky.\\\\n\\\\n\\\\tAnytime you learn something your time and energy are not wasted. Van Dyke\\\\n\\\\tBrown is a very nice brown, it's almost like a chocolate brown. It's\\\\n\\\\timportant to me that you're happy. In nature, dead trees are just as normal\\\\n\\\\tas live trees. Painting should do one thing. It should put happiness in\\\\n\\\\tyour heart.\\\\n\\\\n\\\\tThere is immense joy in just watching - watching all the little creatures\\\\n\\\\tin nature. I'll go over the colors one more time that we use: Titanium\\\\n\\\\twhite, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap\\\\n\\\\tgreen, Cad yellow, and Permanent red. If you don't like it - change it.\\\\n\\\\tIt's your world. Be brave. Sometimes you learn more from your mistakes than\\\\n\\\\tyou do from your masterpieces.\\";export{e as OneKilobyteOfBobRoss};
+//# sourceMappingURL=raw.esm.js.map
+"
+`;
+
+exports[`build fixtures build raw with jvdx 4`] = `
+"exports.OneKilobyteOfBobRoss=\\"\\\\n\\\\tWe might as well make some Almighty mountains today as well, what the heck.\\\\n\\\\tIn your imagination you can go anywhere you want. Nice little fluffy clouds\\\\n\\\\tlaying around in the sky being lazy. You have to make those little noises or\\\\n\\\\tit won't work. Clouds are free they come and go as they please.\\\\n\\\\n\\\\tTrees grow in all kinds of ways. They're not all perfectly straight. Not\\\\n\\\\tevery limb is perfect. Now let's put some happy little clouds in here. We\\\\n\\\\thave no limits to our world. We're only limited by our imagination. The\\\\n\\\\tfirst step to doing anything is to believe you can do it. See it finished\\\\n\\\\tin your mind before you ever start. Even trees need a friend. We all need\\\\n\\\\tfriends. And that's when it becomes fun - you don't have to spend your\\\\n\\\\ttime thinking about what's happening - you just let it happen.\\\\n\\\\n\\\\tI thought today we would do a happy little picture. We don't have to be\\\\n\\\\tconcerned about it. We just have to let it fall where it will. I'm gonna\\\\n\\\\tstart with a little Alizarin crimson and a touch of Prussian blue Be so\\\\n\\\\tvery light. Be a gentle whisper. The only prerequisite is that it makes\\\\n\\\\tyou happy. If it makes you happy then it's good. This is truly an almighty\\\\n\\\\tmountain.\\\\n\\\\n\\\\tThat's why I paint - because I can create the kind of world I want - and I\\\\n\\\\tcan make this world as happy as I want it. I was blessed with a very steady\\\\n\\\\thand; and it comes in very handy when you're doing these little delicate\\\\n\\\\tthings. We'll paint one happy little tree right here. These things happen\\\\n\\\\tautomatically. All you have to do is just let them happen.\\\\n\\\\n\\\\tYou can do anything here - the only pre-requisite is that it makes you\\\\n\\\\thappy. I'm going to mix up a little color. We’ll use Van Dyke Brown,\\\\n\\\\tPermanent Red, and a little bit of Prussian Blue. Let's make some happy\\\\n\\\\tlittle clouds in our world.\\\\n\\\\n\\\\tWork on one thing at a time. Don't get carried away - we have plenty of\\\\n\\\\ttime. Everything is happy if you choose to make it that way. Happy\\\\n\\\\tpainting, God bless. You can create anything that makes you happy. Just\\\\n\\\\tmake a decision and let it go. Nice little clouds playing around in the\\\\n\\\\tsky.\\\\n\\\\n\\\\tAnytime you learn something your time and energy are not wasted. Van Dyke\\\\n\\\\tBrown is a very nice brown, it's almost like a chocolate brown. It's\\\\n\\\\timportant to me that you're happy. In nature, dead trees are just as normal\\\\n\\\\tas live trees. Painting should do one thing. It should put happiness in\\\\n\\\\tyour heart.\\\\n\\\\n\\\\tThere is immense joy in just watching - watching all the little creatures\\\\n\\\\tin nature. I'll go over the colors one more time that we use: Titanium\\\\n\\\\twhite, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap\\\\n\\\\tgreen, Cad yellow, and Permanent red. If you don't like it - change it.\\\\n\\\\tIt's your world. Be brave. Sometimes you learn more from your mistakes than\\\\n\\\\tyou do from your masterpieces.\\";
+//# sourceMappingURL=raw.js.map
+"
+`;
+
+exports[`build fixtures build raw with jvdx 5`] = `
+"!function(e,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?t(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],t):t((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).raw={})}(this,function(e){e.OneKilobyteOfBobRoss=\\"\\\\n\\\\tWe might as well make some Almighty mountains today as well, what the heck.\\\\n\\\\tIn your imagination you can go anywhere you want. Nice little fluffy clouds\\\\n\\\\tlaying around in the sky being lazy. You have to make those little noises or\\\\n\\\\tit won't work. Clouds are free they come and go as they please.\\\\n\\\\n\\\\tTrees grow in all kinds of ways. They're not all perfectly straight. Not\\\\n\\\\tevery limb is perfect. Now let's put some happy little clouds in here. We\\\\n\\\\thave no limits to our world. We're only limited by our imagination. The\\\\n\\\\tfirst step to doing anything is to believe you can do it. See it finished\\\\n\\\\tin your mind before you ever start. Even trees need a friend. We all need\\\\n\\\\tfriends. And that's when it becomes fun - you don't have to spend your\\\\n\\\\ttime thinking about what's happening - you just let it happen.\\\\n\\\\n\\\\tI thought today we would do a happy little picture. We don't have to be\\\\n\\\\tconcerned about it. We just have to let it fall where it will. I'm gonna\\\\n\\\\tstart with a little Alizarin crimson and a touch of Prussian blue Be so\\\\n\\\\tvery light. Be a gentle whisper. The only prerequisite is that it makes\\\\n\\\\tyou happy. If it makes you happy then it's good. This is truly an almighty\\\\n\\\\tmountain.\\\\n\\\\n\\\\tThat's why I paint - because I can create the kind of world I want - and I\\\\n\\\\tcan make this world as happy as I want it. I was blessed with a very steady\\\\n\\\\thand; and it comes in very handy when you're doing these little delicate\\\\n\\\\tthings. We'll paint one happy little tree right here. These things happen\\\\n\\\\tautomatically. All you have to do is just let them happen.\\\\n\\\\n\\\\tYou can do anything here - the only pre-requisite is that it makes you\\\\n\\\\thappy. I'm going to mix up a little color. We’ll use Van Dyke Brown,\\\\n\\\\tPermanent Red, and a little bit of Prussian Blue. Let's make some happy\\\\n\\\\tlittle clouds in our world.\\\\n\\\\n\\\\tWork on one thing at a time. Don't get carried away - we have plenty of\\\\n\\\\ttime. Everything is happy if you choose to make it that way. Happy\\\\n\\\\tpainting, God bless. You can create anything that makes you happy. Just\\\\n\\\\tmake a decision and let it go. Nice little clouds playing around in the\\\\n\\\\tsky.\\\\n\\\\n\\\\tAnytime you learn something your time and energy are not wasted. Van Dyke\\\\n\\\\tBrown is a very nice brown, it's almost like a chocolate brown. It's\\\\n\\\\timportant to me that you're happy. In nature, dead trees are just as normal\\\\n\\\\tas live trees. Painting should do one thing. It should put happiness in\\\\n\\\\tyour heart.\\\\n\\\\n\\\\tThere is immense joy in just watching - watching all the little creatures\\\\n\\\\tin nature. I'll go over the colors one more time that we use: Titanium\\\\n\\\\twhite, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap\\\\n\\\\tgreen, Cad yellow, and Permanent red. If you don't like it - change it.\\\\n\\\\tIt's your world. Be brave. Sometimes you learn more from your mistakes than\\\\n\\\\tyou do from your masterpieces.\\"});
+//# sourceMappingURL=raw.umd.js.map
+"
+`;
+
+exports[`build fixtures build shebang with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+shebang
+  dist
+    shebang.esm.js
+    shebang.esm.js.map
+    shebang.js
+    shebang.js.map
+    shebang.umd.js
+    shebang.umd.js.map
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/shebang.js (65 B)
+  -> gzip: 85 B
+  -> brotli: 62 B
+./dist/shebang.esm.js (71 B)
+  -> gzip: 89 B
+  -> brotli: 70 B
+./dist/shebang.umd.js (286 B)
+  -> gzip: 199 B
+  -> brotli: 160 B
+"
+`;
+
+exports[`build fixtures build shebang with jvdx 2`] = `6`;
+
+exports[`build fixtures build shebang with jvdx 3`] = `
+"#!/usr/bin/env node
+function o(){return\\"hello world\\"}export{o as foo};
+//# sourceMappingURL=shebang.esm.js.map
+"
+`;
+
+exports[`build fixtures build shebang with jvdx 4`] = `
+"#!/usr/bin/env node
+exports.foo=function(){return\\"hello world\\"};
+//# sourceMappingURL=shebang.js.map
+"
+`;
+
+exports[`build fixtures build shebang with jvdx 5`] = `
+"#!/usr/bin/env node
+!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?o(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],o):o((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).shebang={})}(this,function(e){e.foo=function(){return\\"hello world\\"}});
+//# sourceMappingURL=shebang.umd.js.map
+"
+`;
+
+exports[`build fixtures build ts-declaration with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+ts-declaration
+  dist
+    index.esm.js
+    index.esm.js.map
+    index.js
+    index.js.map
+    index.umd.js
+    index.umd.js.map
+  node_modules
+  package.json
+  src
+    index.tsx
+  tsconfig.json
+  types
+    index.d.ts
+
+
+Built in 0s
+
+Bundle(s)
+./dist/index.js (35 B)
+  -> gzip: 55 B
+  -> brotli: 33 B
+./dist/index.esm.js (41 B)
+  -> gzip: 61 B
+  -> brotli: 45 B
+./dist/index.umd.js (263 B)
+  -> gzip: 186 B
+  -> brotli: 139 B
+"
+`;
+
+exports[`build fixtures build ts-declaration with jvdx 2`] = `6`;
+
+exports[`build fixtures build ts-declaration with jvdx 3`] = `
+"function n(){return 42}export{n as foo};
+//# sourceMappingURL=index.esm.js.map
+"
+`;
+
+exports[`build fixtures build ts-declaration with jvdx 4`] = `
+"exports.foo=function(){return 42};
+//# sourceMappingURL=index.js.map
+"
+`;
+
+exports[`build fixtures build ts-declaration with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?o(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],o):o((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).tsDeclarations={})}(this,function(e){e.foo=function(){return 42}});
+//# sourceMappingURL=index.umd.js.map
+"
+`;
+
+exports[`build fixtures build ts-declaration with jvdx 6`] = `1`;
+
+exports[`build fixtures build ts-declaration with jvdx 7`] = `
+"export declare function foo(): number;
+"
+`;
+
+exports[`build fixtures build ts-jsx with jvdx 1`] = `
+"Used script: jvdx build --jsx
+
+Directory tree:
+
+ts-jsx
+  dist
+    index.d.ts
+    ts-jsx.esm.js
+    ts-jsx.esm.js.map
+    ts-jsx.js
+    ts-jsx.js.map
+    ts-jsx.umd.js
+    ts-jsx.umd.js.map
+  node_modules
+  package.json
+  src
+    index.tsx
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/ts-jsx.js (137 B)
+  -> gzip: 130 B
+  -> brotli: 94 B
+./dist/ts-jsx.esm.js (140 B)
+  -> gzip: 131 B
+  -> brotli: 111 B
+./dist/ts-jsx.umd.js (356 B)
+  -> gzip: 232 B
+  -> brotli: 193 B
+"
+`;
+
+exports[`build fixtures build ts-jsx with jvdx 2`] = `7`;
+
+exports[`build fixtures build ts-jsx with jvdx 3`] = `
+"export declare const foo: any;
+"
+`;
+
+exports[`build fixtures build ts-jsx with jvdx 4`] = `
+"var n=function(n,r){return{tag:n,props:r,children:[].slice.call(arguments,2)}}(function(n){return n.children},null,\\"foo\\");export{n as foo};
+//# sourceMappingURL=ts-jsx.esm.js.map
+"
+`;
+
+exports[`build fixtures build ts-jsx with jvdx 5`] = `
+"var n=function(n,r){return{tag:n,props:r,children:[].slice.call(arguments,2)}}(function(n){return n.children},null,\\"foo\\");exports.foo=n;
+//# sourceMappingURL=ts-jsx.js.map
+"
+`;
+
+exports[`build fixtures build ts-jsx with jvdx 6`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?n(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],n):n((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).tsJsx={})}(this,function(e){var n=function(e,n){return{tag:e,props:n,children:[].slice.call(arguments,2)}}(function(e){return e.children},null,\\"foo\\");e.foo=n});
+//# sourceMappingURL=ts-jsx.umd.js.map
+"
+`;
+
+exports[`build fixtures build ts-mixed-exports with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+ts-mixed-exports
+  dist
+    car.d.ts
+    index.d.ts
+    ts-mixed-exports.esm.js
+    ts-mixed-exports.esm.js.map
+    ts-mixed-exports.js
+    ts-mixed-exports.js.map
+    ts-mixed-exports.umd.js
+    ts-mixed-exports.umd.js.map
+  node_modules
+  package.json
+  src
+    car.ts
+    index.ts
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/ts-mixed-exports.js (124 B)
+  -> gzip: 112 B
+  -> brotli: 89 B
+./dist/ts-mixed-exports.esm.js (126 B)
+  -> gzip: 115 B
+  -> brotli: 100 B
+./dist/ts-mixed-exports.umd.js (346 B)
+  -> gzip: 228 B
+  -> brotli: 180 B
+"
+`;
+
+exports[`build fixtures build ts-mixed-exports with jvdx 2`] = `8`;
+
+exports[`build fixtures build ts-mixed-exports with jvdx 3`] = `
+"export interface Driveable {
+    drive(distance: number): boolean;
+}
+export default class Car implements Driveable {
+    drive(distance: number): boolean;
+}
+"
+`;
+
+exports[`build fixtures build ts-mixed-exports with jvdx 4`] = `
+"import Car from './car';
+declare let Ferrari: Car;
+export { Car };
+export default Ferrari;
+"
+`;
+
+exports[`build fixtures build ts-mixed-exports with jvdx 5`] = `
+"var t=function(){function t(){}return t.prototype.drive=function(t){return!0},t}(),n=new t;export default n;export{t as Car};
+//# sourceMappingURL=ts-mixed-exports.esm.js.map
+"
+`;
+
+exports[`build fixtures build ts-mixed-exports with jvdx 6`] = `
+"var r=function(){function r(){}return r.prototype.drive=function(r){return!0},r}(),t=new r;exports.Car=r,exports.default=t;
+//# sourceMappingURL=ts-mixed-exports.js.map
+"
+`;
+
+exports[`build fixtures build ts-mixed-exports with jvdx 7`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?n(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],n):n((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).tsMixedExports={})}(this,function(e){var n=function(){function e(){}return e.prototype.drive=function(e){return!0},e}(),t=new n;e.Car=n,e.default=t});
+//# sourceMappingURL=ts-mixed-exports.umd.js.map
+"
+`;
+
+exports[`build fixtures build ts-module with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+ts-module
+  dist
+    foo.d.ts
+    index.d.ts
+    ts-module.esm.js
+    ts-module.esm.js.map
+    ts-module.js
+    ts-module.js.map
+    ts-module.umd.js
+    ts-module.umd.js.map
+  node_modules
+  package.json
+  src
+    foo.ts
+    index.ts
+  tsconfig.json
+
+
+Built in 0s
+
+Bundle(s)
+./dist/ts-module.js (43 B)
+  -> gzip: 59 B
+  -> brotli: 42 B
+./dist/ts-module.esm.js (49 B)
+  -> gzip: 65 B
+  -> brotli: 49 B
+./dist/ts-module.umd.js (265 B)
+  -> gzip: 181 B
+  -> brotli: 143 B
+"
+`;
+
+exports[`build fixtures build ts-module with jvdx 2`] = `8`;
+
+exports[`build fixtures build ts-module with jvdx 3`] = `
+"export declare function foo(): string;
+"
+`;
+
+exports[`build fixtures build ts-module with jvdx 4`] = `
+"export declare function foobar(): string;
+"
+`;
+
+exports[`build fixtures build ts-module with jvdx 5`] = `
+"function o(){return\\"foobar\\"}export{o as foobar};
+//# sourceMappingURL=ts-module.esm.js.map
+"
+`;
+
+exports[`build fixtures build ts-module with jvdx 6`] = `
+"exports.foobar=function(){return\\"foobar\\"};
+//# sourceMappingURL=ts-module.js.map
+"
+`;
+
+exports[`build fixtures build ts-module with jvdx 7`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?o(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],o):o((e=\\"undefined\\"!=typeof globalThis?globalThis:e||self).tsModule={})}(this,function(e){e.foobar=function(){return\\"foobar\\"}});
+//# sourceMappingURL=ts-module.umd.js.map
+"
+`;

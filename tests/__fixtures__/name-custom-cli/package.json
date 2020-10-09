@@ -1,0 +1,6 @@
+{
+  "name": "name-custom",
+  "scripts": {
+    "build": "jvdx build --name nameCustomCli"
+  }
+}

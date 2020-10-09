@@ -1,0 +1,6 @@
+{
+  "name": "modern-lib",
+  "scripts": {
+    "build": "jvdx build -f modern"
+  }
+}
