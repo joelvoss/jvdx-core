@@ -34,7 +34,7 @@ module.exports = handler => {
 		.command('clean')
 		.describe(
 			'Cleans repository and removes `./node_modules` and `./dist`.' +
-				'You can append a glob pattern to remove additional files/folders.',
+				'You can append a glob pattern to remove your own set of files/folders.',
 		)
 		.action(cmd('clean'));
 
@@ -100,11 +100,6 @@ module.exports = handler => {
 		.option('--tsconfig', 'Specify the path to a custom tsconfig.json')
 		.example('build --tsconfig tsconfig.build.json')
 		.action(cmd('build'));
-
-	// prog
-	// 	.command('watch [...entries]')
-	// 	.describe('Rebuilds on any change')
-	// 	.action(cmd('watch'));
 
 	// Parse argv; add extra aliases
 	return argv =>
