@@ -68,8 +68,8 @@ module.exports = handler => {
 			'Builds the assets once, it also enabled minification and sets the NODE_ENV=production environment variable',
 		)
 		.example('build')
-		.option('--lint, -l', 'Lint before build.')
-		.option('--clean, -c', 'Clean output folder.')
+		.option('--clean, -c', 'Clean output directory before building.')
+		.example('build --clean')
 		.option('--entry, -i', 'Entry module(s)')
 		.option('--output, -o', 'Directory to place build files into')
 		.option(
@@ -102,7 +102,6 @@ module.exports = handler => {
 			null,
 		)
 		.example("build --no-sourcemap # don't generate sourcemaps")
-		.option('--raw', 'Show raw byte size', false)
 		.option('--jsx', 'Enable @babel/preset-react')
 		.option('--tsconfig', 'Specify the path to a custom tsconfig.json')
 		.example('build --tsconfig tsconfig.build.json')

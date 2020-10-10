@@ -36,7 +36,6 @@ const { shouldCssModules, cssModulesConfig } = require('../shared/css-modules');
 const { normalizeMinifyOptions } = require('../shared/terser');
 const { getSizeInfo } = require('../shared/compressed-size');
 const { clean } = require('./clean');
-const { lint } = require('./lint');
 
 const WATCH_OPTS = {
 	exclude: 'node_modules/**',
@@ -44,16 +43,6 @@ const WATCH_OPTS = {
 
 async function build(opts) {
 	const stop = stopwatch();
-
-	// Conditionally clean output directory
-	if (opts.clean) {
-		await clean({ _: arrify(opts.clean) });
-	}
-
-	// Conditionally lint source code
-	if (opts.lint) {
-		await lint({ _: [] });
-	}
 
 	let options = { ...opts };
 
@@ -118,6 +107,11 @@ async function build(opts) {
 				),
 			);
 		}
+	}
+
+	// Conditionally clean output directory
+	if (opts.clean) {
+		await clean({ _: arrify(dirname(options.output)) });
 	}
 
 	if (options.watch) {
