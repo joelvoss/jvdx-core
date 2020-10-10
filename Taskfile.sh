@@ -28,10 +28,6 @@ test() {
   node src/index.js test --testPathPattern=/tests $*
 }
 
-pre-commit() {
-  node src/index.js pre-commit $*
-}
-
 # Validate application
 validate() {
   format $*

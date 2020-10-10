@@ -57,12 +57,6 @@ module.exports = handler => {
 		.action(cmd('test'));
 
 	prog
-		.command('pre-commit')
-		.describe('Run pre-commit tasks using `lint-staged`')
-		.example('pre-commit')
-		.action(cmd('pre-commit'));
-
-	prog
 		.command('build [...entries]')
 		.describe(
 			'Builds the assets once, it also enabled minification and sets the NODE_ENV=production environment variable',

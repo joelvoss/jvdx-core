@@ -5,7 +5,6 @@ const { lint } = require('./actions/lint');
 const { format } = require('./actions/format');
 const { test } = require('./actions/test');
 const { build } = require('./actions/build');
-const { preCommit } = require('./actions/pre-commit');
 
 const prog = require('./prog');
 const { print, logError } = require('./utils');
@@ -39,10 +38,6 @@ const run = (type, opts) => {
 		case 'test':
 			print('Running unit tests');
 			return unwrap(test(opts));
-
-		case 'pre-commit':
-			print('Running pre-commit task');
-			return unwrap(preCommit(opts));
 
 		case 'build':
 		default:
