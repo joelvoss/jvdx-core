@@ -4,6 +4,14 @@
   "description": "Personal nodejs toolbox",
   "author": "Joel Voss <mail@joelvoss.com>",
   "license": "MIT",
+  "homepage": "https://github.com/joelvoss/jvdx-core",
+  "bugs": {
+    "url": "https://github.com/joelvoss/jvdx-core/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelvoss/jvdx-core.git"
+  },
   "main": "src/index.js",
   "bin": {
     "jvdx": "src/index.js"
