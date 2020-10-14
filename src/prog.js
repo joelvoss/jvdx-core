@@ -28,21 +28,28 @@ module.exports = handler => {
 		.action(cmd('clean'));
 
 	prog
-		.command('lint [dir]')
-		.describe('Lint your source code using `eslint` and `prettier`')
+		.command('lint [...files|dir|glob]')
+		.describe(
+			'Statically analyzes your code using ESLint.' +
+				`Note: We support ESLint's cli flags.`,
+		)
 		.example('lint')
-		.option('--ext', 'Specify file extensions to lint', '.js,.jsx,.ts,.tsx')
 		.action(cmd('lint'));
 
 	prog
-		.command('format')
-		.describe('Format your source code using `prettier`')
+		.command('format [...files|dir|glob]')
+		.describe(
+			'Formats your code in-place using prettier.' +
+				`Note: We support prettiers's cli flags.`,
+		)
 		.example('format')
 		.action(cmd('format'));
 
 	prog
 		.command('test')
-		.describe('Test your source code using `jest`')
+		.describe(
+			`Runs your test suite using Jest. Note: We support Jest's cli flags.`,
+		)
 		.example('test')
 		.action(cmd('test'));
 

@@ -1,10 +1,11 @@
 # @jvdx/core
 
-jvdx is a minimal set of tools to help maintain and build better applications.
+jvdx is a minimal set of tools to help maintain and build better applications.  
+It is a single dependency to `bundle`, `lint`, `format` and `test` your library.
 
-## Installation
+## Installation & Usage
 
-(1) Install the core package:
+(1) Install `@jvdx/core`:
 
 ```bash
 # Using npm
@@ -13,3 +14,343 @@ $ npm i -D @jvdx/core
 # Using yarn
 $ yarn add -D @jvdx/core
 ```
+
+(2) Setup your `package.json`
+
+```js
+{
+  "name": "my-package",                   // Your package name
+  "source": "src/my-package.js",          // Your source code
+  "main": "dist/my-package.js",           // Where to generate the CommonJS/Node bundle
+  "module": "dist/my-package.module.js",  // Where to generate the ESM bundle
+  "unpkg": "dist/my-package.umd.js",      // Where to generate the UMD bundle (also aliased as "umd:main")
+  "scripts": {
+    "build": "jvdx build",       // Compiles "source" to "main"/"module"/"unpkg"
+    "dev": "jvdx build --watch"  // Re-build when source files change
+  }
+}
+```
+
+(3) Build your application
+
+```bash
+# Using npm
+$ npm run build
+
+# Using yarn
+$ yarn build
+```
+
+## Starter templates
+
+We also provide a few starter templates that you can initialize with the
+help of [`degit`](https://github.com/Rich-Harris/degit).
+
+  - @jvdx/templates/node-lib
+  - @jvdx/templates/react-lib
+  - @jvdx/templates/react-app
+
+```bash
+$ npx degit @jvdx/templates/<template-name> my-package
+$ cd my-package
+
+# Using npm
+$ npm install
+
+# Using yarn
+$ yarn
+```
+
+## Output Formats
+
+jvdx produces esm _(ECMAScript Modules, e.g. import / export)_,
+cjs _(CommonJS, e.g. Node-style module.exports)_ and umd 
+_(Universal Module Definition)_ bundles with your code compiled to syntax that
+works pretty much everywhere.
+
+While it's possible to customize the browser or Node versions you wish to
+support using a [browserslist configuration][browserslist], the default setting is optimal
+and strongly recommended.
+
+
+## Usage & Configuration
+
+jvdx comes with a variaty of commands, but the most notable are `build`,
+`lint`, `format`, `test` and `clean`. Neither require any options/flags, but
+they can be tailored to suit your needs if need be.
+
+Each command does exactly what you would expect from it's name.
+
+### `jvdx build`
+
+Builds your code once, it also enables minification and sets the
+`NODE_ENV=production` environment variable.  
+Unless overridden via the command line, jvdx uses the `source` property in
+your `package.json` to locate the input file, and the `main` property for
+the output:
+
+```js
+{
+  "source": "src/index.js",      // input
+  "main": "dist/my-packate.js",  // output
+  "scripts": {
+    "build": "jvdx build"
+  }
+}
+```
+
+For UMD builds, jvdx will use a camelCase version of the name field in your
+`package.json` as export name. This can be customized using an "amdName" key
+in your `package.json` or the `--name` command line argument.
+
+### `jvdx lint`
+
+Statically analyzes your code using ESLint.  
+Unless overridden via the command line, jvdx lints `.js`,`.jsx`,`.ts`, and
+`.tsx` files inside the `./src` directory.
+
+For a full list of options see the [ESLint documentation][eslint-docs].
+
+### `jvdx format`
+
+Formats your code in-place using Prettier.  
+Unless overridden via the command line, jvdx uses the following glob pattern
+to format all matching files in place:  
+`./src/**/*.+(js|json|less|css|ts|tsx|md)`
+
+For a full list of options see the [Prettier documentation][prettier-docs].
+
+### `jvdx test`
+
+Runs your test suite using Jest.
+Unless overridden via the command line, jvdx uses the following jest
+configuration to test your code:
+
+```js
+{
+  testEnvironment: 'node',
+  testURL: 'http://localhost',
+  watchPlugins: [
+    require.resolve('jest-watch-typeahead/filename'),
+    require.resolve('jest-watch-typeahead/testname'),
+  ],
+  transform: {
+    '^.+\\.jsx?$': require.resolve('babel-jest'),
+    '^.+\\.(ts|tsx)$': require.resolve('ts-jest/dist'),
+  },
+}
+```
+
+For a full list of options see the [Jest documentation][eslint-docs].
+
+### `jvdx clean`
+
+Cleans your source repository using rimraf.
+Unless overridden via the command line, jvdx removes both `./node_modules` and
+`./dist` folders relative to the package root.
+
+```bash
+# Removes ./build
+$ jvdx clean ./build
+```
+
+### Using with TypeScript
+
+Just point the input to a `.ts` file through either the cli or the source key
+in your `package.json` and you’re done.
+Under the hood jvdx uses the `rollup-plugin-typescript2` plugin to transpile
+your TypeScript sources.
+
+jvdx will generally respect your TypeScript config defined in a `tsconfig.json`
+file with notable exceptions being the "[target](https://www.typescriptlang.org/tsconfig/#target)" and "[module](https://www.typescriptlang.org/tsconfig#module)" settings.
+To ensure your TypeScript configuration matches the configuration that jvdx
+uses internally it's strongly recommended that you set
+`"module": "ESNext"` and `"target": "ESNext"` in your `tsconfig.json`.
+
+### Using CSS Modules
+
+By default any css file imported as `.module.css`, will be treated as a
+css-module. If you wish to treat all `.css` imports as a module, specify the
+cli flag `--css-modules` true. If you wish to disable all css-module behaviours
+set the flag to false.
+
+The default scope name when css-modules is turned on will be, in watch mode
+`_[name]__[local]__[hash:base64:5]` and when you build `_[hash:base64:5]`.
+This can be overriden by specifying the flag, eg.
+`--css-modules "_something_[hash:base64:7]"`.
+
+> Note: by setting this, it will be treated as a true, and thus, all .css
+> imports will be scoped.
+
+| flag  | import                           |   is css module?   |
+| ----- | -------------------------------- | :----------------: |
+| null  | `import './my-file.css';`        |         ❌         |
+| null  | `import './my-file.module.css';` |         ✅         |
+| false | `import './my-file.css';`        |         ❌         |
+| false | `import './my-file.module.css';` |         ❌         |
+| true  | `import './my-file.css';`        |         ✅         |
+| true  | `import './my-file.module.css';` |         ✅         |
+
+### Specifying builds in `package.json`
+
+jvdx uses the fields from your `package.json` to figure out where it should
+place each generated bundle:
+
+```js
+{
+  "main": "dist/my-bundle.js",            // CommonJS bundle
+  "umd:main": "dist/my-bundle.umd.js",    // UMD bundle
+  "module": "dist/my-bundle.m.js",        // ES Modules bundle
+  "esmodule": "dist/my-bundle.modern.js", // Modern bundle
+  "types": "dist/my-bundle.d.ts"          // TypeScript typings directory
+}
+```
+
+### Building a single bundle with a fixed output name
+
+By default jvdx outputs multiple bundles, one bundle per format.
+A single bundle with a fixed output name can be built like this:
+
+```bash
+$ jvdx -i lib/main.js -o dist/bundle.js --no-pkg-main -f umd
+```
+
+### Mangling Properties
+
+To achieve the smallest possible bundle size, libraries often wish to rename
+internal object properties or class members to smaller names - transforming
+`this._internalIdValue` to `this._i`. jvdx doesn't do this by default,
+however it can be enabled by creating a `mangle.json` file (or a "mangle"
+property in your `package.json`). Within that file, you can specify a regular
+expression pattern to control which properties should be mangled. For example:
+to mangle all property names beginning an underscore:
+
+```js
+{
+  "mangle": {
+    "regex": "^_"
+  }
+}
+```
+
+It's also possible to configure repeatable short names for each mangled
+property, so that every build of your library has the same output.
+
+## All CLI Options
+
+```bash
+Usage
+  $ jvdx <command> [options]
+
+Available Commands
+  clean     Cleans repository and removes `./node_modules` and `./dist`.
+  lint      Statically analyzes your code using ESLint.
+  format    Formats your code in-place using prettier.
+  test      Runs your test suite using Jest.
+  build     Builds the assets once, it also enabled minification and sets the NODE_ENV=production environment variable
+
+For more info, run any command with the `--help` flag
+  $ jvdx clean --help
+  $ jvdx lint --help
+
+Options
+  -v, --version    Displays current version
+  -h, --help       Displays this message
+```
+
+### build
+
+```bash
+Usage
+  $ jvdx build [...entries] [options]
+
+Options
+  -c, --clean      Clean output directory before building.
+  -i, --entry      Entry module(s)
+  -o, --output     Directory to place build files into
+  -f, --format     Only build specified formats (any of modern,es,cjs,umd or iife)  (default modern,es,cjs,umd)
+  -w, --watch      Rebuilds on any change  (default false)
+  --pkg-main       Outputs files analog to package.json main entries  (default true)
+  --target         Specify your target environment (node or web)  (default web)
+  --external       Specify external dependencies, or 'none'
+  --globals        Specify globals dependencies, or 'none'
+  --define         Replace constants with hard-coded values
+  --alias          Map imports to different modules
+  --compress       Compress output using Terser
+  --strict         Enforce undefined global context and add "use strict"
+  --name           Specify name exposed in UMD builds
+  --cwd            Use an alternative working directory  (default .)
+  --sourcemap      Generate source map  (default true)
+  --css-modules    Turns on css-modules for all .css imports. Passing a string will override the scopeName. eg --css-modules="_[hash]"
+  --jsx            Enable @babel/preset-react
+  --tsconfig       Specify the path to a custom tsconfig.json
+  -h, --help       Displays this message
+
+Examples
+  $ jvdx build
+  $ jvdx build --clean
+  $ jvdx build --globals react=React,jquery=$
+  $ jvdx build --define API_KEY=1234
+  $ jvdx build --alias react=preact
+  $ jvdx build --no-sourcemap # don't generate sourcemaps
+  $ jvdx build --tsconfig tsconfig.build.json
+```
+
+### lint
+
+```bash
+Usage
+  $ jvdx lint [...files|dir|glob] [options]
+
+Options
+  -h, --help    Displays this message
+
+Examples
+  $ jvdx lint
+```
+
+### format
+
+```bash
+Usage
+  $ jvdx format [...files|dir|glob] [options]
+
+Options
+  -h, --help    Displays this message
+
+Examples
+  $ jvdx format
+```
+
+### test
+
+```bash
+Usage
+  $ jvdx test [options]
+
+Options
+  -h, --help    Displays this message
+
+Examples
+  $ jvdx test
+```
+
+### clean
+
+```bash
+Usage
+  $ jvdx clean [...files|dir|glob] [options]
+
+Options
+  -h, --help    Displays this message
+
+Examples
+  $ jvdx clean
+```
+
+---
+
+[browserslist]: https://github.com/browserslist/browserslist#browserslist-
+[eslint-docs]: https://eslint.org/docs/user-guide/command-line-interface
+[prettier-docs]: https://prettier.io/docs/en/cli.html
+[jest-docs]: https://jestjs.io/docs/en/cli

@@ -11,13 +11,13 @@ async function format(opts) {
 	const stop = stopwatch();
 
 	const hasPositionArgs = Boolean(opts._.length);
+	const filesToApply = hasPositionArgs
+		? opts._
+		: ['./src/**/*.+(js|json|less|css|ts|tsx|md)'];
 
 	const args = parseArgs(opts, {
 		defaultArgs: ['--write', '--loglevel', 'silent'],
 	});
-	const filesToApply = hasPositionArgs
-		? opts._
-		: ['./src/**/*.+(js|json|less|css|ts|tsx|md)'];
 
 	await runCMD([resolveBin('prettier'), ...args, ...filesToApply]).catch(
 		err => {
