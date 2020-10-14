@@ -1,29 +1,18 @@
 const sade = require('sade');
-const { arrify } = require('./utils');
 let { version } = require('../package.json');
 
 module.exports = handler => {
 	const ENABLE_MODERN = process.env.MICROBUNDLE_MODERN !== 'false';
 	const DEFAULT_FORMATS = ENABLE_MODERN ? 'modern,es,cjs,umd' : 'es,cjs,umd';
 
-	// Define our base command. This sets certain options by default
+	// Define our base command. This normalizes positional arguments.
 	// The cmd handler may choose to act on those
-	const cmd = type => (str, opts) => {
-		if (opts == null) opts = str;
+	const cmd = type => (...args) => {
+		const opts = args[args.length - 1];
+		const pos = args.slice(0, args.length - 1).filter(Boolean);
 
-		if (type === 'build') {
-			opts.entries = arrify(str || opts.entry).concat(opts._);
-
-			if (opts.compress != null) {
-				// Convert `--compress true/false/1/0` to booleans:
-				if (typeof opts.compress !== 'boolean') {
-					opts.compress = opts.compress !== 'false' && opts.compress !== '0';
-				}
-			} else {
-				// the default compress value is `true` for web, `false` for Node:
-				opts.compress = opts.target !== 'node';
-			}
-		}
+		const posArgs = pos.concat(opts._);
+		opts._ = posArgs.length !== 0 ? [...new Set(posArgs)] : [];
 
 		handler(type, opts);
 	};
@@ -39,9 +28,10 @@ module.exports = handler => {
 		.action(cmd('clean'));
 
 	prog
-		.command('lint')
+		.command('lint [dir]')
 		.describe('Lint your source code using `eslint` and `prettier`')
 		.example('lint')
+		.option('--ext', 'Specify file extensions to lint', '.js,.jsx,.ts,.tsx')
 		.action(cmd('lint'));
 
 	prog

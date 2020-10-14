@@ -44,6 +44,17 @@ const WATCH_OPTS = {
 async function build(opts) {
 	const stop = stopwatch();
 
+	opts.entries = arrify(opts.entry).concat(opts._);
+	if (opts.compress != null) {
+		// Convert `--compress true/false/1/0` to booleans:
+		if (typeof opts.compress !== 'boolean') {
+			opts.compress = opts.compress !== 'false' && opts.compress !== '0';
+		}
+	} else {
+		// the default compress value is `true` for web, `false` for Node:
+		opts.compress = opts.target !== 'node';
+	}
+
 	let options = { ...opts };
 
 	options.cwd = resolve(process.cwd(), opts.cwd);
