@@ -20,14 +20,6 @@ module.exports = handler => {
 	let prog = sade('jvdx').version(version);
 
 	prog
-		.command('clean')
-		.describe(
-			'Cleans repository and removes `./node_modules` and `./dist`.' +
-				'You can append a glob pattern to remove your own set of files/folders.',
-		)
-		.action(cmd('clean'));
-
-	prog
 		.command('lint [...files|dir|glob]')
 		.describe(
 			'Statically analyzes your code using ESLint.' +
@@ -44,6 +36,15 @@ module.exports = handler => {
 		)
 		.example('format')
 		.action(cmd('format'));
+
+	prog
+		.command('clean [...files|dir|glob]')
+		.describe(
+			'Cleans repository and removes `./node_modules` and `./dist`.' +
+				'You can append a glob pattern to remove your own set of files/folders.',
+		)
+		.example('clean')
+		.action(cmd('clean'));
 
 	prog
 		.command('test')

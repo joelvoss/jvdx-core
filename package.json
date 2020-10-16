@@ -32,10 +32,11 @@
     "asyncro": "3.0.0",
     "autoprefixer": "9.8.6",
     "babel-jest": "26.5.2",
-    "babel-plugin-transform-replace-expressions": "^0.2.0",
+    "babel-plugin-transform-replace-expressions": "0.2.0",
     "brotli-size": "4.0.0",
     "builtin-modules": "3.1.0",
     "camelcase": "6.1.0",
+    "es6-promisify": "6.1.1",
     "escape-string-regexp": "4.0.0",
     "eslint": "7.11.0",
     "fs-extra": "9.0.1",
@@ -69,7 +70,6 @@
     "@babel/plugin-proposal-throw-expressions": "^7.10.4",
     "babel-plugin-macros": "^2.8.0",
     "directory-tree": "^2.2.4",
-    "es6-promisify": "^6.1.1",
     "rimraf": "^3.0.2",
     "shell-quote": "^1.7.2"
   }
