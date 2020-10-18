@@ -1,5 +1,5 @@
-// Normalize Terser options from jvdx's relaxed JSON format (mutates
-// argument in-place)
+// Normalize terser options from jvdx's relaxed json format
+// (mutates argument in-place)
 function normalizeMinifyOptions(minifyOptions) {
 	const mangle = minifyOptions.mangle || (minifyOptions.mangle = {});
 	let properties = mangle.properties;

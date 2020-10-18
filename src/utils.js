@@ -4,7 +4,6 @@ const fs = require('fs-extra');
 const which = require('which');
 const readPkgUp = require('read-pkg-up');
 const spawn = require('cross-spawn');
-const { has: lodashHas } = require('lodash.has');
 
 exports.readFile = fs.readFile;
 
@@ -89,11 +88,6 @@ function fromRoot(...p) {
 }
 exports.fromRoot = fromRoot;
 
-function hasFile(...p) {
-	return fs.existsSync(fromRoot(...p));
-}
-exports.hasFile = hasFile;
-
 function isDir(name) {
 	return fs
 		.stat(name)
@@ -109,28 +103,6 @@ function isFile(name) {
 		.catch(() => false);
 }
 exports.isFile = isFile;
-
-////////////////////////////////////////////////////////////////////////////////
-
-// export lodash.has
-const has = lodashHas;
-exports.has = has;
-
-function hasDep(names) {
-	const { packageJson } = readPkgUp.sync({ normalize: false });
-
-	const deps = arrify(names).map(p => `dependencies.${p}`);
-	const devDeps = arrify(names).map(p => `devDependencies.${p}`);
-
-	if (deps.some(prop => has(packageJson, prop))) {
-		return true;
-	}
-	if (devDeps.some(prop => has(packageJson, prop))) {
-		return true;
-	}
-	return false;
-}
-exports.hasDep = hasDep;
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -154,11 +126,8 @@ exports.runCMD = runCMD;
 ////////////////////////////////////////////////////////////////////////////////
 
 const regex = '@[a-z\\d][\\w-.]+/';
-function removePkgScope(str, options) {
+function removePkgScope(str) {
 	let regexp = new RegExp(regex, 'gi');
-	if (options && options.exact) {
-		regexp = new RegExp(`^${regex}$`, 'i');
-	}
 	return str.replace(regexp, '');
 }
 exports.removePkgScope = removePkgScope;
@@ -198,10 +167,10 @@ exports.resolveBin = resolveBin;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-function parseArgs(opts, options) {
-	const keysToFilter = options.keysToFilter || [];
-	const defaultArgs = options.defaultArgs || [];
-	const requiredArgs = options.requiredArgs || [];
+function parseArgs(opts, options = {}) {
+	const keysToFilter = arrify(options.keysToFilter);
+	const defaultArgs = arrify(options.defaultArgs);
+	const requiredArgs = arrify(options.requiredArgs);
 
 	// Filter out unwanted arguments
 	const filterOut = ['_', ...(keysToFilter ? keysToFilter : [])];
@@ -249,7 +218,7 @@ function arrify(value) {
 	}
 
 	if (typeof value[Symbol.iterator] === 'function') {
-		return [...value];
+		return Array.from(value);
 	}
 
 	return [value];
