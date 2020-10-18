@@ -16,9 +16,6 @@
   "bin": {
     "jvdx": "src/index.js"
   },
-  "files": [
-    "src"
-  ],
   "scripts": {
     "test": "./Taskfile.sh test"
   },
@@ -74,5 +71,18 @@
   ],
   "eslintConfig": {
     "extends": "@jvdx/eslint-config"
-  }
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "jvdx",
+    "rollup",
+    "eslint",
+    "prettier",
+    "jest"
+  ]
 }
