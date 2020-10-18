@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`print, printWarn, printErr should print formatted log messages 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "[36minfo[39m - Log message",
+    ],
+    Array [
+      "[33mwarn[39m - Warn message",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`print, printWarn, printErr should print formatted log messages 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "[31merr [39m - Err message",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
