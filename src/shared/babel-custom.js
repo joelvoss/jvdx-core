@@ -84,7 +84,10 @@ module.exports = () => {
 				for (const file of [cfg.babelrc, cfg.config]) {
 					if (file && !configs.has(file)) {
 						configs.add(file);
-						print(`Using external babel configuration from ${file}`);
+						const filePathRelative = file.replace(process.cwd(), '.');
+						print(
+							`Using external babel configuration from ${filePathRelative}`,
+						);
 					}
 				}
 			} else {
