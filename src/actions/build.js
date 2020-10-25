@@ -121,8 +121,10 @@ async function build(opts) {
 	}
 
 	// Conditionally clean output directory
-	if (opts.clean) {
-		await clean({ _: arrify(dirname(options.output)) });
+	if (options.clean) {
+		await clean({
+			_: arrify(dirname(options.output).replace(process.cwd(), '.')),
+		});
 	}
 
 	if (options.watch) {
