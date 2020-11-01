@@ -22,7 +22,7 @@
   "dependencies": {
     "@babel/core": "7.12.3",
     "@jvdx/babel-preset": "0.6.0",
-    "@jvdx/eslint-config": "2.0.0",
+    "@jvdx/eslint-config": "2.1.0",
     "@jvdx/prettier-config": "0.3.3",
     "@rollup/plugin-alias": "3.1.1",
     "@rollup/plugin-babel": "5.2.1",
@@ -48,7 +48,7 @@
     "prettier": "2.1.2",
     "pretty-bytes": "5.4.1",
     "rimraf": "3.0.2",
-    "rollup": "2.32.1",
+    "rollup": "2.33.0",
     "rollup-plugin-bundle-size": "1.0.3",
     "rollup-plugin-es3": "1.1.0",
     "rollup-plugin-postcss": "3.1.8",
