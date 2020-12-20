@@ -31,6 +31,7 @@ const {
 	isTruthy,
 	printWarn,
 	arrify,
+	resolveFrom,
 } = require('../utils');
 const { shouldCssModules, cssModulesConfig } = require('../shared/css-modules');
 const { normalizeMinifyOptions } = require('../shared/terser');
@@ -593,7 +594,11 @@ function createConfig(options, entry, format, writeMeta) {
 					// Handle Typescript
 					useTypescript &&
 						typescript({
-							typescript: require('typescript'),
+							typescript: require(resolveFrom(
+								options.cwd,
+								'typescript',
+								true,
+							) || 'typescript'),
 							cacheRoot: `./node_modules/.cache/.rts2_cache_${format}`,
 							useTsconfigDeclarationDir: true,
 							tsconfigDefaults: {
