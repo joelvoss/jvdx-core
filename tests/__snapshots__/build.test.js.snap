@@ -475,6 +475,7 @@ Directory tree:
 basic-css
   dist
     basic-css.css
+    basic-css.css.map
     basic-css.esm.js
     basic-css.esm.js.map
     basic-css.js
@@ -502,9 +503,12 @@ Bundle(s)
 "
 `;
 
-exports[`build fixtures build basic-css with jvdx 2`] = `7`;
+exports[`build fixtures build basic-css with jvdx 2`] = `8`;
 
-exports[`build fixtures build basic-css with jvdx 3`] = `".testing{display:flex;color:red;background:#00f}"`;
+exports[`build fixtures build basic-css with jvdx 3`] = `
+".testing{display:flex;color:red;background:#00f}
+/*# sourceMappingURL=basic-css.css.map */"
+`;
 
 exports[`build fixtures build basic-css with jvdx 4`] = `
 "function e(){var e=document.createElement(\\"div\\");return e.className=\\"testing\\",e}export default e;

@@ -565,6 +565,7 @@ function createConfig(options, entry, format, writeMeta) {
 						inject: false,
 						extract: !!writeMeta,
 						minimize: options.compress,
+						sourceMap: options.sourcemap,
 					}),
 					// Process module aliases
 					moduleAliases.length > 0 && alias({ entries: moduleAliases }),
