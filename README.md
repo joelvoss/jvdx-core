@@ -22,6 +22,7 @@ $ yarn add -D @jvdx/core
   "name": "my-package",                   // Your package name
   "source": "src/my-package.js",          // Your source code
   "main": "dist/my-package.js",           // Where to generate the CommonJS/Node bundle
+  "exports": "dist/foo.modern.js",        // path to the modern output (see below)
   "module": "dist/my-package.module.js",  // Where to generate the ESM bundle
   "unpkg": "dist/my-package.umd.js",      // Where to generate the UMD bundle (also aliased as "umd:main")
   "scripts": {
@@ -71,6 +72,21 @@ works pretty much everywhere.
 While it's possible to customize the browser or Node versions you wish to
 support using a [browserslist configuration][browserslist], the default setting is optimal
 and strongly recommended.
+
+## Modern Mode <a name="modern"></a>
+
+In addition to the above formats, jvdx also outputs a `modern` bundle
+specially designed to work in _all modern browsers_. This bundle preserves
+most modern JS features when compiling your code, but ensures the result runs
+in 95% of web browsers without needing to be transpiled. Specifically,
+it uses [preset-modules](https://github.com/babel/preset-modules) to target the
+set of browsers that support `<script type="module">` - that allows syntax like
+async/await, tagged templates, arrow functions, destructured and rest
+parameters, etc. The result is generally smaller and faster to execute than
+the `esm` bundle.
+
+**This is enabled by default.** All you have to do is add an `"exports"` field
+to your `package.json`
 
 
 ## Usage & Configuration
