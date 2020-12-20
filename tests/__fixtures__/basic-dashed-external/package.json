@@ -1,9 +1,0 @@
-{
-  "name": "basic-dashed-external",
-  "scripts": {
-    "build": "jvdx build"
-  },
-  "dependencies": {
-    "tiny-glob": "^0.2.6"
-  }
-}

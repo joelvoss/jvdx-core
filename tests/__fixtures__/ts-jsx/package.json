@@ -1,7 +1,0 @@
-{
-	"name": "ts-jsx",
-	"source": "src/index.tsx",
-	"scripts": {
-		"build": "jvdx build --jsx"
-	}
-}

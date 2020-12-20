@@ -40,7 +40,7 @@ describe('fromRoot', () => {
 
 describe('isDir', () => {
 	const { fromRoot, isDir } = require('../src/utils');
-	const FIXTURES_DIR = fromRoot(`tests/__fixtures__`);
+	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/build`);
 
 	it(`should return a boolean indicating if its a directory or not`, async done => {
 		const dir = await isDir(`${FIXTURES_DIR}/basic`);
@@ -53,7 +53,7 @@ describe('isDir', () => {
 
 describe('isFile', () => {
 	const { fromRoot, isFile } = require('../src/utils');
-	const FIXTURES_DIR = fromRoot(`tests/__fixtures__`);
+	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/build`);
 
 	it(`should return a boolean indicating if it's a file or not`, async done => {
 		const file = await isFile(`${FIXTURES_DIR}/basic/package.json`);
@@ -192,7 +192,7 @@ describe('arrify', () => {
 
 describe('jsOrTs', () => {
 	const { fromRoot, jsOrTs } = require('../src/utils');
-	const FIXTURES_DIR = fromRoot(`tests/__fixtures__`);
+	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/build`);
 
 	it(`should return the absolute path with the correct extension`, async done => {
 		const jsFile = await jsOrTs(
@@ -276,5 +276,39 @@ describe('isTruthy', () => {
 		expect(isTruthy(null)).toEqual(false);
 		expect(isTruthy({})).toEqual(false);
 		expect(isTruthy({ key: 'value ' })).toEqual(true);
+	});
+});
+
+describe('resolveFrom', () => {
+	const { resolveFrom } = require('../src/utils');
+
+	it('should throw on invalid arguments', () => {
+		expect(() => resolveFrom(1, './fixture')).toThrowError(/got `number`/);
+		expect(() => resolveFrom('tests/__fixtures__/resolveFrom')).toThrowError(
+			/got `undefined`/,
+		);
+	});
+
+	it('should resolve modules', () => {
+		expect(resolveFrom('tests/__fixtures__/resolveFrom', './fixture')).toMatch(
+			/__fixtures__\/resolveFrom\/fixture\.js$/,
+		);
+
+		const resolveFromfixture = resolveFrom.bind(
+			null,
+			'tests/__fixtures__/resolveFrom',
+		);
+		expect(resolveFromfixture('./fixture')).toMatch(
+			/__fixtures__\/resolveFrom\/fixture\.js$/,
+		);
+	});
+
+	it('should resolve symlink targets', () => {
+		expect(
+			resolveFrom(
+				'tests/__fixtures__/resolveFrom/fixture-for-symlinks/symlink-target',
+				'foo',
+			),
+		).toBeTruthy();
 	});
 });

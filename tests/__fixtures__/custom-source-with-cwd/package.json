@@ -1,6 +1,0 @@
-{
-  "name": "custom-source-with-cwd",
-  "scripts": {
-    "build": "jvdx build --cwd ./custom-source"
-  }
-}

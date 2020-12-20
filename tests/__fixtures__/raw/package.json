@@ -1,6 +1,0 @@
-{
-  "name": "raw",
-  "scripts": {
-    "build": "jvdx build --raw"
-  }
-}

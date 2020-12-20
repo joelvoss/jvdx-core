@@ -1,6 +1,0 @@
-{
-  "name": "define",
-  "scripts": {
-    "build": "jvdx build --no-sourcemap --define DEBUG=false"
-  }
-}

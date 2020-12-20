@@ -1,6 +1,0 @@
-{
-  "name": "define-expression",
-  "scripts": {
-    "build": "jvdx build -f esm --no-sourcemap --define @Object.freeze=Object"
-  }
-}

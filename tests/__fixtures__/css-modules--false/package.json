@@ -1,6 +1,0 @@
-{
-  "name": "css-modules--false",
-  "scripts": {
-    "build": "jvdx build --no-sourcemap --css-modules false"
-  }
-}

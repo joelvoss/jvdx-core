@@ -1,6 +1,0 @@
-{
-  "name": "basic-with-cwd",
-  "scripts": {
-    "build": "jvdx build --cwd ./basic"
-  }
-}

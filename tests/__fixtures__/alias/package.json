@@ -1,6 +1,0 @@
-{
-  "name": "alias-mapping",
-  "scripts": {
-    "build": "jvdx build --no-sourcemap --alias ./constants=./constants-debug"
-  }
-}
