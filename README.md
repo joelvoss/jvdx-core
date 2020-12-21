@@ -182,20 +182,33 @@ To ensure your TypeScript configuration matches the configuration that jvdx
 uses internally it's strongly recommended that you set
 `"module": "ESNext"` and `"target": "ESNext"` in your `tsconfig.json`.
 
-### Using CSS Modules
+### CSS and CSS Modules
 
-By default any css file imported as `.module.css`, will be treated as a
-css-module. If you wish to treat all `.css` imports as a module, specify the
-cli flag `--css-modules` true. If you wish to disable all css-module behaviours
-set the flag to false.
+Importing CSS files is supported via `import "./foo.css"`. By default, generated
+CSS output is written to disk. The `--css` inline command line option will
+inline generated CSS into your bundles as a string, returning the CSS string
+from the import:
 
-The default scope name when css-modules is turned on will be, in watch mode
-`_[name]__[local]__[hash:base64:5]` and when you build `_[hash:base64:5]`.
-This can be overriden by specifying the flag, eg.
-`--css-modules "_something_[hash:base64:7]"`.
+```js
+// with the default external CSS:
+import './foo.css';  // generates a minified .css file in the output directory
 
-> Note: by setting this, it will be treated as a true, and thus, all .css
-> imports will be scoped.
+// with `jvdx build --css inline`:
+import css from './foo.css';
+console.log(css);  // the generated minified stylesheet
+```
+
+**CSS Modules:** CSS files with names ending in `.module.css` are treated as a
+[CSS Modules](https://github.com/css-modules/css-modules).
+To instead treat imported `.css` files as modules, run jvdx with
+`--css-modules true`. To disable CSS Modules for your project, pass
+`--no-css-modules` or `--css-modules false`.
+
+The default scope name for CSS Modules is`_[name]__[local]__[hash:base64:5]` in
+watch mode, and `_[hash:base64:5]` for production builds.
+This can be customized by passing the command line argument
+`--css-modules "[name]_[hash:base64:7]"`, using
+[these fields and naming conventions](https://github.com/webpack/loader-utils#interpolatename).
 
 | flag  | import                           |   is css module?   |
 | ----- | -------------------------------- | :----------------: |
@@ -293,26 +306,28 @@ Usage
   $ jvdx build [...entries] [options]
 
 Options
-  -c, --clean      Clean output directory before building.
-  -i, --entry      Entry module(s)
-  -o, --output     Directory to place build files into
-  -f, --format     Only build specified formats (any of modern,es,cjs,umd or iife)  (default modern,es,cjs,umd)
-  -w, --watch      Rebuilds on any change  (default false)
-  --pkg-main       Outputs files analog to package.json main entries  (default true)
-  --target         Specify your target environment (node or web)  (default web)
-  --external       Specify external dependencies, or 'none'
-  --globals        Specify globals dependencies, or 'none'
-  --define         Replace constants with hard-coded values (use @key=exp to replace an expression)
-  --alias          Map imports to different modules
-  --compress       Compress output using Terser
-  --strict         Enforce undefined global context and add "use strict"
-  --name           Specify name exposed in UMD builds
-  --cwd            Use an alternative working directory  (default .)
-  --sourcemap      Generate source map  (default true)
-  --css-modules    Turns on css-modules for all .css imports. Passing a string will override the scopeName. eg --css-modules="_[hash]"
-  --jsx            Enable @babel/preset-react
-  --tsconfig       Specify the path to a custom tsconfig.json
-  -h, --help       Displays this message
+  -c, --clean        Clean output directory before building.
+  -i, --entry        Entry module(s)
+  -o, --output       Directory to place build files into
+  -f, --format       Only build specified formats (any of modern,es,cjs,umd or iife)  (default modern,es,cjs,umd)
+  -w, --watch        Rebuilds on any change  (default false)
+  --pkg-main         Outputs files analog to package.json main entries  (default true)
+  --target           Specify your target environment (node or web)  (default web)
+  --external         Specify external dependencies, or 'none'
+  --globals          Specify globals dependencies, or 'none'
+  --define           Replace constants with hard-coded values (use @key=exp to replace an expression)
+  --alias            Map imports to different modules
+  --compress         Compress output using Terser
+  --strict           Enforce undefined global context and add "use strict"
+  --name             Specify name exposed in UMD builds
+  --cwd              Use an alternative working directory  (default .)
+  --sourcemap        Generate source map  (default true)
+  --generate-types   Generate type definitions (even for non-TS libs)
+  --css              Where to output CSS: "inline" or "external"  (default: "external")
+  --css-modules      Turns on css-modules for all .css imports. Passing a string will override the scopeName. eg --css-modules="_[hash]"
+  --jsx              Enable @babel/preset-react
+  --tsconfig         Specify the path to a custom tsconfig.json
+  -h, --help         Displays this message
 
 Examples
   $ jvdx build

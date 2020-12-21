@@ -95,6 +95,7 @@ module.exports = handler => {
 			'--generate-types',
 			'Generate type definitions (even for non-TS libs)',
 		)
+		.option('--css', 'Where to output CSS: "inline" or "external"', 'external')
 		.option(
 			'--css-modules',
 			'Turns on css-modules for all .css imports. Passing a string will override the scopeName. eg --css-modules="_[hash]"',

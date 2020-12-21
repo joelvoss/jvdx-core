@@ -1,0 +1,6 @@
+{
+  "name": "css",
+  "scripts": {
+    "build": "jvdx build --css inline"
+  }
+}

@@ -1307,6 +1307,60 @@ exports[`build fixtures build class-properties with jvdx 5`] = `
 "
 `;
 
+exports[`build fixtures build css with jvdx 1`] = `
+"Used script: jvdx build --css inline
+
+Directory tree:
+
+css
+  dist
+    css.esm.js
+    css.esm.js.map
+    css.js
+    css.js.map
+    css.umd.js
+    css.umd.js.map
+  package.json
+  src
+    foo.css
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/css.js (407 B)
+  -> gzip: 351 B
+  -> brotli: 307 B
+./dist/css.esm.js (410 B)
+  -> gzip: 353 B
+  -> brotli: 315 B
+./dist/css.umd.js (571 B)
+  -> gzip: 445 B
+  -> brotli: 384 B
+"
+`;
+
+exports[`build fixtures build css with jvdx 2`] = `6`;
+
+exports[`build fixtures build css with jvdx 3`] = `
+"function o(){console.log(\\"body{display:flex;color:red;background:#00f}\\\\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvby5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsS0FDQyxZQUFhLENBQ2IsU0FBVSxDQUNWLGVBQ0QiLCJmaWxlIjoiZm9vLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRjb2xvcjogcmVkO1xuXHRiYWNrZ3JvdW5kOiBibHVlO1xufVxuIl19 */\\")}export default o;
+//# sourceMappingURL=css.esm.js.map
+"
+`;
+
+exports[`build fixtures build css with jvdx 4`] = `
+"module.exports=function(){console.log(\\"body{display:flex;color:red;background:#00f}\\\\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvby5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsS0FDQyxZQUFhLENBQ2IsU0FBVSxDQUNWLGVBQ0QiLCJmaWxlIjoiZm9vLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRjb2xvcjogcmVkO1xuXHRiYWNrZ3JvdW5kOiBibHVlO1xufVxuIl19 */\\")};
+//# sourceMappingURL=css.js.map
+"
+`;
+
+exports[`build fixtures build css with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=o():\\"function\\"==typeof define&&define.amd?define(o):(e||self).css=o()}(this,function(){return function(){console.log(\\"body{display:flex;color:red;background:#00f}\\\\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvby5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsS0FDQyxZQUFhLENBQ2IsU0FBVSxDQUNWLGVBQ0QiLCJmaWxlIjoiZm9vLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRjb2xvcjogcmVkO1xuXHRiYWNrZ3JvdW5kOiBibHVlO1xufVxuIl19 */\\")}});
+//# sourceMappingURL=css.umd.js.map
+"
+`;
+
 exports[`build fixtures build css-modules--false with jvdx 1`] = `
 "Used script: jvdx build --no-sourcemap --css-modules false
 
