@@ -1864,6 +1864,57 @@ exports[`build fixtures build esnext-ts with jvdx 6`] = `
 "
 `;
 
+exports[`build fixtures build inline-source-map with jvdx 1`] = `
+"Used script: jvdx build --sourcemap inline
+
+Directory tree:
+
+inline-source-map
+  dist
+    inline-source-map.esm.js
+    inline-source-map.js
+    inline-source-map.umd.js
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/inline-source-map.js (386 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
+./dist/inline-source-map.esm.js (385 B)
+  -> gzip: 188 B
+  -> brotli: 139 B
+./dist/inline-source-map.umd.js (562 B)
+  -> gzip: 278 B
+  -> brotli: 217 B
+"
+`;
+
+exports[`build fixtures build inline-source-map with jvdx 2`] = `3`;
+
+exports[`build fixtures build inline-source-map with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5saW5lLXNvdXJjZS1tYXAuZXNtLmpzIiwic291cmNlcyI6WyIuLi9zcmMvdHdvLmpzIiwiLi4vc3JjL2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBhc3luYyBmdW5jdGlvbiB0d28oLi4uYXJncykge1xuXHRyZXR1cm4gYXJncy5yZWR1Y2UoKHRvdGFsLCB2YWx1ZSkgPT4gdG90YWwgKyB2YWx1ZSwgMCk7XG59XG4iLCJpbXBvcnQgeyB0d28gfSBmcm9tICcuL3R3byc7XG5cbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uICguLi5hcmdzKSB7XG5cdHJldHVybiBbYXdhaXQgdHdvKC4uLmFyZ3MpLCBhd2FpdCB0d28oLi4uYXJncyldO1xufVxuIl0sIm5hbWVzIjpbInR3byIsInJlZHVjZSIsInRvdGFsIiwidmFsdWUiLCJhcmdzIl0sIm1hcHBpbmdzIjoiSUFBc0JBLGlDQUNyQix1QkFBTyxpQkFBS0MsT0FBTyxTQUFDQyxFQUFPQyxVQUFVRCxFQUFRQyxHQUFPLElBRHJELGtGQ0VrQ0MsMENBQ25CSixlQUFPSSw0Q0FBYUosZUFBT0kscUJBQXpDLE1BQU8sVUFEUiJ9
+"
+`;
+
+exports[`build fixtures build inline-source-map with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5saW5lLXNvdXJjZS1tYXAuanMiLCJzb3VyY2VzIjpbIi4uL3NyYy90d28uanMiLCIuLi9zcmMvaW5kZXguanMiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIHR3byguLi5hcmdzKSB7XG5cdHJldHVybiBhcmdzLnJlZHVjZSgodG90YWwsIHZhbHVlKSA9PiB0b3RhbCArIHZhbHVlLCAwKTtcbn1cbiIsImltcG9ydCB7IHR3byB9IGZyb20gJy4vdHdvJztcblxuZXhwb3J0IGRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gKC4uLmFyZ3MpIHtcblx0cmV0dXJuIFthd2FpdCB0d28oLi4uYXJncyksIGF3YWl0IHR3byguLi5hcmdzKV07XG59XG4iXSwibmFtZXMiOlsidHdvIiwicmVkdWNlIiwidG90YWwiLCJ2YWx1ZSIsImFyZ3MiXSwibWFwcGluZ3MiOiJJQUFzQkEsaUNBQ3JCLHVCQUFPLGlCQUFLQyxPQUFPLFNBQUNDLEVBQU9DLFVBQVVELEVBQVFDLEdBQU8sSUFEckQsa0ZDRWtDQywwQ0FDbkJKLGVBQU9JLDRDQUFhSixlQUFPSSxxQkFBekMsTUFBTyxVQURSIn0=
+"
+`;
+
+exports[`build fixtures build inline-source-map with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e||self).inlineSourceMap=n()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,n){return e+n},0))}catch(e){return Promise.reject(e)}};return function(){try{var n=arguments,r=[].slice.call(n);return Promise.resolve(e.apply(void 0,r)).then(function(n){return Promise.resolve(e.apply(void 0,r)).then(function(e){return[n,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5saW5lLXNvdXJjZS1tYXAudW1kLmpzIiwic291cmNlcyI6WyIuLi9zcmMvdHdvLmpzIiwiLi4vc3JjL2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBhc3luYyBmdW5jdGlvbiB0d28oLi4uYXJncykge1xuXHRyZXR1cm4gYXJncy5yZWR1Y2UoKHRvdGFsLCB2YWx1ZSkgPT4gdG90YWwgKyB2YWx1ZSwgMCk7XG59XG4iLCJpbXBvcnQgeyB0d28gfSBmcm9tICcuL3R3byc7XG5cbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uICguLi5hcmdzKSB7XG5cdHJldHVybiBbYXdhaXQgdHdvKC4uLmFyZ3MpLCBhd2FpdCB0d28oLi4uYXJncyldO1xufVxuIl0sIm5hbWVzIjpbInR3byIsInJlZHVjZSIsInRvdGFsIiwidmFsdWUiLCJhcmdzIl0sIm1hcHBpbmdzIjoic09BQXNCQSxpQ0FDckIsdUJBQU8saUJBQUtDLE9BQU8sU0FBQ0MsRUFBT0MsVUFBVUQsRUFBUUMsR0FBTyxJQURyRCwwRUNFa0NDLDBDQUNuQkosZUFBT0ksNENBQWFKLGVBQU9JLHFCQUF6QyxNQUFPLFVBRFIifQ==
+"
+`;
+
 exports[`build fixtures build jsx with jvdx 1`] = `
 "Used script: jvdx build
 

@@ -75,7 +75,9 @@ async function build(opts) {
 	options.name = finalName;
 	options.pkg.name = pkgName;
 
-	if (options.sourcemap !== false) {
+	if (options.sourcemap === 'inline') {
+		printWarn('Inline sourcemaps should only be used for debugging purposes.');
+	} else if (options.sourcemap !== false) {
 		options.sourcemap = true;
 	}
 
