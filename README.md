@@ -88,7 +88,6 @@ the `esm` bundle.
 **This is enabled by default.** All you have to do is add an `"exports"` field
 to your `package.json`
 
-
 ## Usage & Configuration
 
 jvdx comes with a variaty of commands, but the most notable are `build`,
@@ -252,6 +251,19 @@ to mangle all property names beginning an underscore:
 It's also possible to configure repeatable short names for each mangled
 property, so that every build of your library has the same output.
 
+### Defining build-time constants
+
+The `--define` option can be used to inject or replace build-time constants
+when bundling. In addition to injecting string or number constants, prefixing
+the define name with `@` allows injecting JavaScript expressions.
+
+| Build command                       | Source code           | Output                  |
+|-------------------------------------|-----------------------|-------------------------|
+`jvdx --define VERSION=2`             | `console.log(VERSION)` | `console.log(2)`
+`jvdx --define API_KEY='abc123'`      | `console.log(API_KEY)` | `console.log("abc123")`
+`jvdx --define @assign=Object.assign` | `assign(a, b)`         | `Object.assign(a, b)`
+
+
 ## All CLI Options
 
 ```bash
@@ -290,7 +302,7 @@ Options
   --target         Specify your target environment (node or web)  (default web)
   --external       Specify external dependencies, or 'none'
   --globals        Specify globals dependencies, or 'none'
-  --define         Replace constants with hard-coded values
+  --define         Replace constants with hard-coded values (use @key=exp to replace an expression)
   --alias          Map imports to different modules
   --compress       Compress output using Terser
   --strict         Enforce undefined global context and add "use strict"

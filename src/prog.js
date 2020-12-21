@@ -79,7 +79,10 @@ module.exports = handler => {
 		.option('--external', `Specify external dependencies, or 'none'`)
 		.option('--globals', `Specify globals dependencies, or 'none'`)
 		.example('build --globals react=React,jquery=$')
-		.option('--define', 'Replace constants with hard-coded values')
+		.option(
+			'--define',
+			'Replace constants with hard-coded values (use @key=exp to replace an expression)',
+		)
 		.example('build --define API_KEY=1234')
 		.option('--alias', `Map imports to different modules`)
 		.example('build --alias react=preact')
