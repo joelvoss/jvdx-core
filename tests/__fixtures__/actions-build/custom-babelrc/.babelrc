@@ -1,0 +1,21 @@
+{
+	"presets": [
+		[
+			"@jvdx/babel-preset",
+			{
+				"preset-env": {
+					"loose": true,
+					"modules": false,
+					"useBuiltIns": "usage",
+					"corejs": 2,
+					"targets": {
+						"esmodules": true
+					}
+				},
+				"class-properties": {
+					"loose": false
+				}
+			}
+		]
+	]
+}

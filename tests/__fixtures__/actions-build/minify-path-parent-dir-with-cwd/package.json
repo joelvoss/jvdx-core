@@ -1,0 +1,6 @@
+{
+  "name": "minify-path-parent-dir-with-cwd",
+  "scripts": {
+    "build": "jvdx build --cwd ./minify-path-parent-dir"
+  }
+}

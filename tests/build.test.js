@@ -12,7 +12,7 @@ const { fromRoot } = require('../src/utils');
 ////////////////////////////////////////////////////////////////////////////////
 // Test specific variables and helper methods
 const TEST_TIMEOUT = 11000;
-const FIXTURES_DIR = fromRoot(`tests/__fixtures__/build`);
+const FIXTURES_DIR = fromRoot(`tests/__fixtures__/actions-build`);
 const DEFAULT_SCRIPT = 'jvdx build';
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));

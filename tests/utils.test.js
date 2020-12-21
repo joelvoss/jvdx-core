@@ -40,7 +40,7 @@ describe('fromRoot', () => {
 
 describe('isDir', () => {
 	const { fromRoot, isDir } = require('../src/utils');
-	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/build`);
+	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/actions-build`);
 
 	it(`should return a boolean indicating if its a directory or not`, async done => {
 		const dir = await isDir(`${FIXTURES_DIR}/basic`);
@@ -53,7 +53,7 @@ describe('isDir', () => {
 
 describe('isFile', () => {
 	const { fromRoot, isFile } = require('../src/utils');
-	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/build`);
+	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/actions-build`);
 
 	it(`should return a boolean indicating if it's a file or not`, async done => {
 		const file = await isFile(`${FIXTURES_DIR}/basic/package.json`);
@@ -192,7 +192,7 @@ describe('arrify', () => {
 
 describe('jsOrTs', () => {
 	const { fromRoot, jsOrTs } = require('../src/utils');
-	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/build`);
+	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/actions-build`);
 
 	it(`should return the absolute path with the correct extension`, async done => {
 		const jsFile = await jsOrTs(

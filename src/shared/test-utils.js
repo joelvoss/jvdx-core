@@ -10,7 +10,7 @@ const rimraf = promisify(_rimraf);
 
 ///////////////////////////////////////////////////////////////////////////////
 
-const FIXTURES_DIR = fromRoot(`tests/__fixtures__/build`);
+const FIXTURES_DIR = fromRoot(`tests/__fixtures__/actions-build`);
 const DEFAULT_SCRIPT = 'jvdx build';
 
 const printTree = (nodes, indentLevel = 0) => {

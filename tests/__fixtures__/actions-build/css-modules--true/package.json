@@ -1,0 +1,6 @@
+{
+  "name": "css-modules--true",
+  "scripts": {
+    "build": "jvdx build --no-sourcemap --css-modules true"
+  }
+}
