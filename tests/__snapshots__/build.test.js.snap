@@ -1864,6 +1864,66 @@ exports[`build fixtures build esnext-ts with jvdx 6`] = `
 "
 `;
 
+exports[`build fixtures build generate-types with jvdx 1`] = `
+"Used script: jvdx build --generate-types
+
+Directory tree:
+
+generate-types
+  dist
+    generate-types.esm.js
+    generate-types.esm.js.map
+    generate-types.js
+    generate-types.js.map
+    generate-types.umd.js
+    generate-types.umd.js.map
+    index.d.ts
+  node_modules
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/generate-types.js (35 B)
+  -> gzip: 55 B
+  -> brotli: 33 B
+./dist/generate-types.esm.js (41 B)
+  -> gzip: 61 B
+  -> brotli: 45 B
+./dist/generate-types.umd.js (218 B)
+  -> gzip: 170 B
+  -> brotli: 131 B
+"
+`;
+
+exports[`build fixtures build generate-types with jvdx 2`] = `7`;
+
+exports[`build fixtures build generate-types with jvdx 3`] = `
+"function n(){return 42}export{n as foo};
+//# sourceMappingURL=generate-types.esm.js.map
+"
+`;
+
+exports[`build fixtures build generate-types with jvdx 4`] = `
+"exports.foo=function(){return 42};
+//# sourceMappingURL=generate-types.js.map
+"
+`;
+
+exports[`build fixtures build generate-types with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?n(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],n):n((e||self).generateTypes={})}(this,function(e){e.foo=function(){return 42}});
+//# sourceMappingURL=generate-types.umd.js.map
+"
+`;
+
+exports[`build fixtures build generate-types with jvdx 6`] = `
+"export function foo(): number;
+"
+`;
+
 exports[`build fixtures build inline-source-map with jvdx 1`] = `
 "Used script: jvdx build --sourcemap inline
 

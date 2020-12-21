@@ -92,6 +92,10 @@ module.exports = handler => {
 		.option('--cwd', 'Use an alternative working directory', '.')
 		.option('--sourcemap', 'Generate source map')
 		.option(
+			'--generate-types',
+			'Generate type definitions (even for non-TS libs)',
+		)
+		.option(
 			'--css-modules',
 			'Turns on css-modules for all .css imports. Passing a string will override the scopeName. eg --css-modules="_[hash]"',
 			null,

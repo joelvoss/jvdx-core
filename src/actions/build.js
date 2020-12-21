@@ -81,6 +81,10 @@ async function build(opts) {
 		options.sourcemap = true;
 	}
 
+	if (options['generate-types'] != null) {
+		options.generateTypes = options['generate-types'];
+	}
+
 	options.input = await getInput({
 		entries: options.entries,
 		cwd,
@@ -517,6 +521,7 @@ function createConfig(options, entry, format, writeMeta) {
 		'./' + relative(options.cwd, dirname(options.output)) || '.';
 
 	const useTypescript = extname(entry) === '.ts' || extname(entry) === '.tsx';
+	const emitDeclaration = !!(options.generateTypes || pkg.types || pkg.typings);
 
 	let config = {
 		inputOptions: {
@@ -599,7 +604,7 @@ function createConfig(options, entry, format, writeMeta) {
 					// Convert .json files to ES6 modules
 					json(),
 					// Handle Typescript
-					useTypescript &&
+					(useTypescript || emitDeclaration) &&
 						typescript({
 							typescript: require(resolveFrom(
 								options.cwd,
@@ -612,6 +617,8 @@ function createConfig(options, entry, format, writeMeta) {
 								compilerOptions: {
 									sourceMap: options.sourcemap,
 									declaration: true,
+									allowJs: true,
+									emitDeclarationOnly: options.generateTypes && !useTypescript,
 									declarationDir: getDeclarationDir({ options, pkg }),
 									jsx: 'preserve',
 									jsxFactory: options.jsx ? 'React.createElement' : undefined,
