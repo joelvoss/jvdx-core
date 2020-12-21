@@ -589,7 +589,11 @@ function createConfig(options, entry, format, writeMeta) {
 					},
 					// Convert CommonJS modules to ES6 modules
 					// Use a regex to make sure to include eventual hoisted packages
-					commonjs({ include: /\/node_modules\// }),
+					commonjs({
+						include: /\/node_modules\//,
+						esmExternals: false,
+						requireReturnsDefault: 'namespace',
+					}),
 					// Convert .json files to ES6 modules
 					json(),
 					// Handle Typescript
@@ -666,7 +670,7 @@ function createConfig(options, entry, format, writeMeta) {
 								},
 								minifyOptions.compress || {},
 							),
-							output: {
+							format: {
 								// By default, Terser wraps function arguments in extra parens
 								// to trigger eager parsing.
 								// Whether this is a good idea is way too specific to guess, so
@@ -674,8 +678,8 @@ function createConfig(options, entry, format, writeMeta) {
 								wrap_func_args: false,
 								comments: false,
 							},
-							warnings: true,
-							ecma: modern ? 9 : 5,
+							module: modern,
+							ecma: modern ? 2017 : 5,
 							toplevel: modern || format === 'cjs' || format === 'es',
 							mangle: Object.assign({}, minifyOptions.mangle || {}),
 							nameCache,
@@ -695,7 +699,30 @@ function createConfig(options, entry, format, writeMeta) {
 							},
 						},
 					],
-					{
+
+					/** @type {import('rollup').Plugin} */
+					({
+						name: 'postprocessing',
+						// Rollup 2 injects `globalThis`, which is nice, but doesn't really
+						// make sense for jvdx. Only ESM environments necessitate
+						// `globalThis`, and UMD bundles can't be properly loaded as ESM.
+						// So we remove the `globalThis` check, replacing it with
+						// `this||self` to match Rollup 1's output
+						renderChunk(code, chunk, opts) {
+							if (opts.format === 'umd') {
+								// minified:
+								code = code.replace(
+									/([a-zA-Z$_]+)="undefined"!=typeof globalThis\?globalThis:(\1\|\|self)/,
+									'$2',
+								);
+								// unminified:
+								code = code.replace(
+									/(global *= *)typeof +globalThis *!== *['"]undefined['"] *\? *globalThis *: *(global *\|\| *self)/,
+									'$1$2',
+								);
+								return { code, map: null };
+							}
+						},
 						writeBundle(_, bundle) {
 							config._sizeInfo = Promise.all(
 								Object.values(bundle).map(({ code, fileName }) => {
@@ -710,7 +737,7 @@ function createConfig(options, entry, format, writeMeta) {
 								}),
 							);
 						},
-					},
+					}),
 				)
 				.filter(Boolean),
 		},
