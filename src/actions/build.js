@@ -572,7 +572,7 @@ function createConfig(options, entry, format, writeMeta) {
 						inject: false,
 						extract: options.css !== 'inline',
 						minimize: options.compress,
-						sourceMap: options.sourcemap,
+						sourceMap: options.sourcemap && options.css !== 'inline',
 					}),
 					// Process module aliases
 					moduleAliases.length > 0 && alias({ entries: moduleAliases }),

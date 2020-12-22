@@ -1329,34 +1329,34 @@ css
 Built in 0s
 
 Bundle(s)
-./dist/css.js (407 B)
-  -> gzip: 351 B
-  -> brotli: 307 B
-./dist/css.esm.js (410 B)
-  -> gzip: 353 B
-  -> brotli: 315 B
-./dist/css.umd.js (571 B)
-  -> gzip: 445 B
-  -> brotli: 384 B
+./dist/css.js (88 B)
+  -> gzip: 103 B
+  -> brotli: 65 B
+./dist/css.esm.js (91 B)
+  -> gzip: 103 B
+  -> brotli: 76 B
+./dist/css.umd.js (252 B)
+  -> gzip: 187 B
+  -> brotli: 138 B
 "
 `;
 
 exports[`build fixtures build css with jvdx 2`] = `6`;
 
 exports[`build fixtures build css with jvdx 3`] = `
-"function o(){console.log(\\"body{display:flex;color:red;background:#00f}\\\\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvby5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsS0FDQyxZQUFhLENBQ2IsU0FBVSxDQUNWLGVBQ0QiLCJmaWxlIjoiZm9vLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRjb2xvcjogcmVkO1xuXHRiYWNrZ3JvdW5kOiBibHVlO1xufVxuIl19 */\\")}export default o;
+"function o(){console.log(\\"body{display:flex;color:red;background:#00f}\\")}export default o;
 //# sourceMappingURL=css.esm.js.map
 "
 `;
 
 exports[`build fixtures build css with jvdx 4`] = `
-"module.exports=function(){console.log(\\"body{display:flex;color:red;background:#00f}\\\\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvby5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsS0FDQyxZQUFhLENBQ2IsU0FBVSxDQUNWLGVBQ0QiLCJmaWxlIjoiZm9vLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRjb2xvcjogcmVkO1xuXHRiYWNrZ3JvdW5kOiBibHVlO1xufVxuIl19 */\\")};
+"module.exports=function(){console.log(\\"body{display:flex;color:red;background:#00f}\\")};
 //# sourceMappingURL=css.js.map
 "
 `;
 
 exports[`build fixtures build css with jvdx 5`] = `
-"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=o():\\"function\\"==typeof define&&define.amd?define(o):(e||self).css=o()}(this,function(){return function(){console.log(\\"body{display:flex;color:red;background:#00f}\\\\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImZvby5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsS0FDQyxZQUFhLENBQ2IsU0FBVSxDQUNWLGVBQ0QiLCJmaWxlIjoiZm9vLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRjb2xvcjogcmVkO1xuXHRiYWNrZ3JvdW5kOiBibHVlO1xufVxuIl19 */\\")}});
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=o():\\"function\\"==typeof define&&define.amd?define(o):(e||self).css=o()}(this,function(){return function(){console.log(\\"body{display:flex;color:red;background:#00f}\\")}});
 //# sourceMappingURL=css.umd.js.map
 "
 `;
