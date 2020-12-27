@@ -22,7 +22,7 @@
   "dependencies": {
     "@babel/core": "7.12.10",
     "@jvdx/babel-preset": "1.0.3",
-    "@jvdx/eslint-config": "3.1.0",
+    "@jvdx/eslint-config": "3.1.1",
     "@jvdx/prettier-config": "0.3.3",
     "@rollup/plugin-alias": "3.1.1",
     "@rollup/plugin-babel": "5.2.2",
@@ -47,7 +47,7 @@
     "lodash.merge": "4.6.2",
     "postcss": "^8.2.1",
     "prettier": "2.2.1",
-    "pretty-bytes": "5.4.1",
+    "pretty-bytes": "5.5.0",
     "rimraf": "3.0.2",
     "rollup": "2.35.1",
     "rollup-plugin-bundle-size": "1.0.3",
