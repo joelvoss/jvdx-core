@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const { resolve, basename, extname, dirname, relative } = require('path');
 const { red, bold, underline, dim } = require('kleur');
-const camelCase = require('camelCase');
+const camelCase = require('camelcase');
 const glob = require('tiny-glob/sync');
 const { map, series } = require('asyncro');
 const escapeStringRegexp = require('escape-string-regexp');
