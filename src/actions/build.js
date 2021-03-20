@@ -77,6 +77,8 @@ async function build(opts) {
 
 	if (options.sourcemap === 'inline') {
 		printWarn('Inline sourcemaps should only be used for debugging purposes.');
+	} else if (options.sourcemap === 'false') {
+		options.sourcemap = false;
 	} else if (options.sourcemap !== false) {
 		options.sourcemap = true;
 	}
