@@ -22,7 +22,7 @@ $ yarn add -D @jvdx/core
   "name": "my-package",                   // Your package name
   "source": "src/my-package.js",          // Your source code
   "main": "dist/my-package.js",           // Where to generate the CommonJS/Node bundle
-  "exports": "dist/foo.modern.js",        // path to the modern output (see below)
+  "exports": "./dist/foo.modern.js",        // path to the modern output (see below)
   "module": "dist/my-package.module.js",  // Where to generate the ESM bundle
   "unpkg": "dist/my-package.umd.js",      // Where to generate the UMD bundle (also aliased as "umd:main")
   "scripts": {
