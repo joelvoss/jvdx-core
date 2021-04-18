@@ -312,3 +312,19 @@ describe('resolveFrom', () => {
 		).toBeTruthy();
 	});
 });
+
+describe('escapeStringRegexp', () => {
+	const { escapeStringRegexp } = require('../src/utils');
+
+	it('should escape a regex', () => {
+		expect(escapeStringRegexp('\\ ^ $ * + ? . ( ) | { } [ ]')).toEqual(
+			'\\\\ \\^ \\$ \\* \\+ \\? \\. \\( \\) \\| \\{ \\} \\[ \\]',
+		);
+	});
+	it('should escape `-` in a way compatible with PCRE', () => {
+		expect(escapeStringRegexp('foo - bar')).toEqual('foo \\x2d bar');
+	});
+	it('should escape `-` in a way compatible with the Unicode flag', () => {
+		expect('-').toMatch(new RegExp(escapeStringRegexp('-'), 'u'));
+	});
+});

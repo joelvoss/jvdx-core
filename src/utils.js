@@ -385,3 +385,21 @@ function resolveFrom(fromDirectory, moduleId, silent) {
 	return resolveFileName();
 }
 exports.resolveFrom = resolveFrom;
+
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * escapeStringRegexp escapes RegExp special characters.
+ * Inspired by https://github.com/sindresorhus/escape-string-regexp
+ * (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+ * @param {string} string
+ * @returns {string}
+ */
+function escapeStringRegexp(string) {
+	if (typeof string !== 'string') return string;
+	// NOTE(joel): Use a simple backslash escape when it’s always valid, and a
+	// `\xnn` escape when the simpler form would be disallowed by Unicode
+	// patterns’ stricter grammar.
+	return string.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&').replace(/-/g, '\\x2d');
+}
+exports.escapeStringRegexp = escapeStringRegexp;
