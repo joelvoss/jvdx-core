@@ -182,6 +182,9 @@ To ensure your TypeScript configuration matches the configuration that jvdx
 uses internally it's strongly recommended that you set
 `"module": "ESNext"` and `"target": "ESNext"` in your `tsconfig.json`.
 
+If you're using CSS Modules, set `"include": ["node_modules/@jvdx/core/index.d.ts"]`
+in your `tsconfig.json` to enable type annotations of your CSS Module imports.
+
 ### CSS and CSS Modules
 
 Importing CSS files is supported via `import "./foo.css"`. By default, generated

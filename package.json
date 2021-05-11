@@ -73,7 +73,8 @@
     "extends": "@jvdx/eslint-config"
   },
   "files": [
-    "src"
+    "src",
+    "index.d.ts"
   ],
   "publishConfig": {
     "access": "public"
