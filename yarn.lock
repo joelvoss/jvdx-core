@@ -1219,10 +1219,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@jvdx/babel-preset@1.0.10":
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/@jvdx/babel-preset/-/babel-preset-1.0.10.tgz#f27a15bc31e293eb71d2d800bd21a27f4dca7b0e"
-  integrity sha512-yjkkvJfuXhcySxTJiCeZbyY0+7unAKF0BXWN/xXitEHZntjKqmNmxcArnVPAAoGupPgMjlPnJ7Lg5wsJ2VFinw==
+"@jvdx/babel-preset@1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@jvdx/babel-preset/-/babel-preset-1.0.11.tgz#44604fc1cd7f728548be910d3d00916f65a8ebf2"
+  integrity sha512-1B9/Owhwg88FNx+kJ3w3JGD4I6enE8UxDBKdRmzy/1N2uxyN3TwaFHJkCdO9t5RoEopi7iheGJcxcFAhGg6q8A==
   dependencies:
     "@babel/plugin-proposal-class-properties" "^7.13.0"
     "@babel/plugin-proposal-nullish-coalescing-operator" "^7.13.8"
