@@ -7,15 +7,17 @@ module.exports = handler => {
 
 	// Define our base command. This normalizes positional arguments.
 	// The cmd handler may choose to act on those
-	const cmd = type => (...args) => {
-		const opts = args[args.length - 1];
-		const pos = args.slice(0, args.length - 1).filter(Boolean);
+	const cmd =
+		type =>
+		(...args) => {
+			const opts = args[args.length - 1];
+			const pos = args.slice(0, args.length - 1).filter(Boolean);
 
-		const posArgs = pos.concat(opts._);
-		opts._ = posArgs.length !== 0 ? [...new Set(posArgs)] : [];
+			const posArgs = pos.concat(opts._);
+			opts._ = posArgs.length !== 0 ? [...new Set(posArgs)] : [];
 
-		handler(type, opts);
-	};
+			handler(type, opts);
+		};
 
 	let prog = sade('jvdx').version(version);
 
