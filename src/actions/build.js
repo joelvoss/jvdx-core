@@ -62,7 +62,10 @@ async function build(opts) {
 	const cwd = options.cwd;
 
 	const { hasPackageJson, pkg } = await getConfigFromPkgJson(cwd);
-	options.pkg = pkg;
+	options.pkg = {
+		...pkg,
+		...pkg.publishConfig,
+	};
 
 	const { finalName, pkgName } = getName({
 		name: options.name,

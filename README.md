@@ -84,12 +84,13 @@ and strongly recommended.
 In addition to the above formats, jvdx also outputs a `modern` bundle
 specially designed to work in _all modern browsers_. This bundle preserves
 most modern JS features when compiling your code, but ensures the result runs
-in 95% of web browsers without needing to be transpiled. Specifically,
-it uses [preset-modules](https://github.com/babel/preset-modules) to target the
-set of browsers that support `<script type="module">` - that allows syntax like
-async/await, tagged templates, arrow functions, destructured and rest
-parameters, etc. The result is generally smaller and faster to execute than
-the `esm` bundle.
+in 95% of web browsers without needing to be transpiled. Specifically, it uses
+Babel's ["bugfixes" mode](https://babeljs.io/blog/2020/03/16/7.9.0#babelpreset-envs-bugfixes-option-11083httpsgithubcombabelbabelpull11083)
+(previously known as [preset-modules](https://github.com/babel/preset-modules))
+to target the set of browsers that support `<script type="module">` - that
+allows syntax like async/await, tagged templates, arrow functions, destructured
+and rest parameters, etc. The result is generally smaller and faster to execute
+than the plain `esm` bundle.
 
 **This is enabled by default.** All you have to do is add an `"exports"` field
 to your `package.json`
@@ -106,10 +107,11 @@ Each command does exactly what you would expect from it's name.
 
 Builds your code once, it also enables minification and sets the
 `NODE_ENV=production` environment variable.  
-Unless overridden via the command line, jvdx uses the `source` property in
-your `package.json` to locate the input file, and the `main` , `umd:main`,
-`module` and `exports` properties to figure out where it should place each
-generated bundle:
+Unless overridden via the command line, jvdx uses the `source` property in your
+`package.json` to determine which of your JavaScript files to start bundling
+from (your "entry module").
+The filenames and paths for generated bundles in each format are defined by
+the `main`, `umd:main`, `module` and `exports` properties in your `package.json`.
 
 ```json
 {
@@ -239,6 +241,24 @@ This can be customized by passing the command line argument
 | false | `import './my-file.module.css';` |         ❌         |
 | true  | `import './my-file.css';`        |         ✅         |
 | true  | `import './my-file.module.css';` |         ✅         |
+
+### Additional build configuration options
+
+You can override the build configuration using the [`publishConfig`](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#publishconfig)
+property in your `package.json`.
+
+```jsonc
+{
+  "main": "src/index.ts",          // Used in local dev environment
+  "publishConfig": {
+    "source": "src/index.js",      // Input
+    "main": "dist/my-library.js",  // Output
+  },
+  "scripts": {
+    "build": "jvdx build"
+  }
+}
+```
 
 ### Building a single bundle with a fixed output name
 

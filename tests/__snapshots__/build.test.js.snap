@@ -2835,6 +2835,44 @@ exports[`build fixtures build pretty with jvdx 5`] = `
 "
 `;
 
+exports[`build fixtures build publish-config with jvdx 1`] = `
+"Used script: jvdx build -f cjs
+
+Directory tree:
+
+publish-config
+  dist
+    bar.js
+    bar.js.map
+    foo.d.ts
+  node_modules
+  package.json
+  src
+    foo.ts
+
+
+Built in 0s
+
+Bundle(s)
+./dist/bar.js (35 B)
+  -> gzip: 55 B
+  -> brotli: 33 B
+"
+`;
+
+exports[`build fixtures build publish-config with jvdx 2`] = `3`;
+
+exports[`build fixtures build publish-config with jvdx 3`] = `
+"exports.foo=function(){return 42};
+//# sourceMappingURL=bar.js.map
+"
+`;
+
+exports[`build fixtures build publish-config with jvdx 4`] = `
+"export declare function foo(): number;
+"
+`;
+
 exports[`build fixtures build pure with jvdx 1`] = `
 "Used script: jvdx build
 
