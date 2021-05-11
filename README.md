@@ -17,17 +17,23 @@ $ yarn add -D @jvdx/core
 
 (2) Setup your `package.json`
 
-```js
+```json
 {
-  "name": "my-package",                   // Your package name
-  "source": "src/my-package.js",          // Your source code
-  "main": "dist/my-package.js",           // Where to generate the CommonJS/Node bundle
-  "exports": "./dist/foo.modern.js",        // path to the modern output (see below)
-  "module": "dist/my-package.module.js",  // Where to generate the ESM bundle
-  "unpkg": "dist/my-package.umd.js",      // Where to generate the UMD bundle (also aliased as "umd:main")
+  "name": "my-package",                // Your package name
+  "source": "src/index.js",            // input
+  "main": "dist/foo.js",               // CommonJS output bundle
+  "umd:main": "dist/foo.umd.js",       // UMD output bundle
+  "module": "dist/foo.m.js",           // ES Modules output bundle 
+  "exports": {
+    "require": "./dist/foo.js",        // CommonJS output bundle
+    "default": "./dist/foo.modern.js", // Modern ES Modules output bundle
+  },
+  "types": "dist/foo.d.ts",            // TypeScript typings directory
   "scripts": {
-    "build": "jvdx build",       // Compiles "source" to "main"/"module"/"unpkg"
-    "dev": "jvdx build --watch"  // Re-build when source files change
+    "build": "jvdx build",             // Compiles "source" to "main"/"module"/"unpkg"
+    "dev": "jvdx build --watch",       // Re-build when source files change
+    "format": "jvdx format",           // Format sources using prettier
+    "lint": "jvdx lint"                // Lint source using ESLint
   }
 }
 ```
@@ -101,18 +107,30 @@ Each command does exactly what you would expect from it's name.
 Builds your code once, it also enables minification and sets the
 `NODE_ENV=production` environment variable.  
 Unless overridden via the command line, jvdx uses the `source` property in
-your `package.json` to locate the input file, and the `main` property for
-the output:
+your `package.json` to locate the input file, and the `main` , `umd:main`,
+`module` and `exports` properties to figure out where it should place each
+generated bundle:
 
-```js
+```json
 {
-  "source": "src/index.js",      // input
-  "main": "dist/my-packate.js",  // output
-  "scripts": {
-    "build": "jvdx build"
-  }
+  "source": "src/index.js",            // input
+  "main": "dist/foo.js",               // CommonJS output bundle
+  "umd:main": "dist/foo.umd.js",       // UMD output bundle
+  "module": "dist/foo.m.js",           // ES Modules output bundle 
+  "exports": {
+    "require": "./dist/foo.js",        // CommonJS output bundle
+    "default": "./dist/foo.modern.js", // Modern ES Modules output bundle
+  },
+  "types": "dist/foo.d.ts"             // TypeScript typings directory
 }
 ```
+
+When deciding which bundle to use, Node.js 12+ and webpack 5+ will prefer the
+`exports` property, while older Node.js releases use the `main` property,
+and other bundlers prefer the `module` field.
+
+> For more information about the meaning of the different properties, refer
+> to the [Node.js documentation](https://nodejs.org/api/packages.html#packages_package_entry_points).
 
 For UMD builds, jvdx will use a camelCase version of the name field in your
 `package.json` as export name. This can be customized using an "amdName" key
@@ -221,21 +239,6 @@ This can be customized by passing the command line argument
 | false | `import './my-file.module.css';` |         ❌         |
 | true  | `import './my-file.css';`        |         ✅         |
 | true  | `import './my-file.module.css';` |         ✅         |
-
-### Specifying builds in `package.json`
-
-jvdx uses the fields from your `package.json` to figure out where it should
-place each generated bundle:
-
-```js
-{
-  "main": "dist/my-bundle.js",            // CommonJS bundle
-  "umd:main": "dist/my-bundle.umd.js",    // UMD bundle
-  "module": "dist/my-bundle.m.js",        // ES Modules bundle
-  "esmodule": "dist/my-bundle.modern.js", // Modern bundle
-  "types": "dist/my-bundle.d.ts"          // TypeScript typings directory
-}
-```
 
 ### Building a single bundle with a fixed output name
 
