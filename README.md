@@ -50,15 +50,18 @@ $ yarn build
 
 ## Starter templates
 
-We also provide a few starter templates that you can initialize with the
+We also provide some starter templates that you can initialize with the
 help of [`degit`](https://github.com/Rich-Harris/degit).
 
-  - @jvdx/templates/node-lib
-  - @jvdx/templates/react-lib
-  - @jvdx/templates/react-app
+  - joelvoss/jvdx-templates/google-cloud-function
+  - joelvoss/jvdx-templates/google-cloud-run
+  - joelvoss/jvdx-templates/next-app
+  - joelvoss/jvdx-templates/node-lib
+  - joelvoss/jvdx-templates/node-rest-api
+  - joelvoss/jvdx-templates/react-lib
 
 ```bash
-$ npx degit @jvdx/templates/<template-name> my-package
+$ npx degit joelvoss/jvdx-templates/<template-name> my-package
 $ cd my-package
 
 # Using npm
