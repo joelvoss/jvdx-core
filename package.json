@@ -20,9 +20,9 @@
     "test": "./Taskfile.sh test"
   },
   "dependencies": {
-    "@babel/core": "7.14.0",
+    "@babel/core": "7.14.2",
     "@jvdx/babel-preset": "1.0.11",
-    "@jvdx/eslint-config": "3.4.3",
+    "@jvdx/eslint-config": "3.4.4",
     "@jvdx/prettier-config": "0.3.3",
     "@rollup/plugin-alias": "3.1.2",
     "@rollup/plugin-babel": "5.3.0",
@@ -55,7 +55,7 @@
     "rollup-plugin-terser": "7.0.2",
     "rollup-plugin-typescript2": "0.30.0",
     "sade": "1.7.4",
-    "tiny-glob": "0.2.8",
+    "tiny-glob": "0.2.9",
     "ts-jest": "26.5.6",
     "typescript": "4.2.4"
   },
