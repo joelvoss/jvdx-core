@@ -13,7 +13,7 @@ async function test(opts) {
 		],
 		transform: {
 			'^.+\\.jsx?$': require.resolve('babel-jest'),
-			'^.+\\.(ts|tsx)$': require.resolve('ts-jest/dist'),
+			'^.+\\.(ts|tsx)$': require.resolve('ts-jest'),
 		},
 	};
 

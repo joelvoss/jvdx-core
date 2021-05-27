@@ -42,12 +42,11 @@ describe('isDir', () => {
 	const { fromRoot, isDir } = require('../src/utils');
 	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/actions-build`);
 
-	it(`should return a boolean indicating if its a directory or not`, async done => {
+	it(`should return a boolean indicating if its a directory or not`, async () => {
 		const dir = await isDir(`${FIXTURES_DIR}/basic`);
 		const notADir = await isDir(`${FIXTURES_DIR}/basic/package.json`);
 		expect(dir).toBe(true);
 		expect(notADir).toBe(false);
-		done();
 	});
 });
 
@@ -55,12 +54,11 @@ describe('isFile', () => {
 	const { fromRoot, isFile } = require('../src/utils');
 	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/actions-build`);
 
-	it(`should return a boolean indicating if it's a file or not`, async done => {
+	it(`should return a boolean indicating if it's a file or not`, async () => {
 		const file = await isFile(`${FIXTURES_DIR}/basic/package.json`);
 		const notAFile = await isFile(`${FIXTURES_DIR}/basic`);
 		expect(file).toBe(true);
 		expect(notAFile).toBe(false);
-		done();
 	});
 });
 
@@ -194,7 +192,7 @@ describe('jsOrTs', () => {
 	const { fromRoot, jsOrTs } = require('../src/utils');
 	const FIXTURES_DIR = fromRoot(`tests/__fixtures__/actions-build`);
 
-	it(`should return the absolute path with the correct extension`, async done => {
+	it(`should return the absolute path with the correct extension`, async () => {
 		const jsFile = await jsOrTs(
 			process.cwd(),
 			`${FIXTURES_DIR}/basic/src/index`,
@@ -205,7 +203,6 @@ describe('jsOrTs', () => {
 		);
 		expect(jsFile).toContain('.js');
 		expect(tsFile).toContain('.ts');
-		done();
 	});
 });
 
