@@ -2,7 +2,7 @@ const c = require('kleur');
 const path = require('path');
 const fs = require('fs-extra');
 const which = require('which');
-const readPkgUp = require('read-pkg-up');
+const { readPackageUpSync } = require('readpkg-lit');
 const spawn = require('cross-spawn');
 const Module = require('module');
 
@@ -78,7 +78,7 @@ exports.logError = logError;
 ////////////////////////////////////////////////////////////////////////////////
 
 function appDir() {
-	const { path: rootPath } = readPkgUp.sync({ normalize: false });
+	const { path: rootPath } = readPackageUpSync({ normalize: false });
 	return path.dirname(rootPath || '');
 }
 exports.appDir = appDir;
