@@ -301,6 +301,13 @@ function getDeclarationDir({ options, pkg }) {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+// Recursively walk the "exports" package.json property
+function walkExports(input) {
+	if (typeof input === 'string') return input;
+	return walkExports(input['.'] || input.import || input.module);
+}
+
+////////////////////////////////////////////////////////////////////////////////
 // Return future main entry files of our bundled output
 function getMain({ options, entry, format }) {
 	const { pkg } = options;
@@ -340,7 +347,10 @@ function getMain({ options, entry, format }) {
 		mainNoExtension,
 	);
 	mainsByFormat.modern = replaceName(
-		(pkg.syntax && pkg.syntax.esmodules) || pkg.esmodule || 'x.modern.js',
+		(pkg.exports && walkExports(pkg.exports)) ||
+			(pkg.syntax && pkg.syntax.esmodules) ||
+			pkg.esmodule ||
+			'x.modern.js',
 		mainNoExtension,
 	);
 	mainsByFormat.cjs = replaceName(
