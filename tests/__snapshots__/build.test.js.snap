@@ -249,9 +249,9 @@ Bundle(s)
 ./dist/basic-lib.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/basic-lib.esm.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/basic-lib.esm.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/basic-lib.umd.js (555 B)
   -> gzip: 273 B
   -> brotli: 211 B
@@ -261,7 +261,7 @@ Bundle(s)
 exports[`build fixtures build basic with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic with jvdx 3`] = `
-"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
 //# sourceMappingURL=basic-lib.esm.js.map
 "
 `;
@@ -356,9 +356,9 @@ Bundle(s)
 ./dist/basic-compress-false.js (640 B)
   -> gzip: 260 B
   -> brotli: 206 B
-./dist/basic-compress-false.esm.js (638 B)
-  -> gzip: 258 B
-  -> brotli: 209 B
+./dist/basic-compress-false.esm.js (645 B)
+  -> gzip: 263 B
+  -> brotli: 212 B
 ./dist/basic-compress-false.umd.js (938 B)
   -> gzip: 383 B
   -> brotli: 305 B
@@ -393,7 +393,7 @@ var index = (function () {
   }
 });
 
-export default index;
+export { index as default };
 //# sourceMappingURL=basic-compress-false.esm.js.map
 "
 `;
@@ -494,9 +494,9 @@ Bundle(s)
 ./dist/basic-css.js (95 B)
   -> gzip: 107 B
   -> brotli: 60 B
-./dist/basic-css.esm.js (98 B)
-  -> gzip: 109 B
-  -> brotli: 67 B
+./dist/basic-css.esm.js (102 B)
+  -> gzip: 111 B
+  -> brotli: 75 B
 ./dist/basic-css.umd.js (264 B)
   -> gzip: 195 B
   -> brotli: 138 B
@@ -511,7 +511,7 @@ exports[`build fixtures build basic-css with jvdx 3`] = `
 `;
 
 exports[`build fixtures build basic-css with jvdx 4`] = `
-"function e(){var e=document.createElement(\\"div\\");return e.className=\\"testing\\",e}export default e;
+"function e(){var e=document.createElement(\\"div\\");return e.className=\\"testing\\",e}export{e as default};
 //# sourceMappingURL=basic-css.esm.js.map
 "
 `;
@@ -553,9 +553,9 @@ Bundle(s)
 ./dist/basic-dashed-external.js (511 B)
   -> gzip: 259 B
   -> brotli: 196 B
-./dist/basic-dashed-external.esm.js (425 B)
-  -> gzip: 214 B
-  -> brotli: 164 B
+./dist/basic-dashed-external.esm.js (438 B)
+  -> gzip: 220 B
+  -> brotli: 173 B
 ./dist/basic-dashed-external.umd.js (709 B)
   -> gzip: 343 B
   -> brotli: 286 B
@@ -565,7 +565,7 @@ Bundle(s)
 exports[`build fixtures build basic-dashed-external with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic-dashed-external with jvdx 3`] = `
-"import r from\\"tiny-glob\\";var e=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};console.log(r);export default function(){try{var r=arguments,t=[].slice.call(r);return Promise.resolve(e.apply(void 0,t)).then(function(r){return Promise.resolve(e.apply(void 0,t)).then(function(e){return[r,e]})})}catch(r){return Promise.reject(r)}}
+"import r from\\"tiny-glob\\";var e=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};console.log(r);var t=function(){try{var r=arguments,t=[].slice.call(r);return Promise.resolve(e.apply(void 0,t)).then(function(r){return Promise.resolve(e.apply(void 0,t)).then(function(e){return[r,e]})})}catch(r){return Promise.reject(r)}};export{t as default};
 //# sourceMappingURL=basic-dashed-external.esm.js.map
 "
 `;
@@ -607,9 +607,9 @@ Bundle(s)
 ./dist/basic-lib-flow.js (39 B)
   -> gzip: 57 B
   -> brotli: 43 B
-./dist/basic-lib-flow.esm.js (38 B)
-  -> gzip: 56 B
-  -> brotli: 42 B
+./dist/basic-lib-flow.esm.js (51 B)
+  -> gzip: 69 B
+  -> brotli: 51 B
 ./dist/basic-lib-flow.umd.js (247 B)
   -> gzip: 171 B
   -> brotli: 132 B
@@ -619,7 +619,7 @@ Bundle(s)
 exports[`build fixtures build basic-flow with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic-flow with jvdx 3`] = `
-"export default[\\"banana\\",\\"raspberry\\"];
+"var a=[\\"banana\\",\\"raspberry\\"];export{a as default};
 //# sourceMappingURL=basic-lib-flow.esm.js.map
 "
 `;
@@ -661,9 +661,9 @@ Bundle(s)
 ./dist/basic-json.js (74 B)
   -> gzip: 93 B
   -> brotli: 65 B
-./dist/basic-json.esm.js (73 B)
-  -> gzip: 92 B
-  -> brotli: 64 B
+./dist/basic-json.esm.js (82 B)
+  -> gzip: 97 B
+  -> brotli: 77 B
 ./dist/basic-json.umd.js (244 B)
   -> gzip: 180 B
   -> brotli: 129 B
@@ -673,7 +673,7 @@ Bundle(s)
 exports[`build fixtures build basic-json with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic-json with jvdx 3`] = `
-"var e={test:\\"true\\"};export default function(){return Promise.resolve(e)}
+"var e={test:\\"true\\"},r=function(){return Promise.resolve(e)};export{r as default};
 //# sourceMappingURL=basic-json.esm.js.map
 "
 `;
@@ -801,9 +801,9 @@ Bundle(s)
 ./dist/basic-no-compress.js (640 B)
   -> gzip: 260 B
   -> brotli: 206 B
-./dist/basic-no-compress.esm.js (638 B)
-  -> gzip: 258 B
-  -> brotli: 209 B
+./dist/basic-no-compress.esm.js (645 B)
+  -> gzip: 263 B
+  -> brotli: 212 B
 ./dist/basic-no-compress.umd.js (935 B)
   -> gzip: 381 B
   -> brotli: 310 B
@@ -838,7 +838,7 @@ var index = (function () {
   }
 });
 
-export default index;
+export { index as default };
 //# sourceMappingURL=basic-no-compress.esm.js.map
 "
 `;
@@ -933,9 +933,9 @@ Bundle(s)
 ./dist/basic-no-pkg-main.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/basic-no-pkg-main.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/basic-no-pkg-main.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/basic-no-pkg-main.js (561 B)
   -> gzip: 278 B
   -> brotli: 229 B
@@ -1024,8 +1024,8 @@ Bundle(s)
 ./dist/basic-lib-ts.js (106 B)
   -> gzip: 104 B
   -> brotli: 76 B
-./dist/basic-lib-ts.esm.js (106 B)
-  -> gzip: 104 B
+./dist/basic-lib-ts.esm.js (110 B)
+  -> gzip: 106 B
   -> brotli: 82 B
 ./dist/basic-lib-ts.umd.js (269 B)
   -> gzip: 186 B
@@ -1036,7 +1036,7 @@ Bundle(s)
 exports[`build fixtures build basic-ts with jvdx 2`] = `8`;
 
 exports[`build fixtures build basic-ts with jvdx 3`] = `
-"var n=new(function(){function n(){}return n.prototype.drive=function(n){return!0},n}());export default n;
+"var n=new(function(){function n(){}return n.prototype.drive=function(n){return!0},n}());export{n as default};
 //# sourceMappingURL=basic-lib-ts.esm.js.map
 "
 `;
@@ -1097,9 +1097,9 @@ Bundle(s)
 ./dist/basic-lib-tsx.js (245 B)
   -> gzip: 199 B
   -> brotli: 153 B
-./dist/basic-lib-tsx.esm.js (249 B)
-  -> gzip: 200 B
-  -> brotli: 153 B
+./dist/basic-lib-tsx.esm.js (253 B)
+  -> gzip: 202 B
+  -> brotli: 158 B
 ./dist/basic-lib-tsx.umd.js (417 B)
   -> gzip: 281 B
   -> brotli: 217 B
@@ -1109,7 +1109,7 @@ Bundle(s)
 exports[`build fixtures build basic-tsx with jvdx 2`] = `7`;
 
 exports[`build fixtures build basic-tsx with jvdx 3`] = `
-"var n=function(n,r){return{tag:n,props:r,children:[].slice.call(arguments,2)}},r=function(){function r(){}return r.prototype.render=function(){return n(\\"div\\",{id:\\"app\\"},n(\\"h1\\",null,\\"Hello, World!\\"),n(\\"p\\",null,\\"A JSX demo.\\"))},r}();export default r;
+"var n=function(n,r){return{tag:n,props:r,children:[].slice.call(arguments,2)}},r=function(){function r(){}return r.prototype.render=function(){return n(\\"div\\",{id:\\"app\\"},n(\\"h1\\",null,\\"Hello, World!\\"),n(\\"p\\",null,\\"A JSX demo.\\"))},r}();export{r as default};
 //# sourceMappingURL=basic-lib-tsx.esm.js.map
 "
 `;
@@ -1158,9 +1158,9 @@ Bundle(s)
 ./dist/basic.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/basic.esm.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/basic.esm.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/basic.umd.js (552 B)
   -> gzip: 269 B
   -> brotli: 198 B
@@ -1170,7 +1170,7 @@ Bundle(s)
 exports[`build fixtures build basic-with-cwd with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic-with-cwd with jvdx 3`] = `
-"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
 //# sourceMappingURL=basic.esm.js.map
 "
 `;
@@ -1214,9 +1214,9 @@ Bundle(s)
 ./dist/class-decorators-ts.js (564 B)
   -> gzip: 340 B
   -> brotli: 279 B
-./dist/class-decorators-ts.esm.js (564 B)
-  -> gzip: 340 B
-  -> brotli: 279 B
+./dist/class-decorators-ts.esm.js (568 B)
+  -> gzip: 343 B
+  -> brotli: 285 B
 ./dist/class-decorators-ts.umd.js (738 B)
   -> gzip: 406 B
   -> brotli: 349 B
@@ -1226,7 +1226,7 @@ Bundle(s)
 exports[`build fixtures build class-decorators-ts with jvdx 2`] = `7`;
 
 exports[`build fixtures build class-decorators-ts with jvdx 3`] = `
-"var e=function(){function e(e){this.greeting=void 0,this.greeting=e}return e.prototype.greet=function(){return\\"Hello, \\"+this.greeting},e}(),t=new(e=function(e,t,r,n){var o,c=arguments.length,i=c<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,r):n;if(\\"object\\"==typeof Reflect&&\\"function\\"==typeof Reflect.decorate)i=Reflect.decorate(e,t,r,n);else for(var l=e.length-1;l>=0;l--)(o=e[l])&&(i=(c<3?o(i):c>3?o(t,r,i):o(t,r))||i);return c>3&&i&&Object.defineProperty(t,r,i),i}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))(\\"Hello World\\");export default t;
+"var e=function(){function e(e){this.greeting=void 0,this.greeting=e}return e.prototype.greet=function(){return\\"Hello, \\"+this.greeting},e}(),t=new(e=function(e,t,r,n){var o,c=arguments.length,i=c<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,r):n;if(\\"object\\"==typeof Reflect&&\\"function\\"==typeof Reflect.decorate)i=Reflect.decorate(e,t,r,n);else for(var l=e.length-1;l>=0;l--)(o=e[l])&&(i=(c<3?o(i):c>3?o(t,r,i):o(t,r))||i);return c>3&&i&&Object.defineProperty(t,r,i),i}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))(\\"Hello World\\");export{t as default};
 //# sourceMappingURL=class-decorators-ts.esm.js.map
 "
 `;
@@ -1278,9 +1278,9 @@ Bundle(s)
 ./dist/class-properties.js (82 B)
   -> gzip: 93 B
   -> brotli: 79 B
-./dist/class-properties.esm.js (84 B)
-  -> gzip: 96 B
-  -> brotli: 85 B
+./dist/class-properties.esm.js (80 B)
+  -> gzip: 95 B
+  -> brotli: 84 B
 ./dist/class-properties.umd.js (261 B)
   -> gzip: 197 B
   -> brotli: 150 B
@@ -1290,7 +1290,7 @@ Bundle(s)
 exports[`build fixtures build class-properties with jvdx 2`] = `6`;
 
 exports[`build fixtures build class-properties with jvdx 3`] = `
-"var a=function(){this.baz=3};a.bar=2;var r=new a;export default r;export{a as Foo};
+"var a=function(){this.baz=3};a.bar=2;var r=new a;export{a as Foo,r as default};
 //# sourceMappingURL=class-properties.esm.js.map
 "
 `;
@@ -1332,9 +1332,9 @@ Bundle(s)
 ./dist/css.js (88 B)
   -> gzip: 103 B
   -> brotli: 65 B
-./dist/css.esm.js (91 B)
-  -> gzip: 103 B
-  -> brotli: 76 B
+./dist/css.esm.js (95 B)
+  -> gzip: 106 B
+  -> brotli: 75 B
 ./dist/css.umd.js (252 B)
   -> gzip: 187 B
   -> brotli: 138 B
@@ -1344,7 +1344,7 @@ Bundle(s)
 exports[`build fixtures build css with jvdx 2`] = `6`;
 
 exports[`build fixtures build css with jvdx 3`] = `
-"function o(){console.log(\\"body{display:flex;color:red;background:#00f}\\")}export default o;
+"function o(){console.log(\\"body{display:flex;color:red;background:#00f}\\")}export{o as default};
 //# sourceMappingURL=css.esm.js.map
 "
 `;
@@ -1385,9 +1385,9 @@ Bundle(s)
 ./dist/css-modules--false.js (29 B)
   -> gzip: 49 B
   -> brotli: 23 B
-./dist/css-modules--false.esm.js (32 B)
-  -> gzip: 52 B
-  -> brotli: 36 B
+./dist/css-modules--false.esm.js (36 B)
+  -> gzip: 56 B
+  -> brotli: 40 B
 ./dist/css-modules--false.umd.js (221 B)
   -> gzip: 156 B
   -> brotli: 109 B
@@ -1399,7 +1399,7 @@ exports[`build fixtures build css-modules--false with jvdx 2`] = `4`;
 exports[`build fixtures build css-modules--false with jvdx 3`] = `"body{display:flex;color:red;background:#00f}.test_class_that_shouldnt_be_scoped{background-color:#00f}.not_scoped_class{color:pink}"`;
 
 exports[`build fixtures build css-modules--false with jvdx 4`] = `
-"function t(){}export default t;
+"function t(){}export{t as default};
 "
 `;
 
@@ -1437,9 +1437,9 @@ Bundle(s)
 ./dist/css-modules--null.js (94 B)
   -> gzip: 110 B
   -> brotli: 72 B
-./dist/css-modules--null.esm.js (97 B)
-  -> gzip: 112 B
-  -> brotli: 77 B
+./dist/css-modules--null.esm.js (101 B)
+  -> gzip: 114 B
+  -> brotli: 70 B
 ./dist/css-modules--null.umd.js (269 B)
   -> gzip: 200 B
   -> brotli: 140 B
@@ -1451,7 +1451,7 @@ exports[`build fixtures build css-modules--null with jvdx 2`] = `4`;
 exports[`build fixtures build css-modules--null with jvdx 3`] = `"body{display:flex;color:red;background:#00f}.test_class_that_shouldnt_be_scoped{background-color:#00f}._2kWDE{color:pink}"`;
 
 exports[`build fixtures build css-modules--null with jvdx 4`] = `
-"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE\\",e}export default e;
+"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE\\",e}export{e as default};
 "
 `;
 
@@ -1489,9 +1489,9 @@ Bundle(s)
 ./dist/css-modules--string.js (183 B)
   -> gzip: 166 B
   -> brotli: 118 B
-./dist/css-modules--string.esm.js (186 B)
-  -> gzip: 168 B
-  -> brotli: 122 B
+./dist/css-modules--string.esm.js (190 B)
+  -> gzip: 171 B
+  -> brotli: 130 B
 ./dist/css-modules--string.umd.js (360 B)
   -> gzip: 263 B
   -> brotli: 192 B
@@ -1503,7 +1503,7 @@ exports[`build fixtures build css-modules--string with jvdx 2`] = `4`;
 exports[`build fixtures build css-modules--string with jvdx 3`] = `"body{display:flex;color:red;background:#00f}._contains_this_81567d0efc15a456670452d3277e1a68{background-color:#00f}._contains_this_0a8c24df242c2cd708036873307aea94{color:pink}"`;
 
 exports[`build fixtures build css-modules--string with jvdx 4`] = `
-"function a(){var a=document.createElement(\\"div\\");return a.className=\\"_contains_this_0a8c24df242c2cd708036873307aea94 _contains_this_81567d0efc15a456670452d3277e1a68\\",a}export default a;
+"function a(){var a=document.createElement(\\"div\\");return a.className=\\"_contains_this_0a8c24df242c2cd708036873307aea94 _contains_this_81567d0efc15a456670452d3277e1a68\\",a}export{a as default};
 "
 `;
 
@@ -1541,9 +1541,9 @@ Bundle(s)
 ./dist/css-modules--true.js (137 B)
   -> gzip: 139 B
   -> brotli: 94 B
-./dist/css-modules--true.esm.js (140 B)
-  -> gzip: 141 B
-  -> brotli: 108 B
+./dist/css-modules--true.esm.js (144 B)
+  -> gzip: 144 B
+  -> brotli: 100 B
 ./dist/css-modules--true.umd.js (312 B)
   -> gzip: 230 B
   -> brotli: 165 B
@@ -1555,7 +1555,7 @@ exports[`build fixtures build css-modules--true with jvdx 2`] = `4`;
 exports[`build fixtures build css-modules--true with jvdx 3`] = `"body{display:flex;color:red;background:#00f}.test_class_that_should_be_scoped{background-color:#00f}._2kWDE{color:pink}"`;
 
 exports[`build fixtures build css-modules--true with jvdx 4`] = `
-"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE \\"+(void 0).test_class_that_should_be_scoped,e}export default e;
+"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE \\"+(void 0).test_class_that_should_be_scoped,e}export{e as default};
 "
 `;
 
@@ -1647,9 +1647,9 @@ Bundle(s)
 ./dist/custom-source.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/custom-source.esm.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/custom-source.esm.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/custom-source.umd.js (559 B)
   -> gzip: 275 B
   -> brotli: 203 B
@@ -1659,7 +1659,7 @@ Bundle(s)
 exports[`build fixtures build custom-source with jvdx 2`] = `6`;
 
 exports[`build fixtures build custom-source with jvdx 3`] = `
-"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
 //# sourceMappingURL=custom-source.esm.js.map
 "
 `;
@@ -1701,9 +1701,9 @@ Bundle(s)
 ./dist/custom-src.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/custom-src.esm.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/custom-src.esm.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/custom-src.umd.js (556 B)
   -> gzip: 273 B
   -> brotli: 203 B
@@ -1713,7 +1713,7 @@ Bundle(s)
 exports[`build fixtures build custom-source-with-cwd with jvdx 2`] = `6`;
 
 exports[`build fixtures build custom-source-with-cwd with jvdx 3`] = `
-"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
 //# sourceMappingURL=custom-src.esm.js.map
 "
 `;
@@ -1754,9 +1754,9 @@ Bundle(s)
 ./dist/default-named.js (45 B)
   -> gzip: 60 B
   -> brotli: 46 B
-./dist/default-named.esm.js (58 B)
-  -> gzip: 74 B
-  -> brotli: 62 B
+./dist/default-named.esm.js (54 B)
+  -> gzip: 71 B
+  -> brotli: 58 B
 ./dist/default-named.umd.js (221 B)
   -> gzip: 169 B
   -> brotli: 122 B
@@ -1766,7 +1766,7 @@ Bundle(s)
 exports[`build fixtures build default-named with jvdx 2`] = `6`;
 
 exports[`build fixtures build default-named with jvdx 3`] = `
-"var t=42;function e(){}export default e;export{t as foo};
+"var a=42;function t(){}export{t as default,a as foo};
 //# sourceMappingURL=default-named.esm.js.map
 "
 `;
@@ -1881,34 +1881,34 @@ esnext-ts
 Built in 0s
 
 Bundle(s)
-./dist/esnext-ts.js (2484 B)
-  -> gzip: 1007 B
-  -> brotli: 895 B
-./dist/esnext-ts.esm.js (2484 B)
-  -> gzip: 1008 B
-  -> brotli: 896 B
-./dist/esnext-ts.umd.js (2653 B)
-  -> gzip: 1067 B
-  -> brotli: 945 B
+./dist/esnext-ts.js (2430 B)
+  -> gzip: 990 B
+  -> brotli: 873 B
+./dist/esnext-ts.esm.js (2434 B)
+  -> gzip: 993 B
+  -> brotli: 879 B
+./dist/esnext-ts.umd.js (2599 B)
+  -> gzip: 1048 B
+  -> brotli: 929 B
 "
 `;
 
 exports[`build fixtures build esnext-ts with jvdx 2`] = `7`;
 
 exports[`build fixtures build esnext-ts with jvdx 3`] = `
-"function n(t,e,i){if(!t.s){if(i instanceof r){if(!i.s)return void(i.o=n.bind(null,t,e));1&e&&(e=i.s),i=i.v}if(i&&i.then)return void i.then(n.bind(null,t,e),n.bind(null,t,2));t.s=e,t.v=i;var o=t.o;o&&o(t)}}var t=function(){try{var t,o,u,f,h=[],c=!0,a=!1,v=i(function(){return function(i,f){try{var a=function(){t=function(n){var t;if(\\"undefined\\"!=typeof Symbol&&(Symbol.asyncIterator&&(t=n[Symbol.asyncIterator]),null==t&&Symbol.iterator&&(t=n[Symbol.iterator])),null==t&&(t=n[\\"@@asyncIterator\\"]),null==t&&(t=n[\\"@@iterator\\"]),null==t)throw new TypeError(\\"Object is not async iterable\\");return t.call(n)}([1,2]);var i=function(t,i,o){for(var u;;){var f=t();if(e(f)&&(f=f.v),!f)return h;if(f.then){u=0;break}var h=o();if(h&&h.then){if(!e(h)){u=1;break}h=h.s}if(i){var c=i();if(c&&c.then&&!e(c)){u=2;break}}}var a=new r,v=n.bind(null,a,2);return(0===u?f.then(s):1===u?h.then(l):c.then(d)).then(void 0,v),a;function l(r){h=r;do{if(i&&(c=i())&&c.then&&!e(c))return void c.then(d).then(void 0,v);if(!(f=t())||e(f)&&!f.v)return void n(a,1,h);if(f.then)return void f.then(s).then(void 0,v);e(h=o())&&(h=h.v)}while(!h||!h.then);h.then(l).then(void 0,v)}function s(t){t?(h=o())&&h.then?h.then(l).then(void 0,v):l(h):n(a,1,h)}function d(){(f=t())?f.then?f.then(s).then(void 0,v):s(f):n(a,1,h)}}(function(){return!!Promise.resolve(t.next()).then(function(n){return c=o.done,o=n,Promise.resolve(o.value).then(function(n){return u=n,!c})})},function(){return!!(c=!0)},function(){h.push(u)});if(i&&i.then)return i.then(function(){})}()}catch(n){return f(n)}return a&&a.then?a.then(void 0,f):a}(0,function(n){a=!0,f=n})},function(n,r){function e(t){if(n)throw r;return r}var o=i(function(){var n=function(){if(!c&&null!=t.return)return Promise.resolve(t.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(a)throw f;if(n)throw t;return t});return o&&o.then?o.then(e):e()});return Promise.resolve(v&&v.then?v.then(function(n){return h}):h)}catch(n){return Promise.reject(n)}},r=function(){function t(){}return t.prototype.then=function(r,e){var i=new t,o=this.s;if(o){var u=1&o?r:e;if(u){try{n(i,1,u(this.v))}catch(t){n(i,2,t)}return i}return this}return this.o=function(t){try{var o=t.v;1&t.s?n(i,1,r?r(o):o):e?n(i,1,e(o)):n(i,2,o)}catch(t){n(i,2,t)}},i},t}();function e(n){return n instanceof r&&1&n.s}function i(n,t){try{var r=n()}catch(n){return t(!0,n)}return r&&r.then?r.then(t.bind(null,!1),t.bind(null,!0)):t(!1,r)}t().then(console.log);export default t;
+"function n(t,e,i){if(!t.s){if(i instanceof r){if(!i.s)return void(i.o=n.bind(null,t,e));1&e&&(e=i.s),i=i.v}if(i&&i.then)return void i.then(n.bind(null,t,e),n.bind(null,t,2));t.s=e,t.v=i;var o=t.o;o&&o(t)}}var t=function(){try{var t,o,u,f=[],h=!1,c=!1,a=i(function(){return function(i,u){try{var c=function(){t=function(n){var t;if(\\"undefined\\"!=typeof Symbol&&(Symbol.asyncIterator&&(t=n[Symbol.asyncIterator]),null==t&&Symbol.iterator&&(t=n[Symbol.iterator])),null==t&&(t=n[\\"@@asyncIterator\\"]),null==t&&(t=n[\\"@@iterator\\"]),null==t)throw new TypeError(\\"Object is not async iterable\\");return t.call(n)}([1,2]);var i=function(t,i,o){for(var u;;){var f=t();if(e(f)&&(f=f.v),!f)return h;if(f.then){u=0;break}var h=o();if(h&&h.then){if(!e(h)){u=1;break}h=h.s}if(i){var c=i();if(c&&c.then&&!e(c)){u=2;break}}}var a=new r,v=n.bind(null,a,2);return(0===u?f.then(s):1===u?h.then(l):c.then(d)).then(void 0,v),a;function l(r){h=r;do{if(i&&(c=i())&&c.then&&!e(c))return void c.then(d).then(void 0,v);if(!(f=t())||e(f)&&!f.v)return void n(a,1,h);if(f.then)return void f.then(s).then(void 0,v);e(h=o())&&(h=h.v)}while(!h||!h.then);h.then(l).then(void 0,v)}function s(t){t?(h=o())&&h.then?h.then(l).then(void 0,v):l(h):n(a,1,h)}function d(){(f=t())?f.then?f.then(s).then(void 0,v):s(f):n(a,1,h)}}(function(){return!!Promise.resolve(t.next()).then(function(n){return h=!(o=n).done})},function(){return!!(h=!1)},function(){f.push(o.value)});if(i&&i.then)return i.then(function(){})}()}catch(n){return u(n)}return c&&c.then?c.then(void 0,u):c}(0,function(n){c=!0,u=n})},function(n,r){function e(t){if(n)throw r;return r}var o=i(function(){var n=function(){if(h&&null!=t.return)return Promise.resolve(t.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(c)throw u;if(n)throw t;return t});return o&&o.then?o.then(e):e()});return Promise.resolve(a&&a.then?a.then(function(n){return f}):f)}catch(n){return Promise.reject(n)}},r=function(){function t(){}return t.prototype.then=function(r,e){var i=new t,o=this.s;if(o){var u=1&o?r:e;if(u){try{n(i,1,u(this.v))}catch(t){n(i,2,t)}return i}return this}return this.o=function(t){try{var o=t.v;1&t.s?n(i,1,r?r(o):o):e?n(i,1,e(o)):n(i,2,o)}catch(t){n(i,2,t)}},i},t}();function e(n){return n instanceof r&&1&n.s}function i(n,t){try{var r=n()}catch(n){return t(!0,n)}return r&&r.then?r.then(t.bind(null,!1),t.bind(null,!0)):t(!1,r)}t().then(console.log);export{t as default};
 //# sourceMappingURL=esnext-ts.esm.js.map
 "
 `;
 
 exports[`build fixtures build esnext-ts with jvdx 4`] = `
-"function n(t,e,i){if(!t.s){if(i instanceof r){if(!i.s)return void(i.o=n.bind(null,t,e));1&e&&(e=i.s),i=i.v}if(i&&i.then)return void i.then(n.bind(null,t,e),n.bind(null,t,2));t.s=e,t.v=i;var o=t.o;o&&o(t)}}var t=function(){try{var t,o,u,f,h=[],c=!0,v=!1,a=i(function(){return function(i,f){try{var v=function(){t=function(n){var t;if(\\"undefined\\"!=typeof Symbol&&(Symbol.asyncIterator&&(t=n[Symbol.asyncIterator]),null==t&&Symbol.iterator&&(t=n[Symbol.iterator])),null==t&&(t=n[\\"@@asyncIterator\\"]),null==t&&(t=n[\\"@@iterator\\"]),null==t)throw new TypeError(\\"Object is not async iterable\\");return t.call(n)}([1,2]);var i=function(t,i,o){for(var u;;){var f=t();if(e(f)&&(f=f.v),!f)return h;if(f.then){u=0;break}var h=o();if(h&&h.then){if(!e(h)){u=1;break}h=h.s}if(i){var c=i();if(c&&c.then&&!e(c)){u=2;break}}}var v=new r,a=n.bind(null,v,2);return(0===u?f.then(s):1===u?h.then(l):c.then(d)).then(void 0,a),v;function l(r){h=r;do{if(i&&(c=i())&&c.then&&!e(c))return void c.then(d).then(void 0,a);if(!(f=t())||e(f)&&!f.v)return void n(v,1,h);if(f.then)return void f.then(s).then(void 0,a);e(h=o())&&(h=h.v)}while(!h||!h.then);h.then(l).then(void 0,a)}function s(t){t?(h=o())&&h.then?h.then(l).then(void 0,a):l(h):n(v,1,h)}function d(){(f=t())?f.then?f.then(s).then(void 0,a):s(f):n(v,1,h)}}(function(){return!!Promise.resolve(t.next()).then(function(n){return c=o.done,o=n,Promise.resolve(o.value).then(function(n){return u=n,!c})})},function(){return!!(c=!0)},function(){h.push(u)});if(i&&i.then)return i.then(function(){})}()}catch(n){return f(n)}return v&&v.then?v.then(void 0,f):v}(0,function(n){v=!0,f=n})},function(n,r){function e(t){if(n)throw r;return r}var o=i(function(){var n=function(){if(!c&&null!=t.return)return Promise.resolve(t.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(v)throw f;if(n)throw t;return t});return o&&o.then?o.then(e):e()});return Promise.resolve(a&&a.then?a.then(function(n){return h}):h)}catch(n){return Promise.reject(n)}},r=function(){function t(){}return t.prototype.then=function(r,e){var i=new t,o=this.s;if(o){var u=1&o?r:e;if(u){try{n(i,1,u(this.v))}catch(t){n(i,2,t)}return i}return this}return this.o=function(t){try{var o=t.v;1&t.s?n(i,1,r?r(o):o):e?n(i,1,e(o)):n(i,2,o)}catch(t){n(i,2,t)}},i},t}();function e(n){return n instanceof r&&1&n.s}function i(n,t){try{var r=n()}catch(n){return t(!0,n)}return r&&r.then?r.then(t.bind(null,!1),t.bind(null,!0)):t(!1,r)}t().then(console.log),module.exports=t;
+"function n(t,e,i){if(!t.s){if(i instanceof r){if(!i.s)return void(i.o=n.bind(null,t,e));1&e&&(e=i.s),i=i.v}if(i&&i.then)return void i.then(n.bind(null,t,e),n.bind(null,t,2));t.s=e,t.v=i;var o=t.o;o&&o(t)}}var t=function(){try{var t,o,u,f=[],h=!1,c=!1,a=i(function(){return function(i,u){try{var c=function(){t=function(n){var t;if(\\"undefined\\"!=typeof Symbol&&(Symbol.asyncIterator&&(t=n[Symbol.asyncIterator]),null==t&&Symbol.iterator&&(t=n[Symbol.iterator])),null==t&&(t=n[\\"@@asyncIterator\\"]),null==t&&(t=n[\\"@@iterator\\"]),null==t)throw new TypeError(\\"Object is not async iterable\\");return t.call(n)}([1,2]);var i=function(t,i,o){for(var u;;){var f=t();if(e(f)&&(f=f.v),!f)return h;if(f.then){u=0;break}var h=o();if(h&&h.then){if(!e(h)){u=1;break}h=h.s}if(i){var c=i();if(c&&c.then&&!e(c)){u=2;break}}}var a=new r,v=n.bind(null,a,2);return(0===u?f.then(s):1===u?h.then(l):c.then(d)).then(void 0,v),a;function l(r){h=r;do{if(i&&(c=i())&&c.then&&!e(c))return void c.then(d).then(void 0,v);if(!(f=t())||e(f)&&!f.v)return void n(a,1,h);if(f.then)return void f.then(s).then(void 0,v);e(h=o())&&(h=h.v)}while(!h||!h.then);h.then(l).then(void 0,v)}function s(t){t?(h=o())&&h.then?h.then(l).then(void 0,v):l(h):n(a,1,h)}function d(){(f=t())?f.then?f.then(s).then(void 0,v):s(f):n(a,1,h)}}(function(){return!!Promise.resolve(t.next()).then(function(n){return h=!(o=n).done})},function(){return!!(h=!1)},function(){f.push(o.value)});if(i&&i.then)return i.then(function(){})}()}catch(n){return u(n)}return c&&c.then?c.then(void 0,u):c}(0,function(n){c=!0,u=n})},function(n,r){function e(t){if(n)throw r;return r}var o=i(function(){var n=function(){if(h&&null!=t.return)return Promise.resolve(t.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(c)throw u;if(n)throw t;return t});return o&&o.then?o.then(e):e()});return Promise.resolve(a&&a.then?a.then(function(n){return f}):f)}catch(n){return Promise.reject(n)}},r=function(){function t(){}return t.prototype.then=function(r,e){var i=new t,o=this.s;if(o){var u=1&o?r:e;if(u){try{n(i,1,u(this.v))}catch(t){n(i,2,t)}return i}return this}return this.o=function(t){try{var o=t.v;1&t.s?n(i,1,r?r(o):o):e?n(i,1,e(o)):n(i,2,o)}catch(t){n(i,2,t)}},i},t}();function e(n){return n instanceof r&&1&n.s}function i(n,t){try{var r=n()}catch(n){return t(!0,n)}return r&&r.then?r.then(t.bind(null,!1),t.bind(null,!0)):t(!1,r)}t().then(console.log),module.exports=t;
 //# sourceMappingURL=esnext-ts.js.map
 "
 `;
 
 exports[`build fixtures build esnext-ts with jvdx 5`] = `
-"!function(n,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t():\\"function\\"==typeof define&&define.amd?define(t):(n||self).esnextTs=t()}(this,function(){function n(t,r,i){if(!t.s){if(i instanceof e){if(!i.s)return void(i.o=n.bind(null,t,r));1&r&&(r=i.s),i=i.v}if(i&&i.then)return void i.then(n.bind(null,t,r),n.bind(null,t,2));t.s=r,t.v=i;var o=t.o;o&&o(t)}}var t=function(){try{var t,o,u,f,h=[],c=!0,l=!1,a=i(function(){return function(i,f){try{var l=function(){t=function(n){var t;if(\\"undefined\\"!=typeof Symbol&&(Symbol.asyncIterator&&(t=n[Symbol.asyncIterator]),null==t&&Symbol.iterator&&(t=n[Symbol.iterator])),null==t&&(t=n[\\"@@asyncIterator\\"]),null==t&&(t=n[\\"@@iterator\\"]),null==t)throw new TypeError(\\"Object is not async iterable\\");return t.call(n)}([1,2]);var i=function(t,i,o){for(var u;;){var f=t();if(r(f)&&(f=f.v),!f)return h;if(f.then){u=0;break}var h=o();if(h&&h.then){if(!r(h)){u=1;break}h=h.s}if(i){var c=i();if(c&&c.then&&!r(c)){u=2;break}}}var l=new e,a=n.bind(null,l,2);return(0===u?f.then(s):1===u?h.then(v):c.then(d)).then(void 0,a),l;function v(e){h=e;do{if(i&&(c=i())&&c.then&&!r(c))return void c.then(d).then(void 0,a);if(!(f=t())||r(f)&&!f.v)return void n(l,1,h);if(f.then)return void f.then(s).then(void 0,a);r(h=o())&&(h=h.v)}while(!h||!h.then);h.then(v).then(void 0,a)}function s(t){t?(h=o())&&h.then?h.then(v).then(void 0,a):v(h):n(l,1,h)}function d(){(f=t())?f.then?f.then(s).then(void 0,a):s(f):n(l,1,h)}}(function(){return!!Promise.resolve(t.next()).then(function(n){return c=o.done,o=n,Promise.resolve(o.value).then(function(n){return u=n,!c})})},function(){return!!(c=!0)},function(){h.push(u)});if(i&&i.then)return i.then(function(){})}()}catch(n){return f(n)}return l&&l.then?l.then(void 0,f):l}(0,function(n){l=!0,f=n})},function(n,e){function r(t){if(n)throw e;return e}var o=i(function(){var n=function(){if(!c&&null!=t.return)return Promise.resolve(t.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(l)throw f;if(n)throw t;return t});return o&&o.then?o.then(r):r()});return Promise.resolve(a&&a.then?a.then(function(n){return h}):h)}catch(n){return Promise.reject(n)}},e=function(){function t(){}return t.prototype.then=function(e,r){var i=new t,o=this.s;if(o){var u=1&o?e:r;if(u){try{n(i,1,u(this.v))}catch(t){n(i,2,t)}return i}return this}return this.o=function(t){try{var o=t.v;1&t.s?n(i,1,e?e(o):o):r?n(i,1,r(o)):n(i,2,o)}catch(t){n(i,2,t)}},i},t}();function r(n){return n instanceof e&&1&n.s}function i(n,t){try{var e=n()}catch(n){return t(!0,n)}return e&&e.then?e.then(t.bind(null,!1),t.bind(null,!0)):t(!1,e)}return t().then(console.log),t});
+"!function(n,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t():\\"function\\"==typeof define&&define.amd?define(t):(n||self).esnextTs=t()}(this,function(){function n(t,r,i){if(!t.s){if(i instanceof e){if(!i.s)return void(i.o=n.bind(null,t,r));1&r&&(r=i.s),i=i.v}if(i&&i.then)return void i.then(n.bind(null,t,r),n.bind(null,t,2));t.s=r,t.v=i;var o=t.o;o&&o(t)}}var t=function(){try{var t,o,u,f=[],h=!1,c=!1,l=i(function(){return function(i,u){try{var c=function(){t=function(n){var t;if(\\"undefined\\"!=typeof Symbol&&(Symbol.asyncIterator&&(t=n[Symbol.asyncIterator]),null==t&&Symbol.iterator&&(t=n[Symbol.iterator])),null==t&&(t=n[\\"@@asyncIterator\\"]),null==t&&(t=n[\\"@@iterator\\"]),null==t)throw new TypeError(\\"Object is not async iterable\\");return t.call(n)}([1,2]);var i=function(t,i,o){for(var u;;){var f=t();if(r(f)&&(f=f.v),!f)return h;if(f.then){u=0;break}var h=o();if(h&&h.then){if(!r(h)){u=1;break}h=h.s}if(i){var c=i();if(c&&c.then&&!r(c)){u=2;break}}}var l=new e,a=n.bind(null,l,2);return(0===u?f.then(s):1===u?h.then(v):c.then(d)).then(void 0,a),l;function v(e){h=e;do{if(i&&(c=i())&&c.then&&!r(c))return void c.then(d).then(void 0,a);if(!(f=t())||r(f)&&!f.v)return void n(l,1,h);if(f.then)return void f.then(s).then(void 0,a);r(h=o())&&(h=h.v)}while(!h||!h.then);h.then(v).then(void 0,a)}function s(t){t?(h=o())&&h.then?h.then(v).then(void 0,a):v(h):n(l,1,h)}function d(){(f=t())?f.then?f.then(s).then(void 0,a):s(f):n(l,1,h)}}(function(){return!!Promise.resolve(t.next()).then(function(n){return h=!(o=n).done})},function(){return!!(h=!1)},function(){f.push(o.value)});if(i&&i.then)return i.then(function(){})}()}catch(n){return u(n)}return c&&c.then?c.then(void 0,u):c}(0,function(n){c=!0,u=n})},function(n,e){function r(t){if(n)throw e;return e}var o=i(function(){var n=function(){if(h&&null!=t.return)return Promise.resolve(t.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(c)throw u;if(n)throw t;return t});return o&&o.then?o.then(r):r()});return Promise.resolve(l&&l.then?l.then(function(n){return f}):f)}catch(n){return Promise.reject(n)}},e=function(){function t(){}return t.prototype.then=function(e,r){var i=new t,o=this.s;if(o){var u=1&o?e:r;if(u){try{n(i,1,u(this.v))}catch(t){n(i,2,t)}return i}return this}return this.o=function(t){try{var o=t.v;1&t.s?n(i,1,e?e(o):o):r?n(i,1,r(o)):n(i,2,o)}catch(t){n(i,2,t)}},i},t}();function r(n){return n instanceof e&&1&n.s}function i(n,t){try{var e=n()}catch(n){return t(!0,n)}return e&&e.then?e.then(t.bind(null,!1),t.bind(null,!0)):t(!1,e)}return t().then(console.log),t});
 //# sourceMappingURL=esnext-ts.umd.js.map
 "
 `;
@@ -2000,9 +2000,9 @@ Bundle(s)
 ./dist/inline-source-map.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/inline-source-map.esm.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/inline-source-map.esm.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/inline-source-map.umd.js (562 B)
   -> gzip: 278 B
   -> brotli: 217 B
@@ -2012,8 +2012,8 @@ Bundle(s)
 exports[`build fixtures build inline-source-map with jvdx 2`] = `3`;
 
 exports[`build fixtures build inline-source-map with jvdx 3`] = `
-"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5saW5lLXNvdXJjZS1tYXAuZXNtLmpzIiwic291cmNlcyI6WyIuLi9zcmMvdHdvLmpzIiwiLi4vc3JjL2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBhc3luYyBmdW5jdGlvbiB0d28oLi4uYXJncykge1xuXHRyZXR1cm4gYXJncy5yZWR1Y2UoKHRvdGFsLCB2YWx1ZSkgPT4gdG90YWwgKyB2YWx1ZSwgMCk7XG59XG4iLCJpbXBvcnQgeyB0d28gfSBmcm9tICcuL3R3byc7XG5cbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uICguLi5hcmdzKSB7XG5cdHJldHVybiBbYXdhaXQgdHdvKC4uLmFyZ3MpLCBhd2FpdCB0d28oLi4uYXJncyldO1xufVxuIl0sIm5hbWVzIjpbInR3byIsInJlZHVjZSIsInRvdGFsIiwidmFsdWUiLCJhcmdzIl0sIm1hcHBpbmdzIjoiSUFBc0JBLGlDQUNyQix1QkFBTyxpQkFBS0MsT0FBTyxTQUFDQyxFQUFPQyxVQUFVRCxFQUFRQyxHQUFPLElBRHJELGtGQ0VrQ0MsMENBQ25CSixlQUFPSSw0Q0FBYUosZUFBT0kscUJBQXpDLE1BQU8sVUFEUiJ9
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5saW5lLXNvdXJjZS1tYXAuZXNtLmpzIiwic291cmNlcyI6WyIuLi9zcmMvdHdvLmpzIiwiLi4vc3JjL2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBhc3luYyBmdW5jdGlvbiB0d28oLi4uYXJncykge1xuXHRyZXR1cm4gYXJncy5yZWR1Y2UoKHRvdGFsLCB2YWx1ZSkgPT4gdG90YWwgKyB2YWx1ZSwgMCk7XG59XG4iLCJpbXBvcnQgeyB0d28gfSBmcm9tICcuL3R3byc7XG5cbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uICguLi5hcmdzKSB7XG5cdHJldHVybiBbYXdhaXQgdHdvKC4uLmFyZ3MpLCBhd2FpdCB0d28oLi4uYXJncyldO1xufVxuIl0sIm5hbWVzIjpbInR3byIsInJlZHVjZSIsInRvdGFsIiwidmFsdWUiLCJhcmdzIl0sIm1hcHBpbmdzIjoiSUFBc0JBLGlDQUNyQix1QkFBTyxpQkFBS0MsT0FBTyxTQUFDQyxFQUFPQyxVQUFVRCxFQUFRQyxHQUFPLElBRHJELHFFQ0VrQ0MsMENBQ25CSixlQUFPSSw0Q0FBYUosZUFBT0kscUJBQXpDLE1BQU8sVUFEUiJ9
 "
 `;
 
@@ -2052,9 +2052,9 @@ Bundle(s)
 ./dist/jsx.js (304 B)
   -> gzip: 210 B
   -> brotli: 179 B
-./dist/jsx.esm.js (311 B)
-  -> gzip: 220 B
-  -> brotli: 184 B
+./dist/jsx.esm.js (315 B)
+  -> gzip: 222 B
+  -> brotli: 192 B
 ./dist/jsx.umd.js (496 B)
   -> gzip: 294 B
   -> brotli: 250 B
@@ -2064,7 +2064,7 @@ Bundle(s)
 exports[`build fixtures build jsx with jvdx 2`] = `6`;
 
 exports[`build fixtures build jsx with jvdx 3`] = `
-"import{jsxs as r,jsx as e,Fragment as n}from\\"react/jsx-runtime\\";var t=function(){function t(){}return t.prototype.render=function(){return r(\\"div\\",{id:\\"app\\",children:[e(\\"h1\\",{children:\\"Hello, World!\\"}),e(\\"p\\",{children:\\"A JSX demo.\\"}),e(n,{children:e(\\"p\\",{children:\\"Test fragment\\"})})]})},t}();export default t;
+"import{jsxs as r,jsx as e,Fragment as n}from\\"react/jsx-runtime\\";var t=function(){function t(){}return t.prototype.render=function(){return r(\\"div\\",{id:\\"app\\",children:[e(\\"h1\\",{children:\\"Hello, World!\\"}),e(\\"p\\",{children:\\"A JSX demo.\\"}),e(n,{children:e(\\"p\\",{children:\\"Test fragment\\"})})]})},t}();export{t as default};
 //# sourceMappingURL=jsx.esm.js.map
 "
 `;
@@ -2106,9 +2106,9 @@ Bundle(s)
 ./dist/macro-lib.js (29 B)
   -> gzip: 49 B
   -> brotli: 33 B
-./dist/macro-lib.esm.js (28 B)
-  -> gzip: 48 B
-  -> brotli: 32 B
+./dist/macro-lib.esm.js (41 B)
+  -> gzip: 61 B
+  -> brotli: 45 B
 ./dist/macro-lib.umd.js (213 B)
   -> gzip: 156 B
   -> brotli: 126 B
@@ -2118,7 +2118,7 @@ Bundle(s)
 exports[`build fixtures build macro with jvdx 2`] = `6`;
 
 exports[`build fixtures build macro with jvdx 3`] = `
-"export default\\"name-macro\\";
+"var a=\\"name-macro\\";export{a as default};
 //# sourceMappingURL=macro-lib.esm.js.map
 "
 `;
@@ -2161,9 +2161,9 @@ Bundle(s)
 ./dist/mangle-json-file.js (101 B)
   -> gzip: 103 B
   -> brotli: 89 B
-./dist/mangle-json-file.esm.js (104 B)
-  -> gzip: 105 B
-  -> brotli: 91 B
+./dist/mangle-json-file.esm.js (108 B)
+  -> gzip: 108 B
+  -> brotli: 79 B
 ./dist/mangle-json-file.umd.js (276 B)
   -> gzip: 196 B
   -> brotli: 171 B
@@ -2173,7 +2173,7 @@ Bundle(s)
 exports[`build fixtures build mangle-json-file with jvdx 2`] = `6`;
 
 exports[`build fixtures build mangle-json-file with jvdx 3`] = `
-"var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export default r;
+"var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export{r as default};
 //# sourceMappingURL=mangle-json-file.esm.js.map
 "
 `;
@@ -2215,9 +2215,9 @@ Bundle(s)
 ./dist/minify-config.js (95 B)
   -> gzip: 99 B
   -> brotli: 85 B
-./dist/minify-config.esm.js (98 B)
-  -> gzip: 101 B
-  -> brotli: 87 B
+./dist/minify-config.esm.js (102 B)
+  -> gzip: 103 B
+  -> brotli: 76 B
 ./dist/minify-config.umd.js (268 B)
   -> gzip: 189 B
   -> brotli: 140 B
@@ -2227,7 +2227,7 @@ Bundle(s)
 exports[`build fixtures build minify-config with jvdx 2`] = `6`;
 
 exports[`build fixtures build minify-config with jvdx 3`] = `
-"var o={prop1:1,o:2};function r(){return console.log(o.prop1),console.log(o.o),o}export default r;
+"var o={prop1:1,o:2};function r(){return console.log(o.prop1),console.log(o.o),o}export{r as default};
 //# sourceMappingURL=minify-config.esm.js.map
 "
 `;
@@ -2324,9 +2324,9 @@ Bundle(s)
 ./dist/minify-path-config.js (101 B)
   -> gzip: 103 B
   -> brotli: 89 B
-./dist/minify-path-config.esm.js (104 B)
-  -> gzip: 105 B
-  -> brotli: 91 B
+./dist/minify-path-config.esm.js (108 B)
+  -> gzip: 108 B
+  -> brotli: 79 B
 ./dist/minify-path-config.umd.js (278 B)
   -> gzip: 198 B
   -> brotli: 152 B
@@ -2336,7 +2336,7 @@ Bundle(s)
 exports[`build fixtures build minify-path-config with jvdx 2`] = `6`;
 
 exports[`build fixtures build minify-path-config with jvdx 3`] = `
-"var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export default r;
+"var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export{r as default};
 //# sourceMappingURL=minify-path-config.esm.js.map
 "
 `;
@@ -2377,9 +2377,9 @@ Bundle(s)
 ./dist/minify-path-parent-dir.js (101 B)
   -> gzip: 103 B
   -> brotli: 89 B
-./dist/minify-path-parent-dir.esm.js (104 B)
-  -> gzip: 105 B
-  -> brotli: 91 B
+./dist/minify-path-parent-dir.esm.js (108 B)
+  -> gzip: 108 B
+  -> brotli: 79 B
 ./dist/minify-path-parent-dir.umd.js (281 B)
   -> gzip: 200 B
   -> brotli: 161 B
@@ -2389,7 +2389,7 @@ Bundle(s)
 exports[`build fixtures build minify-path-parent-dir-with-cwd with jvdx 2`] = `6`;
 
 exports[`build fixtures build minify-path-parent-dir-with-cwd with jvdx 3`] = `
-"var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export default r;
+"var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export{r as default};
 //# sourceMappingURL=minify-path-parent-dir.esm.js.map
 "
 `;
@@ -2424,16 +2424,16 @@ modern
 Built in 0s
 
 Bundle(s)
-./dist/modern-lib.modern.js (130 B)
-  -> gzip: 113 B
-  -> brotli: 92 B
+./dist/modern-lib.modern.js (134 B)
+  -> gzip: 116 B
+  -> brotli: 99 B
 "
 `;
 
 exports[`build fixtures build modern with jvdx 2`] = `2`;
 
 exports[`build fixtures build modern with jvdx 3`] = `
-"async function n(...n){return n.reduce((n,t)=>n+t,0)}async function t(...t){return[await n(...t),await n(...t)]}export default t;
+"async function a(...a){return a.reduce((a,n)=>a+n,0)}async function n(...n){return[await a(...n),await a(...n)]}export{n as default};
 //# sourceMappingURL=modern-lib.modern.js.map
 "
 `;
@@ -2465,12 +2465,12 @@ Bundle(s)
 ./dist/modern-generators.js (355 B)
   -> gzip: 234 B
   -> brotli: 207 B
-./dist/modern-generators.modern.js (123 B)
-  -> gzip: 118 B
+./dist/modern-generators.modern.js (127 B)
+  -> gzip: 120 B
   -> brotli: 99 B
-./dist/modern-generators.esm.js (354 B)
-  -> gzip: 233 B
-  -> brotli: 191 B
+./dist/modern-generators.esm.js (367 B)
+  -> gzip: 241 B
+  -> brotli: 200 B
 ./dist/modern-generators.umd.js (532 B)
   -> gzip: 310 B
   -> brotli: 257 B
@@ -2480,7 +2480,7 @@ Bundle(s)
 exports[`build fixtures build modern-generators with jvdx 2`] = `8`;
 
 exports[`build fixtures build modern-generators with jvdx 3`] = `
-"var e=regeneratorRuntime.mark(r);function r(){var r;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:r=0;case 1:return e.next=4,r++;case 4:e.next=1;break;case 6:case\\"end\\":return e.stop()}},e)}export default function(){try{var e=r();return Promise.resolve([e.next().value,e.next().value])}catch(e){return Promise.reject(e)}}
+"var e=regeneratorRuntime.mark(r);function r(){var r;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:r=0;case 1:return e.next=4,r++;case 4:e.next=1;break;case 6:case\\"end\\":return e.stop()}},e)}var t=function(){try{var e=r();return Promise.resolve([e.next().value,e.next().value])}catch(e){return Promise.reject(e)}};export{t as default};
 //# sourceMappingURL=modern-generators.esm.js.map
 "
 `;
@@ -2492,7 +2492,7 @@ exports[`build fixtures build modern-generators with jvdx 4`] = `
 `;
 
 exports[`build fixtures build modern-generators with jvdx 5`] = `
-"async function e(){const e=function*(){let e=0;for(;;)yield e++}();return[e.next().value,e.next().value]}export default e;
+"async function e(){const e=function*(){let e=0;for(;;)yield e++}();return[e.next().value,e.next().value]}export{e as default};
 //# sourceMappingURL=modern-generators.modern.js.map
 "
 `;
@@ -2528,9 +2528,9 @@ Bundle(s)
 ./dist/name-custom-amd.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/name-custom-amd.esm.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/name-custom-amd.esm.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/name-custom-amd.umd.js (560 B)
   -> gzip: 277 B
   -> brotli: 208 B
@@ -2540,7 +2540,7 @@ Bundle(s)
 exports[`build fixtures build name-custom-amd with jvdx 2`] = `6`;
 
 exports[`build fixtures build name-custom-amd with jvdx 3`] = `
-"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
 //# sourceMappingURL=name-custom-amd.esm.js.map
 "
 `;
@@ -2582,9 +2582,9 @@ Bundle(s)
 ./dist/name-custom.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/name-custom.esm.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/name-custom.esm.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/name-custom.umd.js (560 B)
   -> gzip: 276 B
   -> brotli: 215 B
@@ -2594,7 +2594,7 @@ Bundle(s)
 exports[`build fixtures build name-custom-cli with jvdx 2`] = `6`;
 
 exports[`build fixtures build name-custom-cli with jvdx 3`] = `
-"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
 //# sourceMappingURL=name-custom.esm.js.map
 "
 `;
@@ -2635,9 +2635,9 @@ Bundle(s)
 ./dist/no-pkg.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/no-pkg.esm.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/no-pkg.esm.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/no-pkg.umd.js (552 B)
   -> gzip: 270 B
   -> brotli: 216 B
@@ -2647,7 +2647,7 @@ Bundle(s)
 exports[`build fixtures build no-pkg with jvdx 2`] = `6`;
 
 exports[`build fixtures build no-pkg with jvdx 3`] = `
-"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
 //# sourceMappingURL=no-pkg.esm.js.map
 "
 `;
@@ -2689,9 +2689,9 @@ Bundle(s)
 ./dist/no-pkg-name.js (386 B)
   -> gzip: 187 B
   -> brotli: 138 B
-./dist/no-pkg-name.esm.js (385 B)
-  -> gzip: 188 B
-  -> brotli: 139 B
+./dist/no-pkg-name.esm.js (394 B)
+  -> gzip: 193 B
+  -> brotli: 148 B
 ./dist/no-pkg-name.umd.js (556 B)
   -> gzip: 274 B
   -> brotli: 219 B
@@ -2701,7 +2701,7 @@ Bundle(s)
 exports[`build fixtures build no-pkg-name with jvdx 2`] = `6`;
 
 exports[`build fixtures build no-pkg-name with jvdx 3`] = `
-"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};export default function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}}
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
 //# sourceMappingURL=no-pkg-name.esm.js.map
 "
 `;
@@ -3297,9 +3297,9 @@ Bundle(s)
 ./dist/ts-mixed-exports.js (124 B)
   -> gzip: 112 B
   -> brotli: 89 B
-./dist/ts-mixed-exports.esm.js (126 B)
+./dist/ts-mixed-exports.esm.js (122 B)
   -> gzip: 115 B
-  -> brotli: 100 B
+  -> brotli: 90 B
 ./dist/ts-mixed-exports.umd.js (302 B)
   -> gzip: 212 B
   -> brotli: 170 B
@@ -3327,7 +3327,7 @@ export default Ferrari;
 `;
 
 exports[`build fixtures build ts-mixed-exports with jvdx 5`] = `
-"var t=function(){function t(){}return t.prototype.drive=function(t){return!0},t}(),n=new t;export default n;export{t as Car};
+"var n=function(){function n(){}return n.prototype.drive=function(n){return!0},n}(),t=new n;export{n as Car,t as default};
 //# sourceMappingURL=ts-mixed-exports.esm.js.map
 "
 `;
