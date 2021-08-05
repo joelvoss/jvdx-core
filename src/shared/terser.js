@@ -1,6 +1,9 @@
 // Normalize terser options from jvdx's relaxed json format
 // (mutates argument in-place)
 function normalizeMinifyOptions(minifyOptions) {
+	// Ignore normalization if "mangle" is a boolean:
+	if (typeof minifyOptions.mangle === 'boolean') return;
+
 	const mangle = minifyOptions.mangle || (minifyOptions.mangle = {});
 	let properties = mangle.properties;
 

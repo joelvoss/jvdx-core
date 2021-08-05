@@ -2244,6 +2244,60 @@ exports[`build fixtures build minify-config with jvdx 5`] = `
 "
 `;
 
+exports[`build fixtures build minify-config-boolean with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+minify-config-boolean
+  dist
+    minify-config-boolean.esm.js
+    minify-config-boolean.esm.js.map
+    minify-config-boolean.js
+    minify-config-boolean.js.map
+    minify-config-boolean.umd.js
+    minify-config-boolean.umd.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/minify-config-boolean.js (113 B)
+  -> gzip: 107 B
+  -> brotli: 84 B
+./dist/minify-config-boolean.esm.js (128 B)
+  -> gzip: 117 B
+  -> brotli: 92 B
+./dist/minify-config-boolean.umd.js (327 B)
+  -> gzip: 216 B
+  -> brotli: 159 B
+"
+`;
+
+exports[`build fixtures build minify-config-boolean with jvdx 2`] = `6`;
+
+exports[`build fixtures build minify-config-boolean with jvdx 3`] = `
+"var two={prop1:1,_prop2:2};function index(){return console.log(two.prop1),console.log(two._prop2),two}export{index as default};
+//# sourceMappingURL=minify-config-boolean.esm.js.map
+"
+`;
+
+exports[`build fixtures build minify-config-boolean with jvdx 4`] = `
+"var two={prop1:1,_prop2:2};module.exports=function(){return console.log(two.prop1),console.log(two._prop2),two};
+//# sourceMappingURL=minify-config-boolean.js.map
+"
+`;
+
+exports[`build fixtures build minify-config-boolean with jvdx 5`] = `
+"!function(global,factory){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=factory():\\"function\\"==typeof define&&define.amd?define(factory):(global||self).minifyConfigBoolean=factory()}(this,function(){var two={prop1:1,_prop2:2};return function(){return console.log(two.prop1),console.log(two._prop2),two}});
+//# sourceMappingURL=minify-config-boolean.umd.js.map
+"
+`;
+
 exports[`build fixtures build minify-path-config with jvdx 1`] = `
 "Used script: jvdx build
 
