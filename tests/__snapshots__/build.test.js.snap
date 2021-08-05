@@ -3035,6 +3035,60 @@ exports[`build fixtures build shebang with jvdx 5`] = `
 "
 `;
 
+exports[`build fixtures build terser-annotations with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+terser-annotations
+  dist
+    terser-annotations.esm.js
+    terser-annotations.esm.js.map
+    terser-annotations.js
+    terser-annotations.js.map
+    terser-annotations.umd.js
+    terser-annotations.umd.js.map
+  mangle.json
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/terser-annotations.js (154 B)
+  -> gzip: 112 B
+  -> brotli: 86 B
+./dist/terser-annotations.esm.js (167 B)
+  -> gzip: 122 B
+  -> brotli: 92 B
+./dist/terser-annotations.umd.js (332 B)
+  -> gzip: 200 B
+  -> brotli: 159 B
+"
+`;
+
+exports[`build fixtures build terser-annotations with jvdx 2`] = `6`;
+
+exports[`build fixtures build terser-annotations with jvdx 3`] = `
+"function shouldBePreserved(e,n){return e-n}function main(e,n){return{inlined:function(e,n){return e+n}(e,n),preserved:shouldBePreserved(e,n)}}export{main as default};
+//# sourceMappingURL=terser-annotations.esm.js.map
+"
+`;
+
+exports[`build fixtures build terser-annotations with jvdx 4`] = `
+"function shouldBePreserved(e,r){return e-r}module.exports=function(e,r){return{inlined:function(e,r){return e+r}(e,r),preserved:shouldBePreserved(e,r)}};
+//# sourceMappingURL=terser-annotations.js.map
+"
+`;
+
+exports[`build fixtures build terser-annotations with jvdx 5`] = `
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e||self).terserAnnotations=n()}(this,function(){function shouldBePreserved(e,n){return e-n}return function(e,n){return{inlined:function(e,n){return e+n}(e,n),preserved:shouldBePreserved(e,n)}}});
+//# sourceMappingURL=terser-annotations.umd.js.map
+"
+`;
+
 exports[`build fixtures build ts-declaration with jvdx 1`] = `
 "Used script: jvdx build
 
