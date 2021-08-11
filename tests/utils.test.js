@@ -12,9 +12,24 @@ describe('print, printWarn, printErr', () => {
 		printWarn('Warn message');
 		printErr('Err message');
 
-		// eslint-disable-next-line no-console
-		expect(console.log).toMatchSnapshot();
-		expect(console.error).toMatchSnapshot();
+		expect(spyConsoleLog).toHaveBeenCalledTimes(2);
+		expect(
+			spyConsoleLog.mock.calls[0][0]
+				.replace('\x1B[36m', '')
+				.replace('\x1B[39m', ''),
+		).toEqual('info - Log message');
+		expect(
+			spyConsoleLog.mock.calls[1][0]
+				.replace('\x1B[33m', '')
+				.replace('\x1B[39m', ''),
+		).toEqual('warn - Warn message');
+
+		expect(spyConsoleError).toHaveBeenCalledTimes(1);
+		expect(
+			spyConsoleError.mock.calls[0][0]
+				.replace('\x1B[31m', '')
+				.replace('\x1B[39m', ''),
+		).toEqual('err  - Err message');
 	});
 });
 
