@@ -1,11 +1,5 @@
 const { dim, underline, bold } = require('kleur');
-const {
-	resolveBin,
-	parseArgs,
-	runCMD,
-	stopwatch,
-	printErr,
-} = require('../utils');
+const { resolveBin, parseArgs, runCMD, stopwatch } = require('../utils');
 
 async function format(opts) {
 	const stop = stopwatch();
@@ -19,14 +13,7 @@ async function format(opts) {
 		defaultArgs: ['--write', '--loglevel', 'silent'],
 	});
 
-	await runCMD([resolveBin('prettier'), ...args, ...filesToApply]).catch(
-		err => {
-			if (err) {
-				printErr(err);
-				process.exit();
-			}
-		},
-	);
+	await runCMD([resolveBin('prettier'), ...args, ...filesToApply]);
 
 	const { s } = stop();
 	const output =

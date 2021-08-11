@@ -1,4 +1,4 @@
-const { resolveBin, parseArgs, runCMD, printErr } = require('../utils');
+const { resolveBin, parseArgs, runCMD } = require('../utils');
 
 async function test(opts) {
 	// process.env.BABEL_ENV = 'test';
@@ -21,12 +21,7 @@ async function test(opts) {
 		requiredArgs: ['--config', JSON.stringify(jestConfig)],
 	});
 
-	await runCMD([resolveBin('jest'), ...args]).catch(err => {
-		if (err) {
-			printErr(err);
-			process.exit();
-		}
-	});
+	await runCMD([resolveBin('jest'), ...args]);
 
 	return { output: '' };
 }

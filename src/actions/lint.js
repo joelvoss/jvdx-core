@@ -1,11 +1,5 @@
 const { dim, underline, bold } = require('kleur');
-const {
-	resolveBin,
-	parseArgs,
-	runCMD,
-	stopwatch,
-	printErr,
-} = require('../utils');
+const { resolveBin, parseArgs, runCMD, stopwatch } = require('../utils');
 
 async function lint(opts) {
 	const stop = stopwatch();
@@ -17,12 +11,7 @@ async function lint(opts) {
 		defaultArgs: ['--ext', '.js,.jsx,.ts,.tsx'],
 	});
 
-	await runCMD([resolveBin('eslint'), ...filesToApply, ...args]).catch(err => {
-		if (err) {
-			printErr(err);
-			process.exit();
-		}
-	});
+	await runCMD([resolveBin('eslint'), ...filesToApply, ...args]);
 
 	const { s } = stop();
 	const output =
