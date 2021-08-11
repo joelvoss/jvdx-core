@@ -17,7 +17,8 @@ const run = (type, opts) => {
 				if (!opts.watch) process.exit(0);
 			})
 			.catch(err => {
-				process.exitCode = (err.code && typeof err.code === 'number') || 1;
+				process.exitCode =
+					(err && err.code && typeof err.code === 'number') || 1;
 				logError(err, { printLoc: true, printStack: true });
 				process.exit();
 			});
