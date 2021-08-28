@@ -506,7 +506,7 @@ Bundle(s)
 exports[`build fixtures build basic-css with jvdx 2`] = `8`;
 
 exports[`build fixtures build basic-css with jvdx 3`] = `
-".testing{display:flex;color:red;background:#00f}
+".testing{background:blue;color:red;display:flex}
 /*# sourceMappingURL=basic-css.css.map */"
 `;
 
@@ -1330,13 +1330,13 @@ Built in 0s
 
 Bundle(s)
 ./dist/css.js (88 B)
-  -> gzip: 103 B
-  -> brotli: 65 B
+  -> gzip: 102 B
+  -> brotli: 72 B
 ./dist/css.esm.js (95 B)
-  -> gzip: 106 B
+  -> gzip: 104 B
   -> brotli: 75 B
 ./dist/css.umd.js (252 B)
-  -> gzip: 187 B
+  -> gzip: 185 B
   -> brotli: 138 B
 "
 `;
@@ -1344,19 +1344,19 @@ Bundle(s)
 exports[`build fixtures build css with jvdx 2`] = `6`;
 
 exports[`build fixtures build css with jvdx 3`] = `
-"function o(){console.log(\\"body{display:flex;color:red;background:#00f}\\")}export{o as default};
+"function o(){console.log(\\"body{background:blue;color:red;display:flex}\\")}export{o as default};
 //# sourceMappingURL=css.esm.js.map
 "
 `;
 
 exports[`build fixtures build css with jvdx 4`] = `
-"module.exports=function(){console.log(\\"body{display:flex;color:red;background:#00f}\\")};
+"module.exports=function(){console.log(\\"body{background:blue;color:red;display:flex}\\")};
 //# sourceMappingURL=css.js.map
 "
 `;
 
 exports[`build fixtures build css with jvdx 5`] = `
-"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=o():\\"function\\"==typeof define&&define.amd?define(o):(e||self).css=o()}(this,function(){return function(){console.log(\\"body{display:flex;color:red;background:#00f}\\")}});
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=o():\\"function\\"==typeof define&&define.amd?define(o):(e||self).css=o()}(this,function(){return function(){console.log(\\"body{background:blue;color:red;display:flex}\\")}});
 //# sourceMappingURL=css.umd.js.map
 "
 `;
@@ -1396,7 +1396,7 @@ Bundle(s)
 
 exports[`build fixtures build css-modules--false with jvdx 2`] = `4`;
 
-exports[`build fixtures build css-modules--false with jvdx 3`] = `"body{display:flex;color:red;background:#00f}.test_class_that_shouldnt_be_scoped{background-color:#00f}.not_scoped_class{color:pink}"`;
+exports[`build fixtures build css-modules--false with jvdx 3`] = `"body{background:blue;color:red;display:flex}.test_class_that_shouldnt_be_scoped{background-color:blue}.not_scoped_class{color:pink}"`;
 
 exports[`build fixtures build css-modules--false with jvdx 4`] = `
 "function t(){}export{t as default};
@@ -1448,7 +1448,7 @@ Bundle(s)
 
 exports[`build fixtures build css-modules--null with jvdx 2`] = `4`;
 
-exports[`build fixtures build css-modules--null with jvdx 3`] = `"body{display:flex;color:red;background:#00f}.test_class_that_shouldnt_be_scoped{background-color:#00f}._2kWDE{color:pink}"`;
+exports[`build fixtures build css-modules--null with jvdx 3`] = `"body{background:blue;color:red;display:flex}.test_class_that_shouldnt_be_scoped{background-color:blue}._2kWDE{color:pink}"`;
 
 exports[`build fixtures build css-modules--null with jvdx 4`] = `
 "function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE\\",e}export{e as default};
@@ -1500,7 +1500,7 @@ Bundle(s)
 
 exports[`build fixtures build css-modules--string with jvdx 2`] = `4`;
 
-exports[`build fixtures build css-modules--string with jvdx 3`] = `"body{display:flex;color:red;background:#00f}._contains_this_81567d0efc15a456670452d3277e1a68{background-color:#00f}._contains_this_0a8c24df242c2cd708036873307aea94{color:pink}"`;
+exports[`build fixtures build css-modules--string with jvdx 3`] = `"body{background:blue;color:red;display:flex}._contains_this_81567d0efc15a456670452d3277e1a68{background-color:blue}._contains_this_0a8c24df242c2cd708036873307aea94{color:pink}"`;
 
 exports[`build fixtures build css-modules--string with jvdx 4`] = `
 "function a(){var a=document.createElement(\\"div\\");return a.className=\\"_contains_this_0a8c24df242c2cd708036873307aea94 _contains_this_81567d0efc15a456670452d3277e1a68\\",a}export{a as default};
@@ -1552,7 +1552,7 @@ Bundle(s)
 
 exports[`build fixtures build css-modules--true with jvdx 2`] = `4`;
 
-exports[`build fixtures build css-modules--true with jvdx 3`] = `"body{display:flex;color:red;background:#00f}.test_class_that_should_be_scoped{background-color:#00f}._2kWDE{color:pink}"`;
+exports[`build fixtures build css-modules--true with jvdx 3`] = `"body{background:blue;color:red;display:flex}.test_class_that_should_be_scoped{background-color:blue}._2kWDE{color:pink}"`;
 
 exports[`build fixtures build css-modules--true with jvdx 4`] = `
 "function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE \\"+(void 0).test_class_that_should_be_scoped,e}export{e as default};
