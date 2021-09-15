@@ -1,11 +1,11 @@
 const { resolve } = require('path');
 const fs = require('fs-extra');
-const dirTree = require('directory-tree');
 const stripAnsi = require('strip-ansi');
 const {
 	buildDirectory,
 	getBuildScript,
 	printTree,
+	directoryTree,
 } = require('../src/shared/test-utils');
 const { fromRoot } = require('../src/utils');
 
@@ -34,13 +34,13 @@ describe('build fixtures', () => {
 				fixturePath = resolve(fixturePath, fixtureDir.replace('-with-cwd', ''));
 			}
 
-			await sleep(1);
+			await sleep(0.5);
 
 			const output = await buildDirectory(fixtureDir);
 
-			await sleep(1);
+			await sleep(0.5);
 
-			const printedDir = printTree([dirTree(fixturePath)]);
+			const printedDir = printTree([directoryTree(fixturePath)]);
 
 			expect(
 				[

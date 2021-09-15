@@ -1217,9 +1217,9 @@ Bundle(s)
 ./dist/class-decorators-ts.esm.js (568 B)
   -> gzip: 343 B
   -> brotli: 285 B
-./dist/class-decorators-ts.umd.js (738 B)
+./dist/class-decorators-ts.umd.js (739 B)
   -> gzip: 406 B
-  -> brotli: 349 B
+  -> brotli: 351 B
 "
 `;
 
@@ -1238,7 +1238,7 @@ exports[`build fixtures build class-decorators-ts with jvdx 4`] = `
 `;
 
 exports[`build fixtures build class-decorators-ts with jvdx 5`] = `
-"!function(e,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t():\\"function\\"==typeof define&&define.amd?define(t):(e||self).classDecoratorsTs=t()}(this,function(){var e=function(){function e(e){this.greeting=void 0,this.greeting=e}return e.prototype.greet=function(){return\\"Hello, \\"+this.greeting},e}();return new(e=function(e,t,o,n){var r,f=arguments.length,i=f<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,o):n;if(\\"object\\"==typeof Reflect&&\\"function\\"==typeof Reflect.decorate)i=Reflect.decorate(e,t,o,n);else for(var c=e.length-1;c>=0;c--)(r=e[c])&&(i=(f<3?r(i):f>3?r(t,o,i):r(t,o))||i);return f>3&&i&&Object.defineProperty(t,o,i),i}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))(\\"Hello World\\")});
+"!function(e,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t():\\"function\\"==typeof define&&define.amd?define(t):(e||self).classDecoratorsTs=t()}(this,function(){var e=function(){function e(e){this.greeting=void 0,this.greeting=e}return e.prototype.greet=function(){return\\"Hello, \\"+this.greeting},e}();return e=function(e,t,o,n){var r,f=arguments.length,i=f<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,o):n;if(\\"object\\"==typeof Reflect&&\\"function\\"==typeof Reflect.decorate)i=Reflect.decorate(e,t,o,n);else for(var c=e.length-1;c>=0;c--)(r=e[c])&&(i=(f<3?r(i):f>3?r(t,o,i):r(t,o))||i);return f>3&&i&&Object.defineProperty(t,o,i),i}([function(e){Object.seal(e),Object.seal(e.prototype)}],e),new e(\\"Hello World\\")});
 //# sourceMappingURL=class-decorators-ts.umd.js.map
 "
 `;
@@ -3111,34 +3111,34 @@ terser-annotations
 Built in 0s
 
 Bundle(s)
-./dist/terser-annotations.js (154 B)
-  -> gzip: 112 B
-  -> brotli: 86 B
-./dist/terser-annotations.esm.js (167 B)
-  -> gzip: 122 B
-  -> brotli: 92 B
-./dist/terser-annotations.umd.js (332 B)
-  -> gzip: 200 B
-  -> brotli: 159 B
+./dist/terser-annotations.js (162 B)
+  -> gzip: 121 B
+  -> brotli: 91 B
+./dist/terser-annotations.esm.js (175 B)
+  -> gzip: 130 B
+  -> brotli: 88 B
+./dist/terser-annotations.umd.js (340 B)
+  -> gzip: 205 B
+  -> brotli: 162 B
 "
 `;
 
 exports[`build fixtures build terser-annotations with jvdx 2`] = `6`;
 
 exports[`build fixtures build terser-annotations with jvdx 3`] = `
-"function shouldBePreserved(e,n){return e-n}function main(e,n){return{inlined:function(e,n){return e+n}(e,n),preserved:shouldBePreserved(e,n)}}export{main as default};
+"function shouldBePreserved(e,r){return e-r}function main(e,r){var n=function(e,r){return e+r}(e,r);return{inlined:n,preserved:shouldBePreserved(e,r)}}export{main as default};
 //# sourceMappingURL=terser-annotations.esm.js.map
 "
 `;
 
 exports[`build fixtures build terser-annotations with jvdx 4`] = `
-"function shouldBePreserved(e,r){return e-r}module.exports=function(e,r){return{inlined:function(e,r){return e+r}(e,r),preserved:shouldBePreserved(e,r)}};
+"function shouldBePreserved(e,r){return e-r}module.exports=function(e,r){var n=function(e,r){return e+r}(e,r);return{inlined:n,preserved:shouldBePreserved(e,r)}};
 //# sourceMappingURL=terser-annotations.js.map
 "
 `;
 
 exports[`build fixtures build terser-annotations with jvdx 5`] = `
-"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e||self).terserAnnotations=n()}(this,function(){function shouldBePreserved(e,n){return e-n}return function(e,n){return{inlined:function(e,n){return e+n}(e,n),preserved:shouldBePreserved(e,n)}}});
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e||self).terserAnnotations=n()}(this,function(){function shouldBePreserved(e,n){return e-n}return function(e,n){var o=function(e,n){return e+n}(e,n);return{inlined:o,preserved:shouldBePreserved(e,n)}}});
 //# sourceMappingURL=terser-annotations.umd.js.map
 "
 `;
