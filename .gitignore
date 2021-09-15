@@ -18,8 +18,3 @@ __coverage__/
 # Production
 build/
 dist/
-
-# Does more harm than good
-package-lock.json
-
-# Custom (add custom excludes here)
