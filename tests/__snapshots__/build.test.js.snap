@@ -360,7 +360,7 @@ Bundle(s)
   -> gzip: 263 B
   -> brotli: 212 B
 ./dist/basic-compress-false.umd.js (938 B)
-  -> gzip: 383 B
+  -> gzip: 384 B
   -> brotli: 305 B
 "
 `;
@@ -434,7 +434,7 @@ exports[`build fixtures build basic-compress-false with jvdx 5`] = `
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
 	(global = global || self, global.basicCompressFalse = factory());
-}(this, (function () {
+})(this, (function () {
 	var two = function two() {
 	  try {
 	    var _arguments2 = arguments;
@@ -462,7 +462,7 @@ exports[`build fixtures build basic-compress-false with jvdx 5`] = `
 
 	return index;
 
-})));
+}));
 //# sourceMappingURL=basic-compress-false.umd.js.map
 "
 `;
@@ -806,7 +806,7 @@ Bundle(s)
   -> brotli: 212 B
 ./dist/basic-no-compress.umd.js (935 B)
   -> gzip: 381 B
-  -> brotli: 310 B
+  -> brotli: 324 B
 "
 `;
 
@@ -879,7 +879,7 @@ exports[`build fixtures build basic-no-compress with jvdx 5`] = `
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
 	(global = global || self, global.basicNoCompress = factory());
-}(this, (function () {
+})(this, (function () {
 	var two = function two() {
 	  try {
 	    var _arguments2 = arguments;
@@ -907,7 +907,7 @@ exports[`build fixtures build basic-no-compress with jvdx 5`] = `
 
 	return index;
 
-})));
+}));
 //# sourceMappingURL=basic-no-compress.umd.js.map
 "
 `;
