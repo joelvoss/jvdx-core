@@ -328,6 +328,24 @@ the define name with `@` allows injecting JavaScript expressions.
 `jvdx --define API_KEY='abc123'`      | `console.log(API_KEY)` | `console.log("abc123")`
 `jvdx --define @assign=Object.assign` | `assign(a, b)`         | `Object.assign(a, b)`
 
+### Building Module Workers
+
+jvdx is able to detect and bundle Module Workers when generating bundles in the
+`es`, `umd` and `modern` formats. To use this feature, instantiate your
+Web Worker as follows:
+
+```js
+worker = new Worker(new URL('./worker.js', import.meta.url), { type: 'module' });
+// or simply:
+worker = new Worker('./worker.js', { type: 'module' });
+```
+... then add the `--workers` flag to your build command:
+```bash
+microbundle --workers
+```
+
+> For more information see
+> [@surma/rollup-plugin-off-main-thread](https://github.com/surma/rollup-plugin-off-main-thread#config).
 
 ## All CLI Options
 
@@ -377,6 +395,7 @@ Options
   --generate-types   Generate type definitions (even for non-TS libs)
   --css              Where to output CSS: "inline" or "external"  (default: "external")
   --css-modules      Turns on css-modules for all .css imports. Passing a string will override the scopeName. eg --css-modules="_[hash]"
+  --workers          Bundle module workers - see https://git.io/J3oSF (default false)
   --jsx              Enable @babel/preset-react
   --tsconfig         Specify the path to a custom tsconfig.json
   -h, --help         Displays this message

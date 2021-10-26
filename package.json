@@ -29,6 +29,7 @@
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-json": "4.1.0",
     "@rollup/plugin-node-resolve": "13.0.6",
+    "@surma/rollup-plugin-off-main-thread": "^2.2.2",
     "asyncro": "3.0.0",
     "autoprefixer": "10.3.7",
     "babel-jest": "27.3.1",

@@ -3475,3 +3475,72 @@ exports[`build fixtures build ts-module with jvdx 7`] = `
 //# sourceMappingURL=ts-module.umd.js.map
 "
 `;
+
+exports[`build fixtures build worker-loader with jvdx 1`] = `
+"Used script: jvdx build -f modern,es --workers
+
+Directory tree:
+
+worker-loader
+  dist
+    worker-35b22e56.js
+    worker-35b22e56.js.map
+    worker-7e1b9921.js
+    worker-7e1b9921.js.map
+    worker-loader.esm.js
+    worker-loader.esm.js.map
+    worker-loader.modern.js
+    worker-loader.modern.js.map
+  package-lock.json
+  package.json
+  src
+    bar.js
+    index.js
+    worker.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/worker-loader.modern.js (137 B)
+  -> gzip: 140 B
+  -> brotli: 112 B
+
+./dist/worker-7e1b9921.js (50 B)
+  -> gzip: 63 B
+  -> brotli: 54 B
+./dist/worker-loader.esm.js (151 B)
+  -> gzip: 150 B
+  -> brotli: 123 B
+
+./dist/worker-35b22e56.js (67 B)
+  -> gzip: 81 B
+  -> brotli: 66 B
+"
+`;
+
+exports[`build fixtures build worker-loader with jvdx 2`] = `8`;
+
+exports[`build fixtures build worker-loader with jvdx 3`] = `
+"self.onmessage=function(e){return self.postMessage(e.data+\\"bar\\")};
+//# sourceMappingURL=worker-35b22e56.js.map
+"
+`;
+
+exports[`build fixtures build worker-loader with jvdx 4`] = `
+"self.onmessage=s=>self.postMessage(s.data+\\"bar\\");
+//# sourceMappingURL=worker-7e1b9921.js.map
+"
+`;
+
+exports[`build fixtures build worker-loader with jvdx 5`] = `
+"var e=new Worker(new URL(\\"worker-35b22e56.js\\",import.meta.url),{type:\\"module\\"});e.onmessage=function(e){return\\"foobar\\"===e.data},e.postMessage(\\"foo\\");
+//# sourceMappingURL=worker-loader.esm.js.map
+"
+`;
+
+exports[`build fixtures build worker-loader with jvdx 6`] = `
+"const e=new Worker(new URL(\\"worker-7e1b9921.js\\",import.meta.url),{type:\\"module\\"});e.onmessage=e=>\\"foobar\\"===e.data,e.postMessage(\\"foo\\");
+//# sourceMappingURL=worker-loader.modern.js.map
+"
+`;

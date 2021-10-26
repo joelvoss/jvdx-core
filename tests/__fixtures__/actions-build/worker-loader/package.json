@@ -1,0 +1,6 @@
+{
+  "name": "worker-loader",
+  "scripts": {
+    "build": "jvdx build -f modern,es --workers"
+  }
+}

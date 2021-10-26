@@ -103,6 +103,11 @@ module.exports = handler => {
 			'Turns on css-modules for all .css imports. Passing a string will override the scopeName. eg --css-modules="_[hash]"',
 			null,
 		)
+		.option(
+			'--workers',
+			'Bundle module workers - see https://git.io/J3oSF',
+			false,
+		)
 		.example("build --no-sourcemap # don't generate sourcemaps")
 		.option('--jsx', 'Enable @babel/preset-react')
 		.option('--tsconfig', 'Specify the path to a custom tsconfig.json')

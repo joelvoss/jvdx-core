@@ -17,6 +17,7 @@ const alias = require('@rollup/plugin-alias');
 const postcss = require('rollup-plugin-postcss');
 const typescript = require('rollup-plugin-typescript2');
 const json = require('@rollup/plugin-json');
+const offmainthread = require('@surma/rollup-plugin-off-main-thread');
 const {
 	print,
 	printErr,
@@ -545,11 +546,12 @@ function createConfig(options, entry, format, writeMeta) {
 
 	const useTypescript = extname(entry) === '.ts' || extname(entry) === '.tsx';
 	const emitDeclaration = !!(options.generateTypes || pkg.types || pkg.typings);
+	const useWorkerLoader = options.workers !== false;
 
 	let config = {
 		inputOptions: {
-			// Disable Rollup's cache for the modern build to prevent re-use of
-			// legacy transpiled modules
+			// Disable Rollup's cache for modern builds to prevent re-use of legacy
+			// transpiled modules:
 			cache: modern ? false : undefined,
 			input: entry,
 			external: id => {
@@ -745,6 +747,9 @@ function createConfig(options, entry, format, writeMeta) {
 							},
 						},
 					],
+					// Off-Main-Thread only works with amd and esm.
+					// @see: https://github.com/surma/rollup-plugin-off-main-thread#config
+					useWorkerLoader && (format === 'es' || modern) && offmainthread(),
 
 					/** @type {import('rollup').Plugin} */
 					({
