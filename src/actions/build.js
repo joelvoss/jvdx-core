@@ -1,4 +1,5 @@
 const fs = require('fs-extra');
+const { EOL } = require('os');
 const { resolve, basename, extname, dirname, relative } = require('path');
 const { red, bold, underline, dim } = require('kleur');
 const camelCase = require('camelcase');
@@ -518,9 +519,12 @@ function createConfig(options, entry, format, writeMeta) {
 			.join('|')})($|/)`,
 	);
 
+	let endsWithNewLine = false;
 	function loadNameCache() {
 		try {
-			nameCache = JSON.parse(fs.readFileSync(getNameCachePath(), 'utf8'));
+			const data = fs.readFileSync(getNameCachePath(), 'utf8');
+			endsWithNewLine = data.endsWith(EOL);
+			nameCache = JSON.parse(data);
 			// mangle.json can contain a "minify" field, same format as the pkg.
 			// mangle:
 			if (nameCache.minify) {
@@ -740,7 +744,11 @@ function createConfig(options, entry, format, writeMeta) {
 								if (writeMeta && nameCache) {
 									fs.writeFile(
 										getNameCachePath(),
-										JSON.stringify(nameCache, null, 2),
+										JSON.stringify(
+											endsWithNewLine ? `${nameCache}${EOL}` : nameCache,
+											null,
+											2,
+										),
 										() => {},
 									);
 								}
