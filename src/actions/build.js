@@ -302,9 +302,13 @@ function getDeclarationDir({ options, pkg }) {
 
 ////////////////////////////////////////////////////////////////////////////////
 // Recursively walk the "exports" package.json property
-function walkExports(input) {
-	if (typeof input === 'string') return input;
-	return walkExports(input['.'] || input.import || input.module);
+
+function walkExports(exports, includeDefault) {
+	if (!exports) return null;
+	if (typeof exports === 'string') return exports;
+	let p = exports['.'] || exports.import || exports.module;
+	if (!p && includeDefault) p = exports.default;
+	return walkExports(p, includeDefault);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -347,7 +351,7 @@ function getMain({ options, entry, format }) {
 		mainNoExtension,
 	);
 	mainsByFormat.modern = replaceName(
-		(pkg.exports && walkExports(pkg.exports)) ||
+		(pkg.exports && walkExports(pkg.exports, pkg.type === 'module')) ||
 			(pkg.syntax && pkg.syntax.esmodules) ||
 			pkg.esmodule ||
 			'x.modern.js',
