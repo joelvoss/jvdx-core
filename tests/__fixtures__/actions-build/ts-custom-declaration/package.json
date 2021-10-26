@@ -1,0 +1,9 @@
+{
+	"name": "ts-custom-declarations",
+	"main": "dist/index.js",
+	"types": "types/index.d.ts",
+	"source": "src/index.ts",
+  "scripts": {
+    "build": "jvdx build --generateTypes false"
+  }
+}
