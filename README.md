@@ -201,10 +201,16 @@ Under the hood jvdx uses the `rollup-plugin-typescript2` plugin to transpile
 your TypeScript sources.
 
 jvdx will generally respect your TypeScript config defined in a `tsconfig.json`
-file with notable exceptions being the "[target](https://www.typescriptlang.org/tsconfig/#target)" and "[module](https://www.typescriptlang.org/tsconfig#module)" settings.
+file with notable exceptions being the "[target](https://www.typescriptlang.org/tsconfig/#target)"
+and "[module](https://www.typescriptlang.org/tsconfig#module)" settings.
 To ensure your TypeScript configuration matches the configuration that jvdx
 uses internally it's strongly recommended that you set
 `"module": "ESNext"` and `"target": "ESNext"` in your `tsconfig.json`.
+
+To ensure jvdx does not process extraneous files, by default it only includes
+your entry point. If you want to include other files for compilation, such as
+ambient declarations, make sure to add either "[files](https://www.typescriptlang.org/tsconfig#files)"
+or "[include](https://www.typescriptlang.org/tsconfig#include)" into your `tsconfig.json`.
 
 If you're using CSS Modules, set `"include": ["node_modules/@jvdx/core/index.d.ts"]`
 in your `tsconfig.json` to enable type annotations of your CSS Module imports.
