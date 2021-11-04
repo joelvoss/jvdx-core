@@ -20,18 +20,18 @@
     "test": "./Taskfile.sh test"
   },
   "dependencies": {
-    "@babel/core": "7.15.8",
-    "@jvdx/babel-preset": "1.2.6",
-    "@jvdx/eslint-config": "3.8.0",
+    "@babel/core": "7.16.0",
+    "@jvdx/babel-preset": "1.3.0",
+    "@jvdx/eslint-config": "3.9.0",
     "@jvdx/prettier-config": "0.3.4",
     "@rollup/plugin-alias": "3.1.8",
     "@rollup/plugin-babel": "5.3.0",
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-json": "4.1.0",
     "@rollup/plugin-node-resolve": "13.0.6",
-    "@surma/rollup-plugin-off-main-thread": "^2.2.2",
+    "@surma/rollup-plugin-off-main-thread": "^2.2.3",
     "asyncro": "3.0.0",
-    "autoprefixer": "10.3.7",
+    "autoprefixer": "10.4.0",
     "babel-jest": "27.3.1",
     "babel-plugin-transform-replace-expressions": "0.2.0",
     "brotli-size": "4.0.0",
@@ -50,7 +50,7 @@
     "pretty-bytes": "5.6.0",
     "readpkg-lit": "1.2.2",
     "rimraf": "3.0.2",
-    "rollup": "2.58.3",
+    "rollup": "2.59.0",
     "rollup-plugin-bundle-size": "1.0.3",
     "rollup-plugin-es3": "1.1.0",
     "rollup-plugin-postcss": "4.0.1",
@@ -62,7 +62,7 @@
     "typescript": "4.4.4"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-throw-expressions": "^7.14.5",
+    "@babel/plugin-proposal-throw-expressions": "^7.16.0",
     "babel-plugin-macros": "^3.1.0",
     "shell-quote": "^1.7.3"
   },

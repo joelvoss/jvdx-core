@@ -17,6 +17,9 @@
 				},
 				"private-methods": {
 					"loose": false
+				},
+				"private-property-in-object": {
+					"loose": false
 				}
 			}
 		]
