@@ -1,20 +1,8 @@
 const { resolveBin, parseArgs, runCMD } = require('../utils');
 
 async function test(opts) {
-	// process.env.BABEL_ENV = 'test';
-	// process.env.NODE_ENV = 'test';
-
 	const jestConfig = {
-		testEnvironment: 'node',
-		testURL: 'http://localhost',
-		watchPlugins: [
-			require.resolve('jest-watch-typeahead/filename'),
-			require.resolve('jest-watch-typeahead/testname'),
-		],
-		transform: {
-			'^.+\\.jsx?$': require.resolve('babel-jest'),
-			'^.+\\.(ts|tsx)$': require.resolve('ts-jest'),
-		},
+		preset: '@jvdx/jest-preset',
 	};
 
 	const args = parseArgs(opts, {

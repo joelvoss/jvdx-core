@@ -30,7 +30,6 @@ test() {
 
 # Validate application
 validate() {
-  format $*
   lint $*
   test $*
 }

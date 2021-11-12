@@ -148,7 +148,7 @@ Statically analyzes your code using ESLint.
 Unless overridden via the command line, jvdx lints `.js`,`.jsx`,`.ts`, and
 `.tsx` files inside the `./src` directory.
 
-For a full list of options see the [ESLint documentation][eslint-docs].
+> For a full list of options see the [ESLint documentation][eslint-docs].
 
 ### `jvdx format`
 
@@ -157,30 +157,30 @@ Unless overridden via the command line, jvdx uses the following glob pattern
 to format all matching files in place:  
 `./src/**/*.+(js|json|less|css|ts|tsx|md)`
 
-For a full list of options see the [Prettier documentation][prettier-docs].
+> For a full list of options see the [Prettier documentation][prettier-docs].
 
 ### `jvdx test`
 
 Runs your test suite using Jest.
-Unless overridden via the command line, jvdx uses the following jest
-configuration to test your code:
+Unless overridden via the command line, jvdx uses `@jvdx/jest-preset`
+as base configuration.
 
-```js
+You can extend this base configuration by creating a `jest.config.json`
+at the root of your repository with the following content:
+
+```jsonc
 {
-  testEnvironment: 'node',
-  testURL: 'http://localhost',
-  watchPlugins: [
-    require.resolve('jest-watch-typeahead/filename'),
-    require.resolve('jest-watch-typeahead/testname'),
-  ],
-  transform: {
-    '^.+\\.jsx?$': require.resolve('babel-jest'),
-    '^.+\\.(ts|tsx)$': require.resolve('ts-jest/dist'),
-  },
+  "preset": "jvdx/jest-preset",
+  "verbose": true,
 }
 ```
 
-For a full list of options see the [Jest documentation][eslint-docs].
+In the example above we're extending the base preset with `verbose=true`.
+
+To apply this configuration, run `jvdx test` with the `--config <path-to-config>`
+flag.
+
+> For a full list of options see the [Jest documentation][jest-docs].
 
 ### `jvdx clean`
 
