@@ -6,7 +6,7 @@ async function test(opts) {
 	};
 
 	const args = parseArgs(opts, {
-		requiredArgs: ['--config', JSON.stringify(jestConfig)],
+		requiredArgs: [`--config ${JSON.stringify(jestConfig)}`],
 	});
 
 	await runCMD([resolveBin('jest'), ...args]);

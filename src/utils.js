@@ -189,13 +189,20 @@ function parseArgs(opts, options = {}) {
 
 	// If our arguments array is empty, add default arguments
 	if (args.length === 0) {
+		for (let arg of defaultArgs) {
+			const [flag, ...values] = arg.split(' ');
+			if (flag) args.push(flag);
+			if (values) args = [...args, ...values];
+		}
 		args = [...defaultArgs];
 	}
 
 	// Append required args if they are not already present
-	for (let r of requiredArgs) {
-		if (!args.includes(r)) {
-			args.push(r);
+	for (let arg of requiredArgs) {
+		const [flag, ...values] = arg.split(' ');
+		if (!args.includes(flag)) {
+			if (flag) args.push(flag);
+			if (values) args = [...args, ...values];
 		}
 	}
 
