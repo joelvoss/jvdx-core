@@ -152,6 +152,17 @@ describe('parseArgs', () => {
 			'--opt4',
 			'required',
 		]);
+		expect(
+			parseArgs(opts, { requiredArgs: ['--opt4', 'required arg'] }),
+		).toEqual([
+			'--opt1',
+			'--no-opt2',
+			'--opt3',
+			'test',
+			'--opt4',
+			'required',
+			'arg',
+		]);
 	});
 
 	it('should set default arguments', () => {
@@ -161,6 +172,9 @@ describe('parseArgs', () => {
 			'--def1',
 			'def2',
 		]);
+		expect(
+			parseArgs(opts, { defaultArgs: ['--def1', 'def2 witharg'] }),
+		).toEqual(['--def1', 'def2', 'witharg']);
 	});
 });
 

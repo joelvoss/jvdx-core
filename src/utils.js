@@ -194,7 +194,6 @@ function parseArgs(opts, options = {}) {
 			if (flag) args.push(flag);
 			if (values) args = [...args, ...values];
 		}
-		args = [...defaultArgs];
 	}
 
 	// Append required args if they are not already present
