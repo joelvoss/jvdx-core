@@ -88,10 +88,6 @@ async function build(opts) {
 		options.sourcemap = true;
 	}
 
-	if (options['generate-types'] != null) {
-		options.generateTypes = options['generate-types'];
-	}
-
 	options.input = await getInput({
 		entries: options.entries,
 		cwd,

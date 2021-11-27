@@ -94,7 +94,7 @@ module.exports = handler => {
 		.option('--cwd', 'Use an alternative working directory', '.')
 		.option('--sourcemap', 'Generate source map')
 		.option(
-			'--generate-types',
+			'--generateTypes',
 			'Generate type definitions (even for non-TS libs)',
 		)
 		.option('--css', 'Where to output CSS: "inline" or "external"', 'external')

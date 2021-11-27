@@ -19,22 +19,22 @@ $ yarn add -D @jvdx/core
 
 ```jsonc
 {
-  "name": "my-package",                      // Your package name
-  "type": "module",
-  "source": "src/index.js",                  // Your source code
-  "exports": {
-    "require": "./dist/my-package.cjs",      // Used for require() in Node 12+
-    "default": "./dist/my-package.modern.js" // Where to generate the modern bundle (see below)
-  },
-  "main": "./dist/my-package.cjs",           // Where to generate the CommonJS bundle
-  "module": "./dist/my-package.module.js",   // Where to generate the ESM bundle
-  "unpkg": "./dist/my-package.umd.js",       // Where to generate the UMD bundle (also aliased as "umd:main")
-  "scripts": {
-    "build": "jvdx build",                   // Compiles "source" to "main"/"module"/"unpkg"
-    "dev": "jvdx build --watch",             // Re-build when source files change
-    "format": "jvdx format",                 // Format sources using prettier
-    "lint": "jvdx lint"                      // Lint source using ESLint
-  }
+	"name": "my-package", // Your package name
+	"type": "module",
+	"source": "src/index.js", // Your source code
+	"exports": {
+		"require": "./dist/my-package.cjs", // Used for require() in Node 12+
+		"default": "./dist/my-package.modern.js" // Where to generate the modern bundle (see below)
+	},
+	"main": "./dist/my-package.cjs", // Where to generate the CommonJS bundle
+	"module": "./dist/my-package.module.js", // Where to generate the ESM bundle
+	"unpkg": "./dist/my-package.umd.js", // Where to generate the UMD bundle (also aliased as "umd:main")
+	"scripts": {
+		"build": "jvdx build", // Compiles "source" to "main"/"module"/"unpkg"
+		"dev": "jvdx build --watch", // Re-build when source files change
+		"format": "jvdx format", // Format sources using prettier
+		"lint": "jvdx lint" // Lint source using ESLint
+	}
 }
 ```
 
@@ -53,12 +53,12 @@ $ yarn build
 We also provide some starter templates that you can initialize with the
 help of [`degit`](https://github.com/Rich-Harris/degit).
 
-  - joelvoss/jvdx-templates/google-cloud-function
-  - joelvoss/jvdx-templates/google-cloud-run
-  - joelvoss/jvdx-templates/next-app
-  - joelvoss/jvdx-templates/node-lib
-  - joelvoss/jvdx-templates/node-rest-api
-  - joelvoss/jvdx-templates/react-lib
+- joelvoss/jvdx-templates/google-cloud-function
+- joelvoss/jvdx-templates/google-cloud-run
+- joelvoss/jvdx-templates/next-app
+- joelvoss/jvdx-templates/node-lib
+- joelvoss/jvdx-templates/node-rest-api
+- joelvoss/jvdx-templates/react-lib
 
 ```bash
 $ npx degit joelvoss/jvdx-templates/<template-name> my-package
@@ -74,7 +74,7 @@ $ yarn
 ## Output Formats
 
 jvdx produces esm _(ECMAScript Modules, e.g. import / export)_,
-cjs _(CommonJS, e.g. Node-style module.exports)_ and umd 
+cjs _(CommonJS, e.g. Node-style module.exports)_ and umd
 _(Universal Module Definition)_ bundles with your code compiled to syntax that
 works pretty much everywhere.
 
@@ -118,16 +118,16 @@ the `main`, `umd:main`, `module` and `exports` properties in your `package.json`
 
 ```jsonc
 {
-  "type": "module",
-  "source": "src/index.js",                  // Your source code
-  "exports": {
-    "require": "./dist/my-package.cjs",      // Used for require() in Node 12+
-    "default": "./dist/my-package.modern.js" // Where to generate the modern bundle
-  },
-  "main": "./dist/my-package.cjs",           // Where to generate the CommonJS bundle
-  "module": "./dist/my-package.module.js",   // Where to generate the ESM bundle
-  "unpkg": "./dist/my-package.umd.js",       // Where to generate the UMD bundle (also aliased as "umd:main")
-  "types": "dist/foo.d.ts"                   // TypeScript typings directory
+	"type": "module",
+	"source": "src/index.js", // Your source code
+	"exports": {
+		"require": "./dist/my-package.cjs", // Used for require() in Node 12+
+		"default": "./dist/my-package.modern.js" // Where to generate the modern bundle
+	},
+	"main": "./dist/my-package.cjs", // Where to generate the CommonJS bundle
+	"module": "./dist/my-package.module.js", // Where to generate the ESM bundle
+	"unpkg": "./dist/my-package.umd.js", // Where to generate the UMD bundle (also aliased as "umd:main")
+	"types": "dist/foo.d.ts" // TypeScript typings directory
 }
 ```
 
@@ -170,8 +170,8 @@ at the root of your repository with the following content:
 
 ```jsonc
 {
-  "preset": "jvdx/jest-preset",
-  "verbose": true,
+	"preset": "jvdx/jest-preset",
+	"verbose": true
 }
 ```
 
@@ -224,11 +224,11 @@ from the import:
 
 ```js
 // with the default external CSS:
-import './foo.css';  // generates a minified .css file in the output directory
+import './foo.css'; // generates a minified .css file in the output directory
 
 // with `jvdx build --css inline`:
 import css from './foo.css';
-console.log(css);  // the generated minified stylesheet
+console.log(css); // the generated minified stylesheet
 ```
 
 **CSS Modules:** CSS files with names ending in `.module.css` are treated as a
@@ -243,14 +243,14 @@ This can be customized by passing the command line argument
 `--css-modules "[name]_[hash:base64:7]"`, using
 [these fields and naming conventions](https://github.com/webpack/loader-utils#interpolatename).
 
-| flag  | import                           |   is css module?   |
-| ----- | -------------------------------- | :----------------: |
-| null  | `import './my-file.css';`        |         ❌         |
-| null  | `import './my-file.module.css';` |         ✅         |
-| false | `import './my-file.css';`        |         ❌         |
-| false | `import './my-file.module.css';` |         ❌         |
-| true  | `import './my-file.css';`        |         ✅         |
-| true  | `import './my-file.module.css';` |         ✅         |
+| flag  | import                           | is css module? |
+| ----- | -------------------------------- | :------------: |
+| null  | `import './my-file.css';`        |       ❌       |
+| null  | `import './my-file.module.css';` |       ✅       |
+| false | `import './my-file.css';`        |       ❌       |
+| false | `import './my-file.module.css';` |       ❌       |
+| true  | `import './my-file.css';`        |       ✅       |
+| true  | `import './my-file.module.css';` |       ✅       |
 
 ### Usage with `{"type":"module"}` in `package.json`
 
@@ -262,9 +262,9 @@ change the file extension to `.cjs` for CommonJS bundles generated by jvdx.
 
 ```jsonc
 {
-  "type": "module",
-  "module": "dist/foo.js",  // ES Module bundle
-  "main": "dist/foo.cjs",   // CommonJS bundle
+	"type": "module",
+	"module": "dist/foo.js", // ES Module bundle
+	"main": "dist/foo.cjs" // CommonJS bundle
 }
 ```
 
@@ -275,14 +275,14 @@ property in your `package.json`.
 
 ```jsonc
 {
-  "main": "src/index.ts",          // Used in local dev environment
-  "publishConfig": {
-    "source": "src/index.js",      // Input
-    "main": "dist/my-library.js",  // Output
-  },
-  "scripts": {
-    "build": "jvdx build"
-  }
+	"main": "src/index.ts", // Used in local dev environment
+	"publishConfig": {
+		"source": "src/index.js", // Input
+		"main": "dist/my-library.js" // Output
+	},
+	"scripts": {
+		"build": "jvdx build"
+	}
 }
 ```
 
@@ -307,9 +307,9 @@ to mangle all property names beginning an underscore:
 
 ```jsonc
 {
-  "mangle": {
-    "regex": "^_"
-  }
+	"mangle": {
+		"regex": "^_"
+	}
 }
 ```
 
@@ -322,11 +322,11 @@ The `--define` option can be used to inject or replace build-time constants
 when bundling. In addition to injecting string or number constants, prefixing
 the define name with `@` allows injecting JavaScript expressions.
 
-| Build command                       | Source code           | Output                  |
-|-------------------------------------|-----------------------|-------------------------|
-`jvdx --define VERSION=2`             | `console.log(VERSION)` | `console.log(2)`
-`jvdx --define API_KEY='abc123'`      | `console.log(API_KEY)` | `console.log("abc123")`
-`jvdx --define @assign=Object.assign` | `assign(a, b)`         | `Object.assign(a, b)`
+| Build command                         | Source code            | Output                  |
+| ------------------------------------- | ---------------------- | ----------------------- |
+| `jvdx --define VERSION=2`             | `console.log(VERSION)` | `console.log(2)`        |
+| `jvdx --define API_KEY='abc123'`      | `console.log(API_KEY)` | `console.log("abc123")` |
+| `jvdx --define @assign=Object.assign` | `assign(a, b)`         | `Object.assign(a, b)`   |
 
 ### Building Module Workers
 
@@ -335,11 +335,15 @@ jvdx is able to detect and bundle Module Workers when generating bundles in the
 Web Worker as follows:
 
 ```js
-worker = new Worker(new URL('./worker.js', import.meta.url), { type: 'module' });
+worker = new Worker(new URL('./worker.js', import.meta.url), {
+	type: 'module',
+});
 // or simply:
 worker = new Worker('./worker.js', { type: 'module' });
 ```
+
 ... then add the `--workers` flag to your build command:
+
 ```bash
 microbundle --workers
 ```
@@ -379,25 +383,25 @@ Options
   -c, --clean        Clean output directory before building.
   -i, --entry        Entry module(s)
   -o, --output       Directory to place build files into
-  -f, --format       Only build specified formats (any of modern,es,cjs,umd or iife)  (default modern,es,cjs,umd)
+  -f, --format       Only build specified formats (any of modern,esm,cjs,umd or iife) (default modern,esm,cjs,umd)
   -w, --watch        Rebuilds on any change  (default false)
   --pkg-main         Outputs files analog to package.json main entries  (default true)
   --target           Specify your target environment (node or web)  (default web)
-  --external         Specify external dependencies, or 'none'
+  --external         Specify external dependencies, or 'none' (default peerDependencies and dependencies in package.json)
   --globals          Specify globals dependencies, or 'none'
   --define           Replace constants with hard-coded values (use @key=exp to replace an expression)
   --alias            Map imports to different modules
   --compress         Compress output using Terser
   --strict           Enforce undefined global context and add "use strict"
-  --name             Specify name exposed in UMD builds
+  --name             Specify name exposed in UMD and IIFE builds
   --cwd              Use an alternative working directory  (default .)
   --sourcemap        Generate source map  (default true)
-  --generate-types   Generate type definitions (even for non-TS libs)
-  --css              Where to output CSS: "inline" or "external"  (default: "external")
-  --css-modules      Turns on css-modules for all .css imports. Passing a string will override the scopeName. eg --css-modules="_[hash]"
-  --workers          Bundle module workers - see https://git.io/J3oSF (default false)
   --jsx              Enable @babel/preset-react
   --tsconfig         Specify the path to a custom tsconfig.json
+  --generateTypes    Whether or not to generate types, if `types` or `typings` is set in `package.json` then it will default to be `true`
+  --css              Where to output CSS: "inline" or "external" (default: "external")
+  --css-modules      Configures .css to be treated as modules (default: null)
+  --workers          Bundle module workers - see https://git.io/J3oSF  (default false)
   -h, --help         Displays this message
 
 Examples
