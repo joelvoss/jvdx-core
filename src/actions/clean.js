@@ -1,4 +1,4 @@
-const { promisify } = require('es6-promisify');
+const { promisify } = require('util');
 const _rimraf = require('rimraf');
 const { dim, underline, bold } = require('kleur');
 const { stopwatch, printErr, fromRoot } = require('../utils');

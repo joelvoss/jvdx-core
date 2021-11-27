@@ -1,6 +1,6 @@
 const { resolve, extname } = require('path');
 const shellQuote = require('shell-quote');
-const { promisify } = require('es6-promisify');
+const { promisify } = require('util');
 const _rimraf = require('rimraf');
 const { fromRoot, readFile } = require('../utils');
 const createProg = require('../prog');

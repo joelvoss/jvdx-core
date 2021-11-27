@@ -1,7 +1,31 @@
 const { green, red, yellow } = require('kleur');
-const gzipSize = require('gzip-size');
-const { default: brotliSize } = require('brotli-size');
 const prettyBytes = require('pretty-bytes');
+const zlib = require('zlib');
+const { promisify } = require('util');
+
+const gzip = promisify(zlib.gzip);
+const brotliCompress = promisify(zlib.brotliCompress);
+
+async function gzipSize(input, options = {}) {
+	if (!input) return 0;
+	const data = await gzip(input, { level: 9, ...options });
+	return data.length;
+}
+
+async function brotliSize(input, options = {}) {
+	if (!input) return 0;
+	const buffer = typeof input === 'string' ? Buffer.from(input, 'utf8') : input;
+	const data = await brotliCompress(buffer, {
+		params: {
+			[zlib.constants.BROTLI_PARAM_MODE]:
+				options.mode ?? zlib.constants.BROTLI_DEFAULT_MODE,
+			[zlib.constants.BROTLI_PARAM_QUALITY]:
+				options.quality ?? zlib.constants.BROTLI_MAX_QUALITY,
+			[zlib.constants.BROTLI_PARAM_SIZE_HINT]: buffer ? buffer.byteLength : 0,
+		},
+	});
+	return data.byteLength;
+}
 
 function formatSize(size, filename, type = '', onlySize) {
 	const pretty = size < 5000 ? `${size} B` : prettyBytes(size);
