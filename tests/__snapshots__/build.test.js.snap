@@ -1919,7 +1919,7 @@ exports[`build fixtures build esnext-ts with jvdx 6`] = `
 `;
 
 exports[`build fixtures build generate-types with jvdx 1`] = `
-"Used script: jvdx build --generate-types
+"Used script: jvdx build --generateTypes
 
 Directory tree:
 

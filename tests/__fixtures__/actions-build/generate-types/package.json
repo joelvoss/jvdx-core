@@ -1,6 +1,6 @@
 {
 	"name": "generate-types",
 	"scripts": {
-		"build": "jvdx build --generate-types"
+		"build": "jvdx build --generateTypes"
 	}
 }
