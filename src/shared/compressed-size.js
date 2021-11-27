@@ -18,9 +18,13 @@ async function brotliSize(input, options = {}) {
 	const data = await brotliCompress(buffer, {
 		params: {
 			[zlib.constants.BROTLI_PARAM_MODE]:
-				options.mode ?? zlib.constants.BROTLI_DEFAULT_MODE,
+				options.mode != null
+					? options.mode
+					: zlib.constants.BROTLI_DEFAULT_MODE,
 			[zlib.constants.BROTLI_PARAM_QUALITY]:
-				options.quality ?? zlib.constants.BROTLI_MAX_QUALITY,
+				options.quality != null
+					? options.quality
+					: zlib.constants.BROTLI_MAX_QUALITY,
 			[zlib.constants.BROTLI_PARAM_SIZE_HINT]: buffer ? buffer.byteLength : 0,
 		},
 	});
