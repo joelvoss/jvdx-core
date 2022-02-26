@@ -1,7 +1,7 @@
 const { green, red, yellow } = require('kleur');
-const prettyBytes = require('pretty-bytes');
 const zlib = require('zlib');
 const { promisify } = require('util');
+const { prettyBytes } = require('../utils');
 
 const gzip = promisify(zlib.gzip);
 const brotliCompress = promisify(zlib.brotliCompress);

@@ -393,14 +393,9 @@ function resolveFrom(fromDirectory, moduleId, silent) {
 exports.resolveFrom = resolveFrom;
 
 ////////////////////////////////////////////////////////////////////////////////
-
-/**
- * escapeStringRegexp escapes RegExp special characters.
- * Inspired by https://github.com/sindresorhus/escape-string-regexp
- * (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
- * @param {string} string
- * @returns {string}
- */
+// escapeStringRegexp escapes RegExp special characters.
+// Inspired by https://github.com/sindresorhus/escape-string-regexp
+// (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
 function escapeStringRegexp(string) {
 	if (typeof string !== 'string') return string;
 	// NOTE(joel): Use a simple backslash escape when it’s always valid, and a
@@ -409,3 +404,38 @@ function escapeStringRegexp(string) {
 	return string.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&').replace(/-/g, '\\x2d');
 }
 exports.escapeStringRegexp = escapeStringRegexp;
+
+////////////////////////////////////////////////////////////////////////////////
+// prettyBytes converts bytes to a human readable string: `1337 → 1.34 kB`
+// Inspired by https://github.com/sindresorhus/pretty-bytes
+// (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+function prettyBytes(number) {
+	if (!Number.isFinite(number)) {
+		throw new TypeError(
+			`Expected a finite number, got ${typeof number}: ${number}`,
+		);
+	}
+
+	const UNITS = ['B', 'kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+	const isNegative = number < 0;
+	const prefix = isNegative ? '-' : '';
+
+	if (isNegative) {
+		number = -number;
+	}
+
+	if (number < 1) {
+		return prefix + number.toLocaleString() + ' ' + UNITS[0];
+	}
+
+	const exponent = Math.min(
+		Math.floor(Math.log10(number) / 3),
+		UNITS.length - 1,
+	);
+	number /= 1000 ** exponent;
+	number = number.toPrecision(3);
+
+	return prefix + Number(number).toLocaleString() + ' ' + UNITS[exponent];
+}
+exports.prettyBytes = prettyBytes;
