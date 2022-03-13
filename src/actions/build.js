@@ -44,6 +44,8 @@ const WATCH_OPTS = {
 	exclude: 'node_modules/**',
 };
 
+const BUILD_EXTENSIONS = /(\.(umd|cjs|es|m))?\.([cm]?[tj]sx?)$/;
+
 async function build(opts) {
 	const stop = stopwatch();
 
@@ -322,16 +324,13 @@ function getMain({ options, entry, format }) {
 	let mainNoExtension = options.output;
 	if (options.multipleEntries) {
 		let name = entry.match(
-			/([\\/])index(\.(umd|cjs|es|m))?\.(mjs|cjs|[tj]sx?)$/,
+			new RegExp(/([\\/])index/.source + BUILD_EXTENSIONS.source),
 		)
 			? mainNoExtension
 			: entry;
 		mainNoExtension = resolve(dirname(mainNoExtension), basename(name));
 	}
-	mainNoExtension = mainNoExtension.replace(
-		/(\.(umd|cjs|es|m))?\.(mjs|cjs|[tj]sx?)$/,
-		'',
-	);
+	mainNoExtension = mainNoExtension.replace(BUILD_EXTENSIONS, '');
 
 	// Converts fileName `/path/to/dist/jvdx` to `/path/to/dist/jvdx.esm.js` when
 	// fileNameFormat equals `x.esm.js`
@@ -598,10 +597,7 @@ function createConfig(options, entry, format, writeMeta) {
 						extract:
 							!!writeMeta &&
 							options.css !== 'inline' &&
-							options.output.replace(
-								/(\.(umd|cjs|es|m))?\.(mjs|[tj]sx?)$/,
-								'.css',
-							),
+							options.output.replace(BUILD_EXTENSIONS, '.css'),
 						minimize: options.compress,
 						sourceMap: options.sourcemap && options.css !== 'inline',
 					}),
