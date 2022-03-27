@@ -22,15 +22,6 @@ module.exports = handler => {
 	let prog = sade('jvdx').version(version);
 
 	prog
-		.command('lint [...files|dir|glob]')
-		.describe(
-			'Statically analyzes your code using ESLint.' +
-				`Note: We support ESLint's cli flags.`,
-		)
-		.example('lint')
-		.action(cmd('lint'));
-
-	prog
 		.command('format [...files|dir|glob]')
 		.describe(
 			'Formats your code in-place using prettier.' +
@@ -40,13 +31,13 @@ module.exports = handler => {
 		.action(cmd('format'));
 
 	prog
-		.command('clean [...files|dir|glob]')
+		.command('lint [...files|dir|glob]')
 		.describe(
-			'Cleans repository and removes `./node_modules` and `./dist`.' +
-				'You can append a glob pattern to remove your own set of files/folders.',
+			'Statically analyzes your code using ESLint.' +
+				`Note: We support ESLint's cli flags.`,
 		)
-		.example('clean')
-		.action(cmd('clean'));
+		.example('lint')
+		.action(cmd('lint'));
 
 	prog
 		.command('test')
@@ -55,6 +46,24 @@ module.exports = handler => {
 		)
 		.example('test')
 		.action(cmd('test'));
+
+	prog
+		.command('typecheck')
+		.describe(
+			'Checks the types of your code using TypeScript.' +
+				`Note: We support tsc's cli flags.`,
+		)
+		.example('typecheck')
+		.action(cmd('typecheck'));
+
+	prog
+		.command('clean [...files|dir|glob]')
+		.describe(
+			'Cleans repository and removes `./node_modules` and `./dist`.' +
+				'You can append a glob pattern to remove your own set of files/folders.',
+		)
+		.example('clean')
+		.action(cmd('clean'));
 
 	prog
 		.command('build [...entries]')

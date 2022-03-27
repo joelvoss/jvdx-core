@@ -4,6 +4,7 @@ const { clean } = require('./actions/clean');
 const { lint } = require('./actions/lint');
 const { format } = require('./actions/format');
 const { test } = require('./actions/test');
+const { typecheck } = require('./actions/typecheck');
 const { build } = require('./actions/build');
 
 const prog = require('./prog');
@@ -39,6 +40,10 @@ const run = (type, opts) => {
 		case 'test':
 			print('Running unit tests');
 			return unwrap(test(opts));
+
+		case 'typecheck':
+			print('Typechecking sources');
+			return unwrap(typecheck(opts));
 
 		case 'build':
 		default:

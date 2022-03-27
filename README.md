@@ -182,6 +182,13 @@ flag.
 
 > For a full list of options see the [Jest documentation][jest-docs].
 
+### `jvdx typecheck`
+
+Checks the types of your code using the TypeScript compile.
+In essence this is a thin wrapper around `tsc --noEmit`.
+
+> For a full list of options see the [TypeScript compiler documentation][ts-docs].
+
 ### `jvdx clean`
 
 Cleans your source repository using rimraf.
@@ -472,3 +479,4 @@ Examples
 [eslint-docs]: https://eslint.org/docs/user-guide/command-line-interface
 [prettier-docs]: https://prettier.io/docs/en/cli.html
 [jest-docs]: https://jestjs.io/docs/en/cli
+[ts-docs]: https://www.typescriptlang.org/docs/handbook/compiler-options.html
