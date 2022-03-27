@@ -378,3 +378,87 @@ describe('prettyBytes', () => {
 		expect(prettyBytes(-1001)).toBe('-1 kB');
 	});
 });
+
+describe('camelCase', () => {
+	const { camelCase } = require('../src/utils');
+
+	it('should convert a dash/dot/underscore/space separated string to camelCase', () => {
+		expect(camelCase('foo')).toBe('foo');
+		expect(camelCase('foo-bar')).toBe('fooBar');
+		expect(camelCase('foo-bar-baz')).toBe('fooBarBaz');
+		expect(camelCase('foo--bar')).toBe('fooBar');
+		expect(camelCase('--foo-bar')).toBe('fooBar');
+		expect(camelCase('--foo--bar')).toBe('fooBar');
+		expect(camelCase('FOO-BAR')).toBe('fooBar');
+		expect(camelCase('FOÈ-BAR')).toBe('foèBar');
+		expect(camelCase('-foo-bar-')).toBe('fooBar');
+		expect(camelCase('--foo--bar--')).toBe('fooBar');
+		expect(camelCase('foo-1')).toBe('foo1');
+		expect(camelCase('foo.bar')).toBe('fooBar');
+		expect(camelCase('foo..bar')).toBe('fooBar');
+		expect(camelCase('..foo..bar..')).toBe('fooBar');
+		expect(camelCase('foo_bar')).toBe('fooBar');
+		expect(camelCase('__foo__bar__')).toBe('fooBar');
+		expect(camelCase('foo bar')).toBe('fooBar');
+		expect(camelCase('  foo  bar  ')).toBe('fooBar');
+		expect(camelCase('-')).toBe('-');
+		expect(camelCase(' - ')).toBe('-');
+		expect(camelCase('fooBar')).toBe('fooBar');
+		expect(camelCase('fooBar-baz')).toBe('fooBarBaz');
+		expect(camelCase('foìBar-baz')).toBe('foìBarBaz');
+		expect(camelCase('fooBarBaz-bazzy')).toBe('fooBarBazBazzy');
+		expect(camelCase('FBBazzy')).toBe('fbBazzy');
+		expect(camelCase('F')).toBe('f');
+		expect(camelCase('FooBar')).toBe('fooBar');
+		expect(camelCase('Foo')).toBe('foo');
+		expect(camelCase('FOO')).toBe('foo');
+		expect(camelCase(['foo', 'bar'])).toBe('fooBar');
+		expect(camelCase(['foo', '-bar'])).toBe('fooBar');
+		expect(camelCase(['foo', '-bar', 'baz'])).toBe('fooBarBaz');
+		expect(camelCase(['', ''])).toBe('');
+		expect(camelCase('--')).toBe('');
+		expect(camelCase('')).toBe('');
+		expect(camelCase('--__--_--_')).toBe('');
+		expect(camelCase(['---_', '--', '', '-_- '])).toBe('');
+		expect(camelCase('foo bar?')).toBe('fooBar?');
+		expect(camelCase('foo bar!')).toBe('fooBar!');
+		expect(camelCase('foo bar$')).toBe('fooBar$');
+		expect(camelCase('foo-bar#')).toBe('fooBar#');
+		expect(camelCase('XMLHttpRequest')).toBe('xmlHttpRequest');
+		expect(camelCase('AjaxXMLHttpRequest')).toBe('ajaxXmlHttpRequest');
+		expect(camelCase('Ajax-XMLHttpRequest')).toBe('ajaxXmlHttpRequest');
+		expect(camelCase([])).toBe('');
+		expect(camelCase('mGridCol6@md')).toBe('mGridCol6@md');
+		expect(camelCase('A::a')).toBe('a::a');
+		expect(camelCase('Hello1World')).toBe('hello1World');
+		expect(camelCase('Hello11World')).toBe('hello11World');
+		expect(camelCase('hello1world')).toBe('hello1World');
+		expect(camelCase('Hello1World11foo')).toBe('hello1World11Foo');
+		expect(camelCase('Hello1')).toBe('hello1');
+		expect(camelCase('hello1')).toBe('hello1');
+		expect(camelCase('1Hello')).toBe('1Hello');
+		expect(camelCase('1hello')).toBe('1Hello');
+		expect(camelCase('h2w')).toBe('h2W');
+		expect(camelCase('розовый_пушистый-единороги')).toBe(
+			'розовыйПушистыйЕдинороги',
+		);
+		expect(camelCase('розовый_пушистый-единороги')).toBe(
+			'розовыйПушистыйЕдинороги',
+		);
+		expect(camelCase('РОЗОВЫЙ_ПУШИСТЫЙ-ЕДИНОРОГИ')).toBe(
+			'розовыйПушистыйЕдинороги',
+		);
+		expect(camelCase('桑德在这里。')).toBe('桑德在这里。');
+		expect(camelCase('桑德在这里。')).toBe('桑德在这里。');
+		expect(camelCase('桑德_在这里。')).toBe('桑德在这里。');
+	});
+
+	it('should throw on invalid input', () => {
+		try {
+			camelCase(1);
+		} catch (err) {
+			expect(err instanceof TypeError).toBe(true);
+			expect(err.message).toBe('Expected the input to be `string | string[]`');
+		}
+	});
+});

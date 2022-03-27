@@ -439,3 +439,93 @@ function prettyBytes(number) {
 	return prefix + Number(number).toLocaleString() + ' ' + UNITS[exponent];
 }
 exports.prettyBytes = prettyBytes;
+
+////////////////////////////////////////////////////////////////////////////////
+// camelCase converts a dash/dot/underscore/space separated string to camelCase
+// Example: `foo-bar → fooBar`
+// Inspired by https://github.com/sindresorhus/camelcase
+// (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)
+const UPPERCASE = /[\p{Lu}]/u;
+const LOWERCASE = /[\p{Ll}]/u;
+const SEPARATORS = /[_.\- ]+/;
+const IDENTIFIER = /([\p{Alpha}\p{N}_]|$)/u;
+const LEADING_SEPARATORS = new RegExp('^' + SEPARATORS.source);
+const SEPARATORS_AND_IDENTIFIER = new RegExp(
+	SEPARATORS.source + IDENTIFIER.source,
+	'gu',
+);
+const NUMBERS_AND_IDENTIFIER = new RegExp('\\d+' + IDENTIFIER.source, 'gu');
+
+function camelCase(input) {
+	if (!(typeof input === 'string' || Array.isArray(input))) {
+		throw new TypeError('Expected the input to be `string | string[]`');
+	}
+
+	if (Array.isArray(input)) {
+		input = input
+			.map(x => x.trim())
+			.filter(x => x.length)
+			.join('-');
+	} else {
+		input = input.trim();
+	}
+
+	if (input.length === 0) {
+		return '';
+	}
+
+	if (input.length === 1) {
+		return input.toLowerCase();
+	}
+
+	const hasUpperCase = input !== input.toLowerCase();
+
+	if (hasUpperCase) {
+		let isLastCharLower = false;
+		let isLastCharUpper = false;
+		let isLastLastCharUpper = false;
+
+		for (let i = 0; i < input.length; i++) {
+			const character = input[i];
+
+			if (isLastCharLower && UPPERCASE.test(character)) {
+				input = input.slice(0, i) + '-' + input.slice(i);
+				isLastCharLower = false;
+				isLastLastCharUpper = isLastCharUpper;
+				isLastCharUpper = true;
+				i++;
+			} else if (
+				isLastCharUpper &&
+				isLastLastCharUpper &&
+				LOWERCASE.test(character)
+			) {
+				input = input.slice(0, i - 1) + '-' + input.slice(i - 1);
+				isLastLastCharUpper = isLastCharUpper;
+				isLastCharUpper = false;
+				isLastCharLower = true;
+			} else {
+				isLastCharLower =
+					character.toLowerCase() === character &&
+					character.toUpperCase() !== character;
+				isLastLastCharUpper = isLastCharUpper;
+				isLastCharUpper =
+					character.toUpperCase() === character &&
+					character.toLowerCase() !== character;
+			}
+		}
+	}
+
+	input = input.replace(LEADING_SEPARATORS, '');
+
+	input = input.toLowerCase();
+
+	SEPARATORS_AND_IDENTIFIER.lastIndex = 0;
+	NUMBERS_AND_IDENTIFIER.lastIndex = 0;
+
+	return input
+		.replace(SEPARATORS_AND_IDENTIFIER, (_, identifier) =>
+			identifier.toUpperCase(),
+		)
+		.replace(NUMBERS_AND_IDENTIFIER, m => m.toUpperCase());
+}
+exports.camelCase = camelCase;
