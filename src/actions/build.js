@@ -662,7 +662,7 @@ function createConfig(options, entry, format, writeMeta) {
 							tsconfigOverride: {
 								compilerOptions: {
 									module: 'ESNext',
-									target: 'esnext',
+									target: 'ESNext',
 								},
 							},
 						}),
