@@ -1436,32 +1436,32 @@ Built in 0s
 Bundle(s)
 ./dist/css-modules--null.js (94 B)
   -> gzip: 110 B
-  -> brotli: 72 B
+  -> brotli: 69 B
 ./dist/css-modules--null.esm.js (101 B)
   -> gzip: 114 B
   -> brotli: 70 B
 ./dist/css-modules--null.umd.js (269 B)
   -> gzip: 200 B
-  -> brotli: 140 B
+  -> brotli: 139 B
 "
 `;
 
 exports[`build fixtures build css-modules--null with jvdx 2`] = `4`;
 
-exports[`build fixtures build css-modules--null with jvdx 3`] = `"body{background:blue;color:red;display:flex}.test_class_that_shouldnt_be_scoped{background-color:blue}._2kWDE{color:pink}"`;
+exports[`build fixtures build css-modules--null with jvdx 3`] = `"body{background:blue;color:red;display:flex}.test_class_that_shouldnt_be_scoped{background-color:blue}._-qmAn{color:pink}"`;
 
 exports[`build fixtures build css-modules--null with jvdx 4`] = `
-"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE\\",e}export{e as default};
+"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_-qmAn\\",e}export{e as default};
 "
 `;
 
 exports[`build fixtures build css-modules--null with jvdx 5`] = `
-"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE\\",e};
+"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"_-qmAn\\",e};
 "
 `;
 
 exports[`build fixtures build css-modules--null with jvdx 6`] = `
-"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e||self).cssModulesNull=n()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE\\",e}});
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e||self).cssModulesNull=n()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"_-qmAn\\",e}});
 "
 `;
 
@@ -1486,34 +1486,34 @@ css-modules--string
 Built in 0s
 
 Bundle(s)
-./dist/css-modules--string.js (183 B)
-  -> gzip: 166 B
-  -> brotli: 118 B
-./dist/css-modules--string.esm.js (190 B)
-  -> gzip: 171 B
-  -> brotli: 130 B
-./dist/css-modules--string.umd.js (360 B)
-  -> gzip: 263 B
-  -> brotli: 192 B
+./dist/css-modules--string.js (151 B)
+  -> gzip: 145 B
+  -> brotli: 95 B
+./dist/css-modules--string.esm.js (158 B)
+  -> gzip: 149 B
+  -> brotli: 112 B
+./dist/css-modules--string.umd.js (328 B)
+  -> gzip: 238 B
+  -> brotli: 168 B
 "
 `;
 
 exports[`build fixtures build css-modules--string with jvdx 2`] = `4`;
 
-exports[`build fixtures build css-modules--string with jvdx 3`] = `"body{background:blue;color:red;display:flex}._contains_this_81567d0efc15a456670452d3277e1a68{background-color:blue}._contains_this_0a8c24df242c2cd708036873307aea94{color:pink}"`;
+exports[`build fixtures build css-modules--string with jvdx 3`] = `"body{background:blue;color:red;display:flex}._contains_this_911e75fe428eec11{background-color:blue}._contains_this_faa9809ffc07a201{color:pink}"`;
 
 exports[`build fixtures build css-modules--string with jvdx 4`] = `
-"function a(){var a=document.createElement(\\"div\\");return a.className=\\"_contains_this_0a8c24df242c2cd708036873307aea94 _contains_this_81567d0efc15a456670452d3277e1a68\\",a}export{a as default};
+"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_contains_this_faa9809ffc07a201 _contains_this_911e75fe428eec11\\",e}export{e as default};
 "
 `;
 
 exports[`build fixtures build css-modules--string with jvdx 5`] = `
-"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"_contains_this_0a8c24df242c2cd708036873307aea94 _contains_this_81567d0efc15a456670452d3277e1a68\\",e};
+"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"_contains_this_faa9809ffc07a201 _contains_this_911e75fe428eec11\\",e};
 "
 `;
 
 exports[`build fixtures build css-modules--string with jvdx 6`] = `
-"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e||self).cssModulesString=n()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"_contains_this_0a8c24df242c2cd708036873307aea94 _contains_this_81567d0efc15a456670452d3277e1a68\\",e}});
+"!function(e,n){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=n():\\"function\\"==typeof define&&define.amd?define(n):(e||self).cssModulesString=n()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"_contains_this_faa9809ffc07a201 _contains_this_911e75fe428eec11\\",e}});
 "
 `;
 
@@ -1539,33 +1539,33 @@ Built in 0s
 
 Bundle(s)
 ./dist/css-modules--true.js (137 B)
-  -> gzip: 139 B
-  -> brotli: 94 B
+  -> gzip: 138 B
+  -> brotli: 93 B
 ./dist/css-modules--true.esm.js (144 B)
-  -> gzip: 144 B
-  -> brotli: 100 B
+  -> gzip: 143 B
+  -> brotli: 99 B
 ./dist/css-modules--true.umd.js (312 B)
-  -> gzip: 230 B
-  -> brotli: 165 B
+  -> gzip: 228 B
+  -> brotli: 162 B
 "
 `;
 
 exports[`build fixtures build css-modules--true with jvdx 2`] = `4`;
 
-exports[`build fixtures build css-modules--true with jvdx 3`] = `"body{background:blue;color:red;display:flex}.test_class_that_should_be_scoped{background-color:blue}._2kWDE{color:pink}"`;
+exports[`build fixtures build css-modules--true with jvdx 3`] = `"body{background:blue;color:red;display:flex}.test_class_that_should_be_scoped{background-color:blue}._-qmAn{color:pink}"`;
 
 exports[`build fixtures build css-modules--true with jvdx 4`] = `
-"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE \\"+(void 0).test_class_that_should_be_scoped,e}export{e as default};
+"function e(){var e=document.createElement(\\"div\\");return e.className=\\"_-qmAn \\"+(void 0).test_class_that_should_be_scoped,e}export{e as default};
 "
 `;
 
 exports[`build fixtures build css-modules--true with jvdx 5`] = `
-"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE \\"+(void 0).test_class_that_should_be_scoped,e};
+"module.exports=function(){var e=document.createElement(\\"div\\");return e.className=\\"_-qmAn \\"+(void 0).test_class_that_should_be_scoped,e};
 "
 `;
 
 exports[`build fixtures build css-modules--true with jvdx 6`] = `
-"!function(e,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t():\\"function\\"==typeof define&&define.amd?define(t):(e||self).cssModulesTrue=t()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"_2kWDE \\"+(void 0).test_class_that_should_be_scoped,e}});
+"!function(e,t){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?module.exports=t():\\"function\\"==typeof define&&define.amd?define(t):(e||self).cssModulesTrue=t()}(this,function(){return function(){var e=document.createElement(\\"div\\");return e.className=\\"_-qmAn \\"+(void 0).test_class_that_should_be_scoped,e}});
 "
 `;
 
