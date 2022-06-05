@@ -96,15 +96,13 @@ describe('resolveBin', () => {
 
 	it(`should resolve to the full path when it's not in $PATH`, () => {
 		const { resolveBin } = require('../src/utils');
-		expect(resolveBin('eslint')).toBe(
-			require.resolve('eslint/bin/eslint').replace(process.cwd(), '.'),
-		);
+		expect(resolveBin('eslint')).toBe('./node_modules/eslint/bin/eslint.js');
 	});
 
 	it(`should resolve to the binary if it's in $PATH`, () => {
 		const { resolveBin } = require('../src/utils');
-		whichSyncMock.mockImplementationOnce(() =>
-			require.resolve('eslint/bin/eslint').replace(process.cwd(), '.'),
+		whichSyncMock.mockImplementationOnce(
+			() => './node_modules/eslint/bin/eslint.js',
 		);
 		expect(resolveBin('eslint')).toBe('eslint');
 		expect(whichSyncMock).toHaveBeenCalledTimes(1);
