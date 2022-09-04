@@ -1,0 +1,7 @@
+{
+	"name": "generate-types-from-pkg-json",
+	"types": "dist/types.d.ts",
+	"scripts": {
+		"build": "jvdx build"
+	}
+}

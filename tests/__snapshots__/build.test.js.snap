@@ -1978,6 +1978,66 @@ exports[`build fixtures build generate-types with jvdx 6`] = `
 "
 `;
 
+exports[`build fixtures build generate-types-from-pkg-json with jvdx 1`] = `
+"Used script: jvdx build
+
+Directory tree:
+
+generate-types-from-pkg-json
+  dist
+    generate-types-from-pkg-json.esm.js
+    generate-types-from-pkg-json.esm.js.map
+    generate-types-from-pkg-json.js
+    generate-types-from-pkg-json.js.map
+    generate-types-from-pkg-json.umd.js
+    generate-types-from-pkg-json.umd.js.map
+    index.d.ts
+  node_modules
+  package.json
+  src
+    index.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/generate-types-from-pkg-json.js (35 B)
+  -> gzip: 55 B
+  -> brotli: 33 B
+./dist/generate-types-from-pkg-json.esm.js (41 B)
+  -> gzip: 61 B
+  -> brotli: 45 B
+./dist/generate-types-from-pkg-json.umd.js (229 B)
+  -> gzip: 181 B
+  -> brotli: 142 B
+"
+`;
+
+exports[`build fixtures build generate-types-from-pkg-json with jvdx 2`] = `7`;
+
+exports[`build fixtures build generate-types-from-pkg-json with jvdx 3`] = `
+"function n(){return 42}export{n as foo};
+//# sourceMappingURL=generate-types-from-pkg-json.esm.js.map
+"
+`;
+
+exports[`build fixtures build generate-types-from-pkg-json with jvdx 4`] = `
+"exports.foo=function(){return 42};
+//# sourceMappingURL=generate-types-from-pkg-json.js.map
+"
+`;
+
+exports[`build fixtures build generate-types-from-pkg-json with jvdx 5`] = `
+"!function(e,o){\\"object\\"==typeof exports&&\\"undefined\\"!=typeof module?o(exports):\\"function\\"==typeof define&&define.amd?define([\\"exports\\"],o):o((e||self).generateTypesFromPkgJson={})}(this,function(e){e.foo=function(){return 42}});
+//# sourceMappingURL=generate-types-from-pkg-json.umd.js.map
+"
+`;
+
+exports[`build fixtures build generate-types-from-pkg-json with jvdx 6`] = `
+"export function foo(): number;
+"
+`;
+
 exports[`build fixtures build inline-source-map with jvdx 1`] = `
 "Used script: jvdx build --sourcemap inline
 

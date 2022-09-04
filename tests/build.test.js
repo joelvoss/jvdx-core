@@ -34,11 +34,11 @@ describe('build fixtures', () => {
 				fixturePath = resolve(fixturePath, fixtureDir.replace('-with-cwd', ''));
 			}
 
-			await sleep(0.5);
+			await sleep(0.1);
 
 			const output = await buildDirectory(fixtureDir);
 
-			await sleep(0.5);
+			await sleep(0.1);
 
 			const printedDir = printTree([directoryTree(fixturePath)]);
 
