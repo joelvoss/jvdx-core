@@ -15,8 +15,6 @@ const TEST_TIMEOUT = 11000;
 const FIXTURES_DIR = fromRoot(`tests/__fixtures__/actions-build`);
 const DEFAULT_SCRIPT = 'jvdx build';
 
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-
 ////////////////////////////////////////////////////////////////////////////////
 // Test suite
 describe('build fixtures', () => {
@@ -34,12 +32,7 @@ describe('build fixtures', () => {
 				fixturePath = resolve(fixturePath, fixtureDir.replace('-with-cwd', ''));
 			}
 
-			await sleep(0.1);
-
 			const output = await buildDirectory(fixtureDir);
-
-			await sleep(0.1);
-
 			const printedDir = printTree([directoryTree(fixturePath)]);
 
 			expect(
