@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/joelvoss/jvdx-core.git"
   },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "main": "src/index.js",
   "bin": {
     "jvdx": "src/index.js"
