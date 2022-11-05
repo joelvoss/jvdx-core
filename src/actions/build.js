@@ -688,7 +688,9 @@ function createConfig(options, entry, format, writeMeta) {
 					customBabel()({
 						babelHelpers: 'bundled',
 						extensions: ['.ts', '.tsx', '.js', '.jsx', '.es6', '.es', '.mjs'],
-						exclude: 'node_modules/**',
+						// NOTE(joel): Use a regex to make sure to exclude eventual hoisted
+						// packages
+						exclude: /\/node_modules\//,
 						// @see https://babeljs.io/docs/en/options#passperpreset
 						passPerPreset: true,
 						custom: {
