@@ -7,7 +7,7 @@ Directory tree:
 
 alias
   dist
-    alias-mapping.esm.js
+    alias-mapping.esm.mjs
     alias-mapping.js
     alias-mapping.umd.js
   package.json
@@ -23,7 +23,7 @@ Bundle(s)
 ./dist/alias-mapping.js (42 B)
   -> gzip: 62 B
   -> brotli: 46 B
-./dist/alias-mapping.esm.js (42 B)
+./dist/alias-mapping.esm.mjs (42 B)
   -> gzip: 62 B
   -> brotli: 46 B
 ./dist/alias-mapping.umd.js (121 B)
@@ -56,8 +56,8 @@ Directory tree:
 
 alias-external
   dist
-    alias-external.esm.js
-    alias-external.esm.js.map
+    alias-external.esm.mjs
+    alias-external.esm.mjs.map
     alias-external.js
     alias-external.js.map
     alias-external.umd.js
@@ -74,9 +74,9 @@ Bundle(s)
 ./dist/alias-external.js (60 B)
   -> gzip: 80 B
   -> brotli: 58 B
-./dist/alias-external.esm.js (64 B)
-  -> gzip: 84 B
-  -> brotli: 61 B
+./dist/alias-external.esm.mjs (65 B)
+  -> gzip: 85 B
+  -> brotli: 62 B
 ./dist/alias-external.umd.js (143 B)
   -> gzip: 140 B
   -> brotli: 104 B
@@ -87,7 +87,7 @@ exports[`build fixtures build alias-external with jvdx 2`] = `6`;
 
 exports[`build fixtures build alias-external with jvdx 3`] = `
 "console.log(42);
-//# sourceMappingURL=alias-external.esm.js.map
+//# sourceMappingURL=alias-external.esm.mjs.map
 "
 `;
 
@@ -110,8 +110,8 @@ Directory tree:
 
 async-iife-ts
   dist
-    async-iife-ts.esm.js
-    async-iife-ts.esm.js.map
+    async-iife-ts.esm.mjs
+    async-iife-ts.esm.mjs.map
     async-iife-ts.js
     async-iife-ts.js.map
     async-iife-ts.umd.js
@@ -130,9 +130,9 @@ Bundle(s)
 ./dist/async-iife-ts.js (93 B)
   -> gzip: 111 B
   -> brotli: 87 B
-./dist/async-iife-ts.esm.js (97 B)
-  -> gzip: 113 B
-  -> brotli: 94 B
+./dist/async-iife-ts.esm.mjs (98 B)
+  -> gzip: 114 B
+  -> brotli: 102 B
 ./dist/async-iife-ts.umd.js (177 B)
   -> gzip: 161 B
   -> brotli: 127 B
@@ -143,7 +143,7 @@ exports[`build fixtures build async-iife-ts with jvdx 2`] = `7`;
 
 exports[`build fixtures build async-iife-ts with jvdx 3`] = `
 "try{console.log("foo")}catch(o){Promise.reject(o)}
-//# sourceMappingURL=async-iife-ts.esm.js.map
+//# sourceMappingURL=async-iife-ts.esm.mjs.map
 "
 `;
 
@@ -168,8 +168,8 @@ Directory tree:
 
 async-ts
   dist
-    async-ts.esm.js
-    async-ts.esm.js.map
+    async-ts.esm.mjs
+    async-ts.esm.mjs.map
     async-ts.js
     async-ts.js.map
     async-ts.umd.js
@@ -188,9 +188,9 @@ Bundle(s)
 ./dist/async-ts.js (144 B)
   -> gzip: 137 B
   -> brotli: 112 B
-./dist/async-ts.esm.js (159 B)
-  -> gzip: 146 B
-  -> brotli: 116 B
+./dist/async-ts.esm.mjs (160 B)
+  -> gzip: 147 B
+  -> brotli: 110 B
 ./dist/async-ts.umd.js (325 B)
   -> gzip: 232 B
   -> brotli: 190 B
@@ -201,7 +201,7 @@ exports[`build fixtures build async-ts with jvdx 2`] = `7`;
 
 exports[`build fixtures build async-ts with jvdx 3`] = `
 "var o=function(){function o(){}return o.prototype.foo=function(){return Promise.resolve()},o}();export{o as MyClass};
-//# sourceMappingURL=async-ts.esm.js.map
+//# sourceMappingURL=async-ts.esm.mjs.map
 "
 `;
 
@@ -231,8 +231,8 @@ Directory tree:
 
 basic
   dist
-    basic-lib.esm.js
-    basic-lib.esm.js.map
+    basic-lib.esm.mjs
+    basic-lib.esm.mjs.map
     basic-lib.js
     basic-lib.js.map
     basic-lib.umd.js
@@ -249,9 +249,9 @@ Bundle(s)
 ./dist/basic-lib.js (424 B)
   -> gzip: 224 B
   -> brotli: 177 B
-./dist/basic-lib.esm.js (436 B)
+./dist/basic-lib.esm.mjs (437 B)
   -> gzip: 232 B
-  -> brotli: 190 B
+  -> brotli: 195 B
 ./dist/basic-lib.umd.js (597 B)
   -> gzip: 307 B
   -> brotli: 239 B
@@ -262,7 +262,7 @@ exports[`build fixtures build basic with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic with jvdx 3`] = `
 "var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
-//# sourceMappingURL=basic-lib.esm.js.map
+//# sourceMappingURL=basic-lib.esm.mjs.map
 "
 `;
 
@@ -285,8 +285,8 @@ Directory tree:
 
 basic-babelrc
   dist
-    basic-babelrc.esm.js
-    basic-babelrc.esm.js.map
+    basic-babelrc.esm.mjs
+    basic-babelrc.esm.mjs.map
     basic-babelrc.js
     basic-babelrc.js.map
     basic-babelrc.umd.js
@@ -302,7 +302,7 @@ Bundle(s)
 ./dist/basic-babelrc.js (186 B)
   -> gzip: 157 B
   -> brotli: 121 B
-./dist/basic-babelrc.esm.js (190 B)
+./dist/basic-babelrc.esm.mjs (191 B)
   -> gzip: 160 B
   -> brotli: 125 B
 ./dist/basic-babelrc.umd.js (269 B)
@@ -315,7 +315,7 @@ exports[`build fixtures build basic-babelrc with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic-babelrc with jvdx 3`] = `
 "function r(r){return void 0===r&&(r=function(r){throw new Error("required!")}()),!0===r||function(r){throw new Error("Falsey!")}()}r(!0),r(!1);
-//# sourceMappingURL=basic-babelrc.esm.js.map
+//# sourceMappingURL=basic-babelrc.esm.mjs.map
 "
 `;
 
@@ -338,8 +338,8 @@ Directory tree:
 
 basic-compress-false
   dist
-    basic-compress-false.esm.js
-    basic-compress-false.esm.js.map
+    basic-compress-false.esm.mjs
+    basic-compress-false.esm.mjs.map
     basic-compress-false.js
     basic-compress-false.js.map
     basic-compress-false.umd.js
@@ -356,9 +356,9 @@ Bundle(s)
 ./dist/basic-compress-false.js (689 B)
   -> gzip: 300 B
   -> brotli: 244 B
-./dist/basic-compress-false.esm.js (698 B)
-  -> gzip: 306 B
-  -> brotli: 248 B
+./dist/basic-compress-false.esm.mjs (699 B)
+  -> gzip: 307 B
+  -> brotli: 249 B
 ./dist/basic-compress-false.umd.js (991 B)
   -> gzip: 422 B
   -> brotli: 361 B
@@ -394,7 +394,7 @@ var index = (function () {
 });
 
 export { index as default };
-//# sourceMappingURL=basic-compress-false.esm.js.map
+//# sourceMappingURL=basic-compress-false.esm.mjs.map
 "
 `;
 
@@ -476,8 +476,8 @@ basic-css
   dist
     basic-css.css
     basic-css.css.map
-    basic-css.esm.js
-    basic-css.esm.js.map
+    basic-css.esm.mjs
+    basic-css.esm.mjs.map
     basic-css.js
     basic-css.js.map
     basic-css.umd.js
@@ -494,8 +494,8 @@ Bundle(s)
 ./dist/basic-css.js (133 B)
   -> gzip: 139 B
   -> brotli: 83 B
-./dist/basic-css.esm.js (144 B)
-  -> gzip: 145 B
+./dist/basic-css.esm.mjs (145 B)
+  -> gzip: 146 B
   -> brotli: 105 B
 ./dist/basic-css.umd.js (306 B)
   -> gzip: 227 B
@@ -512,7 +512,7 @@ exports[`build fixtures build basic-css with jvdx 3`] = `
 
 exports[`build fixtures build basic-css with jvdx 4`] = `
 "function e(){var e=document.createElement("div");return e.className="testing",e}export{e as default};
-//# sourceMappingURL=basic-css.esm.js.map
+//# sourceMappingURL=basic-css.esm.mjs.map
 "
 `;
 
@@ -535,8 +535,8 @@ Directory tree:
 
 basic-dashed-external
   dist
-    basic-dashed-external.esm.js
-    basic-dashed-external.esm.js.map
+    basic-dashed-external.esm.mjs
+    basic-dashed-external.esm.mjs.map
     basic-dashed-external.js
     basic-dashed-external.js.map
     basic-dashed-external.umd.js
@@ -553,9 +553,9 @@ Bundle(s)
 ./dist/basic-dashed-external.js (474 B)
   -> gzip: 251 B
   -> brotli: 207 B
-./dist/basic-dashed-external.esm.js (492 B)
-  -> gzip: 264 B
-  -> brotli: 228 B
+./dist/basic-dashed-external.esm.mjs (493 B)
+  -> gzip: 265 B
+  -> brotli: 227 B
 ./dist/basic-dashed-external.umd.js (680 B)
   -> gzip: 349 B
   -> brotli: 282 B
@@ -566,7 +566,7 @@ exports[`build fixtures build basic-dashed-external with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic-dashed-external with jvdx 3`] = `
 "import r from"tiny-glob";var e=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};console.log(r);var t=function(){try{var r=arguments,t=[].slice.call(r);return Promise.resolve(e.apply(void 0,t)).then(function(r){return Promise.resolve(e.apply(void 0,t)).then(function(e){return[r,e]})})}catch(r){return Promise.reject(r)}};export{t as default};
-//# sourceMappingURL=basic-dashed-external.esm.js.map
+//# sourceMappingURL=basic-dashed-external.esm.mjs.map
 "
 `;
 
@@ -589,8 +589,8 @@ Directory tree:
 
 basic-flow
   dist
-    basic-lib-flow.esm.js
-    basic-lib-flow.esm.js.map
+    basic-lib-flow.esm.mjs
+    basic-lib-flow.esm.mjs.map
     basic-lib-flow.js
     basic-lib-flow.js.map
     basic-lib-flow.umd.js
@@ -607,9 +607,9 @@ Bundle(s)
 ./dist/basic-lib-flow.js (82 B)
   -> gzip: 100 B
   -> brotli: 86 B
-./dist/basic-lib-flow.esm.js (98 B)
-  -> gzip: 116 B
-  -> brotli: 102 B
+./dist/basic-lib-flow.esm.mjs (99 B)
+  -> gzip: 117 B
+  -> brotli: 103 B
 ./dist/basic-lib-flow.umd.js (294 B)
   -> gzip: 206 B
   -> brotli: 163 B
@@ -620,7 +620,7 @@ exports[`build fixtures build basic-flow with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic-flow with jvdx 3`] = `
 "var a=["banana","raspberry"];export{a as default};
-//# sourceMappingURL=basic-lib-flow.esm.js.map
+//# sourceMappingURL=basic-lib-flow.esm.mjs.map
 "
 `;
 
@@ -643,8 +643,8 @@ Directory tree:
 
 basic-json
   dist
-    basic-json.esm.js
-    basic-json.esm.js.map
+    basic-json.esm.mjs
+    basic-json.esm.mjs.map
     basic-json.js
     basic-json.js.map
     basic-json.umd.js
@@ -661,9 +661,9 @@ Bundle(s)
 ./dist/basic-json.js (113 B)
   -> gzip: 125 B
   -> brotli: 92 B
-./dist/basic-json.esm.js (125 B)
-  -> gzip: 133 B
-  -> brotli: 96 B
+./dist/basic-json.esm.mjs (126 B)
+  -> gzip: 134 B
+  -> brotli: 94 B
 ./dist/basic-json.umd.js (287 B)
   -> gzip: 217 B
   -> brotli: 161 B
@@ -674,7 +674,7 @@ exports[`build fixtures build basic-json with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic-json with jvdx 3`] = `
 "var e={test:"true"},r=function(){return Promise.resolve(e)};export{r as default};
-//# sourceMappingURL=basic-json.esm.js.map
+//# sourceMappingURL=basic-json.esm.mjs.map
 "
 `;
 
@@ -699,14 +699,14 @@ basic-multi-source
   a.js
   b.js
   dist
-    a.esm.js
-    a.esm.js.map
+    a.esm.mjs
+    a.esm.mjs.map
     a.js
     a.js.map
     a.umd.js
     a.umd.js.map
-    b.esm.js
-    b.esm.js.map
+    b.esm.mjs
+    b.esm.mjs.map
     b.js
     b.js.map
     b.umd.js
@@ -720,18 +720,18 @@ Bundle(s)
 ./dist/a.js (53 B)
   -> gzip: 73 B
   -> brotli: 57 B
-./dist/a.esm.js (57 B)
-  -> gzip: 77 B
-  -> brotli: 61 B
+./dist/a.esm.mjs (58 B)
+  -> gzip: 78 B
+  -> brotli: 62 B
 ./dist/a.umd.js (136 B)
   -> gzip: 133 B
   -> brotli: 98 B
 ./dist/b.js (53 B)
   -> gzip: 73 B
   -> brotli: 53 B
-./dist/b.esm.js (57 B)
-  -> gzip: 77 B
-  -> brotli: 61 B
+./dist/b.esm.mjs (58 B)
+  -> gzip: 78 B
+  -> brotli: 59 B
 ./dist/b.umd.js (136 B)
   -> gzip: 133 B
   -> brotli: 98 B
@@ -742,7 +742,7 @@ exports[`build fixtures build basic-multi-source with jvdx 2`] = `12`;
 
 exports[`build fixtures build basic-multi-source with jvdx 3`] = `
 "console.log("i am a");
-//# sourceMappingURL=a.esm.js.map
+//# sourceMappingURL=a.esm.mjs.map
 "
 `;
 
@@ -760,7 +760,7 @@ exports[`build fixtures build basic-multi-source with jvdx 5`] = `
 
 exports[`build fixtures build basic-multi-source with jvdx 6`] = `
 "console.log("i am b");
-//# sourceMappingURL=b.esm.js.map
+//# sourceMappingURL=b.esm.mjs.map
 "
 `;
 
@@ -783,8 +783,8 @@ Directory tree:
 
 basic-no-compress
   dist
-    basic-no-compress.esm.js
-    basic-no-compress.esm.js.map
+    basic-no-compress.esm.mjs
+    basic-no-compress.esm.mjs.map
     basic-no-compress.js
     basic-no-compress.js.map
     basic-no-compress.umd.js
@@ -801,9 +801,9 @@ Bundle(s)
 ./dist/basic-no-compress.js (686 B)
   -> gzip: 298 B
   -> brotli: 241 B
-./dist/basic-no-compress.esm.js (695 B)
-  -> gzip: 304 B
-  -> brotli: 248 B
+./dist/basic-no-compress.esm.mjs (696 B)
+  -> gzip: 305 B
+  -> brotli: 249 B
 ./dist/basic-no-compress.umd.js (985 B)
   -> gzip: 422 B
   -> brotli: 356 B
@@ -839,7 +839,7 @@ var index = (function () {
 });
 
 export { index as default };
-//# sourceMappingURL=basic-no-compress.esm.js.map
+//# sourceMappingURL=basic-no-compress.esm.mjs.map
 "
 `;
 
@@ -1001,8 +1001,8 @@ Directory tree:
 
 basic-ts
   dist
-    basic-lib-ts.esm.js
-    basic-lib-ts.esm.js.map
+    basic-lib-ts.esm.mjs
+    basic-lib-ts.esm.mjs.map
     basic-lib-ts.js
     basic-lib-ts.js.map
     basic-lib-ts.umd.js
@@ -1023,9 +1023,9 @@ Bundle(s)
 ./dist/basic-lib-ts.js (147 B)
   -> gzip: 141 B
   -> brotli: 105 B
-./dist/basic-lib-ts.esm.js (155 B)
-  -> gzip: 146 B
-  -> brotli: 116 B
+./dist/basic-lib-ts.esm.mjs (156 B)
+  -> gzip: 147 B
+  -> brotli: 117 B
 ./dist/basic-lib-ts.umd.js (314 B)
   -> gzip: 219 B
   -> brotli: 171 B
@@ -1036,7 +1036,7 @@ exports[`build fixtures build basic-ts with jvdx 2`] = `8`;
 
 exports[`build fixtures build basic-ts with jvdx 3`] = `
 "var n=new(function(){function n(){}return n.prototype.drive=function(n){return!0},n}());export{n as default};
-//# sourceMappingURL=basic-lib-ts.esm.js.map
+//# sourceMappingURL=basic-lib-ts.esm.mjs.map
 "
 `;
 
@@ -1076,8 +1076,8 @@ Directory tree:
 
 basic-tsx
   dist
-    basic-lib-tsx.esm.js
-    basic-lib-tsx.esm.js.map
+    basic-lib-tsx.esm.mjs
+    basic-lib-tsx.esm.mjs.map
     basic-lib-tsx.js
     basic-lib-tsx.js.map
     basic-lib-tsx.umd.js
@@ -1096,9 +1096,9 @@ Bundle(s)
 ./dist/basic-lib-tsx.js (287 B)
   -> gzip: 232 B
   -> brotli: 181 B
-./dist/basic-lib-tsx.esm.js (299 B)
+./dist/basic-lib-tsx.esm.mjs (300 B)
   -> gzip: 239 B
-  -> brotli: 192 B
+  -> brotli: 193 B
 ./dist/basic-lib-tsx.umd.js (463 B)
   -> gzip: 316 B
   -> brotli: 255 B
@@ -1109,7 +1109,7 @@ exports[`build fixtures build basic-tsx with jvdx 2`] = `7`;
 
 exports[`build fixtures build basic-tsx with jvdx 3`] = `
 "var n=function(n,r){return{tag:n,props:r,children:[].slice.call(arguments,2)}},r=function(){function r(){}return r.prototype.render=function(){return n("div",{id:"app"},n("h1",null,"Hello, World!"),n("p",null,"A JSX demo."))},r}();export{r as default};
-//# sourceMappingURL=basic-lib-tsx.esm.js.map
+//# sourceMappingURL=basic-lib-tsx.esm.mjs.map
 "
 `;
 
@@ -1139,8 +1139,8 @@ Directory tree:
 
 basic
   dist
-    basic.esm.js
-    basic.esm.js.map
+    basic.esm.mjs
+    basic.esm.mjs.map
     basic.js
     basic.js.map
     basic.umd.js
@@ -1157,9 +1157,9 @@ Bundle(s)
 ./dist/basic.js (420 B)
   -> gzip: 221 B
   -> brotli: 166 B
-./dist/basic.esm.js (432 B)
-  -> gzip: 228 B
-  -> brotli: 182 B
+./dist/basic.esm.mjs (433 B)
+  -> gzip: 229 B
+  -> brotli: 187 B
 ./dist/basic.umd.js (590 B)
   -> gzip: 301 B
   -> brotli: 232 B
@@ -1170,7 +1170,7 @@ exports[`build fixtures build basic-with-cwd with jvdx 2`] = `6`;
 
 exports[`build fixtures build basic-with-cwd with jvdx 3`] = `
 "var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
-//# sourceMappingURL=basic.esm.js.map
+//# sourceMappingURL=basic.esm.mjs.map
 "
 `;
 
@@ -1193,8 +1193,8 @@ Directory tree:
 
 class-decorators-ts
   dist
-    class-decorators-ts.esm.js
-    class-decorators-ts.esm.js.map
+    class-decorators-ts.esm.mjs
+    class-decorators-ts.esm.mjs.map
     class-decorators-ts.js
     class-decorators-ts.js.map
     class-decorators-ts.umd.js
@@ -1213,9 +1213,9 @@ Bundle(s)
 ./dist/class-decorators-ts.js (612 B)
   -> gzip: 378 B
   -> brotli: 329 B
-./dist/class-decorators-ts.esm.js (620 B)
-  -> gzip: 382 B
-  -> brotli: 324 B
+./dist/class-decorators-ts.esm.mjs (621 B)
+  -> gzip: 383 B
+  -> brotli: 323 B
 ./dist/class-decorators-ts.umd.js (791 B)
   -> gzip: 443 B
   -> brotli: 379 B
@@ -1226,7 +1226,7 @@ exports[`build fixtures build class-decorators-ts with jvdx 2`] = `7`;
 
 exports[`build fixtures build class-decorators-ts with jvdx 3`] = `
 "var e=function(){function e(e){this.greeting=void 0,this.greeting=e}return e.prototype.greet=function(){return"Hello, "+this.greeting},e}(),t=new(e=function(e,t,r,n){var o,c=arguments.length,i=c<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,r):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(e,t,r,n);else for(var l=e.length-1;l>=0;l--)(o=e[l])&&(i=(c<3?o(i):c>3?o(t,r,i):o(t,r))||i);return c>3&&i&&Object.defineProperty(t,r,i),i}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))("Hello World");export{t as default};
-//# sourceMappingURL=class-decorators-ts.esm.js.map
+//# sourceMappingURL=class-decorators-ts.esm.mjs.map
 "
 `;
 
@@ -1260,8 +1260,8 @@ Directory tree:
 
 class-properties
   dist
-    class-properties.esm.js
-    class-properties.esm.js.map
+    class-properties.esm.mjs
+    class-properties.esm.mjs.map
     class-properties.js
     class-properties.js.map
     class-properties.umd.js
@@ -1277,8 +1277,8 @@ Bundle(s)
 ./dist/class-properties.js (127 B)
   -> gzip: 135 B
   -> brotli: 102 B
-./dist/class-properties.esm.js (129 B)
-  -> gzip: 137 B
+./dist/class-properties.esm.mjs (130 B)
+  -> gzip: 138 B
   -> brotli: 101 B
 ./dist/class-properties.umd.js (310 B)
   -> gzip: 235 B
@@ -1290,7 +1290,7 @@ exports[`build fixtures build class-properties with jvdx 2`] = `6`;
 
 exports[`build fixtures build class-properties with jvdx 3`] = `
 "var a=function(){this.baz=3};a.bar=2;var r=new a;export{a as Foo,r as default};
-//# sourceMappingURL=class-properties.esm.js.map
+//# sourceMappingURL=class-properties.esm.mjs.map
 "
 `;
 
@@ -1313,8 +1313,8 @@ Directory tree:
 
 css
   dist
-    css.esm.js
-    css.esm.js.map
+    css.esm.mjs
+    css.esm.mjs.map
     css.js
     css.js.map
     css.umd.js
@@ -1331,8 +1331,8 @@ Bundle(s)
 ./dist/css.js (120 B)
   -> gzip: 131 B
   -> brotli: 86 B
-./dist/css.esm.js (131 B)
-  -> gzip: 136 B
+./dist/css.esm.mjs (132 B)
+  -> gzip: 138 B
   -> brotli: 98 B
 ./dist/css.umd.js (288 B)
   -> gzip: 219 B
@@ -1344,7 +1344,7 @@ exports[`build fixtures build css with jvdx 2`] = `6`;
 
 exports[`build fixtures build css with jvdx 3`] = `
 "function o(){console.log("body{background:blue;color:red;display:flex}")}export{o as default};
-//# sourceMappingURL=css.esm.js.map
+//# sourceMappingURL=css.esm.mjs.map
 "
 `;
 
@@ -1368,7 +1368,7 @@ Directory tree:
 css-modules--false
   dist
     css-modules--false.css
-    css-modules--false.esm.js
+    css-modules--false.esm.mjs
     css-modules--false.js
     css-modules--false.umd.js
   package.json
@@ -1384,7 +1384,7 @@ Bundle(s)
 ./dist/css-modules--false.js (29 B)
   -> gzip: 49 B
   -> brotli: 23 B
-./dist/css-modules--false.esm.js (36 B)
+./dist/css-modules--false.esm.mjs (36 B)
   -> gzip: 56 B
   -> brotli: 40 B
 ./dist/css-modules--false.umd.js (221 B)
@@ -1420,7 +1420,7 @@ Directory tree:
 css-modules--null
   dist
     css-modules--null.css
-    css-modules--null.esm.js
+    css-modules--null.esm.mjs
     css-modules--null.js
     css-modules--null.umd.js
   package.json
@@ -1436,7 +1436,7 @@ Bundle(s)
 ./dist/css-modules--null.js (94 B)
   -> gzip: 110 B
   -> brotli: 69 B
-./dist/css-modules--null.esm.js (101 B)
+./dist/css-modules--null.esm.mjs (101 B)
   -> gzip: 114 B
   -> brotli: 70 B
 ./dist/css-modules--null.umd.js (269 B)
@@ -1472,7 +1472,7 @@ Directory tree:
 css-modules--string
   dist
     css-modules--string.css
-    css-modules--string.esm.js
+    css-modules--string.esm.mjs
     css-modules--string.js
     css-modules--string.umd.js
   package.json
@@ -1488,7 +1488,7 @@ Bundle(s)
 ./dist/css-modules--string.js (151 B)
   -> gzip: 145 B
   -> brotli: 95 B
-./dist/css-modules--string.esm.js (158 B)
+./dist/css-modules--string.esm.mjs (158 B)
   -> gzip: 149 B
   -> brotli: 112 B
 ./dist/css-modules--string.umd.js (328 B)
@@ -1524,7 +1524,7 @@ Directory tree:
 css-modules--true
   dist
     css-modules--true.css
-    css-modules--true.esm.js
+    css-modules--true.esm.mjs
     css-modules--true.js
     css-modules--true.umd.js
   package.json
@@ -1540,7 +1540,7 @@ Bundle(s)
 ./dist/css-modules--true.js (137 B)
   -> gzip: 138 B
   -> brotli: 93 B
-./dist/css-modules--true.esm.js (144 B)
+./dist/css-modules--true.esm.mjs (144 B)
   -> gzip: 143 B
   -> brotli: 99 B
 ./dist/css-modules--true.umd.js (312 B)
@@ -1575,8 +1575,8 @@ Directory tree:
 
 custom-babelrc
   dist
-    custom-babelrc.esm.js
-    custom-babelrc.esm.js.map
+    custom-babelrc.esm.mjs
+    custom-babelrc.esm.mjs.map
     custom-babelrc.js
     custom-babelrc.js.map
     custom-babelrc.umd.js
@@ -1592,8 +1592,8 @@ Bundle(s)
 ./dist/custom-babelrc.js (322 B)
   -> gzip: 252 B
   -> brotli: 203 B
-./dist/custom-babelrc.esm.js (332 B)
-  -> gzip: 258 B
+./dist/custom-babelrc.esm.mjs (333 B)
+  -> gzip: 259 B
   -> brotli: 210 B
 ./dist/custom-babelrc.umd.js (509 B)
   -> gzip: 343 B
@@ -1605,7 +1605,7 @@ exports[`build fixtures build custom-babelrc with jvdx 2`] = `6`;
 
 exports[`build fixtures build custom-babelrc with jvdx 3`] = `
 "class e{constructor(){var e,r;r=["foo","bar"],(e="myFields")in this?Object.defineProperty(this,e,{value:r,enumerable:!0,configurable:!0,writable:!0}):this[e]=r}foo(){try{return Promise.resolve(this.myFields.find(e=>"bar"===e))}catch(e){return Promise.reject(e)}}}export{e as MyClass};
-//# sourceMappingURL=custom-babelrc.esm.js.map
+//# sourceMappingURL=custom-babelrc.esm.mjs.map
 "
 `;
 
@@ -1628,8 +1628,8 @@ Directory tree:
 
 custom-source
   dist
-    custom-source.esm.js
-    custom-source.esm.js.map
+    custom-source.esm.mjs
+    custom-source.esm.mjs.map
     custom-source.js
     custom-source.js.map
     custom-source.umd.js
@@ -1646,9 +1646,9 @@ Bundle(s)
 ./dist/custom-source.js (428 B)
   -> gzip: 224 B
   -> brotli: 174 B
-./dist/custom-source.esm.js (440 B)
+./dist/custom-source.esm.mjs (441 B)
   -> gzip: 232 B
-  -> brotli: 189 B
+  -> brotli: 193 B
 ./dist/custom-source.umd.js (605 B)
   -> gzip: 307 B
   -> brotli: 238 B
@@ -1659,7 +1659,7 @@ exports[`build fixtures build custom-source with jvdx 2`] = `6`;
 
 exports[`build fixtures build custom-source with jvdx 3`] = `
 "var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
-//# sourceMappingURL=custom-source.esm.js.map
+//# sourceMappingURL=custom-source.esm.mjs.map
 "
 `;
 
@@ -1682,8 +1682,8 @@ Directory tree:
 
 custom-source
   dist
-    custom-src.esm.js
-    custom-src.esm.js.map
+    custom-src.esm.mjs
+    custom-src.esm.mjs.map
     custom-src.js
     custom-src.js.map
     custom-src.umd.js
@@ -1700,9 +1700,9 @@ Bundle(s)
 ./dist/custom-src.js (425 B)
   -> gzip: 224 B
   -> brotli: 175 B
-./dist/custom-src.esm.js (437 B)
-  -> gzip: 231 B
-  -> brotli: 190 B
+./dist/custom-src.esm.mjs (438 B)
+  -> gzip: 232 B
+  -> brotli: 194 B
 ./dist/custom-src.umd.js (599 B)
   -> gzip: 306 B
   -> brotli: 247 B
@@ -1713,7 +1713,7 @@ exports[`build fixtures build custom-source-with-cwd with jvdx 2`] = `6`;
 
 exports[`build fixtures build custom-source-with-cwd with jvdx 3`] = `
 "var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
-//# sourceMappingURL=custom-src.esm.js.map
+//# sourceMappingURL=custom-src.esm.mjs.map
 "
 `;
 
@@ -1736,8 +1736,8 @@ Directory tree:
 
 default-named
   dist
-    default-named.esm.js
-    default-named.esm.js.map
+    default-named.esm.mjs
+    default-named.esm.mjs.map
     default-named.js
     default-named.js.map
     default-named.umd.js
@@ -1753,9 +1753,9 @@ Bundle(s)
 ./dist/default-named.js (87 B)
   -> gzip: 97 B
   -> brotli: 83 B
-./dist/default-named.esm.js (100 B)
-  -> gzip: 112 B
-  -> brotli: 86 B
+./dist/default-named.esm.mjs (101 B)
+  -> gzip: 113 B
+  -> brotli: 104 B
 ./dist/default-named.umd.js (267 B)
   -> gzip: 201 B
   -> brotli: 158 B
@@ -1766,7 +1766,7 @@ exports[`build fixtures build default-named with jvdx 2`] = `6`;
 
 exports[`build fixtures build default-named with jvdx 3`] = `
 "var a=42;function t(){}export{t as default,a as foo};
-//# sourceMappingURL=default-named.esm.js.map
+//# sourceMappingURL=default-named.esm.mjs.map
 "
 `;
 
@@ -1789,7 +1789,7 @@ Directory tree:
 
 define
   dist
-    define.esm.js
+    define.esm.mjs
     define.js
     define.umd.js
   index.js
@@ -1802,7 +1802,7 @@ Bundle(s)
 ./dist/define.js (35 B)
   -> gzip: 55 B
   -> brotli: 37 B
-./dist/define.esm.js (35 B)
+./dist/define.esm.mjs (35 B)
   -> gzip: 55 B
   -> brotli: 37 B
 ./dist/define.umd.js (114 B)
@@ -1835,7 +1835,7 @@ Directory tree:
 
 define-expression
   dist
-    define-expression.esm.js
+    define-expression.esm.mjs
   index.js
   package.json
 
@@ -1843,7 +1843,7 @@ define-expression
 Built in 0s
 
 Bundle(s)
-./dist/define-expression.esm.js (36 B)
+./dist/define-expression.esm.mjs (36 B)
   -> gzip: 56 B
   -> brotli: 40 B
 "
@@ -1863,8 +1863,8 @@ Directory tree:
 
 esnext-ts
   dist
-    esnext-ts.esm.js
-    esnext-ts.esm.js.map
+    esnext-ts.esm.mjs
+    esnext-ts.esm.mjs.map
     esnext-ts.js
     esnext-ts.js.map
     esnext-ts.umd.js
@@ -1883,9 +1883,9 @@ Bundle(s)
 ./dist/esnext-ts.js (3025 B)
   -> gzip: 1195 B
   -> brotli: 1076 B
-./dist/esnext-ts.esm.js (3033 B)
-  -> gzip: 1202 B
-  -> brotli: 1084 B
+./dist/esnext-ts.esm.mjs (3034 B)
+  -> gzip: 1203 B
+  -> brotli: 1086 B
 ./dist/esnext-ts.umd.js (3198 B)
   -> gzip: 1257 B
   -> brotli: 1134 B
@@ -1896,7 +1896,7 @@ exports[`build fixtures build esnext-ts with jvdx 2`] = `7`;
 
 exports[`build fixtures build esnext-ts with jvdx 3`] = `
 "function n(t){function r(n){if(Object(n)!==n)return Promise.reject(new TypeError(n+" is not an object."));var t=n.done;return Promise.resolve(n.value).then(function(n){return{value:n,done:t}})}return n=function(n){this.s=n,this.n=n.next},n.prototype={s:null,n:null,next:function(){return r(this.n.apply(this.s,arguments))},return:function(n){var t=this.s.return;return void 0===t?Promise.resolve({value:n,done:!0}):r(t.apply(this.s,arguments))},throw:function(n){var t=this.s.return;return void 0===t?Promise.reject(n):r(t.apply(this.s,arguments))}},new n(t)}function t(n,r,i){if(!n.s){if(i instanceof e){if(!i.s)return void(i.o=t.bind(null,n,r));1&r&&(r=i.s),i=i.v}if(i&&i.then)return void i.then(t.bind(null,n,r),t.bind(null,n,2));n.s=r,n.v=i;var o=n.o;o&&o(n)}}var r=function(){try{var r,u,f,c=[],h=!1,s=!1,a=o(function(){return function(o,f){try{var s=function(){r=function(t){var r,e,i,o=2;for("undefined"!=typeof Symbol&&(e=Symbol.asyncIterator,i=Symbol.iterator);o--;){if(e&&null!=(r=t[e]))return r.call(t);if(i&&null!=(r=t[i]))return new n(r.call(t));e="@@asyncIterator",i="@@iterator"}throw new TypeError("Object is not async iterable")}([1,2]);var o=function(n,r,o){for(var u;;){var f=n();if(i(f)&&(f=f.v),!f)return c;if(f.then){u=0;break}var c=o();if(c&&c.then){if(!i(c)){u=1;break}c=c.s}if(r){var h=r();if(h&&h.then&&!i(h)){u=2;break}}}var s=new e,a=t.bind(null,s,2);return(0===u?f.then(l):1===u?c.then(v):h.then(d)).then(void 0,a),s;function v(e){c=e;do{if(r&&(h=r())&&h.then&&!i(h))return void h.then(d).then(void 0,a);if(!(f=n())||i(f)&&!f.v)return void t(s,1,c);if(f.then)return void f.then(l).then(void 0,a);i(c=o())&&(c=c.v)}while(!c||!c.then);c.then(v).then(void 0,a)}function l(n){n?(c=o())&&c.then?c.then(v).then(void 0,a):v(c):t(s,1,c)}function d(){(f=n())?f.then?f.then(l).then(void 0,a):l(f):t(s,1,c)}}(function(){return Promise.resolve(r.next()).then(function(n){return h=!(u=n).done})},function(){return!!(h=!1)},function(){c.push(u.value)});if(o&&o.then)return o.then(function(){})}()}catch(n){return f(n)}return s&&s.then?s.then(void 0,f):s}(0,function(n){s=!0,f=n})},function(n,t){function e(r){if(n)throw t;return t}var i=o(function(){var n=function(){if(h&&null!=r.return)return Promise.resolve(r.return()).then(function(){})}();if(n&&n.then)return n.then(function(){})},function(n,t){if(s)throw f;if(n)throw t;return t});return i&&i.then?i.then(e):e()});return Promise.resolve(a&&a.then?a.then(function(n){return c}):c)}catch(n){return Promise.reject(n)}};const e=function(){function n(){}return n.prototype.then=function(r,e){const i=new n,o=this.s;if(o){const n=1&o?r:e;if(n){try{t(i,1,n(this.v))}catch(n){t(i,2,n)}return i}return this}return this.o=function(n){try{const o=n.v;1&n.s?t(i,1,r?r(o):o):e?t(i,1,e(o)):t(i,2,o)}catch(n){t(i,2,n)}},i},n}();function i(n){return n instanceof e&&1&n.s}function o(n,t){try{var r=n()}catch(n){return t(!0,n)}return r&&r.then?r.then(t.bind(null,!1),t.bind(null,!0)):t(!1,r)}r().then(console.log);export{r as default};
-//# sourceMappingURL=esnext-ts.esm.js.map
+//# sourceMappingURL=esnext-ts.esm.mjs.map
 "
 `;
 
@@ -1924,8 +1924,8 @@ Directory tree:
 
 generate-types
   dist
-    generate-types.esm.js
-    generate-types.esm.js.map
+    generate-types.esm.mjs
+    generate-types.esm.mjs.map
     generate-types.js
     generate-types.js.map
     generate-types.umd.js
@@ -1942,9 +1942,9 @@ Bundle(s)
 ./dist/generate-types.js (78 B)
   -> gzip: 98 B
   -> brotli: 77 B
-./dist/generate-types.esm.js (88 B)
-  -> gzip: 106 B
-  -> brotli: 77 B
+./dist/generate-types.esm.mjs (89 B)
+  -> gzip: 107 B
+  -> brotli: 78 B
 ./dist/generate-types.umd.js (265 B)
   -> gzip: 203 B
   -> brotli: 158 B
@@ -1955,7 +1955,7 @@ exports[`build fixtures build generate-types with jvdx 2`] = `6`;
 
 exports[`build fixtures build generate-types with jvdx 3`] = `
 "function n(){return 42}export{n as foo};
-//# sourceMappingURL=generate-types.esm.js.map
+//# sourceMappingURL=generate-types.esm.mjs.map
 "
 `;
 
@@ -1978,8 +1978,8 @@ Directory tree:
 
 generate-types-from-pkg-json
   dist
-    generate-types-from-pkg-json.esm.js
-    generate-types-from-pkg-json.esm.js.map
+    generate-types-from-pkg-json.esm.mjs
+    generate-types-from-pkg-json.esm.mjs.map
     generate-types-from-pkg-json.js
     generate-types-from-pkg-json.js.map
     generate-types-from-pkg-json.umd.js
@@ -1996,8 +1996,8 @@ Bundle(s)
 ./dist/generate-types-from-pkg-json.js (92 B)
   -> gzip: 110 B
   -> brotli: 74 B
-./dist/generate-types-from-pkg-json.esm.js (102 B)
-  -> gzip: 118 B
+./dist/generate-types-from-pkg-json.esm.mjs (103 B)
+  -> gzip: 119 B
   -> brotli: 86 B
 ./dist/generate-types-from-pkg-json.umd.js (290 B)
   -> gzip: 226 B
@@ -2009,7 +2009,7 @@ exports[`build fixtures build generate-types-from-pkg-json with jvdx 2`] = `6`;
 
 exports[`build fixtures build generate-types-from-pkg-json with jvdx 3`] = `
 "function n(){return 42}export{n as foo};
-//# sourceMappingURL=generate-types-from-pkg-json.esm.js.map
+//# sourceMappingURL=generate-types-from-pkg-json.esm.mjs.map
 "
 `;
 
@@ -2032,7 +2032,7 @@ Directory tree:
 
 inline-source-map
   dist
-    inline-source-map.esm.js
+    inline-source-map.esm.mjs
     inline-source-map.js
     inline-source-map.umd.js
   package.json
@@ -2047,9 +2047,9 @@ Bundle(s)
 ./dist/inline-source-map.js (1603 B)
   -> gzip: 922 B
   -> brotli: 849 B
-./dist/inline-source-map.esm.js (1635 B)
-  -> gzip: 946 B
-  -> brotli: 878 B
+./dist/inline-source-map.esm.mjs (1635 B)
+  -> gzip: 944 B
+  -> brotli: 880 B
 ./dist/inline-source-map.umd.js (1783 B)
   -> gzip: 1011 B
   -> brotli: 920 B
@@ -2060,7 +2060,7 @@ exports[`build fixtures build inline-source-map with jvdx 2`] = `3`;
 
 exports[`build fixtures build inline-source-map with jvdx 3`] = `
 "var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5saW5lLXNvdXJjZS1tYXAuZXNtLmpzIiwic291cmNlcyI6WyIuLi9zcmMvdHdvLmpzIiwiLi4vc3JjL2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCBhc3luYyBmdW5jdGlvbiB0d28oLi4uYXJncykge1xuXHRyZXR1cm4gYXJncy5yZWR1Y2UoKHRvdGFsLCB2YWx1ZSkgPT4gdG90YWwgKyB2YWx1ZSwgMCk7XG59XG4iLCJpbXBvcnQgeyB0d28gfSBmcm9tICcuL3R3byc7XG5cbmV4cG9ydCBkZWZhdWx0IGFzeW5jIGZ1bmN0aW9uICguLi5hcmdzKSB7XG5cdHJldHVybiBbYXdhaXQgdHdvKC4uLmFyZ3MpLCBhd2FpdCB0d28oLi4uYXJncyldO1xufVxuIl0sIm5hbWVzIjpbInR3byIsIlByb21pc2UiLCJyZXNvbHZlIiwic2xpY2UiLCJjYWxsIiwiX2FyZ3VtZW50czIiLCJyZWR1Y2UiLCJ0b3RhbCIsInZhbHVlIiwiZSIsInJlamVjdCIsImluZGV4IiwiYXJncyIsImFwcGx5IiwidGhlbiIsIl90d28iLCJfdHdvMiJdLCJtYXBwaW5ncyI6IkFBQXNCQSxJQUFBQSxhQUFHLG9CQUN4QixPQUFPQyxRQUFBQyxRQUFBLEdBQUFDLE1BQUFDLEtBQUFDLEdBQUtDLE9BQU8sU0FBQ0MsRUFBT0MsVUFBZUQsRUFBR0MsQ0FBSyxFQUFFLEdBQ3BELENBQUEsTUFBQUMsR0FBQSxPQUFBUixRQUFBUyxPQUFBRCxFQUFBLENBQUEsRUNBREUsaUJBQWtDQyxJQUFBQSxFQUFBQSxVQUFBQSwwQ0FDbkJaLEVBQUdhLFdBQUEsRUFBSUQsSUFBS0UsS0FBQSxTQUFBQyxHQUFBLE9BQUFkLFFBQUFDLFFBQVFGLEVBQU9ZLFdBQUFBLEVBQUFBLElBQXpDRSxLQUFBLFNBQUFFLEdBQUEsTUFBTyxDQUF5Q0QsRUFBQUMsRUFBQSxFQUFBLEVBQ2hELENBQUEsTUFBQVAsR0FBQSxPQUFBUixRQUFBUyxPQUFBRCxFQUFBLENBQUEifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5saW5lLXNvdXJjZS1tYXAuZXNtLm1qcyIsInNvdXJjZXMiOlsiLi4vc3JjL3R3by5qcyIsIi4uL3NyYy9pbmRleC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgYXN5bmMgZnVuY3Rpb24gdHdvKC4uLmFyZ3MpIHtcblx0cmV0dXJuIGFyZ3MucmVkdWNlKCh0b3RhbCwgdmFsdWUpID0+IHRvdGFsICsgdmFsdWUsIDApO1xufVxuIiwiaW1wb3J0IHsgdHdvIH0gZnJvbSAnLi90d28nO1xuXG5leHBvcnQgZGVmYXVsdCBhc3luYyBmdW5jdGlvbiAoLi4uYXJncykge1xuXHRyZXR1cm4gW2F3YWl0IHR3byguLi5hcmdzKSwgYXdhaXQgdHdvKC4uLmFyZ3MpXTtcbn1cbiJdLCJuYW1lcyI6WyJ0d28iLCJQcm9taXNlIiwicmVzb2x2ZSIsInNsaWNlIiwiY2FsbCIsIl9hcmd1bWVudHMyIiwicmVkdWNlIiwidG90YWwiLCJ2YWx1ZSIsImUiLCJyZWplY3QiLCJpbmRleCIsImFyZ3MiLCJhcHBseSIsInRoZW4iLCJfdHdvIiwiX3R3bzIiXSwibWFwcGluZ3MiOiJBQUFzQkEsSUFBQUEsYUFBRyxvQkFDeEIsT0FBT0MsUUFBQUMsUUFBQSxHQUFBQyxNQUFBQyxLQUFBQyxHQUFLQyxPQUFPLFNBQUNDLEVBQU9DLFVBQWVELEVBQUdDLENBQUssRUFBRSxHQUNwRCxDQUFBLE1BQUFDLEdBQUEsT0FBQVIsUUFBQVMsT0FBQUQsRUFBQSxDQUFBLEVDQURFLGlCQUFrQ0MsSUFBQUEsRUFBQUEsVUFBQUEsMENBQ25CWixFQUFHYSxXQUFBLEVBQUlELElBQUtFLEtBQUEsU0FBQUMsR0FBQSxPQUFBZCxRQUFBQyxRQUFRRixFQUFPWSxXQUFBQSxFQUFBQSxJQUF6Q0UsS0FBQSxTQUFBRSxHQUFBLE1BQU8sQ0FBeUNELEVBQUFDLEVBQUEsRUFBQSxFQUNoRCxDQUFBLE1BQUFQLEdBQUEsT0FBQVIsUUFBQVMsT0FBQUQsRUFBQSxDQUFBIn0=
 "
 `;
 
@@ -2083,8 +2083,8 @@ Directory tree:
 
 jsx
   dist
-    jsx.esm.js
-    jsx.esm.js.map
+    jsx.esm.mjs
+    jsx.esm.mjs.map
     jsx.js
     jsx.js.map
     jsx.umd.js
@@ -2099,9 +2099,9 @@ Bundle(s)
 ./dist/jsx.js (336 B)
   -> gzip: 235 B
   -> brotli: 209 B
-./dist/jsx.esm.js (351 B)
-  -> gzip: 251 B
-  -> brotli: 211 B
+./dist/jsx.esm.mjs (352 B)
+  -> gzip: 252 B
+  -> brotli: 212 B
 ./dist/jsx.umd.js (532 B)
   -> gzip: 321 B
   -> brotli: 266 B
@@ -2112,7 +2112,7 @@ exports[`build fixtures build jsx with jvdx 2`] = `6`;
 
 exports[`build fixtures build jsx with jvdx 3`] = `
 "import{jsxs as r,jsx as e,Fragment as n}from"react/jsx-runtime";var t=function(){function t(){}return t.prototype.render=function(){return r("div",{id:"app",children:[e("h1",{children:"Hello, World!"}),e("p",{children:"A JSX demo."}),e(n,{children:e("p",{children:"Test fragment"})})]})},t}();export{t as default};
-//# sourceMappingURL=jsx.esm.js.map
+//# sourceMappingURL=jsx.esm.mjs.map
 "
 `;
 
@@ -2135,8 +2135,8 @@ Directory tree:
 
 macro
   dist
-    macro-lib.esm.js
-    macro-lib.esm.js.map
+    macro-lib.esm.mjs
+    macro-lib.esm.mjs.map
     macro-lib.js
     macro-lib.js.map
     macro-lib.umd.js
@@ -2153,9 +2153,9 @@ Bundle(s)
 ./dist/macro-lib.js (67 B)
   -> gzip: 84 B
   -> brotli: 71 B
-./dist/macro-lib.esm.js (83 B)
-  -> gzip: 100 B
-  -> brotli: 87 B
+./dist/macro-lib.esm.mjs (84 B)
+  -> gzip: 101 B
+  -> brotli: 80 B
 ./dist/macro-lib.umd.js (255 B)
   -> gzip: 187 B
   -> brotli: 142 B
@@ -2166,7 +2166,7 @@ exports[`build fixtures build macro with jvdx 2`] = `6`;
 
 exports[`build fixtures build macro with jvdx 3`] = `
 "var a="name-macro";export{a as default};
-//# sourceMappingURL=macro-lib.esm.js.map
+//# sourceMappingURL=macro-lib.esm.mjs.map
 "
 `;
 
@@ -2189,8 +2189,8 @@ Directory tree:
 
 mangle-json-file
   dist
-    mangle-json-file.esm.js
-    mangle-json-file.esm.js.map
+    mangle-json-file.esm.mjs
+    mangle-json-file.esm.mjs.map
     mangle-json-file.js
     mangle-json-file.js.map
     mangle-json-file.umd.js
@@ -2208,9 +2208,9 @@ Bundle(s)
 ./dist/mangle-json-file.js (146 B)
   -> gzip: 143 B
   -> brotli: 122 B
-./dist/mangle-json-file.esm.js (157 B)
-  -> gzip: 150 B
-  -> brotli: 118 B
+./dist/mangle-json-file.esm.mjs (158 B)
+  -> gzip: 151 B
+  -> brotli: 124 B
 ./dist/mangle-json-file.umd.js (325 B)
   -> gzip: 235 B
   -> brotli: 187 B
@@ -2221,7 +2221,7 @@ exports[`build fixtures build mangle-json-file with jvdx 2`] = `6`;
 
 exports[`build fixtures build mangle-json-file with jvdx 3`] = `
 "var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export{r as default};
-//# sourceMappingURL=mangle-json-file.esm.js.map
+//# sourceMappingURL=mangle-json-file.esm.mjs.map
 "
 `;
 
@@ -2244,8 +2244,8 @@ Directory tree:
 
 minify-config
   dist
-    minify-config.esm.js
-    minify-config.esm.js.map
+    minify-config.esm.mjs
+    minify-config.esm.mjs.map
     minify-config.js
     minify-config.js.map
     minify-config.umd.js
@@ -2262,9 +2262,9 @@ Bundle(s)
 ./dist/minify-config.js (137 B)
   -> gzip: 137 B
   -> brotli: 113 B
-./dist/minify-config.esm.js (148 B)
-  -> gzip: 145 B
-  -> brotli: 108 B
+./dist/minify-config.esm.mjs (149 B)
+  -> gzip: 146 B
+  -> brotli: 110 B
 ./dist/minify-config.umd.js (314 B)
   -> gzip: 226 B
   -> brotli: 185 B
@@ -2275,7 +2275,7 @@ exports[`build fixtures build minify-config with jvdx 2`] = `6`;
 
 exports[`build fixtures build minify-config with jvdx 3`] = `
 "var o={prop1:1,o:2};function r(){return console.log(o.prop1),console.log(o.o),o}export{r as default};
-//# sourceMappingURL=minify-config.esm.js.map
+//# sourceMappingURL=minify-config.esm.mjs.map
 "
 `;
 
@@ -2298,8 +2298,8 @@ Directory tree:
 
 minify-config-boolean
   dist
-    minify-config-boolean.esm.js
-    minify-config-boolean.esm.js.map
+    minify-config-boolean.esm.mjs
+    minify-config-boolean.esm.mjs.map
     minify-config-boolean.js
     minify-config-boolean.js.map
     minify-config-boolean.umd.js
@@ -2316,9 +2316,9 @@ Bundle(s)
 ./dist/minify-config-boolean.js (163 B)
   -> gzip: 152 B
   -> brotli: 137 B
-./dist/minify-config-boolean.esm.js (182 B)
-  -> gzip: 163 B
-  -> brotli: 127 B
+./dist/minify-config-boolean.esm.mjs (183 B)
+  -> gzip: 164 B
+  -> brotli: 130 B
 ./dist/minify-config-boolean.umd.js (381 B)
   -> gzip: 254 B
   -> brotli: 193 B
@@ -2329,7 +2329,7 @@ exports[`build fixtures build minify-config-boolean with jvdx 2`] = `6`;
 
 exports[`build fixtures build minify-config-boolean with jvdx 3`] = `
 "var two={prop1:1,_prop2:2};function index(){return console.log(two.prop1),console.log(two._prop2),two}export{index as default};
-//# sourceMappingURL=minify-config-boolean.esm.js.map
+//# sourceMappingURL=minify-config-boolean.esm.mjs.map
 "
 `;
 
@@ -2352,8 +2352,8 @@ Directory tree:
 
 minify-path-config
   dist
-    minify-path-config.esm.js
-    minify-path-config.esm.js.map
+    minify-path-config.esm.mjs
+    minify-path-config.esm.mjs.map
     minify-path-config.js
     minify-path-config.js.map
     minify-path-config.umd.js
@@ -2371,9 +2371,9 @@ Bundle(s)
 ./dist/minify-path-config.js (148 B)
   -> gzip: 145 B
   -> brotli: 114 B
-./dist/minify-path-config.esm.js (159 B)
-  -> gzip: 153 B
-  -> brotli: 117 B
+./dist/minify-path-config.esm.mjs (160 B)
+  -> gzip: 154 B
+  -> brotli: 114 B
 ./dist/minify-path-config.umd.js (329 B)
   -> gzip: 237 B
   -> brotli: 192 B
@@ -2384,7 +2384,7 @@ exports[`build fixtures build minify-path-config with jvdx 2`] = `6`;
 
 exports[`build fixtures build minify-path-config with jvdx 3`] = `
 "var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export{r as default};
-//# sourceMappingURL=minify-path-config.esm.js.map
+//# sourceMappingURL=minify-path-config.esm.mjs.map
 "
 `;
 
@@ -2407,8 +2407,8 @@ Directory tree:
 
 minify-path-parent-dir
   dist
-    minify-path-parent-dir.esm.js
-    minify-path-parent-dir.esm.js.map
+    minify-path-parent-dir.esm.mjs
+    minify-path-parent-dir.esm.mjs.map
     minify-path-parent-dir.js
     minify-path-parent-dir.js.map
     minify-path-parent-dir.umd.js
@@ -2424,9 +2424,9 @@ Bundle(s)
 ./dist/minify-path-parent-dir.js (152 B)
   -> gzip: 149 B
   -> brotli: 125 B
-./dist/minify-path-parent-dir.esm.js (163 B)
-  -> gzip: 155 B
-  -> brotli: 120 B
+./dist/minify-path-parent-dir.esm.mjs (164 B)
+  -> gzip: 156 B
+  -> brotli: 117 B
 ./dist/minify-path-parent-dir.umd.js (336 B)
   -> gzip: 242 B
   -> brotli: 191 B
@@ -2437,7 +2437,7 @@ exports[`build fixtures build minify-path-parent-dir-with-cwd with jvdx 2`] = `6
 
 exports[`build fixtures build minify-path-parent-dir-with-cwd with jvdx 3`] = `
 "var o={prop1:1,__p2:2};function r(){return console.log(o.prop1),console.log(o.__p2),o}export{r as default};
-//# sourceMappingURL=minify-path-parent-dir.esm.js.map
+//# sourceMappingURL=minify-path-parent-dir.esm.mjs.map
 "
 `;
 
@@ -2492,8 +2492,8 @@ Directory tree:
 
 modern-generators
   dist
-    modern-generators.esm.js
-    modern-generators.esm.js.map
+    modern-generators.esm.mjs
+    modern-generators.esm.mjs.map
     modern-generators.js
     modern-generators.js.map
     modern-generators.modern.js
@@ -2515,9 +2515,9 @@ Bundle(s)
 ./dist/modern-generators.modern.js (180 B)
   -> gzip: 159 B
   -> brotli: 122 B
-./dist/modern-generators.esm.js (6.96 kB)
+./dist/modern-generators.esm.mjs (6.96 kB)
   -> gzip: 2563 B
-  -> brotli: 2330 B
+  -> brotli: 2328 B
 ./dist/modern-generators.umd.js (7.13 kB)
   -> gzip: 2611 B
   -> brotli: 2366 B
@@ -2528,7 +2528,7 @@ exports[`build fixtures build modern-generators with jvdx 2`] = `8`;
 
 exports[`build fixtures build modern-generators with jvdx 3`] = `
 "function t(){t=function(){return r};var r={},e=Object.prototype,n=e.hasOwnProperty,o=Object.defineProperty||function(t,r,e){t[r]=e.value},i="function"==typeof Symbol?Symbol:{},a=i.iterator||"@@iterator",c=i.asyncIterator||"@@asyncIterator",u=i.toStringTag||"@@toStringTag";function f(t,r,e){return Object.defineProperty(t,r,{value:e,enumerable:!0,configurable:!0,writable:!0}),t[r]}try{f({},"")}catch(t){f=function(t,r,e){return t[r]=e}}function h(t,r,e,n){var i=Object.create((r&&r.prototype instanceof p?r:p).prototype),a=new O(n||[]);return o(i,"_invoke",{value:b(t,e,a)}),i}function l(t,r,e){try{return{type:"normal",arg:t.call(r,e)}}catch(t){return{type:"throw",arg:t}}}r.wrap=h;var s={};function p(){}function v(){}function y(){}var d={};f(d,a,function(){return this});var g=Object.getPrototypeOf,m=g&&g(g(k([])));m&&m!==e&&n.call(m,a)&&(d=m);var w=y.prototype=p.prototype=Object.create(d);function x(t){["next","throw","return"].forEach(function(r){f(t,r,function(t){return this._invoke(r,t)})})}function L(t,r){function e(o,i,a,c){var u=l(t[o],t,i);if("throw"!==u.type){var f=u.arg,h=f.value;return h&&"object"==typeof h&&n.call(h,"__await")?r.resolve(h.__await).then(function(t){e("next",t,a,c)},function(t){e("throw",t,a,c)}):r.resolve(h).then(function(t){f.value=t,a(f)},function(t){return e("throw",t,a,c)})}c(u.arg)}var i;o(this,"_invoke",{value:function(t,n){function o(){return new r(function(r,o){e(t,n,r,o)})}return i=i?i.then(o,o):o()}})}function b(t,r,e){var n="suspendedStart";return function(o,i){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw i;return{value:void 0,done:!0}}for(e.method=o,e.arg=i;;){var a=e.delegate;if(a){var c=E(a,e);if(c){if(c===s)continue;return c}}if("next"===e.method)e.sent=e._sent=e.arg;else if("throw"===e.method){if("suspendedStart"===n)throw n="completed",e.arg;e.dispatchException(e.arg)}else"return"===e.method&&e.abrupt("return",e.arg);n="executing";var u=l(t,r,e);if("normal"===u.type){if(n=e.done?"completed":"suspendedYield",u.arg===s)continue;return{value:u.arg,done:e.done}}"throw"===u.type&&(n="completed",e.method="throw",e.arg=u.arg)}}}function E(t,r){var e=t.iterator[r.method];if(void 0===e){if(r.delegate=null,"throw"===r.method){if(t.iterator.return&&(r.method="return",r.arg=void 0,E(t,r),"throw"===r.method))return s;r.method="throw",r.arg=new TypeError("The iterator does not provide a 'throw' method")}return s}var n=l(e,t.iterator,r.arg);if("throw"===n.type)return r.method="throw",r.arg=n.arg,r.delegate=null,s;var o=n.arg;return o?o.done?(r[t.resultName]=o.value,r.next=t.nextLoc,"return"!==r.method&&(r.method="next",r.arg=void 0),r.delegate=null,s):o:(r.method="throw",r.arg=new TypeError("iterator result is not an object"),r.delegate=null,s)}function _(t){var r={tryLoc:t[0]};1 in t&&(r.catchLoc=t[1]),2 in t&&(r.finallyLoc=t[2],r.afterLoc=t[3]),this.tryEntries.push(r)}function j(t){var r=t.completion||{};r.type="normal",delete r.arg,t.completion=r}function O(t){this.tryEntries=[{tryLoc:"root"}],t.forEach(_,this),this.reset(!0)}function k(t){if(t){var r=t[a];if(r)return r.call(t);if("function"==typeof t.next)return t;if(!isNaN(t.length)){var e=-1,o=function r(){for(;++e<t.length;)if(n.call(t,e))return r.value=t[e],r.done=!1,r;return r.value=void 0,r.done=!0,r};return o.next=o}}return{next:P}}function P(){return{value:void 0,done:!0}}return v.prototype=y,o(w,"constructor",{value:y,configurable:!0}),o(y,"constructor",{value:v,configurable:!0}),v.displayName=f(y,u,"GeneratorFunction"),r.isGeneratorFunction=function(t){var r="function"==typeof t&&t.constructor;return!!r&&(r===v||"GeneratorFunction"===(r.displayName||r.name))},r.mark=function(t){return Object.setPrototypeOf?Object.setPrototypeOf(t,y):(t.__proto__=y,f(t,u,"GeneratorFunction")),t.prototype=Object.create(w),t},r.awrap=function(t){return{__await:t}},x(L.prototype),f(L.prototype,c,function(){return this}),r.AsyncIterator=L,r.async=function(t,e,n,o,i){void 0===i&&(i=Promise);var a=new L(h(t,e,n,o),i);return r.isGeneratorFunction(e)?a:a.next().then(function(t){return t.done?t.value:a.next()})},x(w),f(w,u,"Generator"),f(w,a,function(){return this}),f(w,"toString",function(){return"[object Generator]"}),r.keys=function(t){var r=Object(t),e=[];for(var n in r)e.push(n);return e.reverse(),function t(){for(;e.length;){var n=e.pop();if(n in r)return t.value=n,t.done=!1,t}return t.done=!0,t}},r.values=k,O.prototype={constructor:O,reset:function(t){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(j),!t)for(var r in this)"t"===r.charAt(0)&&n.call(this,r)&&!isNaN(+r.slice(1))&&(this[r]=void 0)},stop:function(){this.done=!0;var t=this.tryEntries[0].completion;if("throw"===t.type)throw t.arg;return this.rval},dispatchException:function(t){if(this.done)throw t;var r=this;function e(e,n){return a.type="throw",a.arg=t,r.next=e,n&&(r.method="next",r.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o],a=i.completion;if("root"===i.tryLoc)return e("end");if(i.tryLoc<=this.prev){var c=n.call(i,"catchLoc"),u=n.call(i,"finallyLoc");if(c&&u){if(this.prev<i.catchLoc)return e(i.catchLoc,!0);if(this.prev<i.finallyLoc)return e(i.finallyLoc)}else if(c){if(this.prev<i.catchLoc)return e(i.catchLoc,!0)}else{if(!u)throw new Error("try statement without catch or finally");if(this.prev<i.finallyLoc)return e(i.finallyLoc)}}}},abrupt:function(t,r){for(var e=this.tryEntries.length-1;e>=0;--e){var o=this.tryEntries[e];if(o.tryLoc<=this.prev&&n.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var i=o;break}}i&&("break"===t||"continue"===t)&&i.tryLoc<=r&&r<=i.finallyLoc&&(i=null);var a=i?i.completion:{};return a.type=t,a.arg=r,i?(this.method="next",this.next=i.finallyLoc,s):this.complete(a)},complete:function(t,r){if("throw"===t.type)throw t.arg;return"break"===t.type||"continue"===t.type?this.next=t.arg:"return"===t.type?(this.rval=this.arg=t.arg,this.method="return",this.next="end"):"normal"===t.type&&r&&(this.next=r),s},finish:function(t){for(var r=this.tryEntries.length-1;r>=0;--r){var e=this.tryEntries[r];if(e.finallyLoc===t)return this.complete(e.completion,e.afterLoc),j(e),s}},catch:function(t){for(var r=this.tryEntries.length-1;r>=0;--r){var e=this.tryEntries[r];if(e.tryLoc===t){var n=e.completion;if("throw"===n.type){var o=n.arg;j(e)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(t,r,e){return this.delegate={iterator:k(t),resultName:r,nextLoc:e},"next"===this.method&&(this.arg=void 0),s}},r}var r=t().mark(e);function e(){var e;return t().wrap(function(t){for(;;)switch(t.prev=t.next){case 0:e=0;case 1:return t.next=4,e++;case 4:t.next=1;break;case 6:case"end":return t.stop()}},r)}var n=function(){try{var t=e();return Promise.resolve([t.next().value,t.next().value])}catch(t){return Promise.reject(t)}};export{n as default};
-//# sourceMappingURL=modern-generators.esm.js.map
+//# sourceMappingURL=modern-generators.esm.mjs.map
 "
 `;
 
@@ -2557,8 +2557,8 @@ Directory tree:
 
 name-custom-amd
   dist
-    name-custom-amd.esm.js
-    name-custom-amd.esm.js.map
+    name-custom-amd.esm.mjs
+    name-custom-amd.esm.mjs.map
     name-custom-amd.js
     name-custom-amd.js.map
     name-custom-amd.umd.js
@@ -2575,9 +2575,9 @@ Bundle(s)
 ./dist/name-custom-amd.js (430 B)
   -> gzip: 226 B
   -> brotli: 178 B
-./dist/name-custom-amd.esm.js (442 B)
+./dist/name-custom-amd.esm.mjs (443 B)
   -> gzip: 235 B
-  -> brotli: 192 B
+  -> brotli: 196 B
 ./dist/name-custom-amd.umd.js (608 B)
   -> gzip: 312 B
   -> brotli: 248 B
@@ -2588,7 +2588,7 @@ exports[`build fixtures build name-custom-amd with jvdx 2`] = `6`;
 
 exports[`build fixtures build name-custom-amd with jvdx 3`] = `
 "var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
-//# sourceMappingURL=name-custom-amd.esm.js.map
+//# sourceMappingURL=name-custom-amd.esm.mjs.map
 "
 `;
 
@@ -2611,8 +2611,8 @@ Directory tree:
 
 name-custom-cli
   dist
-    name-custom.esm.js
-    name-custom.esm.js.map
+    name-custom.esm.mjs
+    name-custom.esm.mjs.map
     name-custom.js
     name-custom.js.map
     name-custom.umd.js
@@ -2629,9 +2629,9 @@ Bundle(s)
 ./dist/name-custom.js (426 B)
   -> gzip: 224 B
   -> brotli: 174 B
-./dist/name-custom.esm.js (438 B)
+./dist/name-custom.esm.mjs (439 B)
   -> gzip: 232 B
-  -> brotli: 192 B
+  -> brotli: 186 B
 ./dist/name-custom.umd.js (604 B)
   -> gzip: 311 B
   -> brotli: 245 B
@@ -2642,7 +2642,7 @@ exports[`build fixtures build name-custom-cli with jvdx 2`] = `6`;
 
 exports[`build fixtures build name-custom-cli with jvdx 3`] = `
 "var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
-//# sourceMappingURL=name-custom.esm.js.map
+//# sourceMappingURL=name-custom.esm.mjs.map
 "
 `;
 
@@ -2665,8 +2665,8 @@ Directory tree:
 
 no-pkg
   dist
-    no-pkg.esm.js
-    no-pkg.esm.js.map
+    no-pkg.esm.mjs
+    no-pkg.esm.mjs.map
     no-pkg.js
     no-pkg.js.map
     no-pkg.umd.js
@@ -2682,9 +2682,9 @@ Bundle(s)
 ./dist/no-pkg.js (421 B)
   -> gzip: 222 B
   -> brotli: 178 B
-./dist/no-pkg.esm.js (433 B)
-  -> gzip: 230 B
-  -> brotli: 189 B
+./dist/no-pkg.esm.mjs (434 B)
+  -> gzip: 231 B
+  -> brotli: 194 B
 ./dist/no-pkg.umd.js (591 B)
   -> gzip: 303 B
   -> brotli: 240 B
@@ -2695,7 +2695,7 @@ exports[`build fixtures build no-pkg with jvdx 2`] = `6`;
 
 exports[`build fixtures build no-pkg with jvdx 3`] = `
 "var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
-//# sourceMappingURL=no-pkg.esm.js.map
+//# sourceMappingURL=no-pkg.esm.mjs.map
 "
 `;
 
@@ -2718,8 +2718,8 @@ Directory tree:
 
 no-pkg-name
   dist
-    no-pkg-name.esm.js
-    no-pkg-name.esm.js.map
+    no-pkg-name.esm.mjs
+    no-pkg-name.esm.mjs.map
     no-pkg-name.js
     no-pkg-name.js.map
     no-pkg-name.umd.js
@@ -2736,9 +2736,9 @@ Bundle(s)
 ./dist/no-pkg-name.js (426 B)
   -> gzip: 225 B
   -> brotli: 180 B
-./dist/no-pkg-name.esm.js (438 B)
+./dist/no-pkg-name.esm.mjs (439 B)
   -> gzip: 233 B
-  -> brotli: 191 B
+  -> brotli: 198 B
 ./dist/no-pkg-name.umd.js (600 B)
   -> gzip: 311 B
   -> brotli: 247 B
@@ -2749,7 +2749,7 @@ exports[`build fixtures build no-pkg-name with jvdx 2`] = `6`;
 
 exports[`build fixtures build no-pkg-name with jvdx 3`] = `
 "var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
-//# sourceMappingURL=no-pkg-name.esm.js.map
+//# sourceMappingURL=no-pkg-name.esm.mjs.map
 "
 `;
 
@@ -2773,8 +2773,8 @@ Directory tree:
 optional-chaining-ts
   dist
     index.d.ts
-    optional-chaining-ts.esm.js
-    optional-chaining-ts.esm.js.map
+    optional-chaining-ts.esm.mjs
+    optional-chaining-ts.esm.mjs.map
     optional-chaining-ts.js
     optional-chaining-ts.js.map
     optional-chaining-ts.umd.js
@@ -2792,9 +2792,9 @@ Bundle(s)
 ./dist/optional-chaining-ts.js (147 B)
   -> gzip: 148 B
   -> brotli: 105 B
-./dist/optional-chaining-ts.esm.js (157 B)
-  -> gzip: 153 B
-  -> brotli: 116 B
+./dist/optional-chaining-ts.esm.mjs (158 B)
+  -> gzip: 154 B
+  -> brotli: 119 B
 ./dist/optional-chaining-ts.umd.js (339 B)
   -> gzip: 247 B
   -> brotli: 212 B
@@ -2814,7 +2814,7 @@ exports[`build fixtures build optional-chaining-ts with jvdx 3`] = `
 
 exports[`build fixtures build optional-chaining-ts with jvdx 4`] = `
 "function n(n){var r,i;return null!=(r=null==(i=n.maybeVar)?void 0:i.thing)?r:void 0}export{n as chain};
-//# sourceMappingURL=optional-chaining-ts.esm.js.map
+//# sourceMappingURL=optional-chaining-ts.esm.mjs.map
 "
 `;
 
@@ -2837,8 +2837,8 @@ Directory tree:
 
 parameters-rest-closure
   dist
-    parameters-rest-closure.esm.js
-    parameters-rest-closure.esm.js.map
+    parameters-rest-closure.esm.mjs
+    parameters-rest-closure.esm.mjs.map
     parameters-rest-closure.js
     parameters-rest-closure.js.map
     parameters-rest-closure.umd.js
@@ -2854,9 +2854,9 @@ Bundle(s)
 ./dist/parameters-rest-closure.js (298 B)
   -> gzip: 191 B
   -> brotli: 149 B
-./dist/parameters-rest-closure.esm.js (306 B)
-  -> gzip: 198 B
-  -> brotli: 160 B
+./dist/parameters-rest-closure.esm.mjs (307 B)
+  -> gzip: 202 B
+  -> brotli: 161 B
 ./dist/parameters-rest-closure.umd.js (487 B)
   -> gzip: 283 B
   -> brotli: 226 B
@@ -2867,7 +2867,7 @@ exports[`build fixtures build parameters-rest-closure with jvdx 2`] = `6`;
 
 exports[`build fixtures build parameters-rest-closure with jvdx 3`] = `
 "function n(n){var c=[].slice.call(arguments,1);return function(){n.apply(void 0,c)}}function c(n){var c=arguments;return function(){n.apply(void 0,[].slice.call(c,1))}}export{n as parametersRestWithClosure,c as parametersRestWithInnerArrowFunction};
-//# sourceMappingURL=parameters-rest-closure.esm.js.map
+//# sourceMappingURL=parameters-rest-closure.esm.mjs.map
 "
 `;
 
@@ -2890,8 +2890,8 @@ Directory tree:
 
 pretty
   dist
-    pretty.esm.js
-    pretty.esm.js.map
+    pretty.esm.mjs
+    pretty.esm.mjs.map
     pretty.js
     pretty.js.map
     pretty.umd.js
@@ -2907,9 +2907,9 @@ Bundle(s)
 ./dist/pretty.js (6.82 kB)
   -> gzip: 6.37 kB
   -> brotli: 5.23 kB
-./dist/pretty.esm.js (6.84 kB)
+./dist/pretty.esm.mjs (6.84 kB)
   -> gzip: 6.39 kB
-  -> brotli: 5.22 kB
+  -> brotli: 5.23 kB
 ./dist/pretty.umd.js (7 kB)
   -> gzip: 6.5 kB
   -> brotli: 5.34 kB
@@ -2920,7 +2920,7 @@ exports[`build fixtures build pretty with jvdx 2`] = `6`;
 
 exports[`build fixtures build pretty with jvdx 3`] = `
 "var n="\\n\\nThere is immense joy in just watching - watching all the little creatures in nature. I'll go over the colors one more\\ntime that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow,\\nand Permanent red. If you don't like it - change it. It's your world. Be brave. Sometimes you learn more from your\\nmistakes than you do from your masterpieces.\\n\\nTrees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Now let's put some happy\\nlittle clouds in here. We have no limits to our world. We're only limited by our imagination. The first step to doing\\nanything is to believe you can do it. See it finished in your mind before you ever start. Even trees need a friend. We\\nall need friends. And that's when it becomes fun - you don't have to spend your time thinking about what's happening -\\nyou just let it happen.\\n\\nरिती संपादक बेंगलूर अन्तरराष्ट्रीयकरन शीघ्र भाषा चिदंश उद्योग विस्तरणक्षमता चिदंश एकएस तरहथा। प्रोत्साहित उपेक्ष बिन्दुओ\\nध्येय देने गुजरना ऎसाजीस निर्माण नवंबर लिए। एसेएवं उपलब्धता मुश्किले डाले। बहतर सहायता माध्यम भाषाओ समूह\\n\\n井待品亡写回横提和指生志考結。重特天県偏切運録広詳三人転者数代歳。秀天戦機広八型希金生作事国第。年米教止証車断級弘報安楽\\n銀必約現獲料切。点額講問課覧傷邸出送跡出懲。編米人験由社迷入解公著片法記択昇必崎掲清。摩出元自越食多県実間旅売主注理併間\\n話策。小政退時年福米越給新家入解美露方堀港朝。俊間髪物縦該高報見甲購形州日事。\\n\\n🌸🍂🌃🐧🍘🏧🍮 🌶👢🔗🐥🔼🎮 🐤🍲📆👧🎼🐒 💑🍖📴🐠🍼 🎱🔮🍦💳👹 💫🏮📅🍑📭🎎 🏭💿🏫🔢👚💩 👇🌄🌗🔵💦 🔺🔡🌍🐗🏀📫\\n📻🍵🐰🔜🕧 🌴🌞🕙🎨🎾🔊🏰 🎑🌆🔁🌂 🕐📣📉🌴🕠📢 🎀📖🎋🔱📒💰 🍅🐻🌃🌖. 🎁🕔👎🎷📀📞 🍁🔫🍀🌃📹 💈📂💶👕 🍡📰👛🐻\\n🍖🐽💫📼 🍆🎀💛👫🔹 🎷🕙🌱👸🕁🔝 🍸🔅👿🐡. 🐟🔐🏡🔅👾 🐱💱👺🍶 🎠🔆🎤🏥🌻🗾 👽🎯💈🏣🔊📴💆🏫 🔉🌉🍃🌻 🎅🔌🔻💣 🌸🍎🐀🌇\\n🗻👔📤💤🔶. 🍆👣🕕👦📦👑 🐍🐉🔶🕕 🍲👩🍍🌕📻👒📵 🔣🌋🌟👼 🔏📀🐆🍖🍮 🐁🌘🐻🏥🐡🔶🔘🏭 👡🔫🔗📊📻 🍂💧🌿📥🔚 📹💻🔌💠🌚\\n🐦💴🌎🌞🏤.\\n\\nThere is immense joy in just watching - watching all the little creatures in nature. I'll go over the colors one more\\ntime that we use: Titanium white, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap green, Cad yellow,\\nand Permanent red. If you don't like it - change it. It's your world. Be brave. Sometimes you learn more from your\\nmistakes than you do from your masterpieces. That's why I paint - because I can create the kind of world I want - and I\\ncan make this world as happy as I want it. I was blessed with a very steady hand; and it comes in very handy when you're\\ndoing these little delicate things. We'll paint one happy little tree right here. These things happen automatically. All\\nyou have to do is just let them happen.\\n\\n🐻🍘💀🐪 🕧🎂🕃🍵🏠 💎🌄🐐📘🐄 🍂🏤👊🍖 👆🍂📫👪🐈🕢👓 👯🕞🏉🍚🎆🔠🌵 🎭🎎💵📮📭 🔪💨📢📕 🐔📬👪🏄🐙🗽📤.\\n💛👴💧🎁👗💟👡💎 🎷🕡👮🗾🍷 🎪🍇🍩💰 📫🐗🎄🍍🎃 🎯🌴🐍🔉📰 👼👧🐢🕔🔷📞🍩 🔘👑🌆🌒🔣 🔆👺📴👾 🔝💑💸💒🏡🔸 🔟👞📷🔱👠\\n📵🏠📕🕝🐂👪 💐🎾🕁🗾👊📪. 🍉🏁👰🏡🕔💒🐯 🐟🍡📴🌿👱👢 📵💄🌊🌵🐫🍏 🎎🕠🍍💭💀👖 🎵💘🔗🍖 📧🌘🍅🕚📘🔮 👤🌾👿🐍🎽🌹\\n🎲🎎💅📪🐐🍢📈 🏣🐑👇👼🐄🍔 🍠📧🌊🕁🔛🐩. 🌺📊🍼🐁💼 🔈💬🌱🎑🔊🐙💲👩 🍇👞📎👻🌔 💑🕁🎲💤 🎮📃🕖📖 📻💬🔢💔🐇👬 🔨🌃📈🔞\\n🌒🎈👙🔥🐊 📭👍📢👊📟.\\n\\n出死問民同歴術荘面族上自。窃指写氷名続球投込光試事樹増。作合副者扶実権守安展感意環待質出。告供体企紙勢構込君奪属仕子業戦\\n浮私。長論攻士踊再連公雪地約政近第公。界地島命党浮国沼出問気混心未独院。朝原妙画岡性制領子金次問無浦妥混口時研。道記険健\\n集立根聖間前設集族山要本覧。変注再悩式付療場図験問県家界月止収文。\\n\\nलेकिन उसके संपादक उपलब्ध दिनांक प्रति सम्पर्क प्राधिकरन नाकर मुक्त कलइस वेबजाल वर्तमान समस्याओ देखने भोगोलिक केन्द्रिय\\nकिया खयालात विज्ञान ध्येय गटको साधन चिदंश पासपाई व्याख्या मार्गदर्शन संदेश जिवन प्रतिबध वार्तालाप किके विश्व खरिदने\\nहुआआदी तकनीकी संदेश सारांश असरकारक वार्तालाप चाहे पहोच। अतित पुर्णता केन्द्रिय\\n\\n👅💾🐂🔙 🐂🎠👶🐮🐛 👛💗💶🌿💒 🐐🌱🐶🌴🏤🐒 🔪🍡🎸🐛🍖 📗🎓🏊🕀🎿 🔅📋📥👳🔝 🐗👝🏄🐲 📂🎷🐎🏯💎🐹 📲🍍🏥🔂🕚🐉🎤\\n🌕🐴📐🎪💋. 💔👂🐗📷🎐 🌹📔💒📝👎📭 🔖🍶💺🕘 🔡💘🎪🔚🔯👉 💯🎉👠🎁🐌💵 👌🔉🎹🕒💕🍁 🏡🍢🔹🔷👀💦🏉👀 👑🐺🐁🏤\\n🎺🍁🐙🐮🌃🕢🐟 🍶🎃🕕🔦 🐧🔝💔💚🔫👍 🌉🔁🌄📺 👓🎳📧🌆💖🍋🕔. 🍥🔘🗼📟 🍹🔸🔰🕣🌍 🏡💽🍬👗👧 📩👬🌻🐐🌞🌎🐵🔛 🏆🌹🍰🔬📕\\n👋🎩🍓🌏👙 🎁🏃🎌🍳🔋👎📔 🐈🌽🔘💮 🏬🐷💿🕕. 📕👖📦📡 🎅🎺🏭🍗💜💷🐦 💻💚🐪🕠🔀 💰🍹💶🍶🎥📄 🌛👕🐲🐣🍷🎬 🐥🎯🔵🎹\\n🌿👌🐚🍛🏪 🌵📞💃📗👱👩 📟🐸🌺🐅👮 💚🐦💉💞🌛 🔼🔤👓🏡💩.\\n\\n\\nयधपि बाजार तकरीबन आंतरजाल प्राधिकरन लगती संदेश एसलिये बिन्दुओ प्रोत्साहित जानकारी ढांचामात्रुभाषा बाजार बदले प्रमान\\nअनुवाद विकेन्द्रित पसंद ढांचा हमारि जोवे उद्योग संस्थान और्४५० विकसित उदेश लेकिन सकती वार्तालाप लाभान्वित संदेश उदेश\\nपहोच। लचकनहि अनुवाद सुविधा एकत्रित कीने सक्षम भीयह अत्यंत लचकनहि निरपेक्ष कराना हमारि प्राप्त पुर्णता प्रतिबध्दता होगा\\nउन्हे जाएन खयालात पहोचाना\\n\\n散待望会窮縮囲前賀理格顔欧製暮景初子加。首稿覧析回未帯則号医間本取退埋帯品。右歳約幻病護指極講賞京応。野受移供頑特公却報\\n法利務水提士政駐物際。角媛分地昧況面日残金真福方雨入顔作化。最刊情感売校見強移本説注辞。経必好以小球生音明優去験見政感治\\n報付。講刊切記勝帯載豪著転読金止。金子森午模移言兆埠関価亡出目載。\\n\\nWork on one thing at a time. Don't get carried away - we have plenty of time. Everything is happy if you choose to make\\nit that way. Happy painting, God bless. You can create anything that makes you happy. Just make a decision and let it\\ngo. Nice little clouds playing around in the sky.You can do anything here - the only pre-requisite is that it makes you\\nhappy. I'm going to mix up a little color. We’ll use Van Dyke Brown, Permanent Red, and a little bit of Prussian Blue.\\nLet's make some happy little clouds in our world.\\n\\nपहेला गएआप स्वतंत्र प्राधिकरन सेऔर अनुकूल ब्रौशर बिन्दुओमे सदस्य गुजरना तकनिकल वैश्विक सकते बनाति चिदंश चाहे कुशलता\\nवर्तमान प्रोत्साहित देने विवरन पहोचाना विकेन्द्रियकरण अनुकूल विभाजनक्षमता औषधिक अन्य खरिदे दिये आवश्यक समस्याए कम्प्युटर\\nविनिमय अविरोधता लाभान्वित लाभो ढांचा\\n\\n抄聞調時得直決移警撃覧進聞滑公政央。日探劇票選伊追短青功書更将奈府成多。味治理育月漬安意散護良読京。芳豚大度面傾府山応著\\n器地捜志。止高棋戻管明証経処流自勝動続。装載聞視属王減通橋説主費事業情芸。追若得本臭稿事馬予治川劇覧記今竹犯破育食。参兆\\n徹括単写東家素講舞校食医咋存務代連子。球設国事検問周東集題聞供奈。\\n\\n🍊🌆📛🍛🌊🍡🍒 🔦🐟🐵🍚🌐🍛🐏 🔆💍📟🎧 🔐📤💺🐒 🔥🔬🐣💹🌻👚 🎰👯🎡🗻💯🐉🌗 🍐👣🐯🔖📚 💡📟👨🍮🍼💛📞 🕕🐁🌾🏧💻📷\\n💗🐢🏥🎵🐰🍉 🏥🔎💛💘🔧🍛🎿 🍟🌰🐴🏫🎀 🎷🌿🌴🏤🍢📳🍺 🐗👷🌳👦📩🌁 🐂🔜🔙📕. 🌎🍠📓📠🕡 🎽🔺🔱🌔📗🎤 🎫🍃👚🍤🐽🌰\\n🕠🌉📪🍒🐃💲 🎢🔯👶🔙🔚🕝 🍮📒🏉🏨🐝🌿 👔💫🏁🎺 🐸💞🌈🐸 📣🔯📅🐍🐴 🌑🌍🌛👀 🕂👟🐕📃🎇🔞 🍮🔏🍥👨 🐪📲🐐🎁 🍥🔁📑💮🌘.\\n🌏🎎🍛👯 🔈🎸💨🏧📚 🏪💼🎣🔚 🐤💳💁👓 👃🍆🕘🐋👬🐣 🕚🏃🌄🔷🌈🔖 💥💧🔴🌛🍁👦 💣🐐🕓🎠🕚🕞🏭 💨👓🏢🌓🔄. 📪🔜💹👤👂🐭\\n🕚🔎🐂🏂👍📻 👾💠🌕📻🎍 🐟🔬🏢💍 👓👠👤🎐💸👝 🔟💕🕛💊 🍩🌙👬🐘 🍪🔙📉💔🐝🕝 📭🕡🎼💈📇🔡 👓🍁🎾👯👨 🏇🍱🐢🌛\\n🎇🐩📴🎋🕁📎🎈 🐌👱📎🍹👆 👐🍐📗👽🐹💜 📭🌔🌅🍯👀.\\n\\n🔜🐰🏊🍃🐮 🔪🔐📇🐩 🐬👔🍙🍩💉 🏉👩👔🍞🍟🌂 🍺🕔🌖🔪🔩🍥 🎓🍒🌅🐘💛 🐔🐊📶🐊 👂📌👂🍺 💗🐳🎠📧🏭💧 🐝📅🍆🔞🏆\\n👇🔂🐺🔬🎯🔳🎐🎍 💖💅🐲🔭📔🏊🔋 🐨📫🕢🎁. 🐯💁🔘📰🐪 💥👭🍘🎴📣💂💄 🐏🔊🐚👔🎿🐙 🔕🐞💹📁 🔊👴👬👪 👠📱👃📍 🏢🐃🍯🍹🗻\\n🐩💮👲👠 🍏🎽📄🐋 🔣💉🔉📒💸🎭👎 💁🗾🔵🐪🍣 🍃🔝💥🔒👴. 📦🔟🔶💷🍥 🍚🕤👦🍻🔥🍹 👄🌜🐑🌀🐃🔪🕦 🌟🐶🍞🕥🌛 👮🐄🏬🎴👂💼📵\\n🌋📐🐲👥 🔒🏭🔭💿🎫🎄 💓🐓🎐🎁👔📟 💌🍇🎶👷🎬 🌌💀🎸💡 📔🐢💁🔊👘🐳🌞 🎩📝💟🍼💦🔄 🕒🍼🏧🎄🔃💐. 🎆🌜👗👿 🐁🌑💮👙🎌👞\\n🏫📙🌌🕙🐥 👓🌑💎💸📹📒 👋🐎🍡🎾👸🗽 📢📓🌍🏮📳🔈 👶🐷🐭🎿🔴🗾🏬 🌆🔈🍡💞💭🎨. ";export{n as allTheIpsum};
-//# sourceMappingURL=pretty.esm.js.map
+//# sourceMappingURL=pretty.esm.mjs.map
 "
 `;
 
@@ -2981,8 +2981,8 @@ Directory tree:
 
 pure
   dist
-    pure.esm.js
-    pure.esm.js.map
+    pure.esm.mjs
+    pure.esm.mjs.map
     pure.js
     pure.js.map
     pure.umd.js
@@ -2998,9 +2998,9 @@ Bundle(s)
 ./dist/pure.js (78 B)
   -> gzip: 98 B
   -> brotli: 74 B
-./dist/pure.esm.js (88 B)
-  -> gzip: 107 B
-  -> brotli: 76 B
+./dist/pure.esm.mjs (89 B)
+  -> gzip: 108 B
+  -> brotli: 91 B
 ./dist/pure.umd.js (256 B)
   -> gzip: 197 B
   -> brotli: 156 B
@@ -3011,7 +3011,7 @@ exports[`build fixtures build pure with jvdx 2`] = `6`;
 
 exports[`build fixtures build pure with jvdx 3`] = `
 "function o(){return"hello world"}export{o as foo};
-//# sourceMappingURL=pure.esm.js.map
+//# sourceMappingURL=pure.esm.mjs.map
 "
 `;
 
@@ -3034,8 +3034,8 @@ Directory tree:
 
 raw
   dist
-    raw.esm.js
-    raw.esm.js.map
+    raw.esm.mjs
+    raw.esm.mjs.map
     raw.js
     raw.js.map
     raw.umd.js
@@ -3051,9 +3051,9 @@ Bundle(s)
 ./dist/raw.js (2958 B)
   -> gzip: 1415 B
   -> brotli: 1180 B
-./dist/raw.esm.js (2973 B)
-  -> gzip: 1427 B
-  -> brotli: 1192 B
+./dist/raw.esm.mjs (2974 B)
+  -> gzip: 1428 B
+  -> brotli: 1194 B
 ./dist/raw.umd.js (3135 B)
   -> gzip: 1529 B
   -> brotli: 1274 B
@@ -3064,7 +3064,7 @@ exports[`build fixtures build raw with jvdx 2`] = `6`;
 
 exports[`build fixtures build raw with jvdx 3`] = `
 "var e="\\n\\tWe might as well make some Almighty mountains today as well, what the heck.\\n\\tIn your imagination you can go anywhere you want. Nice little fluffy clouds\\n\\tlaying around in the sky being lazy. You have to make those little noises or\\n\\tit won't work. Clouds are free they come and go as they please.\\n\\n\\tTrees grow in all kinds of ways. They're not all perfectly straight. Not\\n\\tevery limb is perfect. Now let's put some happy little clouds in here. We\\n\\thave no limits to our world. We're only limited by our imagination. The\\n\\tfirst step to doing anything is to believe you can do it. See it finished\\n\\tin your mind before you ever start. Even trees need a friend. We all need\\n\\tfriends. And that's when it becomes fun - you don't have to spend your\\n\\ttime thinking about what's happening - you just let it happen.\\n\\n\\tI thought today we would do a happy little picture. We don't have to be\\n\\tconcerned about it. We just have to let it fall where it will. I'm gonna\\n\\tstart with a little Alizarin crimson and a touch of Prussian blue Be so\\n\\tvery light. Be a gentle whisper. The only prerequisite is that it makes\\n\\tyou happy. If it makes you happy then it's good. This is truly an almighty\\n\\tmountain.\\n\\n\\tThat's why I paint - because I can create the kind of world I want - and I\\n\\tcan make this world as happy as I want it. I was blessed with a very steady\\n\\thand; and it comes in very handy when you're doing these little delicate\\n\\tthings. We'll paint one happy little tree right here. These things happen\\n\\tautomatically. All you have to do is just let them happen.\\n\\n\\tYou can do anything here - the only pre-requisite is that it makes you\\n\\thappy. I'm going to mix up a little color. We’ll use Van Dyke Brown,\\n\\tPermanent Red, and a little bit of Prussian Blue. Let's make some happy\\n\\tlittle clouds in our world.\\n\\n\\tWork on one thing at a time. Don't get carried away - we have plenty of\\n\\ttime. Everything is happy if you choose to make it that way. Happy\\n\\tpainting, God bless. You can create anything that makes you happy. Just\\n\\tmake a decision and let it go. Nice little clouds playing around in the\\n\\tsky.\\n\\n\\tAnytime you learn something your time and energy are not wasted. Van Dyke\\n\\tBrown is a very nice brown, it's almost like a chocolate brown. It's\\n\\timportant to me that you're happy. In nature, dead trees are just as normal\\n\\tas live trees. Painting should do one thing. It should put happiness in\\n\\tyour heart.\\n\\n\\tThere is immense joy in just watching - watching all the little creatures\\n\\tin nature. I'll go over the colors one more time that we use: Titanium\\n\\twhite, Thalo green, Prussian blue, Van Dyke brown, Alizarin crimson, Sap\\n\\tgreen, Cad yellow, and Permanent red. If you don't like it - change it.\\n\\tIt's your world. Be brave. Sometimes you learn more from your mistakes than\\n\\tyou do from your masterpieces.";export{e as OneKilobyteOfBobRoss};
-//# sourceMappingURL=raw.esm.js.map
+//# sourceMappingURL=raw.esm.mjs.map
 "
 `;
 
@@ -3087,8 +3087,8 @@ Directory tree:
 
 shebang
   dist
-    shebang.esm.js
-    shebang.esm.js.map
+    shebang.esm.mjs
+    shebang.esm.mjs.map
     shebang.js
     shebang.js.map
     shebang.umd.js
@@ -3104,9 +3104,9 @@ Bundle(s)
 ./dist/shebang.js (101 B)
   -> gzip: 118 B
   -> brotli: 89 B
-./dist/shebang.esm.js (111 B)
-  -> gzip: 124 B
-  -> brotli: 94 B
+./dist/shebang.esm.mjs (112 B)
+  -> gzip: 125 B
+  -> brotli: 95 B
 ./dist/shebang.umd.js (282 B)
   -> gzip: 216 B
   -> brotli: 192 B
@@ -3118,7 +3118,7 @@ exports[`build fixtures build shebang with jvdx 2`] = `6`;
 exports[`build fixtures build shebang with jvdx 3`] = `
 "#!/usr/bin/env node
 function o(){return"hello world"}export{o as foo};
-//# sourceMappingURL=shebang.esm.js.map
+//# sourceMappingURL=shebang.esm.mjs.map
 "
 `;
 
@@ -3143,8 +3143,8 @@ Directory tree:
 
 terser-annotations
   dist
-    terser-annotations.esm.js
-    terser-annotations.esm.js.map
+    terser-annotations.esm.mjs
+    terser-annotations.esm.mjs.map
     terser-annotations.js
     terser-annotations.js.map
     terser-annotations.umd.js
@@ -3161,9 +3161,9 @@ Bundle(s)
 ./dist/terser-annotations.js (209 B)
   -> gzip: 157 B
   -> brotli: 131 B
-./dist/terser-annotations.esm.js (226 B)
+./dist/terser-annotations.esm.mjs (227 B)
   -> gzip: 169 B
-  -> brotli: 140 B
+  -> brotli: 131 B
 ./dist/terser-annotations.umd.js (391 B)
   -> gzip: 242 B
   -> brotli: 187 B
@@ -3174,7 +3174,7 @@ exports[`build fixtures build terser-annotations with jvdx 2`] = `6`;
 
 exports[`build fixtures build terser-annotations with jvdx 3`] = `
 "function shouldBePreserved(e,r){return e-r}function main(e,r){var n=function(e,r){return e+r}(e,r);return{inlined:n,preserved:shouldBePreserved(e,r)}}export{main as default};
-//# sourceMappingURL=terser-annotations.esm.js.map
+//# sourceMappingURL=terser-annotations.esm.mjs.map
 "
 `;
 
@@ -3197,8 +3197,8 @@ Directory tree:
 
 ts-custom-declaration
   dist
-    index.esm.js
-    index.esm.js.map
+    index.esm.mjs
+    index.esm.mjs.map
     index.js
     index.js.map
     index.umd.js
@@ -3218,9 +3218,9 @@ Bundle(s)
 ./dist/index.js (69 B)
   -> gzip: 89 B
   -> brotli: 73 B
-./dist/index.esm.js (79 B)
-  -> gzip: 99 B
-  -> brotli: 73 B
+./dist/index.esm.mjs (80 B)
+  -> gzip: 100 B
+  -> brotli: 74 B
 ./dist/index.umd.js (263 B)
   -> gzip: 206 B
   -> brotli: 152 B
@@ -3231,7 +3231,7 @@ exports[`build fixtures build ts-custom-declaration with jvdx 2`] = `6`;
 
 exports[`build fixtures build ts-custom-declaration with jvdx 3`] = `
 "function n(){return 42}export{n as foo};
-//# sourceMappingURL=index.esm.js.map
+//# sourceMappingURL=index.esm.mjs.map
 "
 `;
 
@@ -3261,8 +3261,8 @@ Directory tree:
 
 ts-declaration
   dist
-    index.esm.js
-    index.esm.js.map
+    index.esm.mjs
+    index.esm.mjs.map
     index.js
     index.js.map
     index.umd.js
@@ -3282,9 +3282,9 @@ Bundle(s)
 ./dist/index.js (69 B)
   -> gzip: 89 B
   -> brotli: 73 B
-./dist/index.esm.js (79 B)
-  -> gzip: 99 B
-  -> brotli: 73 B
+./dist/index.esm.mjs (80 B)
+  -> gzip: 100 B
+  -> brotli: 74 B
 ./dist/index.umd.js (257 B)
   -> gzip: 202 B
   -> brotli: 151 B
@@ -3295,7 +3295,7 @@ exports[`build fixtures build ts-declaration with jvdx 2`] = `6`;
 
 exports[`build fixtures build ts-declaration with jvdx 3`] = `
 "function n(){return 42}export{n as foo};
-//# sourceMappingURL=index.esm.js.map
+//# sourceMappingURL=index.esm.mjs.map
 "
 `;
 
@@ -3326,8 +3326,8 @@ Directory tree:
 ts-jsx
   dist
     index.d.ts
-    ts-jsx.esm.js
-    ts-jsx.esm.js.map
+    ts-jsx.esm.mjs
+    ts-jsx.esm.mjs.map
     ts-jsx.js
     ts-jsx.js.map
     ts-jsx.umd.js
@@ -3345,9 +3345,9 @@ Bundle(s)
 ./dist/ts-jsx.js (172 B)
   -> gzip: 159 B
   -> brotli: 119 B
-./dist/ts-jsx.esm.js (179 B)
-  -> gzip: 163 B
-  -> brotli: 132 B
+./dist/ts-jsx.esm.mjs (180 B)
+  -> gzip: 164 B
+  -> brotli: 133 B
 ./dist/ts-jsx.umd.js (351 B)
   -> gzip: 252 B
   -> brotli: 207 B
@@ -3363,7 +3363,7 @@ exports[`build fixtures build ts-jsx with jvdx 3`] = `
 
 exports[`build fixtures build ts-jsx with jvdx 4`] = `
 "var n=function(n,r){return{tag:n,props:r,children:[].slice.call(arguments,2)}}(function(n){return n.children},null,"foo");export{n as foo};
-//# sourceMappingURL=ts-jsx.esm.js.map
+//# sourceMappingURL=ts-jsx.esm.mjs.map
 "
 `;
 
@@ -3388,8 +3388,8 @@ ts-mixed-exports
   dist
     car.d.ts
     index.d.ts
-    ts-mixed-exports.esm.js
-    ts-mixed-exports.esm.js.map
+    ts-mixed-exports.esm.mjs
+    ts-mixed-exports.esm.mjs.map
     ts-mixed-exports.js
     ts-mixed-exports.js.map
     ts-mixed-exports.umd.js
@@ -3408,9 +3408,9 @@ Bundle(s)
 ./dist/ts-mixed-exports.js (169 B)
   -> gzip: 147 B
   -> brotli: 109 B
-./dist/ts-mixed-exports.esm.js (171 B)
-  -> gzip: 154 B
-  -> brotli: 137 B
+./dist/ts-mixed-exports.esm.mjs (172 B)
+  -> gzip: 155 B
+  -> brotli: 113 B
 ./dist/ts-mixed-exports.umd.js (351 B)
   -> gzip: 249 B
   -> brotli: 199 B
@@ -3439,7 +3439,7 @@ export default Ferrari;
 
 exports[`build fixtures build ts-mixed-exports with jvdx 5`] = `
 "var n=function(){function n(){}return n.prototype.drive=function(n){return!0},n}(),t=new n;export{n as Car,t as default};
-//# sourceMappingURL=ts-mixed-exports.esm.js.map
+//# sourceMappingURL=ts-mixed-exports.esm.mjs.map
 "
 `;
 
@@ -3464,8 +3464,8 @@ ts-module
   dist
     foo.d.ts
     index.d.ts
-    ts-module.esm.js
-    ts-module.esm.js.map
+    ts-module.esm.mjs
+    ts-module.esm.mjs.map
     ts-module.js
     ts-module.js.map
     ts-module.umd.js
@@ -3484,8 +3484,8 @@ Bundle(s)
 ./dist/ts-module.js (81 B)
   -> gzip: 97 B
   -> brotli: 76 B
-./dist/ts-module.esm.js (91 B)
-  -> gzip: 107 B
+./dist/ts-module.esm.mjs (92 B)
+  -> gzip: 108 B
   -> brotli: 83 B
 ./dist/ts-module.umd.js (263 B)
   -> gzip: 197 B
@@ -3507,7 +3507,7 @@ exports[`build fixtures build ts-module with jvdx 4`] = `
 
 exports[`build fixtures build ts-module with jvdx 5`] = `
 "function o(){return"foobar"}export{o as foobar};
-//# sourceMappingURL=ts-module.esm.js.map
+//# sourceMappingURL=ts-module.esm.mjs.map
 "
 `;
 
@@ -3534,8 +3534,8 @@ worker-loader
     worker-90ed7156.js.map
     worker-b38a591a.js
     worker-b38a591a.js.map
-    worker-loader.esm.js
-    worker-loader.esm.js.map
+    worker-loader.esm.mjs
+    worker-loader.esm.mjs.map
     worker-loader.modern.js
     worker-loader.modern.js.map
   package-lock.json
@@ -3556,9 +3556,9 @@ Bundle(s)
 ./dist/worker-90ed7156.js (94 B)
   -> gzip: 107 B
   -> brotli: 84 B
-./dist/worker-loader.esm.js (197 B)
+./dist/worker-loader.esm.mjs (198 B)
   -> gzip: 181 B
-  -> brotli: 144 B
+  -> brotli: 146 B
 
 ./dist/worker-b38a591a.js (111 B)
   -> gzip: 125 B
@@ -3582,7 +3582,7 @@ exports[`build fixtures build worker-loader with jvdx 4`] = `
 
 exports[`build fixtures build worker-loader with jvdx 5`] = `
 "var e=new Worker(new URL("worker-b38a591a.js",import.meta.url),{type:"module"});e.onmessage=function(e){return"foobar"===e.data},e.postMessage("foo");
-//# sourceMappingURL=worker-loader.esm.js.map
+//# sourceMappingURL=worker-loader.esm.mjs.map
 "
 `;
 

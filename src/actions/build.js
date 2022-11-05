@@ -316,6 +316,7 @@ function walkExports(exports, includeDefault) {
 function getMain({ options, entry, format }) {
 	const { pkg } = options;
 	const pkgMain = options['pkg-main'];
+	const pkgTypeModule = pkg.type === 'module';
 
 	if (!pkgMain) {
 		return options.output;
@@ -344,18 +345,20 @@ function getMain({ options, entry, format }) {
 	mainsByFormat.es = replaceName(
 		pkg.module && !pkg.module.match(/src\//)
 			? pkg.module
-			: pkg['jsnext:main'] || 'x.esm.js',
+			: pkg['jsnext:main'] || pkgTypeModule
+			? 'x.esm.js'
+			: 'x.esm.mjs',
 		mainNoExtension,
 	);
 	mainsByFormat.modern = replaceName(
-		(pkg.exports && walkExports(pkg.exports, pkg.type === 'module')) ||
+		(pkg.exports && walkExports(pkg.exports, pkgTypeModule)) ||
 			(pkg.syntax && pkg.syntax.esmodules) ||
 			pkg.esmodule ||
 			'x.modern.js',
 		mainNoExtension,
 	);
 	mainsByFormat.cjs = replaceName(
-		pkg['cjs:main'] || (pkg.type && pkg.type === 'module' ? 'x.cjs' : 'x.js'),
+		pkg['cjs:main'] || (pkgTypeModule ? 'x.cjs' : 'x.js'),
 		mainNoExtension,
 	);
 	mainsByFormat.umd = replaceName(
@@ -545,6 +548,13 @@ function createConfig(options, entry, format, writeMeta) {
 	const outputEntryFileName = basename(absMain);
 	const targetDir =
 		'./' + relative(options.cwd, dirname(options.output)) || '.';
+
+	// Warn about the (somewhat) breaking change in #950
+	if (format === 'es' && !pkg.module && outputEntryFileName.endsWith('.mjs')) {
+		printWarn(
+			'Warning: your package.json does not specify {"type":"module"}. jvdx assumes this is a CommonJS package and is generating ES Modules with the ".mjs" file extension.',
+		);
+	}
 
 	const useTypescript = extname(entry) === '.ts' || extname(entry) === '.tsx';
 	const emitDeclaration = !!(options.generateTypes || pkg.types || pkg.typings);

@@ -22,13 +22,15 @@ $ yarn add -D @jvdx/core
 	"name": "my-package", // Your package name
 	"type": "module",
 	"source": "src/index.js", // Your source code
-	"exports": {
+	"main": "./dist/my-package.cjs", // Where to generate the CommonJS bundle
+	"umd:main": "./dist/my-package.umd.js", // Where to generate the UMD bundle (also aliased as "unpkg")
+	"module": "./dist/my-package.module.js", // Where to generate the ESM bundle
+  "exports": {
+    "types": "./dist/my-package.d.ts", // TypeScript typings for NodeNext modules
 		"require": "./dist/my-package.cjs", // Used for require() in Node 12+
 		"default": "./dist/my-package.modern.js" // Where to generate the modern bundle (see below)
 	},
-	"main": "./dist/my-package.cjs", // Where to generate the CommonJS bundle
-	"module": "./dist/my-package.module.js", // Where to generate the ESM bundle
-	"unpkg": "./dist/my-package.umd.js", // Where to generate the UMD bundle (also aliased as "umd:main")
+  "types": "dist/my-package.d.ts", // TypeScript typings
 	"scripts": {
 		"build": "jvdx build", // Compiles "source" to "main"/"module"/"unpkg"
 		"dev": "jvdx build --watch", // Re-build when source files change
