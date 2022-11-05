@@ -1621,6 +1621,136 @@ exports[`build fixtures build custom-babelrc with jvdx 5`] = `
 "
 `;
 
+exports[`build fixtures build custom-outputs with jvdx 1`] = `
+"Used script: jvdx build -f modern,es,umd,cjs
+
+Directory tree:
+
+custom-outputs
+  dist
+    custom-outputs.exportsx.mjs
+    custom-outputs.exportsx.mjs.map
+    custom-outputs.js
+    custom-outputs.js.map
+    custom-outputs.modulex.mjs
+    custom-outputs.modulex.mjs.map
+    custom-outputs.umdx.js
+    custom-outputs.umdx.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/custom-outputs.js (429 B)
+  -> gzip: 226 B
+  -> brotli: 178 B
+./dist/custom-outputs.exportsx.mjs (187 B)
+  -> gzip: 156 B
+  -> brotli: 140 B
+./dist/custom-outputs.modulex.mjs (446 B)
+  -> gzip: 238 B
+  -> brotli: 193 B
+./dist/custom-outputs.umdx.js (608 B)
+  -> gzip: 309 B
+  -> brotli: 242 B
+"
+`;
+
+exports[`build fixtures build custom-outputs with jvdx 2`] = `8`;
+
+exports[`build fixtures build custom-outputs with jvdx 3`] = `
+"async function a(...a){return a.reduce((a,n)=>a+n,0)}async function n(...n){return[await a(...n),await a(...n)]}export{n as default};
+//# sourceMappingURL=custom-outputs.exportsx.mjs.map
+"
+`;
+
+exports[`build fixtures build custom-outputs with jvdx 4`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=custom-outputs.js.map
+"
+`;
+
+exports[`build fixtures build custom-outputs with jvdx 5`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
+//# sourceMappingURL=custom-outputs.modulex.mjs.map
+"
+`;
+
+exports[`build fixtures build custom-outputs with jvdx 6`] = `
+"!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e||self).customOutputs=t()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,t){return e+t},0))}catch(e){return Promise.reject(e)}};return function(){try{var t=arguments,r=[].slice.call(t);return Promise.resolve(e.apply(void 0,r)).then(function(t){return Promise.resolve(e.apply(void 0,r)).then(function(e){return[t,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=custom-outputs.umdx.js.map
+"
+`;
+
+exports[`build fixtures build custom-outputs-alt with jvdx 1`] = `
+"Used script: jvdx build -f modern,es,umd,cjs
+
+Directory tree:
+
+custom-outputs-alt
+  dist
+    custom-outputs-alt.cjsmain.js
+    custom-outputs-alt.cjsmain.js.map
+    custom-outputs-alt.esmodule.mjs
+    custom-outputs-alt.esmodule.mjs.map
+    custom-outputs-alt.jsnextmain.mjs
+    custom-outputs-alt.jsnextmain.mjs.map
+    custom-outputs-alt.unpkg.js
+    custom-outputs-alt.unpkg.js.map
+  package.json
+  src
+    index.js
+    two.js
+
+
+Built in 0s
+
+Bundle(s)
+./dist/custom-outputs-alt.cjsmain.js (441 B)
+  -> gzip: 233 B
+  -> brotli: 182 B
+./dist/custom-outputs-alt.esmodule.mjs (191 B)
+  -> gzip: 161 B
+  -> brotli: 123 B
+./dist/custom-outputs-alt.jsnextmain.mjs (453 B)
+  -> gzip: 242 B
+  -> brotli: 197 B
+./dist/custom-outputs-alt.unpkg.js (616 B)
+  -> gzip: 316 B
+  -> brotli: 255 B
+"
+`;
+
+exports[`build fixtures build custom-outputs-alt with jvdx 2`] = `8`;
+
+exports[`build fixtures build custom-outputs-alt with jvdx 3`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}};module.exports=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};
+//# sourceMappingURL=custom-outputs-alt.cjsmain.js.map
+"
+`;
+
+exports[`build fixtures build custom-outputs-alt with jvdx 4`] = `
+"async function a(...a){return a.reduce((a,n)=>a+n,0)}async function n(...n){return[await a(...n),await a(...n)]}export{n as default};
+//# sourceMappingURL=custom-outputs-alt.esmodule.mjs.map
+"
+`;
+
+exports[`build fixtures build custom-outputs-alt with jvdx 5`] = `
+"var r=function(){try{var r=arguments;return Promise.resolve([].slice.call(r).reduce(function(r,e){return r+e},0))}catch(r){return Promise.reject(r)}},e=function(){try{var e=arguments,t=[].slice.call(e);return Promise.resolve(r.apply(void 0,t)).then(function(e){return Promise.resolve(r.apply(void 0,t)).then(function(r){return[e,r]})})}catch(r){return Promise.reject(r)}};export{e as default};
+//# sourceMappingURL=custom-outputs-alt.jsnextmain.mjs.map
+"
+`;
+
+exports[`build fixtures build custom-outputs-alt with jvdx 6`] = `
+"!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e||self).customOutputsAlt=t()}(this,function(){var e=function(){try{var e=arguments;return Promise.resolve([].slice.call(e).reduce(function(e,t){return e+t},0))}catch(e){return Promise.reject(e)}};return function(){try{var t=arguments,r=[].slice.call(t);return Promise.resolve(e.apply(void 0,r)).then(function(t){return Promise.resolve(e.apply(void 0,r)).then(function(e){return[t,e]})})}catch(e){return Promise.reject(e)}}});
+//# sourceMappingURL=custom-outputs-alt.unpkg.js.map
+"
+`;
+
 exports[`build fixtures build custom-source with jvdx 1`] = `
 "Used script: jvdx build
 
@@ -2460,8 +2590,8 @@ Directory tree:
 
 modern
   dist
-    modern-lib.modern.js
-    modern-lib.modern.js.map
+    modern-lib.modern.mjs
+    modern-lib.modern.mjs.map
   package.json
   src
     index.js
@@ -2471,9 +2601,9 @@ modern
 Built in 0s
 
 Bundle(s)
-./dist/modern-lib.modern.js (180 B)
+./dist/modern-lib.modern.mjs (181 B)
   -> gzip: 153 B
-  -> brotli: 115 B
+  -> brotli: 114 B
 "
 `;
 
@@ -2481,7 +2611,7 @@ exports[`build fixtures build modern with jvdx 2`] = `2`;
 
 exports[`build fixtures build modern with jvdx 3`] = `
 "async function a(...a){return a.reduce((a,n)=>a+n,0)}async function n(...n){return[await a(...n),await a(...n)]}export{n as default};
-//# sourceMappingURL=modern-lib.modern.js.map
+//# sourceMappingURL=modern-lib.modern.mjs.map
 "
 `;
 
@@ -2496,8 +2626,8 @@ modern-generators
     modern-generators.esm.mjs.map
     modern-generators.js
     modern-generators.js.map
-    modern-generators.modern.js
-    modern-generators.modern.js.map
+    modern-generators.modern.mjs
+    modern-generators.modern.mjs.map
     modern-generators.umd.js
     modern-generators.umd.js.map
   package.json
@@ -2512,9 +2642,9 @@ Bundle(s)
 ./dist/modern-generators.js (6.95 kB)
   -> gzip: 2554 B
   -> brotli: 2321 B
-./dist/modern-generators.modern.js (180 B)
-  -> gzip: 159 B
-  -> brotli: 122 B
+./dist/modern-generators.modern.mjs (181 B)
+  -> gzip: 160 B
+  -> brotli: 124 B
 ./dist/modern-generators.esm.mjs (6.96 kB)
   -> gzip: 2563 B
   -> brotli: 2328 B
@@ -2540,7 +2670,7 @@ exports[`build fixtures build modern-generators with jvdx 4`] = `
 
 exports[`build fixtures build modern-generators with jvdx 5`] = `
 "async function e(){const e=function*(){let e=0;for(;;)yield e++}();return[e.next().value,e.next().value]}export{e as default};
-//# sourceMappingURL=modern-generators.modern.js.map
+//# sourceMappingURL=modern-generators.modern.mjs.map
 "
 `;
 
@@ -3536,8 +3666,8 @@ worker-loader
     worker-b38a591a.js.map
     worker-loader.esm.mjs
     worker-loader.esm.mjs.map
-    worker-loader.modern.js
-    worker-loader.modern.js.map
+    worker-loader.modern.mjs
+    worker-loader.modern.mjs.map
   package-lock.json
   package.json
   src
@@ -3549,9 +3679,9 @@ worker-loader
 Built in 0s
 
 Bundle(s)
-./dist/worker-loader.modern.js (186 B)
-  -> gzip: 173 B
-  -> brotli: 140 B
+./dist/worker-loader.modern.mjs (187 B)
+  -> gzip: 174 B
+  -> brotli: 141 B
 
 ./dist/worker-90ed7156.js (94 B)
   -> gzip: 107 B
@@ -3588,6 +3718,6 @@ exports[`build fixtures build worker-loader with jvdx 5`] = `
 
 exports[`build fixtures build worker-loader with jvdx 6`] = `
 "const e=new Worker(new URL("worker-90ed7156.js",import.meta.url),{type:"module"});e.onmessage=e=>"foobar"===e.data,e.postMessage("foo");
-//# sourceMappingURL=worker-loader.modern.js.map
+//# sourceMappingURL=worker-loader.modern.mjs.map
 "
 `;

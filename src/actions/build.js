@@ -345,16 +345,14 @@ function getMain({ options, entry, format }) {
 	mainsByFormat.es = replaceName(
 		pkg.module && !pkg.module.match(/src\//)
 			? pkg.module
-			: pkg['jsnext:main'] || pkgTypeModule
-			? 'x.esm.js'
-			: 'x.esm.mjs',
+			: pkg['jsnext:main'] || (pkgTypeModule ? 'x.esm.js' : 'x.esm.mjs'),
 		mainNoExtension,
 	);
 	mainsByFormat.modern = replaceName(
 		(pkg.exports && walkExports(pkg.exports, pkgTypeModule)) ||
 			(pkg.syntax && pkg.syntax.esmodules) ||
 			pkg.esmodule ||
-			'x.modern.js',
+			(pkgTypeModule ? 'x.modern.js' : 'x.modern.mjs'),
 		mainNoExtension,
 	);
 	mainsByFormat.cjs = replaceName(
