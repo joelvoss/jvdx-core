@@ -224,6 +224,11 @@ or "[include](https://www.typescriptlang.org/tsconfig#include)" into your `tscon
 If you're using CSS Modules, set `"include": ["node_modules/@jvdx/core/index.d.ts"]`
 in your `tsconfig.json` to enable type annotations of your CSS Module imports.
 
+To ensure that your module's `.d.ts` type info is visible to other TypeScript
+projects that use [`moduleResolution: 'NodeNext'`](https://www.typescriptlang.org/docs/handbook/esm-node.html),
+add a [`types` key](https://www.typescriptlang.org/docs/handbook/esm-node.html#packagejson-exports-imports-and-self-referencing)
+to your `package.json`'s corresponding `exports` mapping.
+
 ### CSS and CSS Modules
 
 Importing CSS files is supported via `import "./foo.css"`. By default, generated
