@@ -469,7 +469,7 @@ function createConfig(options, entry, format, writeMeta) {
 	// rollup-node-resolve treats them as externals anyway
 	// @see https://github.com/rollup/plugins/tree/master/packages/node-resolve/#resolving-built-ins-like-fs
 	if (options.target === 'node') {
-		external = external.concat(builtinModules);
+		external = external.concat([/node:.*/], ...builtinModules);
 	}
 
 	const peerDeps = Object.keys(pkg.peerDependencies || {});
