@@ -707,7 +707,7 @@ function createConfig(options, entry, format, writeMeta) {
 							defines,
 							modern,
 							compress: options.compress !== false,
-							targets: options.target === 'node' ? { node: '8' } : undefined,
+							targets: options.target === 'node' ? { node: '14' } : undefined,
 							typescript: !!useTypescript,
 							jsx: options.jsx || false,
 						},
