@@ -398,7 +398,7 @@ Options
   --globals          Specify globals dependencies, or 'none'
   --define           Replace constants with hard-coded values (use @key=exp to replace an expression)
   --alias            Map imports to different modules
-  --compress         Compress output using Terser
+  --compress         Compress output using Terser (default true when --target is web, false when --target is node)
   --strict           Enforce undefined global context and add "use strict"
   --name             Specify name exposed in UMD and IIFE builds
   --cwd              Use an alternative working directory  (default .)
@@ -406,8 +406,8 @@ Options
   --jsx              Enable @babel/preset-react
   --tsconfig         Specify the path to a custom tsconfig.json
   --generateTypes    Whether or not to generate types, if `types` or `typings` is set in `package.json` then it will default to be `true`
-  --css              Where to output CSS: "inline" or "external" (default: "external")
-  --css-modules      Configures .css to be treated as modules (default: null)
+  --css              Where to output CSS: "inline" or "external" (default "external")
+  --css-modules      Configures .css to be treated as modules (default null)
   --workers          Bundle module workers - see https://git.io/J3oSF  (default false)
   -h, --help         Displays this message
 
