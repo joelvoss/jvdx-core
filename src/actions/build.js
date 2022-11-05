@@ -401,14 +401,17 @@ function doWatch(options, cwd, steps) {
 					}
 				}
 				if (e.code === 'END') {
-					options._sizeInfo.then(text => {
-						for (let entry of text) {
-							const base = entry != null && entry.base ? entry.base : '';
-							const gzip = entry != null && entry.gzip ? entry.gzip : '';
-							const brotli = entry != null && entry.brotli ? entry.brotli : '';
-							print(`Wrote ${base} ${dim(`(${gzip}; ${brotli})`)}`);
-						}
-					});
+					if (options._sizeInfo) {
+						options._sizeInfo.then(text => {
+							for (let entry of text) {
+								const base = entry != null && entry.base ? entry.base : '';
+								const gzip = entry != null && entry.gzip ? entry.gzip : '';
+								const brotli =
+									entry != null && entry.brotli ? entry.brotli : '';
+								print(`Wrote ${base} ${dim(`(${gzip}; ${brotli})`)}`);
+							}
+						});
+					}
 					if (typeof onBuild === 'function') {
 						onBuild(e);
 					}
