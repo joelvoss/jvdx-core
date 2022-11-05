@@ -637,6 +637,7 @@ function createConfig(options, entry, format, writeMeta) {
 					// Handle Typescript
 					(useTypescript || emitDeclaration) &&
 						typescript({
+							cwd: options.cwd,
 							typescript: require(resolveFrom(
 								options.cwd,
 								'typescript',
