@@ -410,7 +410,7 @@ Options
   --generateTypes    Whether or not to generate types, if `types` or `typings` is set in `package.json` then it will default to be `true`
   --css              Where to output CSS: "inline" or "external" (default "external")
   --css-modules      Configures .css to be treated as modules (default null)
-  --workers          Bundle module workers - see https://git.io/J3oSF  (default false)
+  --workers          Bundle module workers - see https://github.com/surma/rollup-plugin-off-main-thread#auto-bundling  (default false)
   -h, --help         Displays this message
 
 Examples
