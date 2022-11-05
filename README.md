@@ -340,7 +340,7 @@ the define name with `@` allows injecting JavaScript expressions.
 ### Building Module Workers
 
 jvdx is able to detect and bundle Module Workers when generating bundles in the
-`es`, `umd` and `modern` formats. To use this feature, instantiate your
+`esm` and `modern` formats. To use this feature, instantiate your
 Web Worker as follows:
 
 ```js
