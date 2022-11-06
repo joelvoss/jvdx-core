@@ -1,1 +1,1 @@
-export declare function foo(): number;
+export const foo: () => number;

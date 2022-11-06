@@ -131,5 +131,6 @@ module.exports = handler => {
 				i: ['entry', 'entries', 'e'],
 				w: ['watch'],
 			},
+			boolean: ['generateTypes'],
 		});
 };

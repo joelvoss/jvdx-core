@@ -2060,6 +2060,7 @@ generate-types
     generate-types.js.map
     generate-types.umd.js
     generate-types.umd.js.map
+    index.d.ts
   node_modules
   package.json
   src
@@ -2081,7 +2082,7 @@ Bundle(s)
 "
 `;
 
-exports[`build fixtures build generate-types with jvdx 2`] = `6`;
+exports[`build fixtures build generate-types with jvdx 2`] = `7`;
 
 exports[`build fixtures build generate-types with jvdx 3`] = `
 "function n(){return 42}export{n as foo};
@@ -2101,6 +2102,11 @@ exports[`build fixtures build generate-types with jvdx 5`] = `
 "
 `;
 
+exports[`build fixtures build generate-types with jvdx 6`] = `
+"export function foo(): number;
+"
+`;
+
 exports[`build fixtures build generate-types-from-pkg-json with jvdx 1`] = `
 "Used script: jvdx build
 
@@ -2114,6 +2120,7 @@ generate-types-from-pkg-json
     generate-types-from-pkg-json.js.map
     generate-types-from-pkg-json.umd.js
     generate-types-from-pkg-json.umd.js.map
+    index.d.ts
   node_modules
   package.json
   src
@@ -2135,7 +2142,7 @@ Bundle(s)
 "
 `;
 
-exports[`build fixtures build generate-types-from-pkg-json with jvdx 2`] = `6`;
+exports[`build fixtures build generate-types-from-pkg-json with jvdx 2`] = `7`;
 
 exports[`build fixtures build generate-types-from-pkg-json with jvdx 3`] = `
 "function n(){return 42}export{n as foo};
@@ -2152,6 +2159,11 @@ exports[`build fixtures build generate-types-from-pkg-json with jvdx 4`] = `
 exports[`build fixtures build generate-types-from-pkg-json with jvdx 5`] = `
 "!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o(exports):"function"==typeof define&&define.amd?define(["exports"],o):o((e||self).generateTypesFromPkgJson={})}(this,function(e){e.foo=function(){return 42}});
 //# sourceMappingURL=generate-types-from-pkg-json.umd.js.map
+"
+`;
+
+exports[`build fixtures build generate-types-from-pkg-json with jvdx 6`] = `
+"export function foo(): number;
 "
 `;
 
@@ -3380,7 +3392,7 @@ exports[`build fixtures build ts-custom-declaration with jvdx 5`] = `
 exports[`build fixtures build ts-custom-declaration with jvdx 6`] = `1`;
 
 exports[`build fixtures build ts-custom-declaration with jvdx 7`] = `
-"export declare function foo(): number;
+"export const foo: () => number;
 "
 `;
 

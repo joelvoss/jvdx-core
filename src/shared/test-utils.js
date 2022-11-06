@@ -73,7 +73,9 @@ const buildDirectory = async fixtureDir => {
 	// clean up
 	await rimraf(resolve(`${fixturePath}/dist`));
 	await rimraf(resolve(`${fixturePath}/node_modules`));
-	await rimraf(resolve(`${fixturePath}/types`));
+	if (!fixturePath.endsWith('ts-custom-declaration')) {
+		await rimraf(resolve(`${fixturePath}/types`));
+	}
 	await rimraf(resolve(`${fixturePath}/.rts2_cache_cjs`));
 	await rimraf(resolve(`${fixturePath}/.rts2_cache_es`));
 	await rimraf(resolve(`${fixturePath}/.rts2_cache_umd`));
