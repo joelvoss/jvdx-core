@@ -23,7 +23,7 @@
     "test": "./Taskfile.sh test"
   },
   "dependencies": {
-    "@babel/core": "^7.19.6",
+    "@babel/core": "^7.20.12",
     "@jvdx/babel-preset": "^1.9.0",
     "@jvdx/eslint-config": "^3.20.0",
     "@jvdx/jest-preset": "^1.2.0",
