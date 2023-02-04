@@ -1,9 +1,6 @@
-const { promisify } = require('util');
-const _rimraf = require('rimraf');
+const rimraf = require('rimraf');
 const { dim, underline, bold } = require('kleur');
 const { stopwatch, printErr, fromRoot } = require('../utils');
-
-const rimraf = promisify(_rimraf);
 
 async function clean(opts) {
 	const stop = stopwatch();

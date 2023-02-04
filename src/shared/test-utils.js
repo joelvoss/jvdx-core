@@ -1,14 +1,11 @@
 const { resolve, extname } = require('path');
 const shellQuote = require('shell-quote');
-const { promisify } = require('util');
-const _rimraf = require('rimraf');
+const rimraf = require('rimraf');
 const { fromRoot, readFile } = require('../utils');
 const createProg = require('../prog');
 const { build } = require('../actions/build');
 const fs = require('fs');
 const { basename, join } = require('path');
-
-const rimraf = promisify(_rimraf);
 
 ///////////////////////////////////////////////////////////////////////////////
 
