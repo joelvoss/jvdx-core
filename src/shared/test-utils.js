@@ -1,6 +1,6 @@
 const { resolve, extname } = require('path');
 const shellQuote = require('shell-quote');
-const rimraf = require('rimraf');
+const { rimraf } = require('rimraf');
 const { fromRoot, readFile } = require('../utils');
 const createProg = require('../prog');
 const { build } = require('../actions/build');

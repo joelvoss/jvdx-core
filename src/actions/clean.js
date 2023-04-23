@@ -1,4 +1,4 @@
-const rimraf = require('rimraf');
+const { rimraf } = require('rimraf');
 const { dim, underline, bold } = require('kleur');
 const { stopwatch, printErr, fromRoot } = require('../utils');
 
