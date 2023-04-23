@@ -460,3 +460,42 @@ describe('camelCase', () => {
 		}
 	});
 });
+
+describe('asyncMap', () => {
+	const { asyncMap } = require('../src/utils');
+
+	it('is typeof function', () => {
+		expect(typeof asyncMap).toBe('function');
+	});
+
+	it('processes passed in array using mapper function in parallel', async () => {
+		let start = Date.now();
+
+		const res = await asyncMap([1, 2, 3], async v => {
+			await new Promise(r => setTimeout(r, 50));
+			return await Promise.resolve(v * 2);
+		});
+
+		const elapsed = Date.now() - start;
+
+		expect(res).toStrictEqual([2, 4, 6]);
+		expect(elapsed < 100).toBe(true);
+	});
+});
+
+describe('asyncSeries', () => {
+	const { asyncSeries } = require('../src/utils');
+
+	it('is typeof function', () => {
+		expect(typeof asyncSeries).toBe('function');
+	});
+
+	it('processes passed in functions in series', async () => {
+		const res = await asyncSeries([
+			async () => await Promise.resolve(1),
+			async () => await Promise.resolve(2),
+		]);
+
+		expect(res).toStrictEqual([1, 2]);
+	});
+});

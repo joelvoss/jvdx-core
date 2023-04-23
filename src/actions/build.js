@@ -3,8 +3,7 @@ const { EOL } = require('os');
 const { resolve, basename, extname, dirname, relative } = require('path');
 const { red, bold, underline, dim } = require('kleur');
 const glob = require('tiny-glob/sync');
-const { map, series } = require('asyncro');
-const { escapeStringRegexp } = require('../utils');
+const { escapeStringRegexp, asyncMap, asyncSeries } = require('../utils');
 const autoprefixer = require('autoprefixer');
 const { rollup, watch } = require('rollup');
 const commonjs = require('@rollup/plugin-commonjs');
@@ -144,7 +143,7 @@ async function build(opts) {
 	}
 
 	let cache;
-	let out = await series(
+	let out = await asyncSeries(
 		steps.map(config => async () => {
 			const { inputOptions, outputOptions } = config;
 			if (inputOptions.cache !== false) {
@@ -272,7 +271,7 @@ async function getOutput({ cwd, output, pkgMain, pkgName }) {
 // Return the package entry file(s)
 async function getEntries({ input, cwd }) {
 	let entries = (
-		await map([].concat(input), async file => {
+		await asyncMap([].concat(input), async file => {
 			file = resolve(cwd, file);
 			if (await isDir(file)) {
 				file = resolve(file, 'index.js');

@@ -529,3 +529,25 @@ function camelCase(input) {
 		.replace(NUMBERS_AND_IDENTIFIER, m => m.toUpperCase());
 }
 exports.camelCase = camelCase;
+
+////////////////////////////////////////////////////////////////////////////////
+// Invoke an async transform function on each item in the given Array
+// in parallel, returning the resulting Array of mapped/transformed items
+// Inspired by https://github.com/developit/asyncro
+function asyncMap(array, mapper) {
+	return Promise.all(array.map(mapper));
+}
+exports.asyncMap = asyncMap;
+
+// Invoke all async functions in an Array or Object sequentially,
+// returning the result.
+// Inspired by https://github.com/developit/asyncro
+async function asyncSeries(list) {
+	let accumulator = [];
+	for (let i = 0; i < list.length; i++) {
+		accumulator.push(await list[i]());
+	}
+	return accumulator;
+}
+
+exports.asyncSeries = asyncSeries;
