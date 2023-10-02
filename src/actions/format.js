@@ -10,7 +10,7 @@ async function format(opts) {
 		: ['./src/**/*.+(js|json|less|css|ts|tsx|md)'];
 
 	const args = parseArgs(opts, {
-		defaultArgs: ['--write', '--loglevel silent'],
+		defaultArgs: ['--write', '--log-level silent'],
 	});
 
 	await runCMD([resolveBin('prettier'), ...args, ...filesToApply]);
