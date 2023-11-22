@@ -238,8 +238,8 @@ async function jsOrTs(cwd, filename) {
 	const extension = (await isFile(path.resolve(cwd, filename + '.ts')))
 		? '.ts'
 		: (await isFile(path.resolve(cwd, filename + '.tsx')))
-		? '.tsx'
-		: '.js';
+		  ? '.tsx'
+		  : '.js';
 
 	return path.resolve(cwd, `${filename}${extension}`);
 }

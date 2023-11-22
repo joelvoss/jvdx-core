@@ -37,7 +37,8 @@ describe('appDir', () => {
 	const { appDir } = require('../src/utils');
 
 	it('should return the root directory', () => {
-		expect(appDir()).toContain('@jvdx/core');
+		const root = process.cwd();
+		expect(appDir()).toContain(root);
 	});
 });
 
@@ -45,11 +46,14 @@ describe('fromRoot', () => {
 	const { fromRoot } = require('../src/utils');
 
 	it('should return path relative to the root directory', () => {
-		expect(fromRoot('./sub-dir')).toContain('@jvdx/core/sub-dir');
+		const segments = process.cwd().split('/');
+		const fullpath = segments.join('/');
+		const oneLevelUp = segments.slice(0, segments.length - 1).join('/');
+		expect(fromRoot('./sub-dir')).toContain(fullpath + '/sub-dir');
 		expect(fromRoot('./sub-dir/another-dir')).toContain(
-			'@jvdx/core/sub-dir/another-dir',
+			fullpath + '/sub-dir/another-dir',
 		);
-		expect(fromRoot('../sub-dir')).toContain('@jvdx/sub-dir');
+		expect(fromRoot('../sub-dir')).toContain(oneLevelUp + '/sub-dir');
 	});
 });
 

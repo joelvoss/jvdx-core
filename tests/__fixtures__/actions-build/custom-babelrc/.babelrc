@@ -4,22 +4,13 @@
 			"@jvdx/babel-preset",
 			{
 				"preset-env": {
-					"loose": true,
+					"loose": false,
 					"modules": false,
 					"useBuiltIns": "usage",
 					"corejs": 2,
 					"targets": {
 						"esmodules": true
 					}
-				},
-				"class-properties": {
-					"loose": false
-				},
-				"private-methods": {
-					"loose": false
-				},
-				"private-property-in-object": {
-					"loose": false
 				}
 			}
 		]

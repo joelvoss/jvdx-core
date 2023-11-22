@@ -1210,34 +1210,34 @@ class-decorators-ts
 Built in 0s
 
 Bundle(s)
-./dist/class-decorators-ts.js (664 B)
-  -> gzip: 398 B
-  -> brotli: 327 B
-./dist/class-decorators-ts.esm.mjs (673 B)
-  -> gzip: 403 B
-  -> brotli: 338 B
-./dist/class-decorators-ts.umd.js (843 B)
-  -> gzip: 463 B
-  -> brotli: 394 B
+./dist/class-decorators-ts.js (643 B)
+  -> gzip: 390 B
+  -> brotli: 346 B
+./dist/class-decorators-ts.esm.mjs (652 B)
+  -> gzip: 395 B
+  -> brotli: 332 B
+./dist/class-decorators-ts.umd.js (822 B)
+  -> gzip: 457 B
+  -> brotli: 388 B
 "
 `;
 
 exports[`build fixtures build class-decorators-ts with jvdx 2`] = `7`;
 
 exports[`build fixtures build class-decorators-ts with jvdx 3`] = `
-""function"==typeof SuppressedError&&SuppressedError;var e=function(){function e(e){this.greeting=void 0,this.greeting=e}return e.prototype.greet=function(){return"Hello, "+this.greeting},e}(),t=new(e=function(e,t,r,o){var n,c=arguments.length,f=c<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)f=Reflect.decorate(e,t,r,o);else for(var i=e.length-1;i>=0;i--)(n=e[i])&&(f=(c<3?n(f):c>3?n(t,r,f):n(t,r))||f);return c>3&&f&&Object.defineProperty(t,r,f),f}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))("Hello World");export{t as default};
+""function"==typeof SuppressedError&&SuppressedError;var e=function(){function e(e){this.greeting=e}return e.prototype.greet=function(){return"Hello, "+this.greeting},e}(),t=new(e=function(e,t,r,o){var n,c=arguments.length,f=c<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)f=Reflect.decorate(e,t,r,o);else for(var l=e.length-1;l>=0;l--)(n=e[l])&&(f=(c<3?n(f):c>3?n(t,r,f):n(t,r))||f);return c>3&&f&&Object.defineProperty(t,r,f),f}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))("Hello World");export{t as default};
 //# sourceMappingURL=class-decorators-ts.esm.mjs.map
 "
 `;
 
 exports[`build fixtures build class-decorators-ts with jvdx 4`] = `
-""function"==typeof SuppressedError&&SuppressedError;var e=function(){function e(e){this.greeting=void 0,this.greeting=e}return e.prototype.greet=function(){return"Hello, "+this.greeting},e}(),t=new(e=function(e,t,r,o){var n,c=arguments.length,i=c<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(e,t,r,o);else for(var f=e.length-1;f>=0;f--)(n=e[f])&&(i=(c<3?n(i):c>3?n(t,r,i):n(t,r))||i);return c>3&&i&&Object.defineProperty(t,r,i),i}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))("Hello World");module.exports=t;
+""function"==typeof SuppressedError&&SuppressedError;var e=function(){function e(e){this.greeting=e}return e.prototype.greet=function(){return"Hello, "+this.greeting},e}(),t=new(e=function(e,t,r,o){var n,c=arguments.length,f=c<3?t:null===o?o=Object.getOwnPropertyDescriptor(t,r):o;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)f=Reflect.decorate(e,t,r,o);else for(var l=e.length-1;l>=0;l--)(n=e[l])&&(f=(c<3?n(f):c>3?n(t,r,f):n(t,r))||f);return c>3&&f&&Object.defineProperty(t,r,f),f}([function(e){Object.seal(e),Object.seal(e.prototype)}],e))("Hello World");module.exports=t;
 //# sourceMappingURL=class-decorators-ts.js.map
 "
 `;
 
 exports[`build fixtures build class-decorators-ts with jvdx 5`] = `
-"!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e||self).classDecoratorsTs=t()}(this,function(){"function"==typeof SuppressedError&&SuppressedError;var e=function(){function e(e){this.greeting=void 0,this.greeting=e}return e.prototype.greet=function(){return"Hello, "+this.greeting},e}();return e=function(e,t,o,n){var r,f=arguments.length,i=f<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,o):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(e,t,o,n);else for(var c=e.length-1;c>=0;c--)(r=e[c])&&(i=(f<3?r(i):f>3?r(t,o,i):r(t,o))||i);return f>3&&i&&Object.defineProperty(t,o,i),i}([function(e){Object.seal(e),Object.seal(e.prototype)}],e),new e("Hello World")});
+"!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e||self).classDecoratorsTs=t()}(this,function(){"function"==typeof SuppressedError&&SuppressedError;var e=function(){function e(e){this.greeting=e}return e.prototype.greet=function(){return"Hello, "+this.greeting},e}();return e=function(e,t,o,n){var r,f=arguments.length,i=f<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,o):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(e,t,o,n);else for(var c=e.length-1;c>=0;c--)(r=e[c])&&(i=(f<3?r(i):f>3?r(t,o,i):r(t,o))||i);return f>3&&i&&Object.defineProperty(t,o,i),i}([function(e){Object.seal(e),Object.seal(e.prototype)}],e),new e("Hello World")});
 //# sourceMappingURL=class-decorators-ts.umd.js.map
 "
 `;
@@ -3672,14 +3672,14 @@ Directory tree:
 
 worker-loader
   dist
-    worker-90ed7156.js
-    worker-90ed7156.js.map
-    worker-b38a591a.js
-    worker-b38a591a.js.map
+    worker-cnsH1-jz.js
+    worker-cnsH1-jz.js.map
     worker-loader.esm.mjs
     worker-loader.esm.mjs.map
     worker-loader.modern.mjs
     worker-loader.modern.mjs.map
+    worker-x2_RClC3.js
+    worker-x2_RClC3.js.map
   package-lock.json
   package.json
   src
@@ -3693,43 +3693,43 @@ Built in 0s
 Bundle(s)
 ./dist/worker-loader.modern.mjs (187 B)
   -> gzip: 174 B
-  -> brotli: 141 B
-
-./dist/worker-90ed7156.js (94 B)
-  -> gzip: 107 B
-  -> brotli: 84 B
-./dist/worker-loader.esm.mjs (198 B)
-  -> gzip: 181 B
   -> brotli: 146 B
 
-./dist/worker-b38a591a.js (111 B)
-  -> gzip: 125 B
-  -> brotli: 96 B
+./dist/worker-x2_RClC3.js (94 B)
+  -> gzip: 107 B
+  -> brotli: 92 B
+./dist/worker-loader.esm.mjs (198 B)
+  -> gzip: 179 B
+  -> brotli: 144 B
+
+./dist/worker-cnsH1-jz.js (111 B)
+  -> gzip: 124 B
+  -> brotli: 100 B
 "
 `;
 
 exports[`build fixtures build worker-loader with jvdx 2`] = `8`;
 
 exports[`build fixtures build worker-loader with jvdx 3`] = `
-"self.onmessage=s=>self.postMessage(s.data+"bar");
-//# sourceMappingURL=worker-90ed7156.js.map
+"self.onmessage=function(e){return self.postMessage(e.data+"bar")};
+//# sourceMappingURL=worker-cnsH1-jz.js.map
 "
 `;
 
 exports[`build fixtures build worker-loader with jvdx 4`] = `
-"self.onmessage=function(e){return self.postMessage(e.data+"bar")};
-//# sourceMappingURL=worker-b38a591a.js.map
-"
-`;
-
-exports[`build fixtures build worker-loader with jvdx 5`] = `
-"var e=new Worker(new URL("worker-b38a591a.js",import.meta.url),{type:"module"});e.onmessage=function(e){return"foobar"===e.data},e.postMessage("foo");
+"var e=new Worker(new URL("worker-cnsH1-jz.js",import.meta.url),{type:"module"});e.onmessage=function(e){return"foobar"===e.data},e.postMessage("foo");
 //# sourceMappingURL=worker-loader.esm.mjs.map
 "
 `;
 
-exports[`build fixtures build worker-loader with jvdx 6`] = `
-"const e=new Worker(new URL("worker-90ed7156.js",import.meta.url),{type:"module"});e.onmessage=e=>"foobar"===e.data,e.postMessage("foo");
+exports[`build fixtures build worker-loader with jvdx 5`] = `
+"const e=new Worker(new URL("worker-x2_RClC3.js",import.meta.url),{type:"module"});e.onmessage=e=>"foobar"===e.data,e.postMessage("foo");
 //# sourceMappingURL=worker-loader.modern.mjs.map
+"
+`;
+
+exports[`build fixtures build worker-loader with jvdx 6`] = `
+"self.onmessage=s=>self.postMessage(s.data+"bar");
+//# sourceMappingURL=worker-x2_RClC3.js.map
 "
 `;
