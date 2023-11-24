@@ -47,7 +47,7 @@
     "prettier": "^3.1.0",
     "readpkg-lit": "^1.9.0",
     "rimraf": "^5.0.5",
-    "rollup": "^4.5.1",
+    "rollup": "^4.5.2",
     "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "0.32.1",
     "sade": "^1.8.1",
