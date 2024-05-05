@@ -3603,7 +3603,6 @@ worker-loader
     worker-loader.esm.mjs.map
     worker-loader.modern.mjs
     worker-loader.modern.mjs.map
-  package-lock.json
   package.json
   src
     bar.js
