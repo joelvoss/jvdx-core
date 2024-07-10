@@ -1523,34 +1523,34 @@ custom-babelrc
 Built in 0s
 
 Bundle(s)
-./dist/custom-babelrc.js (351 B)
-  -> gzip: 272 B
-  -> brotli: 218 B
-./dist/custom-babelrc.esm.mjs (362 B)
-  -> gzip: 280 B
-  -> brotli: 233 B
-./dist/custom-babelrc.umd.js (538 B)
-  -> gzip: 363 B
-  -> brotli: 312 B
+./dist/custom-babelrc.js (613 B)
+  -> gzip: 402 B
+  -> brotli: 340 B
+./dist/custom-babelrc.esm.mjs (624 B)
+  -> gzip: 409 B
+  -> brotli: 349 B
+./dist/custom-babelrc.umd.js (800 B)
+  -> gzip: 481 B
+  -> brotli: 408 B
 "
 `;
 
 exports[`build fixtures build custom-babelrc with jvdx 2`] = `6`;
 
 exports[`build fixtures build custom-babelrc with jvdx 3`] = `
-"class e{constructor(){var e,r,t;r=["foo","bar"],(e="symbol"==typeof(t="myFields")?t:t+"")in this?Object.defineProperty(this,e,{value:r,enumerable:!0,configurable:!0,writable:!0}):this[e]=r}foo(){try{return Promise.resolve(this.myFields.find(e=>"bar"===e))}catch(e){return Promise.reject(e)}}}export{e as MyClass};
+"class r{constructor(){var r,e,t;r=this,t=["foo","bar"],(e=function(r){var e=function(r,e){if("object"!=typeof r||!r)return r;var t=r[Symbol.toPrimitive];if(void 0!==t){var i=t.call(r,"string");if("object"!=typeof i)return i;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(r)}(r);return"symbol"==typeof e?e:e+""}(e="myFields"))in r?Object.defineProperty(r,e,{value:t,enumerable:!0,configurable:!0,writable:!0}):r[e]=t}foo(){try{return Promise.resolve(this.myFields.find(r=>"bar"===r))}catch(r){return Promise.reject(r)}}}export{r as MyClass};
 //# sourceMappingURL=custom-babelrc.esm.mjs.map
 "
 `;
 
 exports[`build fixtures build custom-babelrc with jvdx 4`] = `
-"exports.MyClass=class{constructor(){var e,r,s;r=["foo","bar"],(e="symbol"==typeof(s="myFields")?s:s+"")in this?Object.defineProperty(this,e,{value:r,enumerable:!0,configurable:!0,writable:!0}):this[e]=r}foo(){try{return Promise.resolve(this.myFields.find(e=>"bar"===e))}catch(e){return Promise.reject(e)}}};
+"exports.MyClass=class{constructor(){var r,e,t;r=this,t=["foo","bar"],(e=function(r){var e=function(r,e){if("object"!=typeof r||!r)return r;var t=r[Symbol.toPrimitive];if(void 0!==t){var i=t.call(r,"string");if("object"!=typeof i)return i;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(r)}(r);return"symbol"==typeof e?e:e+""}(e="myFields"))in r?Object.defineProperty(r,e,{value:t,enumerable:!0,configurable:!0,writable:!0}):r[e]=t}foo(){try{return Promise.resolve(this.myFields.find(r=>"bar"===r))}catch(r){return Promise.reject(r)}}};
 //# sourceMappingURL=custom-babelrc.js.map
 "
 `;
 
 exports[`build fixtures build custom-babelrc with jvdx 5`] = `
-"!function(e,o){"object"==typeof exports&&"undefined"!=typeof module?o(exports):"function"==typeof define&&define.amd?define(["exports"],o):o((e||self).customBabelrc={})}(this,function(e){e.MyClass=class{constructor(){var e,o,t;o=["foo","bar"],(e="symbol"==typeof(t="myFields")?t:t+"")in this?Object.defineProperty(this,e,{value:o,enumerable:!0,configurable:!0,writable:!0}):this[e]=o}foo(){try{return Promise.resolve(this.myFields.find(e=>"bar"===e))}catch(e){return Promise.reject(e)}}}});
+"!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports):"function"==typeof define&&define.amd?define(["exports"],t):t((e||self).customBabelrc={})}(this,function(e){e.MyClass=class{constructor(){var e,t,r;e=this,r=["foo","bar"],(t=function(e){var t=function(e,t){if("object"!=typeof e||!e)return e;var r=e[Symbol.toPrimitive];if(void 0!==r){var o=r.call(e,"string");if("object"!=typeof o)return o;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(e)}(e);return"symbol"==typeof t?t:t+""}(t="myFields"))in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r}foo(){try{return Promise.resolve(this.myFields.find(e=>"bar"===e))}catch(e){return Promise.reject(e)}}}});
 //# sourceMappingURL=custom-babelrc.umd.js.map
 "
 `;
