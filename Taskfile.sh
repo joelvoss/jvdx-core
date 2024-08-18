@@ -25,7 +25,7 @@ lint() {
 
 # Run tests
 test() {
-  node src/index.js test --testPathPattern=/tests $*
+  node src/index.js test --testPathPattern=tests $*
 }
 
 # Validate application
