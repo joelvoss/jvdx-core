@@ -9,7 +9,7 @@ async function clean(opts) {
 	const filesToApply = hasPositionArgs ? opts._ : ['./node_modules', './dist'];
 
 	for (let f of filesToApply) {
-		await rimraf(fromRoot(f)).catch(_ => {
+		await rimraf(fromRoot(f)).catch(() => {
 			printErr(`Error cleaning ${f}\n`);
 		});
 	}

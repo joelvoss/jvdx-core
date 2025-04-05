@@ -19,7 +19,6 @@ const printTree = (nodes, indentLevel = 0) => {
 		.map(node => {
 			const isDir = node.type === 'directory';
 			return `${indent}${node.name}\n${
-				// eslint-disable-next-line no-unused-vars
 				isDir ? printTree(node.children, indentLevel + 1) : ''
 			}`;
 		})
@@ -115,7 +114,8 @@ function directoryTree(path, context = {}) {
 	try {
 		stats = fs.statSync(path);
 		lstat = fs.lstatSync(path);
-	} catch (e) {
+		// eslint-disable-next-line no-unused-vars
+	} catch (_) {
 		return null;
 	}
 

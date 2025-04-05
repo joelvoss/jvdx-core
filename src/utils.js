@@ -10,7 +10,6 @@ exports.readFile = fs.readFile;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// eslint-disable-next-line no-console
 const stdout = console.log.bind(console);
 exports.stdout;
 
@@ -143,8 +142,9 @@ function resolveBin(
 	try {
 		pathFromWhich = fs.realpathSync(which.sync(executable));
 		if (pathFromWhich && pathFromWhich.includes('.CMD')) return pathFromWhich;
-	} catch (_error) {
-		// silence is golden
+		// eslint-disable-next-line no-unused-vars
+	} catch (_) {
+		/* empty */
 	}
 
 	try {
@@ -383,7 +383,8 @@ function resolveFrom(fromDirectory, moduleId, silent) {
 	if (silent) {
 		try {
 			return resolveFileName();
-		} catch (error) {
+			// eslint-disable-next-line no-unused-vars
+		} catch (_) {
 			return;
 		}
 	}

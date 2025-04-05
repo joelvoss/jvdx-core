@@ -20,7 +20,7 @@ format() {
 
 # Lint project
 lint() {
-  node src/index.js lint $*
+  node src/index.js lint --ext=".js" $*
 }
 
 # Run tests

@@ -371,7 +371,7 @@ function getMain({ options, entry, format }) {
 function doWatch(options, cwd, steps) {
 	const { onStart, onBuild, onError } = options;
 
-	return new Promise((resolve, reject) => {
+	return new Promise(resolve => {
 		const targetDir = './' + relative(cwd, dirname(options.output));
 		print(
 			`Watching source, compiling to ${bold(targetDir)} ${dim(
@@ -534,7 +534,10 @@ function createConfig(options, entry, format, writeMeta) {
 					nameCache.minify,
 				);
 			}
-		} catch (e) {}
+			// eslint-disable-next-line no-unused-vars
+		} catch (_) {
+			/* empty */
+		}
 	}
 	loadNameCache();
 
