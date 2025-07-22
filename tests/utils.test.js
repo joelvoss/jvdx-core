@@ -311,8 +311,8 @@ describe('resolveFrom', () => {
 	const { resolveFrom } = require('../src/utils');
 
 	it('should throw on invalid arguments', () => {
-		expect(() => resolveFrom(1, './fixture')).toThrowError(/got `number`/);
-		expect(() => resolveFrom('tests/__fixtures__/resolveFrom')).toThrowError(
+		expect(() => resolveFrom(1, './fixture')).toThrow(/got `number`/);
+		expect(() => resolveFrom('tests/__fixtures__/resolveFrom')).toThrow(
 			/got `undefined`/,
 		);
 	});
