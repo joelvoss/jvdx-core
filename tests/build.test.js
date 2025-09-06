@@ -1,6 +1,5 @@
 const { resolve } = require('path');
 const fs = require('fs-extra');
-const stripAnsi = require('strip-ansi');
 const {
 	buildDirectory,
 	getBuildScript,
@@ -8,6 +7,18 @@ const {
 	directoryTree,
 } = require('../src/shared/test-utils');
 const { fromRoot } = require('../src/utils');
+
+////////////////////////////////////////////////////////////////////////////////
+
+// Utility to strip ANSI codes from strings
+function stripAnsi(string) {
+	const ST = '(?:\\u0007|\\u001B\\u005C|\\u009C)';
+	const osc = `(?:\\u001B\\][\\s\\S]*?${ST})`;
+	const csi = '[\\u001B\\u009B][[\\]()#;?]*(?:\\d{1,4}(?:[;:]\\d{0,4})*)?[\\dA-PR-TZcf-nq-uy=><~]';
+	const pattern = `${osc}|${csi}`;
+	const regex = new RegExp(pattern, 'g');
+	return string.replace(regex, '');
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 // Test specific variables and helper methods
