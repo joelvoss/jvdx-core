@@ -2,6 +2,7 @@
   "name": "@jvdx/core",
   "version": "5.5.0",
   "description": "Personal nodejs toolbox",
+  "deprecated": "This package is no longer maintained and has been archived. Please do not use for new projects.",
   "author": "Joel Voss <mail@joelvoss.com>",
   "license": "MIT",
   "homepage": "https://github.com/joelvoss/jvdx-core",

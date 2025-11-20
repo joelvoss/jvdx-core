@@ -1,5 +1,7 @@
 # @jvdx/core
 
+> **⚠️ ARCHIVED:** This repository is no longer maintained and has been archived. Please do not use this package for new projects.
+
 jvdx is a minimal set of tools to help maintain and build better applications.  
 It is a single dependency to `bundle`, `lint`, `format` and `test` your library.
 
